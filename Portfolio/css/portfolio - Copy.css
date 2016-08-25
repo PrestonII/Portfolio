@@ -59,12 +59,18 @@
 
 /*#region Example*/
 /*#endregion*/
+html, body {
+    width:100%;
+    overflow-x: hidden;
+    background-color: black;
+}
 
-
-.stuff {
+#stuff {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 25px;
-    width: 100%;
+    z-index: 10;
+    margin: auto;
+    /*max-width: 80%;*/
 }
 
 /*#region Header*/
@@ -118,6 +124,7 @@
 
 #background-image {
     height: 100vh;
+    overflow: hidden;
 }
 /*#endregion*/
 
