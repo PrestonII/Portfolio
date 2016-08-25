@@ -1,4 +1,4 @@
-﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,300,400';
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900';
 
 /*#region organizational play area*/
@@ -59,19 +59,29 @@
 
 /*#region Example*/
 /*#endregion*/
-html, body {
-    width:100%;
+
+/*#region Global*/
+html {
+    width: 100%;
     overflow-x: hidden;
-    background-color: black;
+    /*background-color: lightgray;
+    display: block;
+    margin-left: 200px;*/
 }
 
-#stuff {
-    font-family: 'Open Sans Condensed', sans-serif;
+body {
+    font-family: "Open Sans Condensed", sans-serif;
     font-size: 25px;
     z-index: 10;
     margin: auto;
     /*max-width: 80%;*/
 }
+
+li {
+    display: block;
+}
+
+/*#endregion*/
 
 /*#region Header*/
 #head {
@@ -101,7 +111,6 @@ html, body {
 
 /*#region Splash*/
 #center-stage {
-    
 }
 
 #pro-title {
@@ -110,33 +119,47 @@ html, body {
     line-height: 50px;
 }
 
-#pro-title li {
-    display: block;
-}
+    #pro-title li {
+        display: block;
+    }
 
-#pro-title #job{
-    color: black;
-}
+    #pro-title #job {
+        color: black;
+    }
 
-#pro-title #location{
-    color: darkgrey;
-}
+    #pro-title #location {
+        color: darkgrey;
+    }
 
-#background-image {
-    height: 100vh;
-    overflow: hidden;
-}
+    #background-image {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #background-image img {
+        margin: -75px 0 0 -75px;
+    }
 /*#endregion*/
 
 /*#region Summary*/
-#pro-summary h2{
-    font-size: 50px;
+.pro {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 25px;
     text-align: center;
+    justify-content: center;
 }
 
-#pro-summary p {
-    padding-bottom: 300px;
+.pro h2 {
+    font-size: 50px;
+    font-weight: 400;
 }
+
+.pro p {
+    padding-bottom: 300px;
+    font-weight: 100;
+}
+
+
 /*#endregion*/
 
 /* #endregion real styles*/
