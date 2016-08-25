@@ -2,6 +2,8 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900';
 
 /*#region organizational play area*/
+
+/*#region Header*/
 /*#head {
     border: 10px solid blue;
     margin-top: 50px;
@@ -19,15 +21,53 @@
     text-align: right;
     padding-right: 50px;
 }*/
+/*#endregion*/
 
+/*#region Splash*/
+/*#center-stage {
+    
+}
+
+#pro-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+#pro-title li {
+    display: block;
+}
+
+#pro-title #job{
+    color: black;
+}
+
+#pro-title #location{
+    color: darkgrey;
+}
+
+#background-image {
+    
+}*/
+
+/*#endregion*/
 
 /*#endregion*/
 
 
 /* #region real styles*/
+
+/*#region Example*/
+/*#endregion*/
+
+
 .stuff {
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    width: 100%;
 }
+
+/*#region Header*/
 #head {
     margin-top: 50px;
     display: flex;
@@ -50,5 +90,47 @@
     font-weight: 600;
     font-size: 20px;
 }
+
+/*#endregion Header*/
+
+/*#region Splash*/
+#center-stage {
+    
+}
+
+#pro-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+#pro-title li {
+    display: block;
+}
+
+#pro-title #job{
+    color: black;
+}
+
+#pro-title #location{
+    color: darkgrey;
+}
+
+#background-image {
+    height: 100vh;
+}
+/*#endregion*/
+
+/*#region Summary*/
+#pro-summary h2{
+    font-size: 50px;
+    text-align: center;
+}
+
+#pro-summary p {
+    padding-bottom: 300px;
+}
+/*#endregion*/
+
 /* #endregion real styles*/
 
