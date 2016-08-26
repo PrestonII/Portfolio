@@ -1,5 +1,6 @@
 ﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,300,400';
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900';
+@import 'https://fonts.googleapis.com/css?family=Jaldi:400,700';
 
 /*#region organizational play area*/
 
@@ -71,7 +72,8 @@ html {
 }
 
 body {
-    font-family: "Open Sans Condensed", sans-serif;
+    /*font-family: "Open Sans Condensed", sans-serif;*/
+    font-family: "Jaldi", sans-serif;
     font-size: 25px;
     z-index: 10;
     /*margin: 0 auto;*/
@@ -80,6 +82,14 @@ body {
 
 li {
     display: block;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    color: black;
 }
 
 /*#endregion*/
@@ -103,9 +113,14 @@ li {
 
 #nav-list li {
     display: inline-block;
-    padding-left: 50px;
+    padding-right: 50px;
     font-weight: 600;
     font-size: 20px;
+    /*color: black;*/
+}
+
+a {
+    
 }
 
 /*#endregion Header*/
@@ -135,35 +150,48 @@ li {
     #background-image {
         height: 100vh;
         overflow: hidden;
-        display: flex;
+        /*display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;*/
+        display: block;
+        margin: 0 auto auto;
         background-color: transparent;
+        padding: 0;
     }
 
     #background-image img {
         /*margin: -75px 0 0 -75px;*/
-        width: 200%;
+        width: 100%;
     }
 /*#endregion*/
 
 /*#region Summary*/
 .pro {
     font-family: "Open Sans Condensed", sans-serif;
+    /*font-family: "Jaldi", sans-serif;*/
     font-size: 25px;
-    text-align: center;
-    justify-content: center;
 }
 
 .pro h2 {
-    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
     font-weight: 400;
+    color: grey;
+    text-align: left;
 }
 
-.pro p {
+#api-list {
     padding-bottom: 300px;
     font-weight: 100;
 }
+
+ p {
+    text-align: left;
+}
+
+ #summary {
+     padding-left: 5vw;
+ }
 
 
 /*#endregion*/
