@@ -63,9 +63,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="css\portfolio - Copy.css" />
+    <Content Include="css\portfolio.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\adobe-design-reddish.jpg" />
+    <Content Include="img\adobe-sketch-whitered.jpg" />
     <Content Include="img\apple-touch-icon-precomposed.png" />
+    <Content Include="img\works\portfolio.gif" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -83,7 +86,6 @@
     <Content Include="support\crossdomain.xml" />
     <Content Include="css\main.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="css\portfolio.css" />
     <Content Include="img\favicon.ico" />
     <Content Include="support\humans.txt" />
     <Content Include="img\.gitignore" />
