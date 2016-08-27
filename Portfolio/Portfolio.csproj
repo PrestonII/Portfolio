@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Portfolio___HTML5_Template</RootNamespace>
-    <AssemblyName>HTML5 Boiler Plate v4.3</AssemblyName>
+    <RootNamespace>Portfolio</RootNamespace>
+    <AssemblyName>Portfolio</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -68,6 +68,8 @@
     <Content Include="img\adobe-design-reddish.jpg" />
     <Content Include="img\adobe-sketch-whitered.jpg" />
     <Content Include="img\apple-touch-icon-precomposed.png" />
+    <Content Include="img\flex-form.PNG" />
+    <Content Include="img\transflex.ico" />
     <Content Include="img\works\portfolio.gif" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -150,7 +152,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PreBuildEvent>xcopy $(ProjectDir)index.html $(SolutionDir) /y</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
