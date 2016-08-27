@@ -1,96 +1,200 @@
-﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:100,300,400';
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900';
+@import 'https://fonts.googleapis.com/css?family=Jaldi:400,700';
 
-.stuff {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
+/*#region organizational play area*/
 
-p {
-    font-family: 'Open Sans Condensed', sans-serif;
-    width: 200px;
-    text-align: left;
-    margin: 0 auto;
-    font-weight: 300;
-}
-
-#name {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 50px;
+/*#region Header*/
+/*#head {
+    border: 10px solid blue;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
 }
 
 #nav-list {
-    font-family: 'Open Sans Condensed', sans-serif;
-    text-align: left;
-    margin: 0 auto;
+    border: 5px dotted red;
+    vertical-align: middle;
 }
 
-.pro-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-}
-
-.pro-title li {
-    display: block;
-    font-size: 35px;
-    text-align: left;
-}
-
-.pro-title #job {
-    color: #202020;
-    font-weight: 500;
-}
-
-.pro-title #location {
-    color: grey;
-    font-weight: 400;
-}
-
-/*organizational boxes*/
-#head {
-    border: 10px solid blue;
-    display: inline-block;
-}
-
-#name  {
-    border: 1px solid red;
-    width: 30vw;
+#title {
+    border: 5px dotted green;
     text-align: right;
-    margin-left: 65vw;
+    padding-right: 50px;
+}*/
+/*#endregion*/
+
+/*#region Splash*/
+/*#center-stage {
+    
 }
 
-#options {
-    width: 600px;
+#pro-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    line-height: 50px;
 }
 
-#options li {
-    border: 1px solid green;
-    display: inline-block;
-    margin-left: 5vw;
-    margin-top: 5vh;
+#pro-title li {
+    display: block;
 }
 
-.center-stage {
-    border: 10px solid red;
+#pro-title #job{
+    color: black;
 }
 
-.pro-title {
-    border: 1px solid purple;
+#pro-title #location{
+    color: darkgrey;
 }
 
-.background-image {
-    border: 5px solid orange;
+#background-image {
+    
+}*/
+
+/*#endregion*/
+
+/*#endregion*/
+
+
+/* #region real styles*/
+
+/*#region Example*/
+/*#endregion*/
+
+/*#region Global*/
+html {
     width: 100%;
-    height: 100vh;
+    overflow-x: hidden;
+    background-color: lightgray;
+    display: block;
+    
+    margin-left: 10%;
 }
 
-.pro-summary {
-    border: 1px solid red;
+body {
+    /*font-family: "Open Sans Condensed", sans-serif;*/
+    font-family: "Jaldi", sans-serif;
+    font-size: 25px;
+    z-index: 10;
+    /*margin: 0 auto;*/
+    max-width: 80%;
 }
 
-/*end of org summary*/
+li {
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    color: black;
+}
+
+/*#endregion*/
+
+/*#region Header*/
+#head {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#nav-list {
+    vertical-align: middle;
+}
+
+#title {
+    text-align: right;
+    padding-right: 100px;
+}
+
+#nav-list li {
+    display: inline-block;
+    padding-right: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    /*color: black;*/
+}
+
+a {
+    
+}
+
+/*#endregion Header*/
+
+/*#region Splash*/
+#center-stage {
+}
+
+#pro-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+    #pro-title li {
+        display: block;
+    }
+
+    #pro-title #job {
+        color: black;
+    }
+
+    #pro-title #location {
+        color: darkgrey;
+    }
+
+    #background-image {
+        height: 100vh;
+        overflow: hidden;
+        /*display: flex;
+        align-items: center;
+        justify-content: center;*/
+        display: block;
+        margin: 0 auto auto;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    #background-image img {
+        /*margin: -75px 0 0 -75px;*/
+        width: 100%;
+    }
+/*#endregion*/
+
+/*#region Summary*/
+.pro {
+    font-family: "Open Sans Condensed", sans-serif;
+    /*font-family: "Jaldi", sans-serif;*/
+    font-size: 25px;
+}
+
+.pro h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: grey;
+    text-align: left;
+}
+
+#api-list {
+    padding-bottom: 300px;
+    font-weight: 100;
+}
+
+ p {
+    text-align: left;
+}
+
+ #summary {
+     padding-left: 5vw;
+ }
+
+
+/*#endregion*/
+
+/* #endregion real styles*/
 
