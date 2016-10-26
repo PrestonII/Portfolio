@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "appserver",
   "version": "0.0.0",
   "main":  "app.js",
   "private": true,
@@ -20,6 +20,7 @@
     "debug": "~2.0.0",
     "jade": "~1.6.0",
     "stylus": "0.42.3",
-    "mongoose": "~4.0.0"
+    "mongoose": "~4.0.0",
+    "mocha": "3.1.2"
   }
 }
