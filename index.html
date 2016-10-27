@@ -4,11 +4,20 @@
     <title></title>
 </head>
 <body ng-app="app">
+    
+<div ng-view></div>
+    
 
-<script src="client/scripts/angular.js"></script>
-<script src="client/scripts/angular-animate.js"></script>
-<script src="client/scripts/angular-route.js"></script>
+<script src="client/public/libs/angular/angular.js"></script>
+    <script src="client/public/libs/angular-animate/angular-animate.js"></script>
+    <script src="client/public/libs/angular-route/angular-route.js"></script>
 
-<script src="client/application/app.module.js"></script>
+    <script src="client/app/app.module.js"></script>
+    <script src="client/app/app.router.js"></script>
+
+    <script src="client/app/core/core.module.js"></script>
+    <script src="client/app/core/core.controller.js"></script>
+    
+
 </body>
 </html>
