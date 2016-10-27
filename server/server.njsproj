@@ -33,6 +33,11 @@
     <Compile Include="appserver.js" />
     <Compile Include="app.server.js" />
     <Compile Include="app\models\movie.js" />
+    <Compile Include="app\models\project.js" />
+    <Compile Include="app\routers\approuter.js" />
+    <Compile Include="app\routers\movieRouter.js" />
+    <Compile Include="app\routers\projectRouter.js" />
+    <Compile Include="config\db.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
@@ -49,8 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\models\" />
+    <Folder Include="app\routers\" />
     <Folder Include="bin\" />
     <Folder Include="app\" />
+    <Folder Include="config\" />
     <Folder Include="tests\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />

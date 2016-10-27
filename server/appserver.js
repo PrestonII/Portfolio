@@ -1,101 +1,38 @@
 ﻿var express = require('express');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 var router = express.Router();
-var Movie = require('./app/models/movie.js');
+
 var app = express();
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
+var db = require('./config/db.js');
 var port = process.env.PORT || 8080;
 
-router.use(function(req, res, next) {
+app.port = port;
 
-    console.log('Something is happening');
-    next();
+// allows one to parse JSON
+app.use(bodyParser.json());
 
-});
+// allows one to parse internal JSON stuff as JSON
+app.use(bodyParser.json({ type: 'application/vnd.api + json' }));
 
-router.get('/',
-    function (req, res) {
-        res.json({ message: 'hooray! welcome to our API!' });
-});
+// allows parsing of application as Query Strings
+app.use(bodyParser.urlencoded({ extended: true }));
 
-router.route('/movies')
-    .post(function ( req, res ) {
+// override typical header in request with DELETE/PUT ??
+app.use(methodOverride('X-HTTP-Method-Override'));
 
-        var movie = new Movie();
+// set static files location as /public | /public/img will be for users
+app.use(express.static(__dirname + '/public'));
 
-        movie.name = req.body.name;
-
-        movie.save(function ( err ) {
-            if (err)
-                res.send(err);
-
-            res.json({ message: 'Movie created!' });
-        });
-
-    })
-    .get(function (req, res) {
-        Movie.find(function (err, movies) {
-            if (err)
-                res.send(err);
-        
-            res.json(movies);
-
-        });
-});
-
-router.route('/movies/:movie_id')
-    .get(function(req, res) {
-        Movie.findById(req.params.movie_id,
-            function(err, movie) {
-                if (err)
-                    res.send(err);
-
-                res.json(movie);
-
-            });
-    })
-
-    .put(function(req, res) {
-
-        Movie.findById(req.params.movie_id, function (err, movie) {
-            if (err)
-                res.send(err);
-
-            console.log(req.body);
-            movie.name = req.body.name;
-
-
-            movie.save(function(err) {
-                if (err)
-                    res.send(err);
-
-                res.json({ message: 'Movie has been updated. Title is now ' + req.body.name });
-            });
-
-        });
-
-    })
-
-    .delete(function(req, res) {
-        Movie.remove({
-            _id: req.params.movie_id
-        }, function(err, movie) {
-            if (err)
-                res.send(err);
-
-            res.json({ message: req.params.movie_id + 'successfully deleted' });
-
-        });
-    });
-
+require('./app/routers/approuter.js')(router);
+require('./app/routers/movieRouter.js')(router);
 
 app.use('/api', router);
 
-app.listen(port);
+//app.listen(port);
 console.log('Magic happens on port ' + port);
+
+module.exports = app;
 
 
 
