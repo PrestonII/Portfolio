@@ -1,21 +1,10 @@
-﻿module.exports = function(router) {
-    //var router = app.router;
+﻿var path = require('path');
 
-    //router.use(function (req, res, next) {
-        
-    //    console.log('Something is happening');
-    //    next();
-
-    //});
-    
-    //router.get('/',
-    //function (req, res) {
-    //    res.json({ message: 'hooray! welcome to our API!' });
-    //});
+module.exports = function (router) {
 
     router.use(function (req, res, next) {
         
-        console.log('Something is happening');
+        console.log('Information requested');
         next();
 
     });
@@ -23,5 +12,14 @@
     router.get('/',
         function (req, res) {
             res.json({ message: 'hooray! welcome to our API!' });
-        });
+            
+    });
+    
+    // handles front end routes
+	router.get('*',
+		function(req, res) {
+			//res.sendFile('./public/views/index.html');
+            res.sendFile(path.join(__dirname, '../../../index.html'));
+		    console.log('Sent the index');
+		});
 }

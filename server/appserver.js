@@ -1,4 +1,5 @@
 ﻿var express = require('express');
+var path = require('path');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var router = express.Router();
@@ -21,15 +22,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // override typical header in request with DELETE/PUT ??
 app.use(methodOverride('X-HTTP-Method-Override'));
 
-// set static files location as /public | /public/img will be for users
-app.use(express.static(__dirname + '/public'));
+// set static files location as main directory
+var parent = path.join(__dirname, '../');
+app.use(express.static(parent));
 
 require('./app/routers/approuter.js')(router);
 require('./app/routers/movieRouter.js')(router);
 
 app.use('/api', router);
 
-//app.listen(port);
+app.listen(port);
 console.log('Magic happens on port ' + port);
 
 module.exports = app;
