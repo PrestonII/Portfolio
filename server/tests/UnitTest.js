@@ -1,6 +1,6 @@
 ﻿var assert = require('assert');
 
-describe('Test Suite 1',
+describe('Example Test Suite: ',
     function() {
         it('Test 1',
             function() {
