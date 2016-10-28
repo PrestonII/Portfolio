@@ -11,20 +11,20 @@
         <input id="movie-title-input"
                type="text"
                name="movieTitle"
-               data-ng-model="movieName"/>
-                {{ movieName }}
+               placeholder="Name of Movie to Add"
+               data-ng-model="coreVm.currentMovie.name"/>
         <button id="movie-creator"
-                data-ng-click="coreVm.addMovie(movieName)">Create A New Movie</button>
+                data-ng-click="coreVm.addMovie()">Create A New Movie</button>
         
         <br />
 
         <input id="movie-id-input"
                type="text"
                name="movieId"
-               data-ng-model="movieId" />
-                {{ movieId }}
+               placeholder="Id of Movie to Delete"
+               data-ng-model="coreVm.currentMovie._id" />
         <button id="movie-killer"
-                data-ng-click="coreVm.killMovie(movieId)">Get Rid Of This Movie!</button>
+                data-ng-click="coreVm.killMovie()">Get Rid Of This Movie!</button>
 
         <h2>Movie List!!</h2>
         <ul>

@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
     'use strict';
 
     angular
@@ -26,26 +26,25 @@
 
         function createStuff(movieData) {
             return $http.post('/api/movies', movieData)
-                .then(showStuff)
-                .catch(tattleTell);
+                .success(showStuff)
+                .error(tattleTell);
         };
 
         function deleteStuff(movieData) {
-            return $http.delete('/api/movies', movieData)
-                .then(showStuff)
-                .catch(tattleTell);
+            return $http.delete('/api/movies/' + movieData._id)
+                .success(showStuff)
+                .error(tattleTell);
         };
 
-        function showStuff( response ) {
+        function showStuff(response) {
             console.log(response);
 
             return response;
         };
 
-        function tattleTell( error ) {
+        function tattleTell(error) {
             console.log( "There was an error - here's the data: " + error );
             return error;
         };
     }
-
 })();

@@ -2,25 +2,6 @@
 
 module.exports = function (router) {
 
-    //router.use(function(request, response, next) {
-    //    console.log('Request for route: ' + request.originalUrl);
-    //});
-
-    //router.get('/movies',
-    //    function (request, response) {
-    //        console.log('Attempting to retrieve movies from database');
-
-    //        Movie.find(null, null, null, function(err, movies) {
-    //            if (err)
-    //                response.send(err);
-
-    //            response.json(movies);
-    //            console.log('Movie data sent!');
-    //        });
-
-    //        console.log('Loading data...');
-    //    });
-
 	router.route('/movies')
 		.post(function(request, response) {
 
