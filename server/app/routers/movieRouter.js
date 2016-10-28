@@ -1,8 +1,8 @@
 ﻿var Movie = require('../models/movie.js');
 
-module.exports = function (Router) {
+module.exports = function (router) {
 
-	Router.route('/movies')
+	router.route('/movies')
 		.post(function(req, res) {
 
 			var movie = new Movie();
@@ -27,7 +27,7 @@ module.exports = function (Router) {
 			});
 		});
 
-	Router.route('/movies/:movie_id')
+	router.route('/movies/:movie_id')
 		.get(function(req, res) {
 			Movie.findById(req.params.movie_id,
 				function(err, movie) {

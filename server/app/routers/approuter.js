@@ -18,7 +18,6 @@ module.exports = function (router) {
     // handles front end routes
 	router.get('*',
 		function(req, res) {
-			//res.sendFile('./public/views/index.html');
             res.sendFile(path.join(__dirname, '../../../index.html'));
 		    console.log('Sent the index');
 		});

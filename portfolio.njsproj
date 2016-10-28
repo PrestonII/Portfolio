@@ -33,6 +33,7 @@
   <ItemGroup>
     <Compile Include="client\app\app.router.js" />
     <Compile Include="client\app\app.module.js" />
+    <Compile Include="client\app\core\core.service.js" />
     <Compile Include="client\app\core\core.controller.js" />
     <Compile Include="client\app\core\core.module.js" />
     <Compile Include="server\appserver.js" />

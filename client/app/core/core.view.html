@@ -1,6 +1,38 @@
 <div id="core">
     
-    Should appear after this.
-    <h2>{{ tagline}}</h2>
+    <h1>Let's GO To The Movies !!</h1>
+
+    <div id="movie-list">
+        <button id="movie-getter"
+                data-ng-click="coreVm.getMovies()">Get All The Movies</button>
+        
+        <br />
+
+        <input id="movie-title-input"
+               type="text"
+               name="movieTitle"
+               data-ng-model="movieName"/>
+                {{ movieName }}
+        <button id="movie-creator"
+                data-ng-click="coreVm.addMovie(movieName)">Create A New Movie</button>
+        
+        <br />
+
+        <input id="movie-id-input"
+               type="text"
+               name="movieId"
+               data-ng-model="movieId" />
+                {{ movieId }}
+        <button id="movie-killer"
+                data-ng-click="coreVm.killMovie(movieId)">Get Rid Of This Movie!</button>
+
+        <h2>Movie List!!</h2>
+        <ul>
+            <li data-ng-repeat="movie in coreVm.movieList">
+                Name: {{ movie.name}}<br/>
+                Id:{{ movie._id}}
+            </li>
+        </ul>
+    </div>
 
 </div>
