@@ -2,23 +2,18 @@
 
 module.exports = function (router) {
 
-    router.use(function (req, res, next) {
+    router.use(function (request, response, next) {
         
-        console.log('Information requested');
+        console.log('Receiving a request for data from: ' + request.originalUrl);
         next();
 
     });
     
     router.get('/',
-        function (req, res) {
-            res.json({ message: 'hooray! welcome to our API!' });
+        function (request, response) {
+            console.log('Sending data...');
+            response.json({ message: 'hooray! welcome to our API!' });
+            console.log('Data sent!');
             
     });
-    
-    // handles front end routes
-	router.get('*',
-		function(req, res) {
-            res.sendFile(path.join(__dirname, '../../../index.html'));
-		    console.log('Sent the index');
-		});
 }

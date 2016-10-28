@@ -2,70 +2,92 @@
 
 module.exports = function (router) {
 
+    //router.use(function(request, response, next) {
+    //    console.log('Request for route: ' + request.originalUrl);
+    //});
+
+    //router.get('/movies',
+    //    function (request, response) {
+    //        console.log('Attempting to retrieve movies from database');
+
+    //        Movie.find(null, null, null, function(err, movies) {
+    //            if (err)
+    //                response.send(err);
+
+    //            response.json(movies);
+    //            console.log('Movie data sent!');
+    //        });
+
+    //        console.log('Loading data...');
+    //    });
+
 	router.route('/movies')
-		.post(function(req, res) {
+		.post(function(request, response) {
 
 			var movie = new Movie();
 
-			movie.name = req.body.name;
+			movie.name = request.body.name;
 
 			movie.save(function(err) {
 				if (err)
-					res.send(err);
+					response.send(err);
 
-				res.json({ message: 'Movie created!' });
+				response.json({ message: 'Movie created!' });
 			});
 
 		})
-		.get(function(req, res) {
+        .get(function (request, response) {
+            console.log('Attempting to retrieve movies from database');
+
 			Movie.find(function(err, movies) {
 				if (err)
-					res.send(err);
+					response.send(err);
 
-				res.json(movies);
-
-			});
-		});
+				response.json(movies);
+                console.log('Movie data sent!');
+            });
+	        console.log('Loading data...');
+	    });
 
 	router.route('/movies/:movie_id')
-		.get(function(req, res) {
-			Movie.findById(req.params.movie_id,
+		.get(function(request, response) {
+			Movie.findById(request.params.movie_id,
 				function(err, movie) {
 					if (err)
-						res.send(err);
+						response.send(err);
 
-					res.json(movie);
+					response.json(movie);
 
 				});
 		})
-		.put(function(req, res) {
-			Movie.findById(req.params.movie_id,
+		.put(function(request, response) {
+			Movie.findById(request.params.movie_id,
 				function(err, movie) {
 					if (err)
-						res.send(err);
+						response.send(err);
 
-					console.log(req.body);
-					movie.name = req.body.name;
+					console.log(request.body);
+					movie.name = request.body.name;
 
 					movie.save(function(err) {
 						if (err)
-							res.send(err);
+							response.send(err);
 
-						res.json({ message: 'Movie has been updated. Title is now ' + req.body.name });
+						response.json({ message: 'Movie has been updated. Title is now ' + request.body.name });
 					});
 
 				});
 
 		})
-		.delete(function(req, res) {
+		.delete(function(request, response) {
 			Movie.remove({
-					_id: req.params.movie_id
+					_id: request.params.movie_id
 				},
 				function(err, movie) {
 					if (err)
-						res.send(err);
+						response.send(err);
 
-					res.json({ message: req.params.movie_id + 'successfully deleted' });
+					response.json({ message: request.params.movie_id + 'successfully deleted' });
 
 				});
 		});

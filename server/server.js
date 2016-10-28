@@ -1,5 +1,6 @@
 ﻿var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var router = express.Router();
@@ -22,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // override typical header in request with DELETE/PUT ??
 app.use(methodOverride('X-HTTP-Method-Override'));
 
-// set static files location as main directory
+// set static files location as /public | /public/img will be for users
 var parent = path.join(__dirname, '../');
 app.use(express.static(parent));
 
@@ -31,8 +32,31 @@ require('./app/routers/movieRouter.js')(router);
 
 app.use('/api', router);
 
+app.get('/', function (request, response) {
+    console.log( 'Sending html page' );
+    var filePath = path.join(__dirname, '../index.html');
+    response.sendFile(filePath);
+    console.log('Sent main page');
+});
+
 app.listen(port);
 console.log('Magic happens on port ' + port);
+
+process.on('uncaughtException', function (err) {
+    console.log('This exception occured: ' + err);
+});
+
+process.on('SIGKILL', function (err) {
+    console.log('When SIGKILL occurs, will shutdown');
+    console.log('This exception occured: ' + err);
+    app.close();
+});
+
+process.on('SIGTERM', function (err) {
+    console.log('When SIGTERM occurs, will shutdown');
+    console.log('This exception occured: ' + err);
+    app.close();
+});
 
 module.exports = app;
 

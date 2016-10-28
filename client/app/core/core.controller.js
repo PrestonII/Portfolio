@@ -15,8 +15,8 @@
         coreVm.addMovie = addMovie;
         coreVm.killMovie = killMovie;
         coreVm.movieList = [
-            { name: "PReston", _id: 2452354355 },
-            { name: "Fston", _id: 9846168 }
+            //{ name: "PReston", _id: 2452354355 },
+            //{ name: "Fston", _id: 9846168 }
         ];
 
 
@@ -36,23 +36,27 @@
             console.log(data);
         }
 
-        function reviewData(response) {
+        function reviewData( response ) {
+            console.log( 'Received data' );
+
             if (response === null || response.length === 0)
                 console.log("There are no movies");
 
             console.log('got some movies');
 
             response.data.forEach(function(movie) {
-                movieList.push(data);
+                coreVm.movieList.push(movie);
             });
 
-            $scope.$apply(function() {
-                coreVm.movieList = movieList;
-            });
+            //$scope.$apply(function() {
+            //    coreVm.movieList = movieList;
+            //});
         }
 
-        function complain(error) {
-            console.log("There was an error - here's the data: " + error);
+        function complain( error ) {
+            console.log( "There was an error: " );
+            console.log( error );
+            
         }
     };
 })();
