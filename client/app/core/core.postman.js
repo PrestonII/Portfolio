@@ -3,35 +3,42 @@
 
     angular
         .module('app.core')
-        .factory("postalService", postalService);
+        .factory("postman", postman);
 
-    postalService.$inject = ['$http'];
+    postman.$inject = ['$http'];
 
-    function postalService($http) {
+    function postman($http, type) {
         console.log('Creating postman');
-
-        var postMan = {
+        
+        var objType = type;
+        var postguy = {
             get: getStuff,
             create: createStuff,
             delete: deleteStuff
         }
 
-        return postMan;
+        return postguy;
 
         function getStuff() {
-            return $http.get('/api/movies')
+            var url = String.concat('/api/' + objType);
+
+            return $http.get(url)
                 .success(showStuff)
                 .error(tattleTell);
         };
 
-        function createStuff(movieData) {
-            return $http.post('/api/movies', movieData)
+        function createStuff( data ) {
+            var url = String.concat('/api/' + objType, data);
+
+            return $http.post(url)
                 .success(showStuff)
                 .error(tattleTell);
         };
 
-        function deleteStuff(movieData) {
-            return $http.delete('/api/movies/' + movieData._id)
+        function deleteStuff( data ) {
+            var url = String.concat('/api/' + objType + '/' + data._id);
+
+            return $http.delete(url)
                 .success(showStuff)
                 .error(tattleTell);
         };

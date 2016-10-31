@@ -6,7 +6,8 @@
         [
             'ngRoute',
 
-            'app.core'
+            'app.core',
+            'app.home'
             //'app.projects',
             //'app.news',
             //'app.about'

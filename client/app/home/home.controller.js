@@ -2,24 +2,24 @@
     'use strict';
 
     angular
-        .module('app.core')
-        .controller("coreController", coreController);
+        .module('app.home')
+        .controller("homeController", homeController);
 
     console.log('Inject the scope');
-    coreController.$inject = ['$scope', 'postalService'];
+    homeController.$inject = ['$scope', 'postman'];
 
-    function coreController($scope, postalService) {
+    function homeController($scope, postalService) {
 
-        var coreVm = this;
-        coreVm.currentMovie = {};
-        coreVm.getMovies = getMovies;
-        coreVm.addMovie = addMovie;
-        coreVm.killMovie = killMovie;
-        coreVm.movieList = [];
+        var homeVm = this;
+        homeVm.currentMovie = {};
+        homeVm.getMovies = getMovies;
+        homeVm.addMovie = addMovie;
+        homeVm.killMovie = killMovie;
+        homeVm.movieList = [];
 
         function getMovies() {
             // reset the movie list before retrieving
-            coreVm.movieList = [];
+            homeVm.movieList = [];
 
             return postalService.get()
                 .then(updateScope)
@@ -27,11 +27,11 @@
         }
 
         function addMovie() {
-            var data = coreVm.currentMovie;
+            var data = homeVm.currentMovie;
             console.log("i'll do it! I'll add the movie called:");
             console.log(data);
             
-            coreVm.currentMovie = {};
+            homeVm.currentMovie = {};
 
             return postalService.create(data)
                 .then(refreshScope)
@@ -39,12 +39,12 @@
         }
 
         function killMovie() {
-            var data = coreVm.currentMovie;
+            var data = homeVm.currentMovie;
 
             console.log("i'll do it! I'll kill the movie!");
             console.log(data);
             
-            coreVm.currentMovie = {};
+            homeVm.currentMovie = {};
 
             return postalService.delete(data)
                 .then(refreshScope)
@@ -70,7 +70,7 @@
             reviewData(response);
 
             response.data.forEach( function ( movie ) {
-                coreVm.movieList.push( movie );
+                homeVm.movieList.push( movie );
             });
         }
 

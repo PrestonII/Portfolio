@@ -1,0 +1,15 @@
+<!--the big piece up top right-->
+<div id="head" class="center-ver-hor center-parent">
+    <div id="name" class="center-ver-hor center-child"><h1>{{ vm.page.name }}</h1></div>
+    <div id="navigator" class="center-ver-hor center-child"></div>
+</div>
+
+<!--our main view-->
+<div {{ vm.view }}></div>
+
+<!--the little piece on the bottom-right-->
+<div id="{{ vm.section }}">
+    <h1 id="{{ vm.sectionTitle}}">
+        {{ vm.sectionTitle }}
+    </h1>
+</div>
