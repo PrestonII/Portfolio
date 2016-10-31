@@ -56,3 +56,28 @@
 #name {
     padding-right: 20px;
 }
+
+.summary-title {
+    border-bottom: 1px solid #FE5A6B;
+
+    margin: 50px 0px;
+
+    width: auto;
+    height: auto;
+    padding: 30px 0;
+    text-align: right;
+}
+
+.summary-content {
+    text-align: right;
+    white-space: pre-wrap;
+}
+
+#About {
+    margin-right: 100px;
+}
+
+#About-summary-title {
+    border-top: 2px solid #FE5A6B;
+    border-bottom: 2px solid #FE5A6B;
+}

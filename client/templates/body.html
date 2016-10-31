@@ -1,9 +1,11 @@
-<div id="{{ vm.page.name }}-title">
-    
-</div>
-
-<div id="{{ vm.page.name }}-summary">
-    <p>
-        {{ vm.page.content }}
+<div id="summary-section"
+     class="col-xs-offset-6 col-xs-6 col-md-offset-9 col-md-3 ">
+    <h1 class="summary-title"
+        id="{{ vm.page.name }}-summary-title">
+        {{ vm.page.summary.title}}
+    </h1>
+    <p class="summary-content"
+       id="{{ vm.page.name }}-summary-content">
+        {{ vm.page.summary.content }}
     </p>
 </div>
