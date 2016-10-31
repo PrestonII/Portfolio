@@ -2,29 +2,31 @@
     'use strict';
 
     angular
-        .module('app')
-        .controller('about', about);
+        .module('app.about')
+        .controller('aboutController', aboutController);
 
-    about.$inject = ['$location']; 
+    console.log('Loading About Controller...');
+    aboutController.$inject = ['$location']; 
 
-    function about($location) {
+    function aboutController($location) {
         /* jshint validthis:true */
         var vm = this;
-        vm.title = 'about';
         vm.page = {
             name: '',
-            content: ''
+            content: '',
+            title: ''
         }
 
-        activate();
+        initialize();
 
-        function activate() {
-            addTitle()
+        function initialize() {
+            addTitle();
             addContent();
         }
         
         function addTitle() {
             vm.page.name = ' About ';
+            vm.page.title = 'Preston';
         }
 
         function addContent() {

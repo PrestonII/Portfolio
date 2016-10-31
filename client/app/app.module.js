@@ -7,12 +7,12 @@
             'ngRoute',
 
             'app.core',
-            'app.home'
+            'app.about'
             //'app.projects',
             //'app.news',
             //'app.about'
         ]);
 
-    console.log('Initializing the application');
+    console.log('Initializing the application...');
 
 })();

@@ -2,9 +2,10 @@
     'use strict';
 
     angular
-        .module('app.home',
+        .module('app.about',
         [
             'ngRoute', 'ngAnimate'
         ]);
 
+    console.log('Loading about module...');
 })();
