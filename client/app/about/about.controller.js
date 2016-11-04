@@ -5,31 +5,34 @@
         .module('app.about')
         .controller('aboutController', aboutController);
 
-    console.log('Loading About Controller...');
-    aboutController.$inject = ['$location']; 
+    
 
-    function aboutController($location) {
+    aboutController.$inject = ['$scope','$location', 'navigator', 'context']; 
+
+    function aboutController($scope, $location, navigator, context) {
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
-            name: '',
+            name: 'About',
+            title: 'Preston',
             summary: {
                 title: '',
                 content: ''
             },
-            title: '',
         }
+        vm.showMenu = showMenu;
 
         initialize();
 
         function initialize() {
-            addTitle();
+            console.log('Loading About Controller...');
+
             addContent();
+            addTitle();
         }
         
         function addTitle() {
-            vm.page.name = 'About';
-            vm.page.title = 'Preston';
+            context.updatePage(vm.page);
         }
 
         function addContent() {
@@ -44,6 +47,11 @@
                 ' re, ommodicabo.Us rempor repra volupis is milluptate veniend itatis cullace' +
                 ' perumquat aut velenistius mi, volores totatur? Cilit eos pore nobit, sequat volorum' +
                 ' volessi abor';
+        }
+
+        function showMenu() {
+            //navigator.showMenu();
+            console.log(navigator);
         }
     }
 })();

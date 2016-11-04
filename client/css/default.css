@@ -17,7 +17,7 @@
 
 #location {
     display: table;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-bottom: 20px;
     width: 200px;
@@ -45,12 +45,35 @@
 }
 
 #navigator {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     background: #FE5A6B;
 
     text-align: center;
+}
+
+#nav {
+    background-color: white;
+    background-color: rgba(255, 255, 255, .8);
+    position: absolute;
+    z-index: 100;
+
+    
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    visibility: hidden;
+}
+
+#menu li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin: 0px;
+    color: #303030;
 }
 
 #name {
@@ -74,7 +97,7 @@
 }
 
 #About {
-    margin-right: 100px;
+    margin-right: 90px;
 }
 
 #About-summary-title {

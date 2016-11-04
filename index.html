@@ -26,23 +26,31 @@
     <!--Add google analytics script-->
 </head>
 <body ng-app="app">
-    <div ng-view></div>
+
+    <div directive-body></div>
     
     
-<script src="public/libs/angular/angular.js"></script>
+    <script src="public/libs/angular/angular.js"></script>
     <script src="public/libs/angular-animate/angular-animate.js"></script>
     <script src="public/libs/angular-route/angular-route.js"></script>
+
+    <script src="public/libs/jquery/dist/jquery.js"></script>
+    <script src="public/libs/bootstrap/dist/js/bootstrap.js"></script>
+    
 
     <!--<script src=""></script>-->
 
     <script src="client/app/app.module.js"></script>
     <script src="client/app/app.router.js"></script>
 
-    <script src="client/app/directives/directive-base.js"></script>
+    <script src="client/app/directives/directive-nav.js"></script>
     <script src="client/app/directives/directive-body.js"></script>
     
     <script src="client/app/core/core.module.js"></script>
+    <script src="client/app/core/core.context.js"></script>
+    <script src="client/app/core/core.controller.js"></script>
     <script src="client/app/core/core.postman.js"></script>
+    <script src="client/app/core/core.navigator.js"></script>
 
     <script src="client/app/about/about.module.js"></script>
     <script src="client/app/about/about.controller.js"></script>

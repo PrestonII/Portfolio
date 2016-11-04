@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A26B381A-7ABE-4957-8871-5685B410A4E9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularJSWebApiEmpty</RootNamespace>
+    <AssemblyName>AngularJSWebApiEmpty</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="client\app\about\about.controller.js" />
+    <Content Include="client\app\about\about.module.js" />
+    <Content Include="client\app\core\core.controller.js" />
+    <Content Include="client\app\core\core.context.js" />
+    <Content Include="client\app\app.module.js" />
+    <Content Include="client\app\app.router.js" />
+    <Content Include="client\app\core\core.module.js" />
+    <Content Include="client\app\core\core.navigator.js" />
+    <Content Include="client\app\core\core.postman.js" />
+    <Content Include="client\app\directives\directive-summary.js" />
+    <Content Include="client\app\directives\directive-body.js" />
+    <Content Include="client\app\directives\directive-nav.js" />
+    <Content Include="client\app\movie\movie.controller.js" />
+    <Content Include="client\app\movie\movie.module.js" />
+    <Content Include="client\app\movie\movie.view.html" />
+    <Content Include="client\app\movie\testhome.html" />
+    <Content Include="client\css\default.css" />
+    <Content Include="client\css\global.css" />
+    <Content Include="client\app\about\about.view.html" />
+    <Content Include="client\templates\body.html" />
+    <Content Include="client\templates\nav.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\libs\angular-animate\.bower.json" />
+    <Content Include="public\libs\angular-animate\angular-animate.min.js.map" />
+    <Content Include="public\libs\angular-animate\bower.json" />
+    <Content Include="public\libs\angular-animate\LICENSE.md" />
+    <Content Include="public\libs\angular-animate\package.json" />
+    <Content Include="public\libs\angular-animate\README.md" />
+    <Content Include="public\libs\angular-route\.bower.json" />
+    <Content Include="public\libs\angular-route\angular-route.min.js.map" />
+    <Content Include="public\libs\angular-route\bower.json" />
+    <Content Include="public\libs\angular-route\LICENSE.md" />
+    <Content Include="public\libs\angular-route\package.json" />
+    <Content Include="public\libs\angular-route\README.md" />
+    <Content Include="public\libs\angular\.bower.json" />
+    <Content Include="public\libs\angular\angular.min.js.gzip" />
+    <Content Include="public\libs\angular\angular.min.js.map" />
+    <Content Include="public\libs\angular\bower.json" />
+    <Content Include="public\libs\angular\LICENSE.md" />
+    <Content Include="public\libs\angular\package.json" />
+    <Content Include="public\libs\angular\README.md" />
+    <Content Include="public\libs\animate-css\.bower.json" />
+    <Content Include="public\libs\animate-css\animate-config.json" />
+    <Content Include="public\libs\animate-css\bower.json" />
+    <Content Include="public\libs\animate-css\LICENSE" />
+    <Content Include="public\libs\animate-css\package.json" />
+    <Content Include="public\libs\bootstrap\.bower.json" />
+    <Content Include="public\libs\bootstrap\bower.json" />
+    <Content Include="public\libs\bootstrap\CHANGELOG.md" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="public\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\libs\bootstrap\Gemfile" />
+    <Content Include="public\libs\bootstrap\Gemfile.lock" />
+    <Content Include="public\libs\bootstrap\grunt\.jshintrc" />
+    <Content Include="public\libs\bootstrap\grunt\configBridge.json" />
+    <Content Include="public\libs\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="public\libs\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="public\libs\bootstrap\ISSUE_TEMPLATE.md" />
+    <Content Include="public\libs\bootstrap\js\.jscsrc" />
+    <Content Include="public\libs\bootstrap\js\.jshintrc" />
+    <Content Include="public\libs\bootstrap\less\.csscomb.json" />
+    <Content Include="public\libs\bootstrap\less\.csslintrc" />
+    <Content Include="public\libs\bootstrap\less\alerts.less" />
+    <Content Include="public\libs\bootstrap\less\badges.less" />
+    <Content Include="public\libs\bootstrap\less\bootstrap.less" />
+    <Content Include="public\libs\bootstrap\less\breadcrumbs.less" />
+    <Content Include="public\libs\bootstrap\less\button-groups.less" />
+    <Content Include="public\libs\bootstrap\less\buttons.less" />
+    <Content Include="public\libs\bootstrap\less\carousel.less" />
+    <Content Include="public\libs\bootstrap\less\close.less" />
+    <Content Include="public\libs\bootstrap\less\code.less" />
+    <Content Include="public\libs\bootstrap\less\component-animations.less" />
+    <Content Include="public\libs\bootstrap\less\dropdowns.less" />
+    <Content Include="public\libs\bootstrap\less\forms.less" />
+    <Content Include="public\libs\bootstrap\less\glyphicons.less" />
+    <Content Include="public\libs\bootstrap\less\grid.less" />
+    <Content Include="public\libs\bootstrap\less\input-groups.less" />
+    <Content Include="public\libs\bootstrap\less\jumbotron.less" />
+    <Content Include="public\libs\bootstrap\less\labels.less" />
+    <Content Include="public\libs\bootstrap\less\list-group.less" />
+    <Content Include="public\libs\bootstrap\less\media.less" />
+    <Content Include="public\libs\bootstrap\less\mixins.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\alerts.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\buttons.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\center-block.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\forms.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\gradients.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\grid.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\image.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\labels.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\list-group.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\opacity.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\pagination.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\panels.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\resize.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\size.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\table-row.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="public\libs\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="public\libs\bootstrap\less\modals.less" />
+    <Content Include="public\libs\bootstrap\less\navbar.less" />
+    <Content Include="public\libs\bootstrap\less\navs.less" />
+    <Content Include="public\libs\bootstrap\less\normalize.less" />
+    <Content Include="public\libs\bootstrap\less\pager.less" />
+    <Content Include="public\libs\bootstrap\less\pagination.less" />
+    <Content Include="public\libs\bootstrap\less\panels.less" />
+    <Content Include="public\libs\bootstrap\less\popovers.less" />
+    <Content Include="public\libs\bootstrap\less\print.less" />
+    <Content Include="public\libs\bootstrap\less\progress-bars.less" />
+    <Content Include="public\libs\bootstrap\less\responsive-embed.less" />
+    <Content Include="public\libs\bootstrap\less\responsive-utilities.less" />
+    <Content Include="public\libs\bootstrap\less\scaffolding.less" />
+    <Content Include="public\libs\bootstrap\less\tables.less" />
+    <Content Include="public\libs\bootstrap\less\theme.less" />
+    <Content Include="public\libs\bootstrap\less\thumbnails.less" />
+    <Content Include="public\libs\bootstrap\less\tooltip.less" />
+    <Content Include="public\libs\bootstrap\less\type.less" />
+    <Content Include="public\libs\bootstrap\less\utilities.less" />
+    <Content Include="public\libs\bootstrap\less\variables.less" />
+    <Content Include="public\libs\bootstrap\less\wells.less" />
+    <Content Include="public\libs\bootstrap\LICENSE" />
+    <Content Include="public\libs\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="public\libs\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="public\libs\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="public\libs\bootstrap\package.json" />
+    <Content Include="public\libs\bootstrap\README.md" />
+    <Content Include="public\libs\jquery\.bower.json" />
+    <Content Include="public\libs\jquery\bower.json" />
+    <Content Include="public\libs\jquery\dist\jquery.min.map" />
+    <Content Include="public\libs\jquery\dist\jquery.slim.min.map" />
+    <Content Include="public\libs\jquery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="public\libs\jquery\README.md" />
+    <Content Include="public\libs\jquery\src\.eslintrc.json" />
+    <Content Include="public\libs\angular-animate\angular-animate.js" />
+    <Content Include="public\libs\angular-animate\angular-animate.min.js" />
+    <Content Include="public\libs\angular-animate\index.js" />
+    <Content Include="public\libs\angular-route\angular-route.js" />
+    <Content Include="public\libs\angular-route\angular-route.min.js" />
+    <Content Include="public\libs\angular-route\index.js" />
+    <Content Include="public\libs\angular\angular-csp.css" />
+    <Content Include="public\libs\angular\angular.js" />
+    <Content Include="public\libs\angular\angular.min.js" />
+    <Content Include="public\libs\angular\index.js" />
+    <Content Include="public\libs\animate-css\animate.css" />
+    <Content Include="public\libs\animate-css\animate.min.css" />
+    <Content Include="public\libs\animate-css\gulpfile.js" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\bounce.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\flash.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\headShake.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\jello.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\pulse.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\rubberBand.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\shake.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\swing.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\tada.css" />
+    <Content Include="public\libs\animate-css\source\attention_seekers\wobble.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_entrances\bounceIn.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_entrances\bounceInDown.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_entrances\bounceInLeft.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_entrances\bounceInRight.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_entrances\bounceInUp.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_exits\bounceOut.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_exits\bounceOutDown.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_exits\bounceOutLeft.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_exits\bounceOutRight.css" />
+    <Content Include="public\libs\animate-css\source\bouncing_exits\bounceOutUp.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeIn.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInDown.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInDownBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInLeft.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInLeftBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInRight.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInRightBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInUp.css" />
+    <Content Include="public\libs\animate-css\source\fading_entrances\fadeInUpBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOut.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutDown.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutDownBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutLeft.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutLeftBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutRight.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutRightBig.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutUp.css" />
+    <Content Include="public\libs\animate-css\source\fading_exits\fadeOutUpBig.css" />
+    <Content Include="public\libs\animate-css\source\flippers\flip.css" />
+    <Content Include="public\libs\animate-css\source\flippers\flipInX.css" />
+    <Content Include="public\libs\animate-css\source\flippers\flipInY.css" />
+    <Content Include="public\libs\animate-css\source\flippers\flipOutX.css" />
+    <Content Include="public\libs\animate-css\source\flippers\flipOutY.css" />
+    <Content Include="public\libs\animate-css\source\lightspeed\lightSpeedIn.css" />
+    <Content Include="public\libs\animate-css\source\lightspeed\lightSpeedOut.css" />
+    <Content Include="public\libs\animate-css\source\rotating_entrances\rotateIn.css" />
+    <Content Include="public\libs\animate-css\source\rotating_entrances\rotateInDownLeft.css" />
+    <Content Include="public\libs\animate-css\source\rotating_entrances\rotateInDownRight.css" />
+    <Content Include="public\libs\animate-css\source\rotating_entrances\rotateInUpLeft.css" />
+    <Content Include="public\libs\animate-css\source\rotating_entrances\rotateInUpRight.css" />
+    <Content Include="public\libs\animate-css\source\rotating_exits\rotateOut.css" />
+    <Content Include="public\libs\animate-css\source\rotating_exits\rotateOutDownLeft.css" />
+    <Content Include="public\libs\animate-css\source\rotating_exits\rotateOutDownRight.css" />
+    <Content Include="public\libs\animate-css\source\rotating_exits\rotateOutUpLeft.css" />
+    <Content Include="public\libs\animate-css\source\rotating_exits\rotateOutUpRight.css" />
+    <Content Include="public\libs\animate-css\source\sliding_entrances\slideInDown.css" />
+    <Content Include="public\libs\animate-css\source\sliding_entrances\slideInLeft.css" />
+    <Content Include="public\libs\animate-css\source\sliding_entrances\slideInRight.css" />
+    <Content Include="public\libs\animate-css\source\sliding_entrances\slideInUp.css" />
+    <Content Include="public\libs\animate-css\source\sliding_exits\slideOutDown.css" />
+    <Content Include="public\libs\animate-css\source\sliding_exits\slideOutLeft.css" />
+    <Content Include="public\libs\animate-css\source\sliding_exits\slideOutRight.css" />
+    <Content Include="public\libs\animate-css\source\sliding_exits\slideOutUp.css" />
+    <Content Include="public\libs\animate-css\source\specials\hinge.css" />
+    <Content Include="public\libs\animate-css\source\specials\rollIn.css" />
+    <Content Include="public\libs\animate-css\source\specials\rollOut.css" />
+    <Content Include="public\libs\animate-css\source\zooming_entrances\zoomIn.css" />
+    <Content Include="public\libs\animate-css\source\zooming_entrances\zoomInDown.css" />
+    <Content Include="public\libs\animate-css\source\zooming_entrances\zoomInLeft.css" />
+    <Content Include="public\libs\animate-css\source\zooming_entrances\zoomInRight.css" />
+    <Content Include="public\libs\animate-css\source\zooming_entrances\zoomInUp.css" />
+    <Content Include="public\libs\animate-css\source\zooming_exits\zoomOut.css" />
+    <Content Include="public\libs\animate-css\source\zooming_exits\zoomOutDown.css" />
+    <Content Include="public\libs\animate-css\source\zooming_exits\zoomOutLeft.css" />
+    <Content Include="public\libs\animate-css\source\zooming_exits\zoomOutRight.css" />
+    <Content Include="public\libs\animate-css\source\zooming_exits\zoomOutUp.css" />
+    <Content Include="public\libs\animate-css\source\_base.css" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="public\libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="public\libs\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\libs\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="public\libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="public\libs\bootstrap\dist\js\npm.js" />
+    <Content Include="public\libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\libs\bootstrap\Gruntfile.js" />
+    <Content Include="public\libs\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="public\libs\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="public\libs\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="public\libs\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="public\libs\bootstrap\grunt\change-version.js" />
+    <Content Include="public\libs\bootstrap\js\affix.js" />
+    <Content Include="public\libs\bootstrap\js\alert.js" />
+    <Content Include="public\libs\bootstrap\js\button.js" />
+    <Content Include="public\libs\bootstrap\js\carousel.js" />
+    <Content Include="public\libs\bootstrap\js\collapse.js" />
+    <Content Include="public\libs\bootstrap\js\dropdown.js" />
+    <Content Include="public\libs\bootstrap\js\modal.js" />
+    <Content Include="public\libs\bootstrap\js\popover.js" />
+    <Content Include="public\libs\bootstrap\js\scrollspy.js" />
+    <Content Include="public\libs\bootstrap\js\tab.js" />
+    <Content Include="public\libs\bootstrap\js\tooltip.js" />
+    <Content Include="public\libs\bootstrap\js\transition.js" />
+    <Content Include="public\libs\bootstrap\package.js" />
+    <Content Include="public\libs\jquery\AUTHORS.txt" />
+    <Content Include="public\libs\jquery\dist\core.js" />
+    <Content Include="public\libs\jquery\dist\jquery.js" />
+    <Content Include="public\libs\jquery\dist\jquery.min.js" />
+    <Content Include="public\libs\jquery\dist\jquery.slim.js" />
+    <Content Include="public\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="public\libs\jquery\external\sizzle\dist\sizzle.js" />
+    <Content Include="public\libs\jquery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="public\libs\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="public\libs\jquery\LICENSE.txt" />
+    <Content Include="public\libs\jquery\src\ajax.js" />
+    <Content Include="public\libs\jquery\src\ajax\jsonp.js" />
+    <Content Include="public\libs\jquery\src\ajax\load.js" />
+    <Content Include="public\libs\jquery\src\ajax\parseXML.js" />
+    <Content Include="public\libs\jquery\src\ajax\script.js" />
+    <Content Include="public\libs\jquery\src\ajax\var\location.js" />
+    <Content Include="public\libs\jquery\src\ajax\var\nonce.js" />
+    <Content Include="public\libs\jquery\src\ajax\var\rquery.js" />
+    <Content Include="public\libs\jquery\src\ajax\xhr.js" />
+    <Content Include="public\libs\jquery\src\attributes.js" />
+    <Content Include="public\libs\jquery\src\attributes\attr.js" />
+    <Content Include="public\libs\jquery\src\attributes\classes.js" />
+    <Content Include="public\libs\jquery\src\attributes\prop.js" />
+    <Content Include="public\libs\jquery\src\attributes\support.js" />
+    <Content Include="public\libs\jquery\src\attributes\val.js" />
+    <Content Include="public\libs\jquery\src\callbacks.js" />
+    <Content Include="public\libs\jquery\src\core.js" />
+    <Content Include="public\libs\jquery\src\core\access.js" />
+    <Content Include="public\libs\jquery\src\core\DOMEval.js" />
+    <Content Include="public\libs\jquery\src\core\init.js" />
+    <Content Include="public\libs\jquery\src\core\parseHTML.js" />
+    <Content Include="public\libs\jquery\src\core\ready-no-deferred.js" />
+    <Content Include="public\libs\jquery\src\core\ready.js" />
+    <Content Include="public\libs\jquery\src\core\readyException.js" />
+    <Content Include="public\libs\jquery\src\core\stripAndCollapse.js" />
+    <Content Include="public\libs\jquery\src\core\support.js" />
+    <Content Include="public\libs\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="public\libs\jquery\src\css.js" />
+    <Content Include="public\libs\jquery\src\css\addGetHookIf.js" />
+    <Content Include="public\libs\jquery\src\css\adjustCSS.js" />
+    <Content Include="public\libs\jquery\src\css\curCSS.js" />
+    <Content Include="public\libs\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="public\libs\jquery\src\css\showHide.js" />
+    <Content Include="public\libs\jquery\src\css\support.js" />
+    <Content Include="public\libs\jquery\src\css\var\cssExpand.js" />
+    <Content Include="public\libs\jquery\src\css\var\getStyles.js" />
+    <Content Include="public\libs\jquery\src\css\var\isHiddenWithinTree.js" />
+    <Content Include="public\libs\jquery\src\css\var\rmargin.js" />
+    <Content Include="public\libs\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="public\libs\jquery\src\css\var\swap.js" />
+    <Content Include="public\libs\jquery\src\data.js" />
+    <Content Include="public\libs\jquery\src\data\Data.js" />
+    <Content Include="public\libs\jquery\src\data\var\acceptData.js" />
+    <Content Include="public\libs\jquery\src\data\var\dataPriv.js" />
+    <Content Include="public\libs\jquery\src\data\var\dataUser.js" />
+    <Content Include="public\libs\jquery\src\deferred.js" />
+    <Content Include="public\libs\jquery\src\deferred\exceptionHook.js" />
+    <Content Include="public\libs\jquery\src\deprecated.js" />
+    <Content Include="public\libs\jquery\src\dimensions.js" />
+    <Content Include="public\libs\jquery\src\effects.js" />
+    <Content Include="public\libs\jquery\src\effects\animatedSelector.js" />
+    <Content Include="public\libs\jquery\src\effects\Tween.js" />
+    <Content Include="public\libs\jquery\src\event.js" />
+    <Content Include="public\libs\jquery\src\event\ajax.js" />
+    <Content Include="public\libs\jquery\src\event\alias.js" />
+    <Content Include="public\libs\jquery\src\event\focusin.js" />
+    <Content Include="public\libs\jquery\src\event\support.js" />
+    <Content Include="public\libs\jquery\src\event\trigger.js" />
+    <Content Include="public\libs\jquery\src\exports\amd.js" />
+    <Content Include="public\libs\jquery\src\exports\global.js" />
+    <Content Include="public\libs\jquery\src\jquery.js" />
+    <Content Include="public\libs\jquery\src\manipulation.js" />
+    <Content Include="public\libs\jquery\src\manipulation\buildFragment.js" />
+    <Content Include="public\libs\jquery\src\manipulation\getAll.js" />
+    <Content Include="public\libs\jquery\src\manipulation\setGlobalEval.js" />
+    <Content Include="public\libs\jquery\src\manipulation\support.js" />
+    <Content Include="public\libs\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="public\libs\jquery\src\manipulation\var\rscriptType.js" />
+    <Content Include="public\libs\jquery\src\manipulation\var\rtagName.js" />
+    <Content Include="public\libs\jquery\src\manipulation\wrapMap.js" />
+    <Content Include="public\libs\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="public\libs\jquery\src\offset.js" />
+    <Content Include="public\libs\jquery\src\queue.js" />
+    <Content Include="public\libs\jquery\src\queue\delay.js" />
+    <Content Include="public\libs\jquery\src\selector-native.js" />
+    <Content Include="public\libs\jquery\src\selector-sizzle.js" />
+    <Content Include="public\libs\jquery\src\selector.js" />
+    <Content Include="public\libs\jquery\src\serialize.js" />
+    <Content Include="public\libs\jquery\src\traversing.js" />
+    <Content Include="public\libs\jquery\src\traversing\findFilter.js" />
+    <Content Include="public\libs\jquery\src\traversing\var\dir.js" />
+    <Content Include="public\libs\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="public\libs\jquery\src\traversing\var\siblings.js" />
+    <Content Include="public\libs\jquery\src\var\arr.js" />
+    <Content Include="public\libs\jquery\src\var\class2type.js" />
+    <Content Include="public\libs\jquery\src\var\concat.js" />
+    <Content Include="public\libs\jquery\src\var\document.js" />
+    <Content Include="public\libs\jquery\src\var\documentElement.js" />
+    <Content Include="public\libs\jquery\src\var\fnToString.js" />
+    <Content Include="public\libs\jquery\src\var\getProto.js" />
+    <Content Include="public\libs\jquery\src\var\hasOwn.js" />
+    <Content Include="public\libs\jquery\src\var\indexOf.js" />
+    <Content Include="public\libs\jquery\src\var\ObjectFunctionString.js" />
+    <Content Include="public\libs\jquery\src\var\pnum.js" />
+    <Content Include="public\libs\jquery\src\var\push.js" />
+    <Content Include="public\libs\jquery\src\var\rcssNum.js" />
+    <Content Include="public\libs\jquery\src\var\rnothtmlwhite.js" />
+    <Content Include="public\libs\jquery\src\var\slice.js" />
+    <Content Include="public\libs\jquery\src\var\support.js" />
+    <Content Include="public\libs\jquery\src\var\toString.js" />
+    <Content Include="public\libs\jquery\src\wrap.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="client\app\project\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52716/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

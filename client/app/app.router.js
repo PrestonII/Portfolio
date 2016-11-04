@@ -10,7 +10,7 @@
     function router($routeProvider, $locationProvider) {
 
         $routeProvider
-            .when('/', { templateUrl: 'client/app/app.view.html', controller: 'aboutController', controllerAs: 'vm'})
+            .when('/', { templateUrl: 'client/app/about/about.view.html', controller: 'aboutController', controllerAs: 'vm'})
             .when('/works', { templateUrl: 'client/app/app.view.html', controller: 'worksController', controllerAs: 'vm'})
             .when('/news', { templateUrl: 'client/app/app.view.html', controller: 'newsController', controllerAs: 'vm'})
             .otherwise('/');

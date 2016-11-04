@@ -25,9 +25,10 @@
 
         return directive;
 
-        function link($scope,element, attrs) {
-            console.log($window);
-            console.log($scope);
+        function link($scope, element, attrs) {
+
+            //console.log(navigator);
+
         }
     }
 

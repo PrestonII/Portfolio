@@ -37,4 +37,8 @@ a:hover {
     border-bottom: 2px solid #303030;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 

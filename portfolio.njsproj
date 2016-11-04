@@ -33,16 +33,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="client\app\about\about.controller.js" />
-    <Compile Include="client\app\about\about.module.js" />
-    <Compile Include="client\app\app.router.js" />
-    <Compile Include="client\app\app.module.js" />
-    <Compile Include="client\app\core\core.module.js" />
-    <Compile Include="client\app\core\core.postman.js" />
-    <Compile Include="client\app\directives\directive-body.js" />
-    <Compile Include="client\app\movie\movie.controller.js" />
-    <Compile Include="client\app\movie\movie.module.js" />
-    <Compile Include="client\app\directives\directive-base.js" />
     <Compile Include="public\libs\angular-animate\angular-animate.js" />
     <Compile Include="public\libs\angular-animate\angular-animate.min.js" />
     <Compile Include="public\libs\angular-animate\index.js" />
@@ -183,6 +173,7 @@
     <Compile Include="public\libs\jquery\src\var\support.js" />
     <Compile Include="public\libs\jquery\src\var\toString.js" />
     <Compile Include="public\libs\jquery\src\wrap.js" />
+    <Compile Include="server\app\models\page.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\app\models\movie.js" />
     <Compile Include="server\app\models\project.js" />
@@ -194,17 +185,7 @@
     <Compile Include="server\tests\UnitTest.js">
       <TestFramework>Mocha</TestFramework>
     </Compile>
-    <Content Include=".bowerrc" />
     <Content Include=".gitignore" />
-    <Content Include="bower.json" />
-    <Content Include="client\app\app.view.html" />
-    <Content Include="client\app\movie\movie.view.html" />
-    <Content Include="client\css\default.css" />
-    <Content Include="client\css\global.css" />
-    <Content Include="client\templates\base.html" />
-    <Content Include="client\app\movie\testhome.html" />
-    <Content Include="client\templates\body.html" />
-    <Content Include="index.html" />
     <Content Include="public\libs\angular-animate\.bower.json" />
     <Content Include="public\libs\angular-animate\angular-animate.min.js.map" />
     <Content Include="public\libs\angular-animate\bower.json" />
@@ -432,13 +413,6 @@
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="client\app\" />
-    <Folder Include="client\app\about\" />
-    <Folder Include="client\app\movie\" />
-    <Folder Include="client\app\core\" />
-    <Folder Include="client\app\directives\" />
-    <Folder Include="client\css\" />
-    <Folder Include="client\templates\" />
     <Folder Include="public\" />
     <Folder Include="public\libs\" />
     <Folder Include="public\libs\angular-animate\" />
@@ -501,13 +475,11 @@
     <Folder Include="server\bin\" />
     <Folder Include="server\app\" />
     <Folder Include="server\config\" />
-    <Folder Include="client\" />
     <Folder Include="server\" />
     <Folder Include="server\tests\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\body-parser\" />
-    <Folder Include="typings\globals\bootstrap\" />
     <Folder Include="typings\globals\cookie-parser\" />
     <Folder Include="typings\globals\debug\" />
     <Folder Include="typings\globals\express\" />
@@ -522,7 +494,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\bootstrap\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />

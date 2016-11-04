@@ -4,7 +4,9 @@
     angular
         .module('app.about',
         [
-            'ngRoute', 'ngAnimate'
+            'ngRoute', 'ngAnimate',
+
+            'app.core'
         ]);
 
     console.log('Loading about module...');

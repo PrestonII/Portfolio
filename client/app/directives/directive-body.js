@@ -7,9 +7,9 @@
 
     console.log('Loading body directive...');
 
-    directiveBody.$inject = ['$window'];
+    directiveBody.$inject = ['$window', 'context'];
     
-    function directiveBody ($window) {
+    function directiveBody ($window, context) {
         // Usage:
         //     <directive-body></directive-body>
         // Creates:
@@ -18,7 +18,9 @@
             link: link,
             restrict: 'EA',
             templateUrl: 'client/templates/body.html',
-            initialize : initialize
+            initialize: initialize,
+            controller: 'coreController',
+            controllerAs: 'vm'
         };
 
         initialize();
@@ -29,15 +31,11 @@
         }
 
         function initialize() {
-            //findController();
+
         }
 
-        //function findController($scope, $element) {
-        //    console.log($scope);
-        //    console.log($element);
-
-        //    //directive.controller = $scope
-        //}
+        function refresh() {
+            
+        }
     }
-
 })();
