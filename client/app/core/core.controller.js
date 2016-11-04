@@ -26,11 +26,11 @@
             updateMain();
         }
 
-        function updatePage() {
+        function updatePage(scope, page) {
             vm.page.name = context.name;
             vm.page.title = context.title;
 
-            console.log('Page was updated');
+            console.log('Page was updated by a call from the "' + page.name + '" page');
         }
 
         function updateMain() {
@@ -39,8 +39,7 @@
         }
 
         function showMenu() {
-            //navigator.showMenu();
-            console.log(navigator);
+            navigator.showMenu();
         }
     }
 })();

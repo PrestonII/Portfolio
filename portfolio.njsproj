@@ -477,9 +477,6 @@
     <Folder Include="server\config\" />
     <Folder Include="server\" />
     <Folder Include="server\tests\" />
-    <Folder Include="typings\" />
-    <Folder Include="typings\globals\" />
-    <Folder Include="typings\globals\body-parser\" />
     <Folder Include="typings\globals\cookie-parser\" />
     <Folder Include="typings\globals\debug\" />
     <Folder Include="typings\globals\express\" />
@@ -493,7 +490,6 @@
     <Folder Include="typings\globals\stylus\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />

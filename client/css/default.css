@@ -59,14 +59,14 @@
     position: absolute;
     z-index: 100;
 
-    
     top: 0;
     left: 0;
     text-align: center;
     margin: 20px;
     width: calc(100% - 40px);
     height: calc(100% - 40px);
-    visibility: hidden;
+    display: block;
+    display: none;
 }
 
 #menu li {

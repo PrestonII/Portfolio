@@ -17,7 +17,12 @@
         return nav;
 
         function showMenu() {
-            $('#nav').fadeIn(250);
+            console.log('Attempting to show the menu...');
+            var navMenu = $('#nav');
+            //navMenu.fadeIn(1250);
+            navMenu.fadeIn(250);
+
+            console.log('Menu visible!');
         };
 
     }

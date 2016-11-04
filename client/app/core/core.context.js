@@ -23,9 +23,7 @@
             service.name = page.name || '';
             service.title = page.title || '';
 
-            $root.$broadcast('onPageUpdate', function() {
-                console.log('Updating page information...');
-            });
+            $root.$broadcast('onPageUpdate', page);
         }
     }
 })();
