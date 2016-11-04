@@ -22,8 +22,6 @@
 
         function initialize() {
             console.log('Loading Core Controller...');
-
-            updateMain();
         }
 
         function updatePage(scope, page) {
@@ -31,11 +29,6 @@
             vm.page.title = context.title;
 
             console.log('Page was updated by a call from the "' + page.name + '" page');
-        }
-
-        function updateMain() {
-            console.log(context);
-            console.log(navigator);
         }
 
         function showMenu() {
