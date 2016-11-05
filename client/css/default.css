@@ -69,6 +69,10 @@
     display: none;
 }
 
+.navigable:hover {
+    cursor: crosshair;
+}
+
 #menu li {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;

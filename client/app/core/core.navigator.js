@@ -44,10 +44,10 @@
         function showMenu() {
             console.log('Attempting to show the menu...');
             var navMenu = $('#nav');
-            //navMenu.fadeIn(1250);
-            navMenu.fadeIn(250);
 
-            console.log('Menu visible!');
+            navMenu.fadeIn(750, function () {
+                console.log('Menu visible!');
+            });
         };
 
         function navigateTo(identifier) {
