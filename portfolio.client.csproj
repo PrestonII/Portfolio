@@ -80,6 +80,9 @@
     <Content Include="client\app\movie\movie.module.js" />
     <Content Include="client\app\movie\movie.view.html" />
     <Content Include="client\app\movie\testhome.html" />
+    <Content Include="client\app\project\project.controller.js" />
+    <Content Include="client\app\project\project.module.js" />
+    <Content Include="client\app\project\project.view.html" />
     <Content Include="client\css\default.css" />
     <Content Include="client\css\global.css" />
     <Content Include="client\app\about\about.view.html" />
@@ -470,9 +473,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="client\app\project\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

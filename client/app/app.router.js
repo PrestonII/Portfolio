@@ -11,7 +11,7 @@
 
         $routeProvider
             .when('/', { templateUrl: 'client/app/about/about.view.html', controller: 'aboutController', controllerAs: 'vm'})
-            .when('/works', { templateUrl: 'client/app/app.view.html', controller: 'worksController', controllerAs: 'vm'})
+            .when('/works', { templateUrl: 'client/project/project.view.html', controller: 'projectController', controllerAs: 'vm'})
             .when('/news', { templateUrl: 'client/app/app.view.html', controller: 'newsController', controllerAs: 'vm'})
             .otherwise('/');
 

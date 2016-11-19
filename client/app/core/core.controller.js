@@ -15,13 +15,15 @@
             title: context.title
         }
         vm.showMenu = showMenu;
+        vm.navigateTo = navigateTo;
 
         initialize();
 
-        $root.$on('onPageUpdate', updatePage);
+        
 
         function initialize() {
             console.log('Loading Core Controller...');
+            //$root.$on('onPageUpdate', updatePage);
         }
 
         function updatePage(scope, page) {
@@ -33,6 +35,12 @@
 
         function showMenu() {
             navigator.showMenu();
+        }
+
+        function navigateTo(identifier) {
+            //$scope.$apply(function() {
+                navigator.navigateTo(identifier);
+            //});
         }
     }
 })();

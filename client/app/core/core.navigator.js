@@ -51,7 +51,11 @@
         };
 
         function navigateTo(identifier) {
-            var itemToCheck = identifier[0].innerText;
+            var itemToCheck = 
+            !identifier.hasOwnProperty()
+                ? identifier
+                : identifier[0].innerText;
+
             var entry = findRoute(itemToCheck);
             var path = $location.path();
 
