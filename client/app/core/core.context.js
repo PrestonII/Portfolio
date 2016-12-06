@@ -11,9 +11,9 @@
         console.log('Creating Core Context');
         
         var service = {
-            name: 'DEF',
-            title: 'GHY',
-            //updatePage: updatePage
+            name: 'Loading...',
+            title: 'Starting Up...',
+            updatePage: updatePage
         }
 
         return service;
@@ -23,7 +23,7 @@
             service.name = page.name || '';
             service.title = page.title || '';
 
-            $root.$broadcast('onPageUpdate', page);
+            //$root.$broadcast('onPageUpdate', page);
         }
     }
 })();

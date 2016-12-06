@@ -31,7 +31,9 @@
         }
         
         function addTitle() {
-            context.updatePage(vm.page);
+            vm.page.name = 'Works';
+            vm.page.title = 'Some Project';
+            //context.updatePage(vm.page);
         }
 
         function addContent() {

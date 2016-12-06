@@ -12,6 +12,10 @@
     function aboutController($scope, $location, navigator, context) {
         /* jshint validthis:true */
         var vm = this;
+        var page = {
+            name: 'About',
+            title: 'Preston'
+        }
         vm.page = {
             name: '',
             title: '',

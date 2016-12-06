@@ -12,24 +12,28 @@
 
         var points = [
             {
-                name: 'Home',
-                page: '/',
-                id: 'Home'
-            },
-            {
+                id: 'Home',
                 name: 'About',
                 page: '/',
-                id: 'About'
+                title: 'Preston'
             },
             {
+                id: 'About',
+                name: 'About',
+                page: '/',
+                title: 'Preston'
+            },
+            {
+                id: 'Works',
                 name: 'Works',
                 page: '/Works',
-                id: 'Works'
+                title: 'Project Name'
             },
             {
+                id: 'News',
                 name: 'News',
                 page: '/News',
-                id: 'News'
+                title: 'New Article'
             }
         ];
         
@@ -87,12 +91,12 @@
             if(check.includes("."))
                 check = check.replace(".", "");
 
-            if (routes.some(entry => entry.name === check)) {
+            if (routes.some(entry => entry.id === check)) {
                 for (var x in routes) {
                     if (routes.hasOwnProperty(x)) {
                         var item = routes[x];
 
-                        if (item.name === check)
+                        if (item.id === check)
                             return item;
                     }
                 }
