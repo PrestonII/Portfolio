@@ -66,7 +66,6 @@
     <Content Include="client\app\about\about.controller.js" />
     <Content Include="client\app\about\about.module.js" />
     <Content Include="client\app\core\core.controller.js" />
-    <Content Include="client\app\core\core.context.js" />
     <Content Include="client\app\app.module.js" />
     <Content Include="client\app\app.router.js" />
     <Content Include="client\app\core\core.module.js" />
@@ -82,6 +81,7 @@
     <Content Include="client\app\project\project.controller.js" />
     <Content Include="client\app\project\project.module.js" />
     <Content Include="client\app\project\project.view.html" />
+    <Content Include="client\css\animation.css" />
     <Content Include="client\css\default.css" />
     <Content Include="client\css\global.css" />
     <Content Include="client\app\about\about.view.html" />
