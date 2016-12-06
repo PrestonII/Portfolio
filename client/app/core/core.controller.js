@@ -11,19 +11,30 @@
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
-            name: context.name,
-            title: context.title
+            name: 'Start',
+            title: 'Loading...'
         }
         vm.toggleMenu = toggleMenu;
         vm.navigateTo = navigateTo;
 
         initialize();
 
-        
-
         function initialize() {
             console.log('Loading Core Controller...');
-            $root.$on('onPageUpdate', updatePage);
+            console.log('Creating initial content...');
+            createContent();
+            console.log('Initial content created.');
+            //$root.$on('onPageUpdate', updatePage);
+        }
+
+        function createContent(scope, page) {
+            if(page === null || typeof page === "undefined" )
+                return;
+
+            vm.page.name = page.name;
+            vm.page.title = page.title;
+
+            console.log('Page was updated by a call from the "' + page.name + '" page');
         }
 
         function updatePage(scope, page) {
@@ -38,9 +49,8 @@
         }
 
         function navigateTo(identifier) {
-            //$scope.$apply(function() {
-                navigator.navigateTo(identifier);
-            //});
+            navigator.toggleMenu();
+            navigator.navigateTo(identifier);
         }
     }
 })();

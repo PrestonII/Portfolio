@@ -13,14 +13,13 @@
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
-            name: 'About',
-            title: 'Preston',
+            name: '',
+            title: '',
             summary: {
                 title: '',
                 content: ''
-            },
+            }
         }
-        vm.showMenu = showMenu;
 
         initialize();
 
@@ -32,7 +31,9 @@
         }
         
         function addTitle() {
-            context.updatePage(vm.page);
+            vm.page.name = 'About';
+            vm.page.title = 'Preston';
+            //context.updatePage(vm.page);
         }
 
         function addContent() {
@@ -47,11 +48,6 @@
                 ' re, ommodicabo.Us rempor repra volupis is milluptate veniend itatis cullace' +
                 ' perumquat aut velenistius mi, volores totatur? Cilit eos pore nobit, sequat volorum' +
                 ' volessi abor';
-        }
-
-        function showMenu() {
-            //navigator.showMenu();
-            console.log(navigator);
         }
     }
 })();

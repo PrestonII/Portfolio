@@ -81,7 +81,7 @@
         function findRoute(check) {
             var routes = points;
             
-            if(check.length > 0)
+            if(check.length > 0 && check[0].innerHTML)
                 check = check[0].innerHTML;
 
             if(check.includes("."))

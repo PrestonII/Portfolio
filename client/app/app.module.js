@@ -6,7 +6,7 @@
         [
             'ngRoute', 'ngAnimate',
 
-            'app.core', 'app.about', 'app.project',
+            'app.core', 'app.about', 'app.project'
             //'app.news',
         ]);
 

@@ -15,19 +15,19 @@
         var directive = {
             link: link,
             restrict: 'EA',
-            controller: 'coreController',
-            controllerAs: 'vm'
+            //controller: 'coreController',
+            //controllerAs: 'vm'
         };
         return directive;
 
         function link(scope, element, attrs, coreController) {
-            element.ready(direct);
+            //element.ready(direct);
 
-            function direct() {
-                element.bind('click',function() {
-                    coreController.navigateTo(element);
-                });
-            }
+            //function direct() {
+            //    element.bind('click',function() {
+            //        coreController.navigateTo(element);
+            //    });
+            //}
         }
     }
 

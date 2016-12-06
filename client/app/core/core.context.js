@@ -13,7 +13,7 @@
         var service = {
             name: 'DEF',
             title: 'GHY',
-            updatePage: updatePage
+            //updatePage: updatePage
         }
 
         return service;

@@ -39,6 +39,7 @@
             vm.page.summary.content =
                 ' This is a project called Nimble' +
                 '\n' + '\n' +
+                '\n' + '\n' +
                 ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
                 '\n' +
                 ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
