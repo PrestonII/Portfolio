@@ -14,7 +14,7 @@
             name: context.name,
             title: context.title
         }
-        vm.showMenu = showMenu;
+        vm.toggleMenu = toggleMenu;
         vm.navigateTo = navigateTo;
 
         initialize();
@@ -33,8 +33,8 @@
             console.log('Page was updated by a call from the "' + page.name + '" page');
         }
 
-        function showMenu() {
-            navigator.showMenu();
+        function toggleMenu() {
+            navigator.toggleMenu();
         }
 
         function navigateTo(identifier) {
