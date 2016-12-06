@@ -45,12 +45,20 @@
 }
 
 #navigator {
+    position: relative;
+    z-index: 100;
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background: #FE5A6B;
+    border: 3px solid #FE5658;
 
     text-align: center;
+
+    transition: all ease-in-out .5s;
+}
+
+#navigator:hover {
+    background: #FE5658;
 }
 
 #nav {

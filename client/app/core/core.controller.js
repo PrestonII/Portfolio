@@ -23,7 +23,7 @@
 
         function initialize() {
             console.log('Loading Core Controller...');
-            //$root.$on('onPageUpdate', updatePage);
+            $root.$on('onPageUpdate', updatePage);
         }
 
         function updatePage(scope, page) {

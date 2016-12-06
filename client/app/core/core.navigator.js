@@ -34,20 +34,29 @@
         ];
         
         var nav = {
-            showMenu: showMenu,
+            toggleMenu: toggleMenu,
             navigateTo: navigateTo,
             findRoute : findRoute
         }
 
         return nav;
 
-        function showMenu() {
+        function toggleMenu() {
             console.log('Attempting to show the menu...');
             var navMenu = $('#nav');
+            var vis = navMenu[0].style.display;
 
-            navMenu.fadeIn(750, function () {
-                console.log('Menu visible!');
-            });
+            if(vis === 'none' || vis === ''){
+                navMenu.fadeIn(750, function () {
+                    console.log('Menu visible!');
+                });
+            }
+
+            else{
+                navMenu.fadeOut(750, function () {
+                    console.log('Menu hidden!');
+                });
+            }
         };
 
         function navigateTo(identifier) {
@@ -71,6 +80,12 @@
 
         function findRoute(check) {
             var routes = points;
+            
+            if(check.length > 0)
+                check = check[0].innerHTML;
+
+            if(check.includes("."))
+                check = check.replace(".", "");
 
             if (routes.some(entry => entry.name === check)) {
                 for (var x in routes) {

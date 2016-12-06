@@ -9,5 +9,5 @@
             'app.core'
         ]);
 
-    console.log('Loading about module...');
+    console.log('Loading project module...');
 })();
