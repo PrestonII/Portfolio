@@ -1,11 +1,24 @@
-<div id="summary-section"
-     class="col-md-4 col-md-8 ">
-    <h2 class="summary-title"
-        id="{{ vm.page.name }}-summary-title">
-        {{ vm.page.summary.title}}
-    </h2>
-    <p class="summary-content"
-       id="{{ vm.page.name }}-summary-content">
-        {{ vm.page.summary.content }}
-    </p>
+<div id="summary-section">
+    <div id="words"
+         class="col-xs-4 words">
+        <div id="title-{{ vm.page.name }}"
+             class="title">
+            <h2>
+                {{ vm.page.summary.title}}
+            </h2>
+        </div>
+        <div id="summary-{{ vm.page.name}}"
+             class="summary">
+            <p>
+                {{ vm.page.summary.content }}
+            </p>
+        </div>
+    </div>
+
+    <div id="pictures"
+         class="col-xs-8 pictures">
+        <p>
+            big picture
+        </p>
+    </div>
 </div>

@@ -5,21 +5,33 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    
-
     projectController.$inject = ['$scope','$location', 'navigator']; 
 
     function projectController($scope, $location, navigator) {
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
-            name: 'Works',
-            title: '',
-            summary: {
-                title: '',
-                content: ''
+            name : 'Works',
+            title : '',
+            summary : {
+                title : '',
+                content : ''
             }
-        }
+        };
+
+        var sample = {
+            title : 'Sample Project',
+            content :
+                'Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ' +
+                    'vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions' +
+                    ' ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ' +
+                    'Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ' +
+                    'imodic obse facchicae tin verobus video, publin sentelis fure dum ' +
+                    'poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ' +
+                    'in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ' +
+                    'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
+                    'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que'
+        };
 
         initialize();
 
@@ -29,19 +41,16 @@
             addContent();
         }
 
-        function addContent() {
-            vm.page.summary.title = 'Nimble';
-            vm.page.summary.content =
-                ' This is a project called Nimble' +
-                '\n' +
-                '\n' +
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
-                
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
-                '\n' +
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
-                '\n' +
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ';
+        function addContent(project) {
+
+            if (project === undefined) {
+                vm.page.summary.title = sample.title;
+                vm.page.summary.content = sample.content;
+                return;
+            }
+
+            vm.page.summary.title = project.title;
+            vm.page.summary.content = project.content;
         }
     }
 })();

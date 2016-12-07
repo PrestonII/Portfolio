@@ -118,23 +118,46 @@
     white-space: pre-line;
 }
 
-#Works-summary-title {
-    border-bottom: 2px solid rgb(2, 90, 107);
+#Works {
+    width: 95%;
+    height: 100%;
 
-    margin: 0px 0px;
-    vertical-align: middle;
-
-    /*width: 100%;
-    height: 80%;*/
-    padding: 30px 0;
-    text-align: left;
+    display: table;
+    position: fixed;
+    top: 0;
+    
 }
 
-#Works-summary-content {
-    text-align: left;
-    
-    white-space: pre-line;
+.words {
+    padding: 0;
+    /*border: 1px solid blue;*/
+}
+
+.title {
+    display: table-cell;
+    padding: 20px 15px;
+    height: 200px;
+    vertical-align: middle;
+    /*border: 1px solid red;*/
+}
+
+.summary {
+    border-top: 1px solid #FE5A6B;
     overflow: hidden;
+    white-space: pre-line;
+    padding-left: 15px;
+}
+
+.pictures {
+    /*border: 5px solid purple;
+    padding: 0;*/
+
+    display: table;
+    /*border: 1px solid purple;*/
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    padding: 0;
 }
 
 /* ===============================================================================*/

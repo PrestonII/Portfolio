@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular
@@ -20,8 +20,10 @@
         initialize();
 
         function initialize() {
+
             console.log('Loading Core Controller...');
             console.log('Creating initial content...');
+            console.log($scope);
             updatePage();
             console.log('Initial content created.');
         }
