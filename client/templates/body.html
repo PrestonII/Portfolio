@@ -1,29 +1,31 @@
-<!--The Navigation Menu which appears after clicking the circle-->
-<div id="nav"
-     class="center-ver-hor center-parent"
-     directive-nav>
-</div>
-
-<!--the big piece at the top right-->
-<div id="head" class="center-ver-hor center-parent">
-    
-    <div id="name" class="center-ver-hor center-child">
-        <h1>{{ vm.page.title }}</h1>
+<div id="page">
+    <!--The Navigation Menu which appears after clicking the circle-->
+    <div id="nav"
+         class="center-ver-hor center-parent"
+         directive-nav>
     </div>
 
-    <div id="navigator"
-         class="center-ver-hor center-child"
-         data-ng-click="vm.toggleMenu()">
-    </div>
+    <!--the big piece at the top right-->
+    <div id="head" class="center-ver-hor center-parent">
 
-</div>
+        <div id="name" class="center-ver-hor center-child">
+            <h1>{{ vm.page.title }}</h1>
+        </div>
+
+        <div id="navigator"
+             class="center-ver-hor center-child"
+             data-ng-click="vm.toggleMenu()">
+        </div>
+
+    </div>
 
     <!--our main view-->
     <div id="{{ vm.page.name }}"
          class="center-ver-hor center-parent"
          data-ng-view></div>
 
-<!--the little piece on the bottom-right-->
-<div id="location">
-    <h1 id="location-title"> {{ vm.page.name }} </h1>
+    <!--the little piece on the bottom-right-->
+    <div id="location">
+        <h1 id="location-title"> {{ vm.page.name }} </h1>
+    </div>
 </div>

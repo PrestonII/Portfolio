@@ -10,10 +10,6 @@
     function router($routeProvider, $locationProvider) {
 
         $locationProvider.hashPrefix('');
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
 
         $routeProvider
 

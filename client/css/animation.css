@@ -1,4 +1,5 @@
-﻿/* PROJECTS (specific colors for each page)
+﻿
+/* PROJECTS (specific colors for each page)
 ============================================================================= */
 .proj-simulacra      { background:#00D0BC; color:#00907c; }
 .proj-assemble       { background:#E59400; color:#a55400; }
@@ -7,12 +8,13 @@
 .proj-greysmith      { background:#ffa6bb; color:#9e0000; }
 .proj-artasedu       { background:#ffa6bb; color:#9e0000; }
 .proj-gitit          { background:#303130; color:#7b7b7b; }
+.proj-portfolio      { background:#303130; color:#7b7b7b; }
 
 /* ANIMATIONS
 ============================================================================= */
 
 .ng-enter {
-    animation: scaleUp 0.5s both ease-in; 
+    animation: fadeIn 0.5s both ease-in; 
     z-index: 8888;
 }
 
@@ -22,14 +24,15 @@
 }
 
 
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes fadeIn {
+    from    { opacity: 0.3; }
+}
+
 /* leaving animations ----------------------------------------- */
 /* slide in from the bottom */
 @keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
+    to      { opacity: 0.0; }
 }
 
-/* entering animations --------------------------------------- */
-/* scale up */
-@keyframes scaleUp {
-    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
-}

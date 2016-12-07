@@ -7,9 +7,9 @@
 
     
 
-    aboutController.$inject = ['$scope','$location', 'navigator', 'context']; 
+    aboutController.$inject = ['$scope','$location', 'navigator']; 
 
-    function aboutController($scope, $location, navigator, context) {
+    function aboutController($scope, $location, navigator) {
         /* jshint validthis:true */
         var vm = this;
         var page = {

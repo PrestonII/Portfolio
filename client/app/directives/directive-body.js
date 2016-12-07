@@ -7,9 +7,9 @@
 
     console.log('Loading body directive...');
 
-    directiveBody.$inject = ['$window', 'context'];
+    directiveBody.$inject = ['$window'];
     
-    function directiveBody ($window, context) {
+    function directiveBody ($window) {
         // Usage:
         //     <directive-body></directive-body>
         // Creates:

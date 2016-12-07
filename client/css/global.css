@@ -26,6 +26,10 @@ h1 {
     font-size: 36px;
 }
 
+h2 {
+    font-size: 60px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -40,6 +44,11 @@ a:hover {
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 

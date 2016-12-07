@@ -37,6 +37,8 @@
             vm.page.name = page.name;
             vm.page.title = page.title;
 
+
+
             console.log('Page was updated by a call from the "' + page.name + '" page');
         }
 

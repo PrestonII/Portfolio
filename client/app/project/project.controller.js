@@ -7,9 +7,9 @@
 
     
 
-    projectController.$inject = ['$scope','$location', 'navigator', 'context']; 
+    projectController.$inject = ['$scope','$location', 'navigator']; 
 
-    function projectController($scope, $location, navigator, context) {
+    function projectController($scope, $location, navigator) {
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
@@ -18,7 +18,7 @@
             summary: {
                 title: '',
                 content: ''
-            },
+            }
         }
 
         initialize();
@@ -27,34 +27,21 @@
             console.log('Loading Project Controller...');
 
             addContent();
-            addTitle();
-        }
-        
-        function addTitle() {
-            vm.page.name = 'Works';
-            vm.page.title = 'Some Project';
-            //context.updatePage(vm.page);
         }
 
         function addContent() {
             vm.page.summary.title = 'Nimble';
             vm.page.summary.content =
                 ' This is a project called Nimble' +
-                '\n' + '\n' +
-                '\n' + '\n' +
+                '\n' +
+                '\n' +
+                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
+                
                 ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
                 '\n' +
                 ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
                 '\n' +
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
-                '\n' +
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
-                '\n' + '\n' +
-                ' Enient.Atiorerias aut aut ut pores nobitas nossequ aectatur, sequisint.' +
-                ' Ullitatur solutas ea quibeati rerum ea nosam net aut iur aciae officidis' +
-                ' re, ommodicabo.Us rempor repra volupis is milluptate veniend itatis cullace' +
-                ' perumquat aut velenistius mi, volores totatur? Cilit eos pore nobit, sequat volorum' +
-                ' volessi abor';
+                ' Sometimes I rhyme fast, sometimes I rhyme slow. ';
         }
     }
 })();

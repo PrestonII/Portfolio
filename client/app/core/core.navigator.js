@@ -27,7 +27,7 @@
                 id: 'Works',
                 name: 'Works',
                 page: '/Works',
-                title: 'Project Name'
+                title: ''
             },
             {
                 id: 'News',
@@ -61,7 +61,7 @@
                     console.log('Menu hidden!');
                 });
             }
-        };
+        }
 
         function navigateTo(identifier) {
             var itemToCheck = 
