@@ -65,6 +65,7 @@
   <ItemGroup>
     <Content Include="client\app\about\about.controller.js" />
     <Content Include="client\app\about\about.module.js" />
+    <Content Include="client\app\core\core.context.js" />
     <Content Include="client\app\core\core.controller.js" />
     <Content Include="client\app\app.module.js" />
     <Content Include="client\app\app.router.js" />

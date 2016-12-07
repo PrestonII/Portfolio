@@ -7,18 +7,14 @@
 
     
 
-    aboutController.$inject = ['$scope','$location', 'navigator']; 
+    aboutController.$inject = ['$scope','$location', 'navigator', 'context']; 
 
-    function aboutController($scope, $location, navigator) {
+    function aboutController($scope, $location, navigator, context) {
         /* jshint validthis:true */
         var vm = this;
-        var page = {
-            name: 'About',
-            title: 'Preston'
-        }
         vm.page = {
-            name: '',
-            title: '',
+            name: 'About',
+            title: 'Preston',
             summary: {
                 title: '',
                 content: ''
@@ -35,9 +31,9 @@
         }
         
         function addTitle() {
-            vm.page.name = 'About';
-            vm.page.title = 'Preston';
-            //context.updatePage(vm.page);
+            //vm.page.name = 'About';
+            //vm.page.title = 'Preston';
+            context.updatePage(vm.page);
         }
 
         function addContent() {

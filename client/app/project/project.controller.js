@@ -5,9 +5,9 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['$scope','$location', 'navigator']; 
+    projectController.$inject = ['$scope','$location', 'navigator', 'context']; 
 
-    function projectController($scope, $location, navigator) {
+    function projectController($scope, $location, navigator, context) {
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
@@ -37,8 +37,15 @@
 
         function initialize() {
             console.log('Loading Project Controller...');
-
+            context.updatePage(vm.page);
+            
             addContent();
+            addTitle();
+        }
+
+        function addTitle() {
+            vm.page.name = 'Works';
+            vm.page.title = '';
         }
 
         function addContent(project) {

@@ -5,14 +5,14 @@
         .module('app.core')
         .controller('coreController', coreController);
 
-    coreController.$inject = ['$scope', '$location', 'navigator']; 
+    coreController.$inject = ['$scope', '$location', 'navigator', 'context']; 
 
-    function coreController($scope, $location, navigator) {
+    function coreController($scope, $location, navigator, context) {
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
-            name: 'Start',
-            title: 'Loading...'
+            name: '',
+            title: ''
         }
         vm.toggleMenu = toggleMenu;
         vm.navigateTo = navigateTo;
@@ -23,25 +23,19 @@
 
             console.log('Loading Core Controller...');
             console.log('Creating initial content...');
-            console.log($scope);
             updatePage();
             console.log('Initial content created.');
         }
 
         function updatePage(page) {
-            if (page === null || typeof page === "undefined") {
-                vm.page.name = 'About';
-                vm.page.title = 'Preston';
+            console.log($scope);
 
-                return;
-            }
+            var current = context.updatePage(page);
 
-            vm.page.name = page.name;
-            vm.page.title = page.title;
+            vm.page.name = current.name;
+            vm.page.title = current.title;
 
-
-
-            console.log('Page was updated by a call from the "' + page.name + '" page');
+            console.log('Page was updated by a call from the "' + current.name + '" page');
         }
 
         function toggleMenu() {
