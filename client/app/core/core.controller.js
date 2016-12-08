@@ -1,13 +1,13 @@
-(function () {
+﻿(function () {
     'use strict';
 
     angular
         .module('app.core')
         .controller('coreController', coreController);
 
-    coreController.$inject = ['$scope', '$location', 'navigator', 'context']; 
+    coreController.$inject = ['$scope', '$location', 'navigator', 'context', '$rootScope']; 
 
-    function coreController($scope, $location, navigator, context) {
+    function coreController($scope, $location, navigator, context, $root) {
         /* jshint validthis:true */
         var vm = this;
         vm.page = {
@@ -20,17 +20,13 @@
         initialize();
 
         function initialize() {
-
+            $root.$on('onPageUpdate', updatePage);
             console.log('Loading Core Controller...');
             console.log('Creating initial content...');
-            updatePage();
-            console.log('Initial content created.');
         }
 
-        function updatePage(page) {
-            console.log($scope);
-
-            var current = context.updatePage(page);
+        function updatePage() {
+            var current = context.currentPage;
 
             vm.page.name = current.name;
             vm.page.title = current.title;

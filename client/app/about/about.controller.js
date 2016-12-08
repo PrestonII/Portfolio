@@ -31,8 +31,6 @@
         }
         
         function addTitle() {
-            //vm.page.name = 'About';
-            //vm.page.title = 'Preston';
             context.updatePage(vm.page);
         }
 
