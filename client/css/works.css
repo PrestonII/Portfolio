@@ -48,7 +48,7 @@
 }
 
 .summary {
-    /*border-top: 1px solid #FE5A6B;*/
+    border-top: 1px solid #FE5A6B;
 
     overflow: hidden;
     white-space: pre-line;
@@ -62,7 +62,7 @@
 }
 
 .current-picture {
-    border: 1px solid #303030;
+    border: 1px solid #FE5A6B;
 
     height: 600px;
     
@@ -71,7 +71,7 @@
 }
 
 .caption {
-    border-top: 3px solid #303030;
+    border-top: 3px solid #FE5A6B;
     padding: 15px 50px;
     margin: 15px;
     text-align: left;
