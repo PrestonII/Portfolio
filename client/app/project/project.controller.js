@@ -23,29 +23,30 @@
             title : 'Sample Project',
             content :
                 'Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ' +
-                    'vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions' +
-                    ' ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ' +
-                    'Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ' +
-                    'imodic obse facchicae tin verobus video, publin sentelis fure dum ' +
-                    'poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ' +
-                    'in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ' +
-                    'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
-                    'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que'
+                'vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions' +
+                ' ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ' +
+                '\n' +
+                '\n' +
+                'Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ' +
+                'imodic obse facchicae tin verobus video, publin sentelis fure dum ' +
+                'poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ' +
+                'in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ' +
+                'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
+                'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que'
         };
 
         initialize();
 
         function initialize() {
             console.log('Loading Project Controller...');
-            context.updatePage(vm.page);
+            
             
             addContent();
             addTitle();
         }
 
         function addTitle() {
-            vm.page.name = 'Works';
-            vm.page.title = '';
+            context.updatePage(vm.page);
         }
 
         function addContent(project) {
