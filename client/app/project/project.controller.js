@@ -40,7 +40,6 @@
         function initialize() {
             console.log('Loading Project Controller...');
             
-            
             addContent();
             addTitle();
         }
@@ -50,7 +49,6 @@
         }
 
         function addContent(project) {
-
             if (project === undefined) {
                 vm.page.summary.title = sample.title;
                 vm.page.summary.content = sample.content;

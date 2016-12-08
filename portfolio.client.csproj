@@ -86,6 +86,7 @@
     <Content Include="client\css\default.css" />
     <Content Include="client\css\global.css" />
     <Content Include="client\app\about\about.view.html" />
+    <Content Include="client\css\works.css" />
     <Content Include="client\templates\body.html" />
     <Content Include="client\templates\nav.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
