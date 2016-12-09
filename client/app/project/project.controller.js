@@ -10,7 +10,7 @@
     function projectController($scope, $location, navigator, context, Server, $http, postman) {
         /* jshint validthis:true */
         var vm = this;
-        var projects = {};
+        var projects = [];
         var projectServer = Server.initialize('projects');
         vm.page = {
             name : 'Works',
@@ -63,7 +63,9 @@
             console.log('Loading Project Controller...');
 
             addTitle();
-            getProjects();
+            if(projects.length <= 0)
+                getProjects();
+
             addContent();
         }
 
@@ -80,13 +82,29 @@
 
         function getProjects() {
             console.log('Gettings projects from server...');
+            projectServer.getObjects()
+                .then(function(response) {
+                    updateProjects(response);
+                }, function(error) {
+                     logError(error);
+                });
 
-            console.log(projectServer);
-            var projects = projectServer.getObjects();
-            console.log(projects);
+            function updateProjects(dbprojects) {
+                console.log('Updating page...');
 
-            console.log('Updating page...');
-            console.log('Done.');
+                if (dbprojects !== undefined && dbprojects !== null) {
+                    projects = dbprojects;
+
+                    if (dbprojects.length > 0 && vm.page.projects.currentProject.title === 'Sample Project Titles')
+                        vm.page.currentProject = projects[0];
+                }
+
+                console.log('Done.');
+            }
+
+            function logError(error) {
+                console.log('There was an error here: \n' + error);
+            }
         }
     }
 })();

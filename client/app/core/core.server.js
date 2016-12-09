@@ -75,13 +75,12 @@
             if (response === null || response.length === 0)
                 console.log("There are no objects");
 
-            console.log('request complete');
+            console.log('Request complete');
             console.log(response);
         }
 
         function complain(error) {
-            console.log( "There was an error: " );
-            console.log( error );
+            console.log( "There was an error: \n" + error);
         }
 
         function updateScope(response) {

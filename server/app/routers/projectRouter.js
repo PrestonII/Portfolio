@@ -7,7 +7,10 @@ module.exports = function (router) {
 
             var project = new Project();
 
-            project.name = request.body.name;
+            project.title = request.body.title;
+            project.summary = request.body.summary;
+            project.tags = request.body.tags;
+            project.images = request.body.images;
 
             project.save(function (err) {
                 if (err)

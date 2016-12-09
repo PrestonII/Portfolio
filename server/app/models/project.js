@@ -1,13 +1,13 @@
 ﻿var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/projects');
-var db = mongoose.connection;
+//mongoose.connect('mongodb://localhost/projects');
+//var db = mongoose.connection;
 
 // necessary when there is more than a single connection to a database
-//var options = {
-//    mongos: true
-//};
-//var db = mongoose.createConnection('mongodb://localhost/projects');
+var options = {
+    mongos: true
+};
+var db = mongoose.createConnection('mongodb://localhost/projects', options);
 
 console.log('Database ' + db.name + ' created');
 
@@ -26,4 +26,5 @@ var project =   Schema({
     }]
 });
 
-module.exports = mongoose.model('Project', project);
+//module.exports = mongoose.model('Project', project);
+module.exports = db.model('Project', project);
