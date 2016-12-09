@@ -1,7 +1,8 @@
 ﻿var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/db_name');
-var db = mongoose.connection;
+//mongoose.connect('mongodb://localhost/db_name');
+var db = mongoose.createConnection('mongodb://localhost/movies');
+//var db = mongoose.connection;
 
 console.log('Database ' + db.name + 'created');
 
