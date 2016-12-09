@@ -5,23 +5,34 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['$scope','$location', 'navigator', 'context']; 
+    projectController.$inject = ['$scope','$location', 'navigator', 'context', 'server', '$http', 'postman']; 
 
-    function projectController($scope, $location, navigator, context) {
+    function projectController($scope, $location, navigator, context, Server, $http, postman) {
         /* jshint validthis:true */
         var vm = this;
+        var projects = {};
+        var projectServer = Server.initialize('project');
         vm.page = {
             name : 'Works',
-            title : '',
-            summary : {
-                title : '',
-                content : ''
+            title: '',
+            projects: {
+                currentProject : {
+                    title : '',
+                    summary: '',
+                    currentContent: {
+                        currentItem: {
+                            image: '',
+                            caption: ''
+                        }
+                    }
+                }
             }
         };
 
         var sample = {
-            title : 'Sample Project',
-            content :
+            title:
+                'Sample Project Titles',
+            summary :
                 'Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ' +
                 'vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions' +
                 ' ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ' +
@@ -32,16 +43,28 @@
                 'poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ' +
                 'in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ' +
                 'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
-                'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que'
+                'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que',
+            currentContent: {
+                currentItem: {
+                    image: '',
+                    caption: 
+                        'These are series of words about the image being shown above.' + 
+                        '\n' +
+                        '\n' +
+                        'Some of which have been programmed. Others which have not. ' +
+                        'There are of course more words that could potentially be said but will, for now, be left unsaid.'  
+                }
+            },
         };
 
         initialize();
 
         function initialize() {
             console.log('Loading Project Controller...');
-            
-            addContent();
+
             addTitle();
+            getProjects();
+            addContent();
         }
 
         function addTitle() {
@@ -49,14 +72,21 @@
         }
 
         function addContent(project) {
-            if (project === undefined) {
-                vm.page.summary.title = sample.title;
-                vm.page.summary.content = sample.content;
-                return;
-            }
+            if (project === undefined || project === null)
+                project = sample;
 
-            vm.page.summary.title = project.title;
-            vm.page.summary.content = project.content;
+            vm.page.currentProject = project;
+        }
+
+        function getProjects() {
+            console.log('Gettings projects from server...');
+
+            console.log(projectServer);
+            var projects = projectServer.getObjects();
+            console.log(projects);
+
+            console.log('Updating page...');
+            console.log('Done.');
         }
     }
 })();

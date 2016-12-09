@@ -72,6 +72,7 @@
     <Content Include="client\app\core\core.module.js" />
     <Content Include="client\app\core\core.navigator.js" />
     <Content Include="client\app\core\core.postman.js" />
+    <Content Include="client\app\core\core.server.js" />
     <Content Include="client\app\directives\directive-navigable.js" />
     <Content Include="client\app\directives\directive-body.js" />
     <Content Include="client\app\directives\directive-nav.js" />

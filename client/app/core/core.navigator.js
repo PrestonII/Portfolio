@@ -13,9 +13,9 @@
         var points = [
             {
                 id: 'Home',
-                name: 'About',
+                name: 'Start',
                 page: '/',
-                title: 'Preston'
+                title: 'Hi'
             },
             {
                 id: 'About',
@@ -33,7 +33,7 @@
                 id: 'News',
                 name: 'News',
                 page: '/News',
-                title: 'New Article'
+                title: ''
             }
         ];
         

@@ -25,9 +25,11 @@
             console.log('Creating initial content...');
         }
 
-        function updatePage() {
-            var current = context.currentPage;
-
+        function updatePage($scope, page) {
+            var current = page === undefined
+                ? context.currentPage
+                : page;
+            
             vm.page.name = current.name;
             vm.page.title = current.title;
 
@@ -41,7 +43,7 @@
         function navigateTo(identifier) {
             navigator.toggleMenu();
             var page = navigator.navigateTo(identifier);
-            updatePage(page);
+            updatePage($scope, page);
         }
     }
 })();

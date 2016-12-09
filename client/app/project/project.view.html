@@ -3,26 +3,20 @@
          class="col-xs-4 col-md-4 words">
         <div id="title-{{ vm.page.name }}"
              class="title">
-            <h2>
-                {{ vm.page.summary.title}}
-            </h2>
+            <h2>{{ vm.page.currentProject.title}}</h2>
         </div>
         <div id="summary-{{ vm.page.name}}"
              class="summary">
-            <p>
-                {{ vm.page.summary.content }}
-            </p>
+            <p>{{ vm.page.currentProject.summary }}</p>
         </div>
     </div>
 
     <div id="pictures"
          class="col-xs-6 col-md-7 pictures">
         <div class="current-picture">
-            <!--big picture-->
+            {{ vm.page.currentProject.currentContent.currentItem.image }}
         </div>
-        <div class="caption">
-            These are some words about the above photo
-        </div>
+        <div class="caption">{{ vm.page.currentProject.currentContent.currentItem.caption }}</div>
     </div>
     
     <div id="project-navigation"

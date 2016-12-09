@@ -7,11 +7,11 @@
 
     postman.$inject = ['$http'];
 
-    function postman($http, type) {
-        console.log('Creating postman');
-        
-        var objType = type;
+    function postman($http) {
+
+        var objType = '';
         var postguy = {
+            initialize: initialize,
             get: getStuff,
             create: createStuff,
             delete: deleteStuff
@@ -19,8 +19,14 @@
 
         return postguy;
 
+        function initialize(type) {
+            objType = type;
+            console.log('Creating "' + type + '" specific postman');
+            return postguy;
+        }
+
         function getStuff() {
-            var url = String.concat('/api/' + objType);
+            var url = '/api/' + objType;
 
             return $http.get(url)
                 .success(showStuff)
@@ -28,7 +34,7 @@
         };
 
         function createStuff( data ) {
-            var url = String.concat('/api/' + objType, data);
+            var url = '/api/' + objType + data;
 
             return $http.post(url)
                 .success(showStuff)

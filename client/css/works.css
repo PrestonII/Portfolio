@@ -40,11 +40,14 @@
 }
 
 .title {
+    /*border: 1px solid red;*/
+
     display: table-cell;
     padding: 20px 15px;
     height: 200px;
     vertical-align: middle;
-    /*border: 1px solid red;*/
+    white-space: pre-line;
+    text-align: left;
 }
 
 .summary {
@@ -54,15 +57,18 @@
     white-space: pre-line;
     margin: 0;
     padding: 0 15px;
-    height: 500px;
+    height: 425px;
 }
 
 .summary:hover {
-    overflow-y: scroll;
+    height: auto;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .current-picture {
     border: 1px solid #FE5A6B;
+    /*background-color: #FE5A6B;*/
 
     height: 600px;
     
@@ -75,6 +81,16 @@
     padding: 15px 50px;
     margin: 15px;
     text-align: left;
+    white-space: pre-line;
+    height: 100px;
+    overflow: hidden;
+}
+
+.caption:hover {
+    height: auto;
+    max-height: 150px;
+    overflow-y: auto;
+    
 }
 
 /* ===============================================================================*/
