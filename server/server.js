@@ -28,7 +28,7 @@ var parent = path.join(__dirname, '../');
 app.use(express.static(parent));
 
 require('./app/routers/approuter.js')(router);
-require('./app/routers/movieRouter.js')(router);
+//require('./app/routers/movieRouter.js')(router);
 require('./app/routers/projectRouter.js')(router);
 
 app.use('/api', router);

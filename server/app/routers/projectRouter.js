@@ -21,11 +21,13 @@ module.exports = function (router) {
             console.log('Attempting to retrieve projects from database');
 
             Project.find(function (err, projects) {
-                if (err)
+                if (err) {
+                    console.log('There was an error, reporting...');
                     response.send(err);
+                }
 
+                console.log('Sending project data...');
                 response.json(projects);
-                console.log('Project data sent!');
             });
             console.log('Loading data...');
         });

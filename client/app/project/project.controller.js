@@ -11,7 +11,7 @@
         /* jshint validthis:true */
         var vm = this;
         var projects = {};
-        var projectServer = Server.initialize('project');
+        var projectServer = Server.initialize('projects');
         vm.page = {
             name : 'Works',
             title: '',

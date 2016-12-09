@@ -1,9 +1,13 @@
 ﻿var mongoose = require('mongoose');
 
-//mongoose.connect('mongodb://localhost/projects');
+mongoose.connect('mongodb://localhost/projects');
+var db = mongoose.connection;
+
 // necessary when there is more than a single connection to a database
-var db = mongoose.createConnection('mongodb://localhost/projects');
-//var db = mongoose.connection;
+//var options = {
+//    mongos: true
+//};
+//var db = mongoose.createConnection('mongodb://localhost/projects');
 
 console.log('Database ' + db.name + ' created');
 
