@@ -8,7 +8,7 @@ module.exports = function (router, jsonservice) {
 
             var projects = jsonservice.convertToJSON(storeLoc);
 
-            response.send(projects);
+            response.send(projects.data);
         });
 
     router.route('/projects')

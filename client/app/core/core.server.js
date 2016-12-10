@@ -86,9 +86,13 @@
         function updateScope(response) {
             reviewData(response);
 
-            response.data.forEach( function ( object ) {
-                service.objectList.push( object );
-            });
+            if (response.data.length > 0) {
+                response.data.forEach(function(object) {
+                    service.objectList.push(object);
+                });
+            }
+
+            return service.objectList;
         }
 
         function refreshScope() {

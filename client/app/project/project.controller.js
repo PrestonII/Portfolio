@@ -95,7 +95,7 @@
                 if (dbprojects !== undefined && dbprojects !== null) {
                     projects = dbprojects;
 
-                    if (dbprojects.length > 0 && vm.page.projects.currentProject.title === 'Sample Project Titles')
+                    if (dbprojects.length > 0 && (vm.page.projects.currentProject.title === 'Sample Project Titles' || vm.page.projects.currentProject.title === ''))
                         vm.page.currentProject = projects[0];
                 }
 
