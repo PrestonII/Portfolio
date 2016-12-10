@@ -4,6 +4,7 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var router = express.Router();
+var jsonservice = require('./app/services/jsonService')();
 
 var app = express();
 var db = require('./config/db.js');
@@ -29,7 +30,7 @@ app.use(express.static(parent));
 
 require('./app/routers/approuter.js')(router);
 require('./app/routers/movieRouter.js')(router);
-require('./app/routers/projectRouter.js')(router);
+require('./app/routers/projectRouter.js')(router, jsonservice);
 
 app.use('/api', router);
 

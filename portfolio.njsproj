@@ -174,6 +174,7 @@
     <Compile Include="public\libs\jquery\src\var\toString.js" />
     <Compile Include="public\libs\jquery\src\wrap.js" />
     <Compile Include="server\app\models\page.js" />
+    <Compile Include="server\app\services\jsonService.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\app\models\movie.js" />
     <Compile Include="server\app\models\project.js" />
@@ -411,6 +412,7 @@
     <Content Include="public\libs\jquery\src\.eslintrc.json" />
     <Content Include="README.md" />
     <Content Include="package.json" />
+    <Content Include="server\data\projects.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />
@@ -471,11 +473,13 @@
     <Folder Include="public\libs\jquery\src\traversing\var\" />
     <Folder Include="public\libs\jquery\src\var\" />
     <Folder Include="server\app\models\" />
+    <Folder Include="server\app\services\" />
     <Folder Include="server\app\routers\" />
     <Folder Include="server\bin\" />
     <Folder Include="server\app\" />
     <Folder Include="server\config\" />
     <Folder Include="server\" />
+    <Folder Include="server\data\" />
     <Folder Include="server\tests\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />

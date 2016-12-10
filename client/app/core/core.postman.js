@@ -25,8 +25,13 @@
             return postguy;
         }
 
-        function getStuff() {
-            var url = '/api/' + objType;
+        function getStuff(useInternalStore) {
+            if (useInternalStore === undefined || useInternalStore === null)
+                useInternalStore = true;
+
+            var url = useInternalStore
+                ? '/api/' + objType + '/internal-store'
+                : '/api/' + objType;
 
             return $http.get(url)
                 .success(showStuff)

@@ -1,6 +1,15 @@
 ﻿var Project = require('../models/project.js');
 
-module.exports = function (router) {
+module.exports = function (router, jsonservice) {
+
+    router.route('/projects/internal-store')
+        .get(function (request, response, next) {
+            var storeLoc = '../../data/projects.json';
+
+            var projects = jsonservice.convertToJSON(storeLoc);
+
+            response.send(projects);
+        });
 
     router.route('/projects')
         .post(function (request, response) {
