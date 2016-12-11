@@ -82,6 +82,7 @@
     <Content Include="client\app\movie\testhome.html" />
     <Content Include="client\app\project\project.controller.js" />
     <Content Include="client\app\project\project.module.js" />
+    <Content Include="client\app\project\project.paging.js" />
     <Content Include="client\app\project\project.view.html" />
     <Content Include="client\css\animation.css" />
     <Content Include="client\css\default.css" />

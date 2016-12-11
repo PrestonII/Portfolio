@@ -5,30 +5,14 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['$scope','$location', 'navigator', 'context', 'server', '$http', 'postman']; 
+    projectController.$inject = ['$scope','$location', 'navigator', 'context', 'server', '$http', 'postman', 'pagingService']; 
 
-    function projectController($scope, $location, navigator, context, Server, $http, postman) {
+    function projectController($scope, $location, navigator, context, Server, $http, postman, pagingService) {
         /* jshint validthis:true */
         var vm = this;
         var projects = [];
-        var projectServer = Server.initialize('projects');
-        vm.page = {
-            name : 'Works',
-            title: '',
-            projects: {
-                currentProject : {
-                    title : '',
-                    summary: '',
-                    currentContent: {
-                        currentItem: {
-                            image: '',
-                            caption: ''
-                        }
-                    }
-                }
-            }
-        };
-
+        var projectServer = new Server('projects');
+        var pageHelper = pagingService;
         var sample = {
             title:
                 'Sample Project Titles',
@@ -57,6 +41,23 @@
             },
         };
 
+        vm.page = {
+            name: 'Works',
+            title: '',
+            projects: {
+                currentProject: {
+                    title: '',
+                    summary: '',
+                    currentContent: {
+                        currentItem: {
+                            image: '',
+                            caption: ''
+                        }
+                    }
+                }
+            }
+        };
+
         initialize();
 
         function initialize() {
@@ -66,18 +67,31 @@
             if(projects.length <= 0)
                 getProjects();
 
-            addContent();
+            updateContent();
         }
 
         function addTitle() {
             context.updatePage(vm.page);
         }
 
-        function addContent(project) {
+        function updateContent(project) {
             if (project === undefined || project === null)
                 project = sample;
 
             vm.page.currentProject = project;
+
+            function updatePageColor() {
+                
+            }
+
+            function updateProject() {
+                
+            }
+
+            function updateImages() {
+                
+            }
+
         }
 
         function getProjects() {
