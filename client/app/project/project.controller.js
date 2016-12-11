@@ -11,35 +11,9 @@
         /* jshint validthis:true */
         var vm = this;
         var projects = [];
+        var currentProject = {};
         var projectServer = new Server('projects');
         var pageHelper = pagingService;
-        var sample = {
-            title:
-                'Sample Project Titles',
-            summary :
-                'Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ' +
-                'vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions' +
-                ' ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ' +
-                '\n' +
-                '\n' +
-                'Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ' +
-                'imodic obse facchicae tin verobus video, publin sentelis fure dum ' +
-                'poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ' +
-                'in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ' +
-                'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
-                'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que',
-            currentContent: {
-                currentItem: {
-                    image: '',
-                    caption: 
-                        'These are series of words about the image being shown above.' + 
-                        '\n' +
-                        '\n' +
-                        'Some of which have been programmed. Others which have not. ' +
-                        'There are of course more words that could potentially be said but will, for now, be left unsaid.'  
-                }
-            },
-        };
 
         vm.page = {
             name: 'Works',
@@ -62,36 +36,32 @@
 
         function initialize() {
             console.log('Loading Project Controller...');
-
-            addTitle();
-            if(projects.length <= 0)
+            
+            if (projects.length <= 1)
                 getProjects();
 
-            updateContent();
-        }
-
-        function addTitle() {
             context.updatePage(vm.page);
+
+            vm.page.currentProject = pageHelper.changeProject(projects[0]);
+
+            updatePage();
         }
 
-        function updateContent(project) {
-            if (project === undefined || project === null)
-                project = sample;
+        function updatePage() {
+            if (projects.length <= 1)
+                getProjects();
 
-            vm.page.currentProject = project;
+            context.updatePage(vm.page);
 
-            function updatePageColor() {
-                
-            }
+            vm.page.currentProject = pageHelper.changeProject(projects[0]);
+        }
 
-            function updateProject() {
-                
-            }
+        function changeProject(moveNext) {
+            // find position of current project
 
-            function updateImages() {
-                
-            }
-
+            currentProject = moveNext
+                ? changeProject(projects[pos + 1])
+                : changeProject(projects[pos - 1]);
         }
 
         function getProjects() {
@@ -117,7 +87,7 @@
             }
 
             function logError(error) {
-                console.log('There was an error here: \n' + error);
+                console.log('There was an error attempting to retrieve projects: \n' + error);
             }
         }
     }
