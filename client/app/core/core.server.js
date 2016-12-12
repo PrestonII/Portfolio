@@ -80,7 +80,8 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
             }
 
             function complain(error) {
-                console.log( "There was an error: \n" + error);
+                console.log( "There was an error retrieving items from the server");
+                throw error;
             }
 
             function updateScope(response) {

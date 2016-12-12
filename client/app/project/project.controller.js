@@ -11,7 +11,6 @@
         /* jshint validthis:true */
         var vm = this;
         var projects = [];
-        var currentProject = {};
         var projectServer = new Server('projects');
         var pageHelper = pagingService;
 
@@ -38,11 +37,6 @@
 
         function initialize() {
             console.log('Loading Project Controller...');
-
-            //testing
-            //var page = $('#page');
-            //page.addClass('proj-simulacra');
-
             updatePage();
         }
 
@@ -57,23 +51,22 @@
             context.updatePageColor(vm.page.currentProject);
         }
 
-        function changeProject(moveNext) {
-            var simulacra = {
-                colorCode : 'proj-simulacra'
-            };
-
-            var assemble = {
-                colorCode : 'proj-assemble'
-            };
-
-            var project = moveNext === simulacra.colorCode ? simulacra : assemble;
-            context.updatePageColor(project);
+        function changeProject(direction) {
 
             // find position of current project
+            var pos = projects.indexOf(vm.page.currentProject);
+            var i = direction === 'next'
+                        ? (pos + 1)
+                        : (pos - 1);
 
-            //currentProject = moveNext
-            //    ? changeProject(projects[pos + 1])
-            //    : changeProject(projects[pos - 1]);
+            if (i > projects.length || i < 0) {
+                console.log('Reached end of projects');
+                return;
+            }
+
+            var newProj = pageHelper.changeProject(projects[i]);
+            vm.page.currentProject = newProj;
+            context.updatePageColor(projects[i]);
         }
 
         function getProjects() {
@@ -81,8 +74,11 @@
             projectServer.getObjects()
                 .then(function(response) {
                     updateProjects(response);
-                }, function(error) {
-                     logError(error);
+                })
+                .catch(function(error) {
+                    logError(error);
+                    var samples = pageHelper.getOfflineSamples();
+                    updateProjects(samples);
                 });
 
             function updateProjects(dbprojects) {
