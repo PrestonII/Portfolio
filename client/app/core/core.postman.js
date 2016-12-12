@@ -57,7 +57,7 @@
             };
 
             function tattleTell(error) {
-                console.log("There was an error - here's the data: " + error);
+                console.log("ERROR IN POSTING!");
                 return error;
             };
 

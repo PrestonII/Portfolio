@@ -61,8 +61,6 @@
 }
 
 .summary:hover {
-    height: auto;
-    max-height: 500px;
     overflow-y: auto;
 }
 

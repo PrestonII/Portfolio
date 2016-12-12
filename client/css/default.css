@@ -1,4 +1,12 @@
-﻿.center-ver-hor {
+﻿#page {
+    padding: 20px;
+    height: 100vh;
+    max-height: 100%;
+
+    /*transition: background-color 2.5s ease-in-out;*/
+}
+
+.center-ver-hor {
     display: inline-block;
     vertical-align: middle;
 }

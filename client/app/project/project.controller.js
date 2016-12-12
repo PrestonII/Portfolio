@@ -32,17 +32,16 @@
             }
         };
 
+        vm.changeProject = changeProject;
+
         initialize();
 
         function initialize() {
             console.log('Loading Project Controller...');
-            
-            if (projects.length <= 1)
-                getProjects();
 
-            context.updatePage(vm.page);
-
-            vm.page.currentProject = pageHelper.changeProject(projects[0]);
+            //testing
+            //var page = $('#page');
+            //page.addClass('proj-simulacra');
 
             updatePage();
         }
@@ -54,14 +53,27 @@
             context.updatePage(vm.page);
 
             vm.page.currentProject = pageHelper.changeProject(projects[0]);
+
+            context.updatePageColor(vm.page.currentProject);
         }
 
         function changeProject(moveNext) {
+            var simulacra = {
+                colorCode : 'proj-simulacra'
+            };
+
+            var assemble = {
+                colorCode : 'proj-assemble'
+            };
+
+            var project = moveNext === simulacra.colorCode ? simulacra : assemble;
+            context.updatePageColor(project);
+
             // find position of current project
 
-            currentProject = moveNext
-                ? changeProject(projects[pos + 1])
-                : changeProject(projects[pos - 1]);
+            //currentProject = moveNext
+            //    ? changeProject(projects[pos + 1])
+            //    : changeProject(projects[pos - 1]);
         }
 
         function getProjects() {

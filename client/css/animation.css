@@ -1,26 +1,49 @@
 ﻿
 /* PROJECTS (specific colors for each page)
 ============================================================================= */
-.proj-simulacra      { background:#00D0BC; color:#00907c; }
-.proj-assemble       { background:#E59400; color:#a55400; }
-.proj-automateACAD   { background:#ffa6bb; color:#9e0000; }
+.slowFade-add, .slowFade-remove,
+.proj-simulacra-add, .proj-simulacra-remove,
+.proj-assemble-add, .proj-assemble-remove {
+    transition: all 1000ms linear;
+}
+
+.proj-simulacra,
+.proj-simulacra-add.proj-simulacra-active {
+     background-color:#00D0BC; 
+}
+.proj-assemble,
+.proj-assemble-add.proj-assemble-active {
+     background-color:#E59400; 
+}
+
+.proj-none,
+.proj-none-add.proj-none-active {
+     background-color:white; 
+}
+
+.proj-sample,
+.proj-sample-add.proj-sample-active {
+     background-color:white; 
+}
+
+/*.proj-automateACAD   { background:#ffa6bb; color:#9e0000; }
 .proj-nimble         { background:#ffa6bb; color:#9e0000; }
 .proj-greysmith      { background:#ffa6bb; color:#9e0000; }
 .proj-artasedu       { background:#ffa6bb; color:#9e0000; }
 .proj-gitit          { background:#303130; color:#7b7b7b; }
-.proj-portfolio      { background:#303130; color:#7b7b7b; }
+.proj-portfolio      { background:#303130; color:#7b7b7b; }*/
 
 /* ANIMATIONS
 ============================================================================= */
 
 .ng-enter {
-    animation: fadeIn 0.5s both ease-in; 
-    z-index: 8888;
+    animation: fadeIn 1s both ease-in; 
+    /*z-index: 8888;*/
 }
 
 .ng-leave {
-    animation: slideOutLeft 0.5s both ease-in; 
-    z-index: 9999;
+    animation: fadeOut .25s both linear; 
+    /*z-index: 9999;*/
 }
 
 
@@ -32,7 +55,7 @@
 
 /* leaving animations ----------------------------------------- */
 /* slide in from the bottom */
-@keyframes slideOutLeft {
+@keyframes fadeOut {
     to      { opacity: 0.0; }
 }
 

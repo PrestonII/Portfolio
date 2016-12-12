@@ -5,7 +5,7 @@
              class="title">
             <h2>{{ vm.page.currentProject.title}}</h2>
         </div>
-        <div id="summary-{{ vm.page.name}}"
+        <div id="summary-{{ vm.page.name }}"
              class="summary">
             <p>{{ vm.page.currentProject.summary }}</p>
         </div>
@@ -21,7 +21,9 @@
     
     <div id="project-navigation"
          class="col-xs-2 col-md-1 project-navigation">
-        <div id="next"><h2>></h2></div>
-        <div id="previous"><h2><</h2></div>
+        <div id="next"
+             ng-click="vm.changeProject('proj-simulacra')"><h2>></h2></div>
+        <div id="previous"
+             ng-click="vm.changeProject('proj-assemble')"><h2><</h2></div>
     </div>
 </div>

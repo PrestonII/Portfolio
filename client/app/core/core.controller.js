@@ -12,7 +12,8 @@
         var vm = this;
         vm.page = {
             name: '',
-            title: ''
+            title: '',
+            colorCode: ''
         }
         vm.toggleMenu = toggleMenu;
         vm.navigateTo = navigateTo;
@@ -21,6 +22,7 @@
 
         function initialize() {
             $root.$on('onPageUpdate', updatePage);
+            $root.$on('onPageUpdateColor', updatePageColor);
             console.log('Loading Core Controller...');
             console.log('Creating initial content...');
         }
@@ -34,6 +36,16 @@
             vm.page.title = current.title;
 
             console.log('Page was updated by a call from the "' + current.name + '" page');
+        }
+
+        function updatePageColor($scope, projectColorCode) {
+            var color = projectColorCode === undefined
+                ? 'proj-none'
+                : projectColorCode;
+
+            vm.page.colorCode = color;
+
+            console.log('Page color has been updated.');
         }
 
         function toggleMenu() {

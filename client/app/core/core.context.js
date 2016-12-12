@@ -15,9 +15,12 @@
         var service = {
             currentPage: {
                 name: 'Starting Up!',
-                title: 'Loading...'
+                title: 'Loading...',
+                pageColorCode: 'proj-none'
             },
-            updatePage: updatePage
+            updatePage: updatePage,
+            updatePageColor: updatePageColor,
+            resetPageColor: resetPageColor
         }
 
         return service;
@@ -34,6 +37,25 @@
 
             console.log('Page parameters updated');
             return service.currentPage;
+        }
+
+        function updatePageColor(project) {
+            if (project === null || project === undefined)
+                return service.currentPage.pageColor;
+
+            service.currentPage.pageColorCode = project.colorCode;
+
+            $root.$broadcast('onPageUpdateColor', service.currentPage.pageColorCode);
+
+            return service.currentPage.pageColorCode;
+        }
+
+        function resetPageColor() {
+            var none = {
+                colorCode: 'proj-none'
+            };
+
+            updatePageColor(none);
         }
     }
 })();

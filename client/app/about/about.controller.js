@@ -40,6 +40,7 @@
         function initialize() {
             console.log('Loading About Controller...');
 
+            context.resetPageColor();
             addContent();
             addTitle();
         }

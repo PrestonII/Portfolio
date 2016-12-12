@@ -1,4 +1,6 @@
-<div id="page">
+<div id="page"
+     ng-class="vm.page.colorCode">
+    
     <!--The Navigation Menu which appears after clicking the circle-->
     <div id="nav"
          class="center-ver-hor center-parent"
@@ -19,13 +21,14 @@
 
     </div>
 
-    <!--our main view-->
+    <!--OUR MAIN VIEW-->
     <div id="{{ vm.page.name }}"
          class="center-ver-hor center-parent"
          data-ng-view></div>
 
     <!--the little piece on the bottom-right-->
-    <div id="location">
+    <div id="location"
+         ng-class="slowFade">
         <h1 id="location-title"> {{ vm.page.name }} </h1>
     </div>
 </div>

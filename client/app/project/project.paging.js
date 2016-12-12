@@ -20,6 +20,7 @@
 
         var sample = {
             title: 'Sample Project Titles',
+            colorCode: 'proj-sample',
             backgroundcolor: {
                 "R": 255,
                 "G": 255,
@@ -63,6 +64,22 @@
                 project = sample;
 
             // more stuff to do here
+            //var pageJQ = $('#Works');
+            //pageJQ.css('background-color', 'aqua');
+
+            //var page = angular.element(document.querySelector('html'));
+            var page = $('html');
+            //page.fadeIn(1500,
+            //        function () {
+            //            $(this).css('background-color', 'aqua');
+            //        });
+
+            //page.queue(function() {
+            //    //page.css('background-color', 'aqua').fadeIn(500);
+                
+            //});
+
+            
 
             service.currentProject = project;
 
