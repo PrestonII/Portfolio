@@ -26,6 +26,11 @@
      background-color:white; 
 }
 
+.slowFade,
+.slowFade-add.slowFade-active {
+    animation: fadeIn 1s both ease-in;
+}
+
 /*.proj-automateACAD   { background:#ffa6bb; color:#9e0000; }
 .proj-nimble         { background:#ffa6bb; color:#9e0000; }
 .proj-greysmith      { background:#ffa6bb; color:#9e0000; }

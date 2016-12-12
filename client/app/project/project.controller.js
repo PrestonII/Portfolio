@@ -17,6 +17,7 @@
         vm.page = {
             name: 'Works',
             title: '',
+            transition: 'slowFade',
             projects: {
                 currentProject: {
                     title: '',

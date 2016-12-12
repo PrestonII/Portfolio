@@ -7,16 +7,7 @@
 
     {
       "title": "Nimble",
-      "background-color": {
-        "R": 241,
-        "G": 90,
-        "B": 36
-      },
-      "text-color": {
-        "R": 48,
-        "G": 49,
-        "B": 48
-      },
+      "colorCode": "proj-nimble",
       "summary": "This is a project I've been thinking about for a long while.",
       "tags": [ ".NET", "Javascript" ],
       "images": [
@@ -32,17 +23,42 @@
     },
 
     {
+      "title": "Simulacra",
+      "colorCode": "proj-simulacra",
+      "summary": "Database normalization and join efficiencies weren't necessarily in my vocabulary before this project",
+      "tags": [ ".NET", "Javascript, SQL" ],
+      "images": [
+        {
+          "location": "../images/thing.jpg",
+          "caption": "Image of a thing"
+        },
+        {
+          "location": "../images/thing2.jpg",
+          "caption": "Image of another thing"
+        }
+      ]
+    },
+
+    {
+      "title": [ "Feature/", "\n", " Lines" ],
+      "colorCode": "proj-assemble",
+      "summary": "One of my first experiments with both WebGL and intense client side Javascript.",
+      "tags": [ ".NET", "Javascript, WebGL" ],
+      "images": [
+        {
+          "location": "../images/thing.jpg",
+          "caption": "Image of a thing"
+        },
+        {
+          "location": "../images/thing2.jpg",
+          "caption": "Image of another thing"
+        }
+      ]
+    },
+
+    {
       "title": "Sample Project Titles",
-      "background-color": {
-        "R": 255,
-        "G": 255,
-        "B": 255
-      },
-      "text-color": {
-        "R": 48,
-        "G": 49,
-        "B": 48
-      },
+      "colorCode": "proj-sample",
       "summary": [
         "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
         "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
