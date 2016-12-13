@@ -9,21 +9,58 @@
 
 .proj-simulacra,
 .proj-simulacra-add.proj-simulacra-active {
-     background-color:#00D0BC; 
+     background-color: #303130; 
+     color: white;
 }
 .proj-assemble,
 .proj-assemble-add.proj-assemble-active {
-     background-color:#E59400; 
+    background-color: rgb(255, 212, 84);
+    color: #303130; 
+}
+
+.proj-nimble,
+.proj-nimble-add.proj-nimble-active {
+    background-color: rgb(241, 90, 36);
+    color: #303130;
+}
+
+.proj-acad,
+.proj-acad-add.proj-acad-active {
+    background-color: rgb(122, 26, 89);
+    color: white;
+}
+
+.proj-greysmith,
+.proj-greysmith-add.proj-greysmith-active {
+    background-color: rgb(23, 177, 188);
+    color: #303130; 
+}
+.proj-artasedu,
+.proj-artasedu-add.proj-artasedu-active {
+    background-color:white;
+    color: #303130; 
+}
+.proj-gitit,
+.proj-gitit-add.proj-gitit-active {
+    background-color: rgb(254, 90, 107);
+    color: #303130; 
+}
+.proj-portfolio,
+.proj-portfolio-add.proj-portfolio-active {
+    background-color: #7b7b7b;;
+    color: #303130; 
 }
 
 .proj-none,
 .proj-none-add.proj-none-active {
      background-color:white; 
+     color: #303130; 
 }
 
 .proj-sample,
 .proj-sample-add.proj-sample-active {
      background-color:white; 
+     color: #303130; 
 }
 
 .slowFade,
@@ -31,12 +68,7 @@
     animation: fadeIn 1s both ease-in;
 }
 
-/*.proj-automateACAD   { background:#ffa6bb; color:#9e0000; }
-.proj-nimble         { background:#ffa6bb; color:#9e0000; }
-.proj-greysmith      { background:#ffa6bb; color:#9e0000; }
-.proj-artasedu       { background:#ffa6bb; color:#9e0000; }
-.proj-gitit          { background:#303130; color:#7b7b7b; }
-.proj-portfolio      { background:#303130; color:#7b7b7b; }*/
+/*color:#9e0000;*/
 
 /* ANIMATIONS
 ============================================================================= */

@@ -49,12 +49,14 @@
                 },
             },
             {
-                title: 'Simulacra Sample',
-                colorCode: 'proj-simulacra'
+                title: 'Simulacra',
+                colorCode: 'proj-simulacra',
+                summary: 'Testing to see how text looks in WHITE'
             },
             {
-                title: 'Assemble Sample',
-                colorCode: 'proj-assemble'
+                title: 'Feature/' + '\n' + 'Lines',
+                colorCode: 'proj-assemble',
+                summary: 'Testing to see how text looks in GREY'
             },
         ];
 

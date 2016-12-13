@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.home')
+        .module('app.movie')
         .controller("homeController", homeController);
 
     console.log('Inject the scope');

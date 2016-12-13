@@ -42,13 +42,12 @@
         }
 
         function updatePage() {
-            if (projects.length <= 1)
+            if (projects.length <= 1) {
                 getProjects();
+            }
 
             context.updatePage(vm.page);
-
             vm.page.currentProject = pageHelper.changeProject(projects[0]);
-
             context.updatePageColor(vm.page.currentProject);
         }
 
@@ -60,7 +59,7 @@
                         ? (pos + 1)
                         : (pos - 1);
 
-            if (i > projects.length || i < 0) {
+            if (i >= projects.length || i < 0) {
                 console.log('Reached end of projects');
                 return;
             }

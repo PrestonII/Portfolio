@@ -52,6 +52,8 @@
 }
 
 #navigator {
+    margin-right: 10px;
+    
     position: relative;
     z-index: 100;
     width: 75px;
@@ -64,6 +66,11 @@
     transition: all ease-in-out .5s;
 }
 
+#name {
+    margin-right: 10px;
+    padding-right: 0;
+}
+
 #navigator:hover {
     background: #FE5658;
 }
@@ -73,6 +80,8 @@
     background-color: rgba(255, 255, 255, .8);
     position: absolute;
     z-index: 100;
+
+    padding-right: 20px;
 
     top: 0;
     left: 0;
@@ -95,9 +104,9 @@
     color: #303030;
 }
 
-#name {
+/*#name {
     padding-right: 20px;
-}
+}*/
 
 
 
