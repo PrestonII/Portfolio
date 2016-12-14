@@ -47,11 +47,13 @@
     <Compile Include="client\app\directives\directive-body.js" />
     <Compile Include="client\app\directives\directive-nav.js" />
     <Compile Include="client\app\directives\directive-navigable.js" />
+    <Compile Include="client\app\example\users.js" />
     <Compile Include="client\app\movie\movie.controller.js" />
     <Compile Include="client\app\movie\movie.module.js" />
     <Compile Include="client\app\project\project.controller.js" />
     <Compile Include="client\app\project\project.module.js" />
     <Compile Include="client\app\project\project.paging.js" />
+    <Compile Include="karma.conf.js" />
     <Compile Include="public\libs\angular-animate\angular-animate.js" />
     <Compile Include="public\libs\angular-animate\angular-animate.min.js" />
     <Compile Include="public\libs\angular-animate\index.js" />
@@ -202,9 +204,11 @@
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
     <Compile Include="server\bin\www" />
-    <Compile Include="tests\UnitTest.js">
+    <Compile Include="tests\examples.spec.js">
       <TestFramework>Mocha</TestFramework>
     </Compile>
+    <Compile Include="tests\jasmine.spec.js" />
+    <Compile Include="tests\users.spec.js" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include="client\app\about\about.view.html" />
@@ -452,11 +456,15 @@
     <Folder Include="client\app\core\" />
     <Folder Include="client\app\directives\" />
     <Folder Include="client\app\movie\" />
+    <Folder Include="client\app\example\" />
     <Folder Include="client\app\project\" />
     <Folder Include="client\css\" />
     <Folder Include="client\templates\" />
+    <Folder Include="public\" />
+    <Folder Include="public\libs\" />
     <Folder Include="public\libs\angular-animate\" />
     <Folder Include="public\libs\angular-route\" />
+    <Folder Include="public\libs\angular\" />
     <Folder Include="public\libs\animate-css\" />
     <Folder Include="public\libs\animate-css\source\" />
     <Folder Include="public\libs\animate-css\source\attention_seekers\" />
@@ -518,6 +526,8 @@
     <Folder Include="server\" />
     <Folder Include="server\data\" />
     <Folder Include="tests\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\debug\" />
     <Folder Include="typings\globals\express\" />
     <Folder Include="typings\globals\jade\" />
