@@ -1,4 +1,6 @@
-﻿(function () {
+﻿///<reference path="project.paging.js" />
+
+(function () {
     'use strict';
 
     angular
@@ -45,7 +47,7 @@
             if (projects.length <= 1) {
                 getProjects();
             }
-
+            
             context.updatePage(vm.page);
             vm.page.currentProject = pageHelper.changeProject(projects[0]);
             context.updatePageColor(vm.page.currentProject);

@@ -1,5 +1,4 @@
 ﻿/// <chutzpah_reference path="../node_modules/angular/angular.js" />
-/// <chutzpah_reference path="../node_modules/angular-route/angular-route.min.js" />
 /// <chutzpah_reference path="../node_modules/angular-mocks/angular-mocks.js" />
 /// <chutzpah_reference path="../client/app/example/users.js" />
 
