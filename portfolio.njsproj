@@ -211,6 +211,7 @@
     <Compile Include="tests\users.spec.js" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="chutzpah.json" />
     <Content Include="client\app\about\about.view.html" />
     <Content Include="client\app\movie\movie.view.html" />
     <Content Include="client\app\movie\testhome.html" />

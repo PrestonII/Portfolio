@@ -1,6 +1,6 @@
 ﻿
 //Test suite
-describe('Jasmine Example Tests', function () {
+describe('Example of Jasmine testing that', function () {
 
     //Setup
     beforeEach(function () {
