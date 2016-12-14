@@ -65,6 +65,7 @@
   <ItemGroup>
     <Content Include="client\app\about\about.controller.js" />
     <Content Include="client\app\about\about.module.js" />
+    <Content Include="client\app\about\about.spec.js" />
     <Content Include="client\app\core\core.context.js" />
     <Content Include="client\app\core\core.controller.js" />
     <Content Include="client\app\app.module.js" />
@@ -476,7 +477,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="tests\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

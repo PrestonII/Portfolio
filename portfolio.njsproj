@@ -33,6 +33,25 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="client\app\about\about.controller.js" />
+    <Compile Include="client\app\about\about.module.js" />
+    <Compile Include="client\app\about\about.spec.js" />
+    <Compile Include="client\app\app.module.js" />
+    <Compile Include="client\app\app.router.js" />
+    <Compile Include="client\app\core\core.context.js" />
+    <Compile Include="client\app\core\core.controller.js" />
+    <Compile Include="client\app\core\core.module.js" />
+    <Compile Include="client\app\core\core.navigator.js" />
+    <Compile Include="client\app\core\core.postman.js" />
+    <Compile Include="client\app\core\core.server.js" />
+    <Compile Include="client\app\directives\directive-body.js" />
+    <Compile Include="client\app\directives\directive-nav.js" />
+    <Compile Include="client\app\directives\directive-navigable.js" />
+    <Compile Include="client\app\movie\movie.controller.js" />
+    <Compile Include="client\app\movie\movie.module.js" />
+    <Compile Include="client\app\project\project.controller.js" />
+    <Compile Include="client\app\project\project.module.js" />
+    <Compile Include="client\app\project\project.paging.js" />
     <Compile Include="public\libs\angular-animate\angular-animate.js" />
     <Compile Include="public\libs\angular-animate\angular-animate.min.js" />
     <Compile Include="public\libs\angular-animate\index.js" />
@@ -186,7 +205,19 @@
     <Compile Include="server\tests\UnitTest.js">
       <TestFramework>Mocha</TestFramework>
     </Compile>
+    <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="client\app\about\about.view.html" />
+    <Content Include="client\app\movie\movie.view.html" />
+    <Content Include="client\app\movie\testhome.html" />
+    <Content Include="client\app\project\project.view.html" />
+    <Content Include="client\css\animation.css" />
+    <Content Include="client\css\default.css" />
+    <Content Include="client\css\global.css" />
+    <Content Include="client\css\works.css" />
+    <Content Include="client\templates\body.html" />
+    <Content Include="client\templates\nav.html" />
+    <Content Include="index.html" />
     <Content Include="public\libs\angular-animate\.bower.json" />
     <Content Include="public\libs\angular-animate\angular-animate.min.js.map" />
     <Content Include="public\libs\angular-animate\bower.json" />
@@ -199,7 +230,6 @@
     <Content Include="public\libs\angular-route\LICENSE.md" />
     <Content Include="public\libs\angular-route\package.json" />
     <Content Include="public\libs\angular-route\README.md" />
-    <Content Include="public\libs\angular\.bower.json" />
     <Content Include="public\libs\angular\angular-csp.css" />
     <Content Include="public\libs\angular\angular.min.js.gzip" />
     <Content Include="public\libs\angular\angular.min.js.map" />
@@ -413,13 +443,20 @@
     <Content Include="README.md" />
     <Content Include="package.json" />
     <Content Include="server\data\projects.json" />
+    <Content Include="typings.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="public\" />
-    <Folder Include="public\libs\" />
+    <Folder Include="client\" />
+    <Folder Include="client\app\" />
+    <Folder Include="client\app\about\" />
+    <Folder Include="client\app\core\" />
+    <Folder Include="client\app\directives\" />
+    <Folder Include="client\app\movie\" />
+    <Folder Include="client\app\project\" />
+    <Folder Include="client\css\" />
+    <Folder Include="client\templates\" />
     <Folder Include="public\libs\angular-animate\" />
     <Folder Include="public\libs\angular-route\" />
-    <Folder Include="public\libs\angular\" />
     <Folder Include="public\libs\animate-css\" />
     <Folder Include="public\libs\animate-css\source\" />
     <Folder Include="public\libs\animate-css\source\attention_seekers\" />
@@ -481,9 +518,7 @@
     <Folder Include="server\" />
     <Folder Include="server\data\" />
     <Folder Include="server\tests\" />
-    <Folder Include="typings\" />
-    <Folder Include="typings\globals\" />
-    <Folder Include="typings\globals\cookie-parser\" />
+    <Folder Include="tests\" />
     <Folder Include="typings\globals\debug\" />
     <Folder Include="typings\globals\express\" />
     <Folder Include="typings\globals\jade\" />
@@ -496,7 +531,6 @@
     <Folder Include="typings\globals\stylus\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />

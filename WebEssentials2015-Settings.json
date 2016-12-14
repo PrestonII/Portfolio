@@ -23,7 +23,7 @@
   "General": {
     "AllMessagesToOutputWindow": true,
     "KeepImportantComments": true,
-    "ShowLogoWatermark": false,
+    "ShowLogoWatermark": true,
     "SvgPreviewPane": true
   },
   "Html": {
