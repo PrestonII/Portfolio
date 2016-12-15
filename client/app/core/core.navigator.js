@@ -3,7 +3,7 @@
 
     angular
         .module('app.core')
-        .factory("navigator", navigator);
+        .factory('navigator', navigator);
 
     navigator.$inject = ['$http', '$location', '$timeout'];
 

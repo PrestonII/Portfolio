@@ -34,13 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="client\app\about\about.controller.js" />
-    <Compile Include="client\app\about\about.module.js" />
-    <Compile Include="client\app\about\about.spec.js" />
+    <Compile Include="client\app\about\about.app.js" />
     <Compile Include="client\app\app.module.js" />
     <Compile Include="client\app\app.router.js" />
     <Compile Include="client\app\core\core.context.js" />
     <Compile Include="client\app\core\core.controller.js" />
-    <Compile Include="client\app\core\core.module.js" />
+    <Compile Include="client\app\core\core.app.js" />
     <Compile Include="client\app\core\core.navigator.js" />
     <Compile Include="client\app\core\core.postman.js" />
     <Compile Include="client\app\core\core.server.js" />
@@ -49,9 +48,9 @@
     <Compile Include="client\app\directives\directive-navigable.js" />
     <Compile Include="client\app\example\users.js" />
     <Compile Include="client\app\movie\movie.controller.js" />
-    <Compile Include="client\app\movie\movie.module.js" />
+    <Compile Include="client\app\movie\movie.app.js" />
     <Compile Include="client\app\project\project.controller.js" />
-    <Compile Include="client\app\project\project.module.js" />
+    <Compile Include="client\app\project\project.app.js" />
     <Compile Include="client\app\project\project.paging.js" />
     <Compile Include="karma.conf.js" />
     <Compile Include="server\app\models\page.js" />
