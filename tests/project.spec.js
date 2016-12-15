@@ -1,21 +1,33 @@
-﻿/// <chutzpah_reference path="../node_modules/angular/angular.min.js" />
-/// <chutzpah_reference path="../node_modules/angular-route/angular-route.min.js" />
-/// <chutzpah_reference path="../node_modules/angular-mocks/angular-mocks.js" />
-/// <chutzpah_reference path="../client/app/core/core.module.js" />
-/// <chutzpah_reference path="../client/app/project/project.module.js" />
-/// <chutzpah_reference path="../client/app/project/project.paging.js" />
-/// <chutzpah_reference path="../client/app/project/project.controller.js" />
-
+﻿
 describe('Project Module', function () {
     var $controller, projectController;
 
     // Before each test load our api.users module
+    beforeEach(angular.mock.module('app.core'));
     beforeEach(angular.mock.module('app.project'));
 
     // Before each test set our injected Users factory (_Users_) to our local Users variable
-    beforeEach(inject(function (_$controller_) {
+    beforeEach(inject(function(_$controller_, _context_, _server_, _postman_, _pagingService_) {
         $controller = _$controller_;
-        projectController = $controller('projectController', {});
+        var $scope = {};
+        var $location = {};
+        var navigator = {};
+        var context = _context_;
+        var server = _server_;
+        var $http = {};
+        var postman = _postman_;
+        var pagingService = _pagingService_;
+        projectController = $controller('projectController',
+        {
+            $scope : $scope,
+            $location : $location,
+            navigator : navigator,
+            context : context,
+            server : server,
+            $http : $http,
+            postman : postman,
+            pagingService : pagingService
+        });
     }));
 
     // A simple test to verify the Project Controller exists
