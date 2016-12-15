@@ -4,7 +4,6 @@
   "description": "Preston's preliminary project database. Try saying that 3 times fast :)",
   "type": "object",
   "data": [
-
     {
       "title": "Nimble",
       "colorCode": "proj-nimble",
@@ -12,11 +11,11 @@
       "tags": [ ".NET", "Javascript" ],
       "images": [
         {
-          "location": "../images/thing.jpg",
+          "location": "./images/nimble/web1.jpg",
           "caption": "Image of a thing"
         },
         {
-          "location": "../images/thing2.jpg",
+          "location": "./images/nimble/web2.jpg",
           "caption": "Image of another thing"
         }
       ]
