@@ -12,7 +12,6 @@
     function projectController($scope, $location, context, Server, $http, postman, pagingService) {
         /* jshint validthis:true */
         var vm = this;
-        var projects = [];
         var projectServer = new Server('projects');
         var pageHelper = pagingService;
 
@@ -20,21 +19,12 @@
             name: 'Works',
             title: '',
             transition: 'slowFade',
-            projects: {
-                currentProject: {
-                    title: '',
-                    summary: '',
-                    currentContent: {
-                        currentItem: {
-                            image: '',
-                            caption: ''
-                        }
-                    }
-                }
-            }
+            projects: []
         };
 
         vm.changeProject = changeProject;
+        vm.updatePage = updatePage;
+        vm.getProjects = getProjects;
 
         initialize();
 
@@ -44,31 +34,31 @@
         }
 
         function updatePage() {
-            if (projects.length <= 1) {
+            if (vm.page.projects.length <= 1) {
                 getProjects();
             }
             
             context.updatePage(vm.page);
-            vm.page.currentProject = pageHelper.changeProject(projects[0]);
+            vm.page.currentProject = pageHelper.changeProject(vm.page.projects[0]);
             context.updatePageColor(vm.page.currentProject);
         }
 
         function changeProject(direction) {
 
             // find position of current project
-            var pos = projects.indexOf(vm.page.currentProject);
+            var pos = vm.page.projects.indexOf(vm.page.currentProject);
             var i = direction === 'next'
                         ? (pos + 1)
                         : (pos - 1);
 
-            if (i >= projects.length || i < 0) {
+            if (i >= vm.page.projects.length || i < 0) {
                 console.log('Reached end of projects');
                 return;
             }
 
-            var newProj = pageHelper.changeProject(projects[i]);
+            var newProj = pageHelper.changeProject(vm.page.projects[i]);
             vm.page.currentProject = newProj;
-            context.updatePageColor(projects[i]);
+            context.updatePageColor(vm.page.projects[i]);
         }
 
         function getProjects() {
@@ -87,10 +77,10 @@
                 console.log('Updating page...');
 
                 if (dbprojects !== undefined && dbprojects !== null) {
-                    projects = dbprojects;
+                    vm.page.projects = dbprojects;
 
                     if (dbprojects.length > 0 && (vm.page.projects.currentProject.title === 'Sample Project Titles' || vm.page.projects.currentProject.title === ''))
-                        vm.page.currentProject = projects[0];
+                        vm.page.currentProject = vm.page.projects[0];
                 }
 
                 console.log('Done.');

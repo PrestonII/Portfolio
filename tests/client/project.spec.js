@@ -1,15 +1,16 @@
 ﻿
 describe('Project controller', function () {
-    var $controller, projectController;
+    var $controller, projectController, $rootScope;
 
     // Before each test load our api.users module
     beforeEach(angular.mock.module('app.core'));
     beforeEach(angular.mock.module('app.project'));
 
     // Before each test set our injected Users factory (_Users_) to our local Users variable
-    beforeEach(inject(function(_$controller_, _context_, _server_, _postman_, _pagingService_) {
+    beforeEach(inject(function(_$controller_, _$rootScope_, _context_, _server_, _postman_, _pagingService_) {
         $controller = _$controller_;
-        var $scope = {};
+        $rootScope = _$rootScope_;
+        var $scope = $rootScope.$new();
         var $location = {};
         var context = _context_;
         var server = _server_;
@@ -33,25 +34,21 @@ describe('Project controller', function () {
         expect(projectController).toBeDefined();
     });
 
-    //// A simple test to verify the Users factory exists
-    //it('should not NOT exist', function () {
-    //    expect(Users).not.toBeUndefined();
-    //});
+    // A simple test to verify the method all exists
+    it('should have projects',
+        function () {
+            expect(projectController.page.projects).toBeDefined();
+        });
 
-    //// A set of tests for our Users.all() method
-    //describe('.all()',
-    //    function() {
-    //        // A simple test to verify the method all exists
-    //        it('should exist',
-    //            function() {
-    //                expect(Users.all).toBeDefined();
-    //            });
-
-    //        // A test to verify that calling all() returns the array of users we hard-coded above
-    //        it('should return a hard-coded list of users', function () {
-    //            expect(Users.all()).toEqual(userList);
-    //        });
-    //    });
+    // A set of tests for our Project.getProjects() method
+    describe('.getProjects()',
+        function() {
+            // A simple test to verify the method all exists
+            it('should exist',
+                function () {
+                    expect(projectController.getProjects).toBeDefined();
+                });
+        });
 
     //// A set of tests for our Users.findById() method
     //describe('.findById()', function () {

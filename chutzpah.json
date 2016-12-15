@@ -17,10 +17,6 @@
       "Path": "node_modules/angular-mocks/angular-mocks.js",
       "IsTestFrameworkFile": true
     },
-    {
-      "Path": "node_modules/karma-browserify/index.js",
-      "IsTestFrameworkFile": true
-    },
 
     { "Path": "client/app/core/core.app.js" },
     {

@@ -91,8 +91,11 @@
             if(check.length > 0 && check[0].innerHTML)
                 check = check[0].innerHTML;
 
-            if(check.includes("."))
-                check = check.replace(".", "");
+            if (check.includes) {
+                if (check.includes(".")) {
+                    check = check.replace(".", "");
+                }
+            }
 
             if (routes.some(hasEntry)) {
                 for (var x in routes) {
@@ -106,10 +109,10 @@
             }
 
             throw new TypeError(check + " doesn't exist in our routes");
-        }
 
-        function hasEntry(entry) {
-            return points.id === entry;
+            function hasEntry(items) {
+                return items.id === check;
+            }
         }
     }
 })();

@@ -37,6 +37,7 @@
     <Compile Include="client\app\about\about.app.js" />
     <Compile Include="client\app\app.module.js" />
     <Compile Include="client\app\app.router.js" />
+    <Compile Include="client\app\core\core.processor.js" />
     <Compile Include="client\app\core\core.context.js" />
     <Compile Include="client\app\core\core.controller.js" />
     <Compile Include="client\app\core\core.app.js" />
@@ -66,12 +67,14 @@
     <Compile Include="tests\client\context.spec.js" />
     <Compile Include="tests\client\postman.spec.js" />
     <Compile Include="tests\client\navigator.spec.js" />
+    <Compile Include="tests\client\processor.spec.js" />
     <Compile Include="tests\client\server.spec.js" />
     <Compile Include="tests\client\jasmine.spec.js" />
     <Compile Include="tests\client\project.spec.js" />
     <Compile Include="tests\client\users.spec.js" />
     <Compile Include="tests\server\mocha.spec.js">
-      <TestFramework>Mocha</TestFramework>
+      <TestFramework>
+      </TestFramework>
     </Compile>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
