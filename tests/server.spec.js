@@ -5,7 +5,7 @@
 /// <chutzpah_reference path="../client/app/core/core.postman.js" />
 /// <chutzpah_reference path="../client/app/core/core.server.js" />
 
-describe('Core Module', function () {
+describe('Server', function () {
     var Core;
 
     // Before each test load our api.users module
@@ -18,15 +18,27 @@ describe('Core Module', function () {
         Core = new _server_('testing');
     }));
 
-    // A simple test to verify the Project Controller exists
-    it('should exist', function () {
-        expect(Core).toBeDefined();
-    });
+    describe('on creation',
+        function() {
+            // A simple test to verify the Project Controller exists
+            it('should exist',
+                function() {
+                    expect(Core).toBeDefined();
+                });
 
-    // A simple test to verify the Users factory exists
-    it('should not be undefined', function () {
-        expect(Core).not.toBeUndefined();
-    });
+            // A simple test to verify the Users factory exists
+            it('should not be undefined',
+                function() {
+                    expect(Core).not.toBeUndefined();
+                });
+
+            // A simple test to verify the method all exists
+            it('should be named "testing"',
+                function () {
+                    expect(Core.serverType).toBeDefined();
+                    expect(Core.serverType).toBe('testing');
+                });
+        });
 
     // A set of tests for our Users.all() method
     describe('.getObjects()',
@@ -36,6 +48,9 @@ describe('Core Module', function () {
                 function() {
                     expect(Core.getObjects).toBeDefined();
                 });
+
+
+
 
             //// A test to verify that calling all() returns the array of users we hard-coded above
             //it('should return a hard-coded list of users', function () {

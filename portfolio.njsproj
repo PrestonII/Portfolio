@@ -64,7 +64,8 @@
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
     <Compile Include="server\bin\www" />
-    <Compile Include="tests\core.spec.js" />
+    <Compile Include="tests\postman.spec.js" />
+    <Compile Include="tests\server.spec.js" />
     <Compile Include="tests\examples.spec.js">
       <TestFramework>Mocha</TestFramework>
     </Compile>
