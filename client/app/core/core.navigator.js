@@ -1,16 +1,19 @@
-(function() {
+(function () {
+
     'use strict';
 
     angular
         .module('app.core')
         .factory('navigator', navigator);
 
-    navigator.$inject = ['$http', '$location', '$timeout'];
+    navigator.$inject = ['$http', '$location'];
 
-    function navigator($http, $location, $timeout) {
+    function navigator($http, $location) {
+
         console.log('Creating navigator');
 
-        var points = [
+        var points =
+        [
             {
                 id: 'Home',
                 name: 'Start',
@@ -91,7 +94,7 @@
             if(check.includes("."))
                 check = check.replace(".", "");
 
-            if (routes.some(entry => entry.id === check)) {
+            if (routes.some(hasEntry)) {
                 for (var x in routes) {
                     if (routes.hasOwnProperty(x)) {
                         var item = routes[x];
@@ -105,29 +108,8 @@
             throw new TypeError(check + " doesn't exist in our routes");
         }
 
-        function scrollPage(id) {
-
-            $timeout(callAfterRenderingCompletes(function () {
-                var idSelector = $("#" + id);
-
-                if (!idSelector.offset()) {
-                    console.log("Element doesn't exist yet");
-                }
-
-                $('body').animate({ scrollTop: idSelector.offset().top - 150 }, "slow");
-            }), 0);
-        }
-
-        function callAfterRenderingCompletes(func) {
-            if (typeof func !== 'function')
-                throw new TypeError(func + ' is not a function');
-
-            if ($http.pendingRequests.length > 0) {
-                console.log('waiting to rendering to complete');
-                $timeout(callAfterRenderingCompletes, 0);
-            } else {
-                func();
-            }
+        function hasEntry(entry) {
+            return points.id === entry;
         }
     }
 })();
