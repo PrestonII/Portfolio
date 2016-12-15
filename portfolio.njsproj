@@ -63,13 +63,16 @@
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
     <Compile Include="server\bin\www" />
-    <Compile Include="tests\context.spec.js" />
-    <Compile Include="tests\postman.spec.js" />
-    <Compile Include="tests\navigator.spec.js" />
-    <Compile Include="tests\server.spec.js" />
-    <Compile Include="tests\jasmine.spec.js" />
-    <Compile Include="tests\project.spec.js" />
-    <Compile Include="tests\users.spec.js" />
+    <Compile Include="tests\client\context.spec.js" />
+    <Compile Include="tests\client\postman.spec.js" />
+    <Compile Include="tests\client\navigator.spec.js" />
+    <Compile Include="tests\client\server.spec.js" />
+    <Compile Include="tests\client\jasmine.spec.js" />
+    <Compile Include="tests\client\project.spec.js" />
+    <Compile Include="tests\client\users.spec.js" />
+    <Compile Include="tests\server\mocha.spec.js">
+      <TestFramework>Mocha</TestFramework>
+    </Compile>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include="chutzpah.json" />
@@ -119,6 +122,8 @@
     <Folder Include="server\data\images\" />
     <Folder Include="server\data\images\nimble\" />
     <Folder Include="tests\" />
+    <Folder Include="tests\client\" />
+    <Folder Include="tests\server\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

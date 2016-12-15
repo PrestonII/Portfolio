@@ -48,17 +48,17 @@ process.on('uncaughtException', function (err) {
     console.log('This exception occured: ' + err);
 });
 
-process.on('SIGKILL', function (err) {
-    console.log('When SIGKILL occurs, will shutdown');
-    console.log('This exception occured: ' + err);
-    app.close();
-});
+//process.on('SIGKILL', function (err) {
+//    console.log('When SIGKILL occurs, will shutdown');
+//    console.log('This exception occured: ' + err);
+//    app.close();
+//});
 
-process.on('SIGTERM', function (err) {
-    console.log('When SIGTERM occurs, will shutdown');
-    console.log('This exception occured: ' + err);
-    app.close();
-});
+//process.on('SIGTERM', function (err) {
+//    console.log('When SIGTERM occurs, will shutdown');
+//    console.log('This exception occured: ' + err);
+//    app.close();
+//});
 
 module.exports = app;
 

@@ -1,5 +1,5 @@
 ﻿
-describe('Project Module', function () {
+describe('Project controller', function () {
     var $controller, projectController;
 
     // Before each test load our api.users module
@@ -11,7 +11,6 @@ describe('Project Module', function () {
         $controller = _$controller_;
         var $scope = {};
         var $location = {};
-        var navigator = {};
         var context = _context_;
         var server = _server_;
         var $http = {};
@@ -21,7 +20,6 @@ describe('Project Module', function () {
         {
             $scope : $scope,
             $location : $location,
-            navigator : navigator,
             context : context,
             server : server,
             $http : $http,

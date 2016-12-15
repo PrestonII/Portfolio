@@ -7,9 +7,9 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['$scope','$location', 'navigator', 'context', 'server', '$http', 'postman', 'pagingService']; 
+    projectController.$inject = ['$scope','$location', 'context', 'server', '$http', 'postman', 'pagingService']; 
 
-    function projectController($scope, $location, navigator, context, Server, $http, postman, pagingService) {
+    function projectController($scope, $location, context, Server, $http, postman, pagingService) {
         /* jshint validthis:true */
         var vm = this;
         var projects = [];
