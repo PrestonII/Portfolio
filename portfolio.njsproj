@@ -15,7 +15,7 @@
     <ProjectGuid>eeaf4f15-5033-4bdf-8ac0-d611e073c768</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>server\bin\www</StartupFile>
+    <StartupFile>server\www</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -63,7 +63,7 @@
     <Compile Include="server\app\routers\movieRouter.js" />
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
-    <Compile Include="server\bin\www" />
+    <Compile Include="server\www" />
     <Compile Include="tests\client\context.spec.js" />
     <Compile Include="tests\client\postman.spec.js" />
     <Compile Include="tests\client\navigator.spec.js" />
