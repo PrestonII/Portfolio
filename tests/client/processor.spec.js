@@ -36,10 +36,10 @@
             // A simple test to verify the method all exists
             it('should convert "Feature/ \n Lines" to "Feature/ Lines"',
                 function () {
-                    var title = ["Feature/", "\n", " Lines"];
+                    var title = ["Feature/", "\n", "Lines"];
 
                     var processed = processor.sanitize(title);
-                    var expectation = "Feature/ Lines";
+                    var expectation = "Feature/</br>Lines";
 
                     expect(processed).toEqual(expectation);
                 });
@@ -68,16 +68,16 @@
 
     // A set of tests for our processor.convertArray() method
     describe('.hasEscapes()',
-        function () {
+        function() {
             // A simple test to verify the method all exists
             it('should exist',
-                function () {
+                function() {
                     expect(processor.hasEscapes).toBeDefined();
                 });
 
             // A simple test to verify the method all exists
             it('should say that "Feature/ \n Lines" contains escapes',
-                function () {
+                function() {
                     //var title = ["Feature/", "\n", " Lines"];
                     var item = "Feature/\n Lines";
 
@@ -85,5 +85,28 @@
 
                     expect(answer).toBe(true);
                 });
-        })
+        });
+
+    // A set of tests for our processor.convertArray() method
+    describe('.convertEscapeSequences()',
+        function () {
+            // A simple test to verify the method all exists
+            it('should exist',
+                function () {
+                    expect(processor.convertEscapeSequences).toBeDefined();
+                });
+
+            // A simple test to verify the method all exists
+            it('should change \n to </br>',
+                function () {
+                    //var title = ["Feature/", "\n", " Lines"];
+                    var item = "Feature/\nLines";
+                    var expectation = "Feature/</br>Lines";
+
+                    var processed = processor.convertEscapeSequences(item);
+
+                    expect(expectation).toEqual(processed);
+                });
+        });
+
 });

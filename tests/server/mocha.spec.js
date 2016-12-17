@@ -1,7 +1,8 @@
 ﻿﻿var assert = require('assert');
 ﻿var app = require('../../server/server.js');
 
-describe('Example Mocha Test: ', function() {
+describe('Example Mocha Test: ', function () {
+
 
     it('Purposeful Pass', function() {
             assert.ok(true, "This shouldn't fail");
@@ -10,11 +11,14 @@ describe('Example Mocha Test: ', function() {
     it('Checking If I Can Find Server Files',
         function() {
             assert.ok(app !== undefined, "Server is defined");
+            //expect(app).toBeDefined();
         });
 
     it('Adding third test',
         function () {
             assert.ok(app !== undefined, "Server is defined");
         });
+
+
 
 });

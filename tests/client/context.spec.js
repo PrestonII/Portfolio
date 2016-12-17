@@ -1,4 +1,5 @@
-﻿describe('Context', function () {
+﻿
+describe('Context', function () {
     var Context;
 
     // Before each test load our api.users module

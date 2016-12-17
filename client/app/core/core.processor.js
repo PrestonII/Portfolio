@@ -10,31 +10,31 @@
 
         console.log('Creating data processor');
 
-        var escapes =
-            [
-                {
-                    "escape": "\n",
-                    "html": "</br>"
-                }
-            ];
-
         var service = {
             currentData: {},
-            escapeSequences : escapes,
             sanitize : sanitize,
             convertArray: convertArray,
-            hasEscapes : hasEscapes
+            hasEscapes: hasEscapes,
+            convertEscapeSequences: convertEscapeSequences,
+            localizeFile : localizeFile
         }
+
+        var escapeSequences = [
+            { key : "\n", value : "</br>" }
+        ];
 
         return service;
 
         function sanitize(data) {
-            var originalData = data;
+            var finalData = data;
 
-            if (data.isArray)
-                data = convertArray(data);
+            if (Array.isArray(finalData))
+                finalData = convertArray(finalData);
 
-            return data;
+            if (hasEscapes(finalData))
+                finalData = convertEscapeSequences(finalData);
+
+            return finalData;
         }
 
         function convertArray(array) {
@@ -44,33 +44,35 @@
                 newObj = newObj + object;
             });
 
-            return sanitize(newObj);
+            return newObj;
         }
 
         function convertEscapeSequences(data) {
 
-            if (escapes.some(areInData))
+            escapeSequences.forEach(function(item) {
+                data = data.replace(item.key, item.value);
+            });
+
+            if (hasEscapes(data))
                 return convertEscapeSequences();
-            
-            function areInData(item) {
-                if (data.indexOf(item))
-                    return true;
 
-                return false;
-            }
-
+            return data;
         }
 
         function hasEscapes(item) {
 
-            var escapeSeq = Object.(escapes);
+            for (var i = 0; i < escapeSequences.length; i++) {
+                var esc = escapeSequences[i].key;
 
-            escapeSeq.forEach(function(x) {
-                if (item.indexOf(x))
+                if (item.indexOf(esc) !== -1)
                     return true;
-            });
+            }
 
             return false;
+        }
+
+        function localizeFile() {
+            
         }
     }
 })();

@@ -1,4 +1,4 @@
-﻿///<reference path="project.paging.js" />
+///<reference path="project.paging.js" />
 
 (function () {
     'use strict';
@@ -19,7 +19,18 @@
             name: 'Works',
             title: '',
             transition: 'slowFade',
-            projects: []
+            projects: [],
+            currentProject: {
+                title: '',
+                summary: '',
+                images: [],
+                currentContent: {
+                    currentItem: {
+                        image: '',
+                        caption: ''
+                    }
+                }
+            }
         };
 
         vm.changeProject = changeProject;
@@ -79,7 +90,7 @@
                 if (dbprojects !== undefined && dbprojects !== null) {
                     vm.page.projects = dbprojects;
 
-                    if (dbprojects.length > 0 && (vm.page.projects.currentProject.title === 'Sample Project Titles' || vm.page.projects.currentProject.title === ''))
+                    if (dbprojects.length > 0 && (vm.page.currentProject.title === 'Sample Project Titles' || vm.page.currentProject.title === ''))
                         vm.page.currentProject = vm.page.projects[0];
                 }
 
