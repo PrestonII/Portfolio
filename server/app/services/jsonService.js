@@ -6,7 +6,8 @@ module.exports = function () {
     var service = {
         convertToJSON: convertToJSON,
         localizeFiles: localizeFiles,
-        readJsonFileSync : readJsonFileSync
+        readJsonFileSync: readJsonFileSync,
+        localizePath : localizePath
     };
     return service;
 
