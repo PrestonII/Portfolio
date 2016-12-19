@@ -53,8 +53,10 @@
     <Compile Include="client\app\project\project.controller.js" />
     <Compile Include="client\app\project\project.app.js" />
     <Compile Include="client\app\project\project.paging.js" />
+    <Compile Include="Gruntfile.js" />
     <Compile Include="karma.conf.js" />
     <Compile Include="server\app\models\page.js" />
+    <Compile Include="server\app\services\jsonFileService.js" />
     <Compile Include="server\app\services\jsonService.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\app\models\movie.js" />
@@ -73,10 +75,12 @@
     <Compile Include="tests\client\project.spec.js" />
     <Compile Include="tests\client\users.spec.js" />
     <Compile Include="tests\server\fileguy.spec.js">
-      <TestFramework>Mocha</TestFramework>
+      <TestFramework>
+      </TestFramework>
     </Compile>
-    <Compile Include="tests\server\mocha.spec.js">
-      <TestFramework>Mocha</TestFramework>
+    <Compile Include="tests\server\jsonfs.spec.js">
+      <TestFramework>
+      </TestFramework>
     </Compile>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />

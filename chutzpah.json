@@ -28,7 +28,11 @@
       "Path": "client",
       "Includes": [ "*.js" ],
       "Excludes": [ "client/app/core/*.js" ]
-    }
+    },
+    //{
+    //  "Path": "server",
+    //  "Includes": [ "*.js" ]
+    //}
   ],
   "Tests": [
     { "Path": "tests/client", "Includes": ["*.spec.js"] },

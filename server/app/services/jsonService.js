@@ -1,18 +1,16 @@
-﻿
-
-module.exports = function () {
+﻿var JSONFileService = function() {
     var fs = require('fs');
     var path = require('path');
     var service = {
-        convertToJSON: convertToJSON,
-        localizeFiles: localizeFiles,
-        readJsonFileSync: readJsonFileSync,
+        convertToJSON : convertToJSON,
+        localizeFiles : localizeFiles,
+        readJsonFileSync : readJsonFileSync,
         localizePath : localizePath
     };
     return service;
 
     function convertToJSON(file) {
-        
+
         var json = getConfig(file);
         return json;
 
@@ -52,10 +50,12 @@ module.exports = function () {
     function convertArray(array) {
         var newObj = '';
 
-        array.forEach(function (object) {
+        array.forEach(function(object) {
             newObj = newObj + object;
         });
 
         return newObj;
     }
 };
+
+module.exports = JSONFileService();

@@ -1,9 +1,9 @@
 ﻿var Project = require('../models/project.js');
 
-module.exports = function (router, jsonservice) {
+module.exports = function(router, jsonservice) {
 
     router.route('/projects/internal-store')
-        .get(function (request, response, next) {
+        .get(function(request, response, next) {
             var storeLoc = '../../data/projects.json';
 
             var projects = jsonservice.convertToJSON(storeLoc);
@@ -12,7 +12,7 @@ module.exports = function (router, jsonservice) {
         });
 
     router.route('/projects')
-        .post(function (request, response) {
+        .post(function(request, response) {
 
             var project = new Project();
 
@@ -21,18 +21,18 @@ module.exports = function (router, jsonservice) {
             project.tags = request.body.tags;
             project.images = request.body.images;
 
-            project.save(function (err) {
+            project.save(function(err) {
                 if (err)
                     response.send(err);
 
-                response.json({ message: 'Project created!' });
+                response.json({ message : 'Project created!' });
             });
 
         })
-        .get(function (request, response) {
+        .get(function(request, response) {
             console.log('Attempting to retrieve projects from database');
 
-            Project.find(function (err, projects) {
+            Project.find(function(err, projects) {
                 if (err) {
                     console.log('There was an error, reporting...');
                     response.send(err);
@@ -45,9 +45,9 @@ module.exports = function (router, jsonservice) {
         });
 
     router.route('/projects/:project_id')
-        .get(function (request, response) {
+        .get(function(request, response) {
             Project.findById(request.params.project_id,
-                function (err, project) {
+                function(err, project) {
                     if (err)
                         response.send(err);
 
@@ -55,35 +55,35 @@ module.exports = function (router, jsonservice) {
 
                 });
         })
-        .put(function (request, response) {
+        .put(function(request, response) {
             Project.findById(request.params.project_id,
-                function (err, project) {
+                function(err, project) {
                     if (err)
                         response.send(err);
 
                     console.log(request.body);
                     project.name = request.body.name;
 
-                    project.save(function (err) {
+                    project.save(function(err) {
                         if (err)
                             response.send(err);
 
-                        response.json({ message: 'Project has been updated. Title is now ' + request.body.name });
+                        response.json({ message : 'Project has been updated. Title is now ' + request.body.name });
                     });
 
                 });
 
         })
-        .delete(function (request, response) {
+        .delete(function(request, response) {
             Project.remove({
-                _id: request.params.project_id
-            },
-                function (err, project) {
+                    _id : request.params.project_id
+                },
+                function(err, project) {
                     if (err)
                         response.send(err);
 
-                    response.json({ message: request.params.project_id + ' was successfully deleted' });
+                    response.json({ message : request.params.project_id + ' was successfully deleted' });
 
                 });
         });
-}
+};
