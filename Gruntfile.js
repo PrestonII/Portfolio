@@ -1,5 +1,5 @@
 /// <binding BeforeBuild='jshint:build' />
-///<reference path="node_modules/grunt/lib/grunt.js" />
+/// <reference path="node_modules/grunt/lib/grunt.js" />
 var Grunt = require('grunt');
 
 var TaskRunner = function(Grunt) {

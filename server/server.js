@@ -4,7 +4,7 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var router = express.Router();
-var jsonservice = require('./app/services/jsonService')();
+var jsonservice = require('./app/services/jsonService');
 
 var app = express();
 var db = require('./config/db.js');
@@ -45,18 +45,18 @@ app.listen(port);
 console.log('Magic happens on port ' + port);
 
 process.on('uncaughtException', function (err) {
-    console.log('This exception occured: ' + err);
+    console.log('This exception occurred: ' + err);
 });
 
 //process.on('SIGKILL', function (err) {
 //    console.log('When SIGKILL occurs, will shutdown');
-//    console.log('This exception occured: ' + err);
+//    console.log('This exception occurred: ' + err);
 //    app.close();
 //});
 
 //process.on('SIGTERM', function (err) {
 //    console.log('When SIGTERM occurs, will shutdown');
-//    console.log('This exception occured: ' + err);
+//    console.log('This exception occurred: ' + err);
 //    app.close();
 //});
 

@@ -4,7 +4,7 @@ module.exports = function(router, jsonservice) {
 
     router.route('/projects/internal-store')
         .get(function(request, response, next) {
-            var storeLoc = '../../data/projects.json';
+            var storeLoc = '../../app/services/projects.json';
 
             var projects = jsonservice.convertToJSON(storeLoc);
 

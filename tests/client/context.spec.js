@@ -28,7 +28,6 @@ describe('Context', function () {
             it('should be have an array called "currentPage"',
                 function () {
                     expect(Context.currentPage).toBeDefined();
-                    //expect(Navigator.points).toBe('testing');
                 });
         });
 

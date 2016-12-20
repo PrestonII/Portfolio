@@ -1,11 +1,13 @@
 ﻿var JSONFileService = function() {
     var fs = require('fs');
     var path = require('path');
+    var filefinder = require('./filefinder');
     var service = {
         convertToJSON : convertToJSON,
         localizeFiles : localizeFiles,
         readJsonFileSync : readJsonFileSync,
-        localizePath : localizePath
+        localizePath : localizePath,
+        localizeProject : localizeProject
     };
     return service;
 
@@ -28,23 +30,37 @@
         return JSON.parse(item);
     }
 
-    function localizeFiles(data) {
-        var conv = data;
+    function localizeFiles(database, dbLocation) {
+        var file = database;
 
-        for (var i = 0; i < conv.length; i++) {
-            var item = conv[i];
+        for (var i = 0; i < file.data.length; i++) {
+            var proj = file.data[i];
 
-            conv[i] = localizePath(item);
+            proj = localizeProject(proj);
+
+            file.data[i] = proj;
         }
+
+        return file;
+    }
+
+    function localizeProject(file, originalLocation) {
+        var proj = file;
+
+        for (var i = 0; i < proj.images.length; i++) {
+            var image = proj.images[i];
+
+            image.location = localizePath(image.location);
+
+            proj.images[i].location = image.location;
+        }
+
+        return proj;
     }
 
     function localizePath(filepath) {
-        var newpath = filepath;
-
-        if (filepath.includes('./') || filepath.includes('../'))
-            newpath = path.join(__dirname, filepath);
-
-        return newpath;
+        var location = filefinder.findFile(filepath);
+        return location;
     }
 
     function convertArray(array) {

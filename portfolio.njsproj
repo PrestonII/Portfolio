@@ -79,8 +79,7 @@
       </TestFramework>
     </Compile>
     <Compile Include="tests\server\jsonfs.spec.js">
-      <TestFramework>
-      </TestFramework>
+      <TestFramework>Mocha</TestFramework>
     </Compile>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
@@ -107,7 +106,6 @@
     <Content Include="server\data\images\nimble\web2.jpg" />
     <Content Include="server\data\images\nimble\web3.jpg" />
     <Content Include="server\data\images\nimble\web4.jpg" />
-    <Content Include="server\data\projects.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="client\" />
