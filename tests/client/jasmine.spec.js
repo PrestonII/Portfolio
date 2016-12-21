@@ -1,5 +1,4 @@
-﻿
-//Test suite
+﻿//Test suite
 describe('Example of Jasmine testing that', function () {
 
     //Setup

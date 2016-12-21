@@ -80,7 +80,8 @@
       </TestFramework>
     </Compile>
     <Compile Include="tests\server\jsonfs.spec.js">
-      <TestFramework>Mocha</TestFramework>
+      <TestFramework>
+      </TestFramework>
     </Compile>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
