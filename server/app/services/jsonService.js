@@ -1,7 +1,8 @@
 ﻿var JSONFileService = function() {
     var fs = require('fs');
     var path = require('path');
-    var filefinder = require('./filefinder');
+    var thresholdPath = path.join(__dirname, "../../../");
+    var filefinder = require('./filefinder')(thresholdPath);
     var service = {
         convertToJSON : convertToJSON,
         localizeFiles : localizeFiles,
@@ -14,6 +15,9 @@
     function convertToJSON(file) {
 
         var json = getConfig(file);
+
+        var pathed = localizeFiles(json);
+
         return json;
 
         function getConfig(searchFile) {
@@ -30,7 +34,7 @@
         return JSON.parse(item);
     }
 
-    function localizeFiles(database, dbLocation) {
+    function localizeFiles(database) {
         var file = database;
 
         for (var i = 0; i < file.data.length; i++) {
@@ -44,7 +48,7 @@
         return file;
     }
 
-    function localizeProject(file, originalLocation) {
+    function localizeProject(file) {
         var proj = file;
 
         for (var i = 0; i < proj.images.length; i++) {

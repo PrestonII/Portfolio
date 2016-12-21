@@ -43,17 +43,17 @@ describe('JSON File Service localizeProject()',
             function () {
                 var project = {
                     images: [
-                        {location: './images/nimble/web1.jpg'},
-                        {location: './images/nimble/web2.jpg'},
-                        {location: './images/nimble/web3.jpg'},
+                        {location: './images/example/web1.jpg'},
+                        {location: './images/example/web2.jpg'},
+                        {location: './images/example/web3.jpg'},
                     ]
                 };
 
                 var expectation = {
                     images: [
-                        { location: 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\nimble\\web1.jpg' },
-                        { location: 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\nimble\\web2.jpg' },
-                        { location: 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\nimble\\web3.jpg' },
+                        { location: 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web1.jpg' },
+                        { location: 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web2.jpg' },
+                        { location: 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web3.jpg' },
                     ]
                 };
 
@@ -75,8 +75,8 @@ describe('JSON File Service localizePath()',
 
         it('should a relative based on the current directory',
             function () {
-                var testPath = '../../data/images/nimble/web1.jpg';
-                var expectation = 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\nimble\\web1.jpg';
+                var testPath = '../../data/images/example/web1.jpg';
+                var expectation = 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web1.jpg';
 
                 var result = jsonService.localizePath(testPath);
 

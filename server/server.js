@@ -41,11 +41,15 @@ app.get('/', function (request, response) {
     console.log('Sent main page');
 });
 
-app.listen(port);
 console.log('Magic happens on port ' + port);
 
 process.on('uncaughtException', function (err) {
     console.log('This exception occurred: ' + err);
+});
+
+process.on('exit', function(err) {
+    console.log('Exiting');
+    app.close();
 });
 
 //process.on('SIGKILL', function (err) {

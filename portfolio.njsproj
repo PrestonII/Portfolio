@@ -56,6 +56,7 @@
     <Compile Include="Gruntfile.js" />
     <Compile Include="karma.conf.js" />
     <Compile Include="server\app\models\page.js" />
+    <Compile Include="server\app\services\filefinder.js" />
     <Compile Include="server\app\services\jsonFileService.js" />
     <Compile Include="server\app\services\jsonService.js" />
     <Compile Include="server\server.js" />
@@ -106,6 +107,7 @@
     <Content Include="server\data\images\nimble\web2.jpg" />
     <Content Include="server\data\images\nimble\web3.jpg" />
     <Content Include="server\data\images\nimble\web4.jpg" />
+    <Content Include="server\data\projects.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="client\" />

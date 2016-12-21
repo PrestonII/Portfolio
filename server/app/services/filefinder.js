@@ -1,69 +1,106 @@
-var fileFinder = function(){
+module.exports = function fileFinder(stoppingPoint){
 
     var fs = require('fs');
     var path = require('path');
+    var stopPath = normalizeStoppingPoint(stoppingPoint);
 
     var service = {
         findFile : findFile,
+        getFiles : getFiles
     };
 
     return service;
 
-    function findFile(file, currentLocation){
-        var fileAndExt = path.parse(file).base;
-        var currentDir =  currentLocation || __dirname;
-        var parentDir = path.dirname(currentDir);
-        var files = getFiles(currentDir);
-        var collection = {
-            hasFile: false,
-            allFiles: files
-        };
+    function findFile(file, currentLocation) {
+        try {
+            var fileAndExt = path.parse(file).base;
+            var currentDir = currentLocation || __dirname;
 
-        if(!collection.allFiles.some(isDirectory))
-            return findFile(file, parentDir);
+            if (currentDir === stopPath)
+                throw new RangeError('File either does not exist or is beyond defined threshold');
 
-        for(var i = 0; i < collection.allFiles.length; i++){
-            // var fileReview = path.parse(directory.allFiles[i]).base;
-            var fileReview = collection.allFiles[i];
+            var parentDir = path.dirname(currentDir);
+            var files = getFiles(currentDir);
+            var collection = {
+                hasFile: false,
+                allFiles: files
+            };
 
-            if (isDirectory(fileReview)) {
-                addFiles(fileReview);
-                continue;
+            if (!collection.allFiles.some(isDirectory))
+                return findFile(file, parentDir);
+
+            for (var i = 0; i < collection.allFiles.length; i++) {
+                var fileReview = collection.allFiles[i];
+
+                if (isDirectory(fileReview)) {
+                    addFiles(fileReview);
+                    continue;
+                }
+
+                if (isFile(path.parse(fileReview).base))
+                    return fileReview;
             }
 
-            if(isFile(path.parse(fileReview).base))
-                return fileReview;
+            return findFile(file, parentDir);
         }
 
-        return findFile(file, parentDir);
+        catch(error){
+            console.log(error);
+        }
 
-        function addFiles(currentDirectory){
-            var current = getFiles(currentDirectory);
-            current.forEach(function(file){
-                collection.allFiles.push(file);
+        function addFiles(currentDirectory) {
+            try {
+                var current = getFiles(currentDirectory);
+                current.forEach(function(file) {
+                    collection.allFiles.push(file);
+                });
+            } catch (error) {
+                console.log(error);
+                throw error;
+            }
+        }
+        function isFile(file) {
+            try {
+                return path.parse(file).base === fileAndExt;
+            } catch (error) {
+                throw error;
+            }
+        }
+        function isDirectory(file) {
+            try {
+                var isDir = fs.statSync(file).isDirectory();
+                return isDir;
+            } catch (error) {
+                console.log(error);
+                throw error;
+            }
+        }
+    }
+
+    function getFiles(directory) {
+        try {
+            var contents = fs.readdirSync(directory);
+            var files = [];
+
+            contents.forEach(function(file) {
+                files.push(directory + "\\" + file);
             });
-        }
-        function isFile(file){
-            return path.parse(file).base === fileAndExt;
-        }
-        function isDirectory(file){
-            var isDir = fs.statSync(file).isDirectory();
-            return isDir;
+
+            return files;
+        } catch (error) {
+            console.log(error);
+            throw error;
         }
     }
 
-    function getFiles(directory){
-        var contents = fs.readdirSync(directory);
-        var files = [];
+    function normalizeStoppingPoint(filePath){
+        var newPath = filePath  || path.join(__dirname, "../../../");
 
-        contents.forEach(function(file){
-            files.push(directory + "\\" + file);
-        })
+        if(newPath.endsWith("\\")){
+            var point = newPath.lastIndexOf("\\");
+            newPath = newPath.substring(0, point);
+        }
 
-        return files;
+        return newPath;
     }
-
-
 };
-
-module.exports = fileFinder();

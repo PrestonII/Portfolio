@@ -1,78 +1,42 @@
-﻿/////<reference path="../../server/app/services/jsonService.js" />
+﻿///<reference path="../../server/app/services/filefinder.js" />
 
-//describe('JSON File Server', function () {
-//    var jsonServiceguy;
+var assert = require('chai').assert;
+var expect  = require('chai').expect;
+var path = require('path');
+var fs = require('fs');
+var filefinder = require('../../server/app/services/filefinder');
 
-//    beforeEach("jsonFileService",
-//        function() {
-//            jsonServiceguy = new jsonService();
-//        });
+describe('File Finder Service',
+    function () {
+        it('should exist', function () {
+            expect(filefinder).to.be.defined;
+        });
+    });
 
-//    it('should exist', function() {
-//        //assert.ok(jsonService !== undefined, "Server is defined");
-//        expect(jsonServiceguy).toBeDefined();
-//    });
+describe('File Finder Service findFile()',
+    function(){
 
-//    it('localizeFiles() should exist',
-//        function () {
-//            //assert.ok(jsonService.localizeFiles !== undefined, 'Shoudl exist');
-//            expect(jsonServiceguy.localizeFiles).to.exist;
-//        });
+        var thresholdPath = path.join(__dirname, "../../");
 
-//    //it('should fix all relative paths',
-//    //    function() {
-//    //        var testPath = './images/nimble/web1.jpg';
-//    //        var expectation = null;
+        it('should exist',
+            function(){
+                expect(filefinder.findFile).to.be.defined;
+            });
 
-//    //        var result = jsonServiceguy.localizeFiles(projectData);
+        it('should have a realistic threshold', function(){
+            console.log(thresholdPath);
+            var thresholdExists = fs.statSync(thresholdPath);
 
-//    //        assert.ok(0 === 2, 'This should fail');
-//    //        assert.ok(expectation === result, 'This should fail');
-//    //    });
+           expect(thresholdExists).to.be.defined;
+        });
 
-//    //it('Purposeful Fail', function () {
-//    //    assert.ok(0 === 1, "This shouldn't fail");
-//    //});
+        it("should throw an error if it can't find a file past a threshold", function(){
+            var nonExistentFile = 'thing1.xls';
+            var thresholdFF = require('../../server/app/services/filefinder')(thresholdPath);
 
+            assert.throw(function(){
+                thresholdFF.findFile(nonExistentFile);
+            }, RangeError, 'File either does not exist or is beyond defined threshold');
+        })
 
-//    //it('localizePath() should exist',
-//    //    function () {
-//    //        assert.ok(jsonServiceguy.localizePath !== undefined, 'Should exist');
-//    //        //expect(jsonService.localizePath).to.exist;
-//    //    });
-
-//    //it('should find file relative to its root',
-//    //    function () {
-//    //        var testPath = './images/nimble/web1.jpg';
-//    //        var expectation = 'A:/Work/Projects/Portfolio/server/data/images/nimble';
-
-//    //        var result = jsonServiceguy.localizePath(projectData);
-
-//    //        expect(result).to.equal(expectation);
-//    //    });
-// });
-
-//var projectData =
-//    {
-//        "$schema": "http://json-schema.org/draft-04/schema#",
-//        "title": "Project Data",
-//        "description": "Preston's preliminary project database. Try saying that 3 times fast :)",
-//        "type": "object",
-//        "data": [
-//            {
-//                "title": "Nimble",
-//                "colorCode": "proj-nimble",
-//                "summary": "This is a project I've been thinking about for a long while.",
-//                "tags": [".NET", "Javascript"],
-//                "images": [
-//                    {
-//                        "location": "./images/nimble/web1.jpg",
-//                        "caption": "Image of a thing"
-//                    },
-//                    {
-//                        "location": "./images/nimble/web2.jpg",
-//                        "caption": "Image of another thing"
-//                    }
-//                ]
-//            }]
-//    };
+    });
