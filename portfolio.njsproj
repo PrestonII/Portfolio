@@ -22,7 +22,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
     <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
@@ -67,10 +67,15 @@
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
     <Compile Include="server\www" />
-    <Compile Include="tests\clientMocha\mochaAngularExample.spec.js">
-      <TestFramework>Mocha</TestFramework>
+    <Compile Include="tests\clientMocha\context.spec.js">
+      <TestFramework>
+      </TestFramework>
     </Compile>
-    <Compile Include="tests\clientMocha\testhelpers.js" />
+    <Compile Include="tests\clientMocha\mochaAngularExample.spec.js">
+      <TestFramework>
+      </TestFramework>
+    </Compile>
+    <Compile Include="tests\clientMocha\testvariables.js" />
     <Compile Include="tests\client\context.spec.js" />
     <Compile Include="tests\client\postman.spec.js" />
     <Compile Include="tests\client\navigator.spec.js" />

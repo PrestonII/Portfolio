@@ -16,7 +16,9 @@
             currentPage: {
                 name: 'Starting Up!',
                 title: 'Loading...',
-                pageColorCode: 'proj-none'
+                project: {
+                    colorCode: 'proj-none'
+                }
             },
             updatePage: updatePage,
             updatePageColor: updatePageColor,
@@ -29,7 +31,10 @@
 
             if (page === null || typeof page === "undefined") 
                 return service.currentPage;
-            
+
+            if(page.project && page.project.colorCode)
+                updatePageColor(page.project);
+
             service.currentPage.name = page.name || '';
             service.currentPage.title = page.title || '';
 
@@ -41,13 +46,13 @@
 
         function updatePageColor(project) {
             if (project === null || project === undefined)
-                return service.currentPage.pageColor;
+                return service.currentPage.project.colorCode;
 
-            service.currentPage.pageColorCode = project.colorCode;
+            service.currentPage.project.colorCode = project.colorCode;
 
-            $root.$broadcast('onPageUpdateColor', service.currentPage.pageColorCode);
+            $root.$broadcast('onPageUpdateColor', service.currentPage.project.colorCode);
 
-            return service.currentPage.pageColorCode;
+            return service.currentPage.project.colorCode;
         }
 
         function resetPageColor() {
