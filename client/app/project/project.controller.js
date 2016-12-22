@@ -7,9 +7,9 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['$scope','$location', 'context', 'server', '$http', 'postman', 'pagingService']; 
+    projectController.$inject = ['$scope','$location', 'context', 'server', '$http', 'pagingService'];
 
-    function projectController($scope, $location, context, Server, $http, postman, pagingService) {
+    function projectController($scope, $location, context, Server, $http, pagingService) {
         /* jshint validthis:true */
         var vm = this;
         var projectServer = new Server('projects');
@@ -75,9 +75,7 @@
         function getProjects() {
             console.log('Gettings projects from server...');
             projectServer.getObjects()
-                .then(function(response) {
-                    updateProjects(response);
-                })
+                .then(updateProjects)
                 .catch(function(error) {
                     logError(error);
                     var samples = pageHelper.getOfflineSamples();
@@ -86,14 +84,7 @@
 
             function updateProjects(dbprojects) {
                 console.log('Updating page...');
-
-                if (dbprojects !== undefined && dbprojects !== null) {
-                    vm.page.projects = dbprojects;
-
-                    if (dbprojects.length > 0 && (vm.page.currentProject.title === 'Sample Project Titles' || vm.page.currentProject.title === ''))
-                        vm.page.currentProject = vm.page.projects[0];
-                }
-
+                pageHelper.changeProject(dbprojects[0]);
                 console.log('Done.');
             }
 
