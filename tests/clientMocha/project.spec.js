@@ -60,4 +60,17 @@ describe('Project Controller', function(){
         expect(projectController.changeProject).to.be.defined;
         expect(projectController.updatePage).to.be.defined;
     })
+
+    describe('changeProject()', function(){
+        it('should update current project', function() {
+
+            var currentProj = projectController.page.currentProject;
+
+            expect(currentProj.title).not.to.be.equal('');
+            expect(currentProj.summary).not.to.be.equal('');
+            expect(currentProj.images).not.to.be.equal([]);
+            expect(currentProj.title).not.to.be.equal('');
+        });
+    });
+
 });

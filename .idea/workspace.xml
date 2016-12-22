@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7bf42d-3f48-4f19-a0d9-634b9b5606d1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/clientMocha/mochaAngularExample.spec.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/clientMocha/contextMocha.spec.js" afterPath="$PROJECT_DIR$/tests/clientMocha/context.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/core/core.context.js" afterPath="$PROJECT_DIR$/client/app/core/core.context.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio.njsproj" afterPath="$PROJECT_DIR$/portfolio.njsproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/clientMocha/project.spec.js" afterPath="$PROJECT_DIR$/tests/clientMocha/project.spec.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,8 +33,8 @@
           <file leaf-file-name="project.spec.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/clientMocha/project.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="571">
-                  <caret line="60" column="59" lean-forward="true" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+                <state relative-caret-position="153">
+                  <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -47,8 +43,8 @@
           <file leaf-file-name="context.spec.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/clientMocha/context.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+                <state relative-caret-position="344">
+                  <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -80,21 +76,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="project.controller.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="project.controller.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1068">
+                <state relative-caret-position="1221">
                   <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="core.context.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="core.context.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
-                  <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+                <state relative-caret-position="-24">
+                  <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
                   <folding>
                     <element signature="e#269#610#0" expanded="false" />
                   </folding>
@@ -334,50 +330,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -404,7 +356,7 @@
       <recent name="A:\Work\Projects\Portfolio" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.tests\clientMocha\project.spec.js">
+  <component name="RunManager" selected="Mocha.Project Controller.changeProject().should update current project">
     <configuration default="false" name="tests\clientMocha\context.spec.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -415,40 +367,6 @@
       <extra-mocha-options />
       <test-kind>TEST_FILE</test-kind>
       <test-file>$PROJECT_DIR$/tests/clientMocha/context.spec.js</test-file>
-      <method />
-    </configuration>
-    <configuration default="false" name="Context Service.updatePageColor().should update page color" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/context.spec.js</test-file>
-      <test-names>
-        <name value="Context Service" />
-        <name value="updatePageColor()" />
-        <name value="should update page color" />
-      </test-names>
-      <method />
-    </configuration>
-    <configuration default="false" name="Context Service.resetPageColor().should reset page color" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/context.spec.js</test-file>
-      <test-names>
-        <name value="Context Service" />
-        <name value="resetPageColor()" />
-        <name value="should reset page color" />
-      </test-names>
       <method />
     </configuration>
     <configuration default="false" name="tests\clientMocha\project.spec.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
@@ -476,6 +394,38 @@
       <test-names>
         <name value="Project Controller" />
         <name value="should exist" />
+      </test-names>
+      <method />
+    </configuration>
+    <configuration default="false" name="Project Controller" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/tests/clientMocha/project.spec.js</test-file>
+      <test-names>
+        <name value="Project Controller" />
+      </test-names>
+      <method />
+    </configuration>
+    <configuration default="false" name="Project Controller.changeProject().should update current project" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tests/clientMocha/project.spec.js</test-file>
+      <test-names>
+        <name value="Project Controller" />
+        <name value="changeProject()" />
+        <name value="should update current project" />
       </test-names>
       <method />
     </configuration>
@@ -701,18 +651,18 @@
       <item index="5" class="java.lang.String" itemvalue="Nodeunit.Unnamed" />
       <item index="6" class="java.lang.String" itemvalue="Protractor.protractor.conf.js" />
       <item index="7" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\context.spec.js" />
-      <item index="8" class="java.lang.String" itemvalue="Mocha.Context Service.updatePageColor().should update page color" />
-      <item index="9" class="java.lang.String" itemvalue="Mocha.Context Service.resetPageColor().should reset page color" />
-      <item index="10" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\project.spec.js" />
-      <item index="11" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
+      <item index="8" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\project.spec.js" />
+      <item index="9" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
+      <item index="10" class="java.lang.String" itemvalue="Mocha.Project Controller" />
+      <item index="11" class="java.lang.String" itemvalue="Mocha.Project Controller.changeProject().should update current project" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\project.spec.js" />
-        <item index="1" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\context.spec.js" />
-        <item index="2" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
-        <item index="3" class="java.lang.String" itemvalue="Mocha.Context Service.updatePageColor().should update page color" />
-        <item index="4" class="java.lang.String" itemvalue="Mocha.Context Service.resetPageColor().should reset page color" />
+        <item index="0" class="java.lang.String" itemvalue="Mocha.Project Controller.changeProject().should update current project" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.Project Controller" />
+        <item index="2" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\project.spec.js" />
+        <item index="3" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\context.spec.js" />
+        <item index="4" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
       </list>
     </recent_temporary>
   </component>
@@ -746,13 +696,16 @@
       <workItem from="1482416570717" duration="9582000" />
       <workItem from="1482430023093" duration="5000" />
       <workItem from="1482430243477" duration="390000" />
-      <workItem from="1482431230708" duration="6789000" />
+      <workItem from="1482431230708" duration="8945000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Project_Controller_should_exist - 2016.12.22 at 15h 39m 51s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller - 2016.12.22 at 16h 21m 09s.xml">
+      <configuration name="Project Controller" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Project_Controller_changeProject()_should_update_current_project - 2016.12.22 at 16h 37m 11s.xml">
+      <configuration name="Project Controller.changeProject().should update current project" configurationId="mocha-javascript-test-runner" />
     </history-entry>
     <history-entry file="Project_Controller_should_exist - 2016.12.22 at 15h 42m 05s.xml">
       <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
@@ -765,9 +718,6 @@
     </history-entry>
     <history-entry file="tests_clientMocha_context_spec_js - 2016.12.22 at 15h 51m 04s.xml">
       <configuration name="tests\clientMocha\context.spec.js" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 15h 39m 33s.xml">
-      <configuration name="tests\clientMocha\project.spec.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
     <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 15h 45m 56s.xml">
       <configuration name="tests\clientMocha\project.spec.js" configurationId="mocha-javascript-test-runner" />
@@ -783,7 +733,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66252000" />
+    <option name="totallyTimeSpent" value="68408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +745,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14805058" sideWeight="0.6271722" order="0" side_tool="false" content_ui="combo" />
@@ -805,11 +755,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49578503" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14805058" sideWeight="0.3728278" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3215434" sideWeight="0.5205479" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215434" sideWeight="0.5205479" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35369775" sideWeight="0.4915701" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19968387" sideWeight="0.51916933" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215434" sideWeight="0.47945204" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3215434" sideWeight="0.47945204" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -919,24 +869,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/tests/clientMocha/project.spec.js</url>
-          <line>37</line>
+          <line>68</line>
           <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/clientMocha/project.spec.js</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/core/core.context.js</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="64" />
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1425,24 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/clientMocha/context.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-          <folding>
-            <element signature="e#269#610#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -1451,18 +1371,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/clientMocha/context.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1068">
+        <state relative-caret-position="1221">
           <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="e#269#610#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/clientMocha/project.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="60" column="59" lean-forward="true" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+        <state relative-caret-position="153">
+          <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
           <folding />
         </state>
       </provider>
