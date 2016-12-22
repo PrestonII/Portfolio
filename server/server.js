@@ -8,7 +8,7 @@ var jsonservice = require('./app/services/jsonService');
 
 var app = express();
 var db = require('./config/db.js');
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 1337;
 
 app.port = port;
 
