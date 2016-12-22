@@ -20,6 +20,8 @@ module.exports = function(config) {
             'node_modules/angular-route/angular-route.js',
             'node_modules/angular-mocks/angular-mocks.js',
 
+
+
             // Source Code modules
             'client/app/core/core.app.js',
             'client/app/core/!(core.app).js',
@@ -31,7 +33,7 @@ module.exports = function(config) {
             'client/app/directives/*.js',
 
             // Testing Modules
-            'tests/client/*.spec.js'
+            'tests/client/!(protractorExample.spec).js',
         ],
 
 

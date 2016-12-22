@@ -67,6 +67,9 @@
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
     <Compile Include="server\www" />
+    <Compile Include="tests\clientMocha\mochaAngularExample.spec.js">
+      <TestFramework>Mocha</TestFramework>
+    </Compile>
     <Compile Include="tests\client\context.spec.js" />
     <Compile Include="tests\client\postman.spec.js" />
     <Compile Include="tests\client\navigator.spec.js" />
@@ -132,6 +135,7 @@
     <Folder Include="server\data\images\" />
     <Folder Include="server\data\images\nimble\" />
     <Folder Include="tests\" />
+    <Folder Include="tests\clientMocha\" />
     <Folder Include="tests\client\" />
     <Folder Include="tests\server\" />
   </ItemGroup>
