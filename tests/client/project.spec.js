@@ -1,61 +1,76 @@
-﻿
-describe('Project controller', function () {
+var chai = require('chai');
+var sinon_chai = require('sinon-chai');
+var chai_promises = require('chai-as-promised');
+var assert = chai.assert;
+var expect = chai.expect;
+chai.use(sinon_chai);
+chai.use(chai_promises);
+
+require('./testvariables');
+require('../../client/app/core/core.app');
+require('../../client/app/core/core.context');
+require('../../client/app/core/core.navigator');
+require('../../client/app/core/core.server');
+require('../../client/app/core/core.postman');
+
+require('../../client/app/project/project.app');
+require('../../client/app/project/project.paging');
+require('../../client/app/project/project.controller');
+
+describe('Project Controller', function(){
+    "use strict";
     var $controller, projectController, $rootScope;
 
-    // Before each test load our api.users module
-    beforeEach(angular.mock.module('app.core'));
-    beforeEach(angular.mock.module('app.project'));
+    beforeEach(function(){
+        ngModule('app.core');
+        ngModule('app.project');
 
-    // Before each test set our injected Users factory (_Users_) to our local Users variable
-    beforeEach(inject(function(_$controller_, _$rootScope_, _context_, _server_, _postman_, _pagingService_) {
-        $controller = _$controller_;
-        $rootScope = _$rootScope_;
-        var $scope = $rootScope.$new();
-        var $location = {};
-        var context = _context_;
-        var server = _server_;
-        var $http = {};
-        var postman = _postman_;
-        var pagingService = _pagingService_;
-        projectController = $controller('projectController',
-        {
-            $scope : $scope,
-            $location : $location,
-            context : context,
-            server : server,
-            $http : $http,
-            postman : postman,
-            pagingService : pagingService
+        inject(function(_$controller_, _$rootScope_, _context_, _server_, _postman_, _pagingService_) {
+            $controller = _$controller_;
+            $rootScope = _$rootScope_;
+            var $scope = $rootScope.$new();
+            var $location = {};
+            var context = _context_;
+            var server = _server_;
+            var $http = {};
+            var postman = _postman_;
+            var pagingService = _pagingService_;
+            projectController = $controller('projectController',
+            {
+                $scope: $scope,
+                $location: $location,
+                context: context,
+                server: server,
+                $http: $http,
+                postman: postman,
+                pagingService: pagingService
+            });
         });
-    }));
-
-    // A simple test to verify the Project Controller exists
-    it('should exist', function () {
-        expect(projectController).toBeDefined();
     });
 
-    // A simple test to verify the method all exists
-    it('should have projects',
-        function () {
-            expect(projectController.page.projects).toBeDefined();
-        });
+    it('should exist', function(){
+        expect(projectController).to.be.defined;
+    })
 
-    // A set of tests for our Project.getProjects() method
-    describe('.getProjects()',
-        function() {
-            // A simple test to verify the method all exists
-            it('should exist',
-                function () {
-                    expect(projectController.getProjects).toBeDefined();
-                });
-        });
+    it('should have all properties and methods', function(){
+        expect(projectController.page).to.be.defined;
+        expect(projectController.page.projects).to.be.defined;
+        expect(projectController.page.currentProject).to.be.defined;
+        expect(projectController.getProjects).to.be.defined;
+        expect(projectController.changeProject).to.be.defined;
+        expect(projectController.updatePage).to.be.defined;
+    })
 
-    //// A set of tests for our Users.findById() method
-    //describe('.findById()', function () {
-    //    // A simple test to verify the method findById exists
-    //    it('should exist', function () {
-    //        expect(Users.findById).toBeDefined();
-    //    });
-    //});
+    describe('changeProject()', function(){
+        it('should update current project', function() {
+
+            var currentProj = projectController.page.currentProject;
+
+            expect(currentProj.title).not.to.be.equal('');
+            expect(currentProj.summary).not.to.be.equal('');
+            expect(currentProj.images).not.to.be.equal([]);
+            expect(currentProj.title).not.to.be.equal('');
+        });
+    });
 
 });

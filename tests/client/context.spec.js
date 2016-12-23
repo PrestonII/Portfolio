@@ -1,59 +1,72 @@
-﻿describe('Context', function () {
-    var Context;
+var chai = require('chai');
+var sinon_chai = require('sinon-chai');
+var chai_promises = require('chai-as-promised');
+var assert = chai.assert;
+var expect = chai.expect;
+chai.use(sinon_chai);
+chai.use(chai_promises);
 
-    // Before each test load our api.users module
-    beforeEach(angular.mock.module('app.core'));
+require('./testvariables');
+require('../../client/app/core/core.app');
+require('../../client/app/core/core.context');
 
-    // Before each test set our injected Users factory (_Users_) to our local Users variable
-    beforeEach(inject(function (_context_) {
-        Context = _context_;
-    }));
+describe('Context Service', function(){
+    var context;
 
-    describe('on creation',
-        function() {
-            // A simple test to verify the Project Controller exists
-            it('should exist',
-                function() {
-                    expect(Context).toBeDefined();
-                });
+    var newPage = {};
 
-            // A simple test to verify the Users factory exists
-            it('should not be undefined',
-                function() {
-                    expect(Context).not.toBeUndefined();
-                });
+    beforeEach(function(){
+        ngModule('app.core');
 
-            // A simple test to verify the method all exists
-            it('should be have an array called "currentPage"',
-                function () {
-                    expect(Context.currentPage).toBeDefined();
-                });
+        inject(function(_context_){
+            context = _context_;
         });
 
-    // A set of tests for our Users.all() method
-    describe('.updatePage()',
-        function() {
-            // A simple test to verify the method all exists
-            it('should exist',
-                function() {
-                    expect(Context.updatePage).toBeDefined();
-                });
+        newPage = {
+            name: 'TestingPageName',
+            title: 'TestingPageTitle',
+            project: {
+                colorCode: 'proj-test'
+            }
+        };
+    });
 
+    it('should exist', function(){
+        expect(context).to.not.be.undefined;
+    });
 
-
-
-            //// A test to verify that calling all() returns the array of users we hard-coded above
-            //it('should return a hard-coded list of users', function () {
-            //    expect(Users.all()).toEqual(userList);
-            //});
+    // A simple test to verify the method all exists
+    it('should be have all properties and methods',
+        function () {
+            expect(context.currentPage).to.be.defined;
+            expect(context.updatePage).to.be.defined;
         });
 
-    //// A set of tests for our Users.findById() method
-    //describe('.findById()', function () {
-    //    // A simple test to verify the method findById exists
-    //    it('should exist', function () {
-    //        expect(Users.findById).toBeDefined();
-    //    });
-    //});
+    describe('updatePage()', function(){
+        it('should update context properties', function() {
+            context.updatePage(newPage);
 
-});
+            expect(context.currentPage.name).to.be.equal('TestingPageName');
+            expect(context.currentPage.title).to.be.equal('TestingPageTitle');
+            expect(context.currentPage.project.colorCode).to.be.equal('proj-test');
+        });
+    });
+
+    describe('updatePageColor()', function(){
+        it('should update page color', function() {
+            context.updatePageColor(newPage.project);
+
+            expect(context.currentPage.project.colorCode).to.be.equal('proj-test');
+        });
+    });
+
+    describe('resetPageColor()', function(){
+        it('should reset page color', function() {
+            context.currentPage.project.colorCode = 'proj-test';
+
+            context.resetPageColor();
+
+            expect(context.currentPage.project.colorCode).to.be.equal('proj-none');
+        });
+    });
+})

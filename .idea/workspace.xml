@@ -7,7 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7bf42d-3f48-4f19-a0d9-634b9b5606d1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/clientMocha/project.spec.js" afterPath="$PROJECT_DIR$/tests/clientMocha/project.spec.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/client/jasmine.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/client/navigator.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/client/postman.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/client/processor.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/client/server.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/client/users.spec.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/clientMocha/context.spec.js" afterPath="$PROJECT_DIR$/tests/client/context.spec.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/clientMocha/project.spec.js" afterPath="$PROJECT_DIR$/tests/client/project.spec.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/clientMocha/testvariables.js" afterPath="$PROJECT_DIR$/tests/client/testvariables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,37 +36,15 @@
     <favorites_list name="Portfolio" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5015806">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="project.spec.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/clientMocha/project.spec.js">
+          <file leaf-file-name="navigator.spec.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/client/navigator.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+                <state relative-caret-position="206">
+                  <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="context.spec.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/clientMocha/context.spec.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="344">
-                  <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="testvariables.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/clientMocha/testvariables.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#599#604#0" expanded="false" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -65,35 +52,23 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="project.spec.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
+        <leaf>
+          <file leaf-file-name="processor.spec.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/client/processor.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-204">
-                  <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+                <state relative-caret-position="391">
+                  <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="project.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
+          <file leaf-file-name="core.processor.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/app/core/core.processor.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1221">
-                  <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="core.context.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-24">
-                  <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#269#610#0" expanded="false" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -101,18 +76,8 @@
           <file leaf-file-name="context.spec.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/client/context.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="412">
-                  <caret line="32" column="48" lean-forward="true" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="core.app.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/core/core.app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="-255">
+                  <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -164,9 +129,11 @@
         <option value="$PROJECT_DIR$/tests/clientMocha/testvariables.js" />
         <option value="$PROJECT_DIR$/tests/clientMocha/mochaAngularExample.spec.js" />
         <option value="$PROJECT_DIR$/tests/clientMocha/contextMocha.spec.js" />
-        <option value="$PROJECT_DIR$/tests/clientMocha/context.spec.js" />
         <option value="$PROJECT_DIR$/client/app/core/core.context.js" />
         <option value="$PROJECT_DIR$/tests/clientMocha/project.spec.js" />
+        <option value="$PROJECT_DIR$/tests/clientMocha/context.spec.js" />
+        <option value="$PROJECT_DIR$/tests/clientMocha/processor.spec.js" />
+        <option value="$PROJECT_DIR$/tests/clientMocha/navigator.spec.js" />
       </list>
     </option>
   </component>
@@ -210,8 +177,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -231,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Client Tests">
           <PATH>
@@ -253,7 +221,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,6 +246,10 @@
               <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -294,39 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="clientMocha" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,97 +275,38 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/client" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
-    <property name="nodejs.mocha.mocha_node_package_dir" value="A:\Work\Projects\Portfolio\node_modules\mocha" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="C:\Users\Preston\Documents\Work\Professional\Independent\Portfolio\node_modules\mocha" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="$PROJECT_DIR$/node_modules/grunt-cli" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="javascript.nodejs.core.library.configured.version" value="6.9.1" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="javascript.nodejs.core.library.configured.version" value="0.12.2" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="JavaScriptPreferStrict" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="A:\Work\Projects\Portfolio\node_modules\gulp" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Preston\Documents\Work\Professional\Independent\Portfolio\tests\clientMocha" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="A:\Work\Projects\Portfolio" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.Project Controller.changeProject().should update current project">
-    <configuration default="false" name="tests\clientMocha\context.spec.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
+  <component name="RunManager" selected="Mocha.All Client Tests">
+    <configuration default="false" name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
       <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/context.spec.js</test-file>
-      <method />
-    </configuration>
-    <configuration default="false" name="tests\clientMocha\project.spec.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/project.spec.js</test-file>
-      <method />
-    </configuration>
-    <configuration default="false" name="Project Controller.should exist" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/project.spec.js</test-file>
-      <test-names>
-        <name value="Project Controller" />
-        <name value="should exist" />
-      </test-names>
-      <method />
-    </configuration>
-    <configuration default="false" name="Project Controller" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/project.spec.js</test-file>
-      <test-names>
-        <name value="Project Controller" />
-      </test-names>
-      <method />
-    </configuration>
-    <configuration default="false" name="Project Controller.changeProject().should update current project" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/tests/clientMocha/project.spec.js</test-file>
-      <test-names>
-        <name value="Project Controller" />
-        <name value="changeProject()" />
-        <name value="should update current project" />
-      </test-names>
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -455,17 +335,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="TEST_METHOD" />
-      <setting name="configType" value="FILE_PATH" />
-      <setting name="settingsFile" value="" />
-      <setting name="jsFile" value="$PROJECT_DIR$/tests/client/context.spec.js" />
-      <setting name="testCase" value="Context" />
-      <setting name="testMethod" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="server/www" working-dir="$PROJECT_DIR$">
@@ -582,16 +451,29 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Run All Server Tests" type="mocha-javascript-test-runner" factoryName="Mocha">
+    <configuration default="false" name="All Server Tests" type="mocha-javascript-test-runner" factoryName="Mocha">
       <node-interpreter>project</node-interpreter>
       <node-options />
-      <working-directory>$PROJECT_DIR$/tests/server</working-directory>
+      <working-directory>$PROJECT_DIR$</working-directory>
       <pass-parent-env>true</pass-parent-env>
       <envs />
       <ui>bdd</ui>
       <extra-mocha-options />
       <test-kind>DIRECTORY</test-kind>
       <test-directory>$PROJECT_DIR$/tests/server</test-directory>
+      <recursive>true</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="All Client Tests" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory>$PROJECT_DIR$/tests/client</test-directory>
       <recursive>true</recursive>
       <method />
     </configuration>
@@ -642,27 +524,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="12">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Run Program JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Unnamed JavaScript" />
       <item index="2" class="java.lang.String" itemvalue="Karma.Run All Client Tests" />
-      <item index="3" class="java.lang.String" itemvalue="Mocha.Run All Server Tests" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.Run Program" />
-      <item index="5" class="java.lang.String" itemvalue="Nodeunit.Unnamed" />
-      <item index="6" class="java.lang.String" itemvalue="Protractor.protractor.conf.js" />
-      <item index="7" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\context.spec.js" />
-      <item index="8" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\project.spec.js" />
-      <item index="9" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
-      <item index="10" class="java.lang.String" itemvalue="Mocha.Project Controller" />
-      <item index="11" class="java.lang.String" itemvalue="Mocha.Project Controller.changeProject().should update current project" />
+      <item index="3" class="java.lang.String" itemvalue="Mocha.All Server Tests" />
+      <item index="4" class="java.lang.String" itemvalue="Mocha.All Client Tests" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.Run Program" />
+      <item index="6" class="java.lang.String" itemvalue="Nodeunit.Unnamed" />
+      <item index="7" class="java.lang.String" itemvalue="Protractor.protractor.conf.js" />
+      <item index="8" class="java.lang.String" itemvalue="npm.start" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Mocha.Project Controller.changeProject().should update current project" />
-        <item index="1" class="java.lang.String" itemvalue="Mocha.Project Controller" />
-        <item index="2" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\project.spec.js" />
-        <item index="3" class="java.lang.String" itemvalue="Mocha.tests\clientMocha\context.spec.js" />
-        <item index="4" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -697,43 +572,46 @@
       <workItem from="1482430023093" duration="5000" />
       <workItem from="1482430243477" duration="390000" />
       <workItem from="1482431230708" duration="8945000" />
+      <workItem from="1482447720781" duration="2769000" />
+      <workItem from="1482451816140" duration="683000" />
+      <workItem from="1482452818153" duration="2970000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Project_Controller - 2016.12.22 at 16h 21m 09s.xml">
-      <configuration name="Project Controller" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="All_Client_Tests - 2016.12.22 at 19h 17m 19s.xml">
+      <configuration name="All Client Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_changeProject()_should_update_current_project - 2016.12.22 at 16h 37m 11s.xml">
-      <configuration name="Project Controller.changeProject().should update current project" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="All_Server_Tests - 2016.12.22 at 19h 17m 07s.xml">
+      <configuration name="All Server Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.22 at 15h 42m 05s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Run_All_Server_Tests - 2016.12.22 at 18h 28m 34s.xml">
+      <configuration name="Run All Server Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.22 at 15h 45m 48s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.22 at 15h 49m 14s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="tests_clientMocha_context_spec_js - 2016.12.22 at 15h 51m 04s.xml">
+    <history-entry file="tests_clientMocha_context_spec_js - 2016.12.22 at 18h 27m 46s.xml">
       <configuration name="tests\clientMocha\context.spec.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 15h 45m 56s.xml">
-      <configuration name="tests\clientMocha\project.spec.js" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="tests_clientMocha_navigator_spec_js - 2016.12.22 at 19h 14m 02s.xml">
+      <configuration name="tests\clientMocha\navigator.spec.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 15h 47m 59s.xml">
-      <configuration name="tests\clientMocha\project.spec.js" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="tests_clientMocha_navigator_spec_js - 2016.12.22 at 19h 14m 27s.xml">
+      <configuration name="tests\clientMocha\navigator.spec.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 15h 50m 50s.xml">
-      <configuration name="tests\clientMocha\project.spec.js" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="tests_clientMocha_navigator_spec_js - 2016.12.22 at 19h 14m 57s.xml">
+      <configuration name="tests\clientMocha\navigator.spec.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 15h 53m 34s.xml">
+    <history-entry file="tests_clientMocha_navigator_spec_js - 2016.12.22 at 19h 15m 15s.xml">
+      <configuration name="tests\clientMocha\navigator.spec.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_clientMocha_processor_spec_js - 2016.12.22 at 18h 56m 47s.xml">
+      <configuration name="tests\clientMocha\processor.spec.js" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="tests_clientMocha_project_spec_js - 2016.12.22 at 18h 28m 22s.xml">
       <configuration name="tests\clientMocha\project.spec.js" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68408000" />
+    <option name="totallyTimeSpent" value="74830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -745,27 +623,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14805058" sideWeight="0.6271722" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21130952" sideWeight="0.615942" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49367756" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19968387" sideWeight="0.5255591" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215434" sideWeight="0.47997892" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49578503" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14805058" sideWeight="0.3728278" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215434" sideWeight="0.5205479" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21130952" sideWeight="0.38405797" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44927537" sideWeight="0.5205479" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35369775" sideWeight="0.4915701" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3510467" sideWeight="0.4915701" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19968387" sideWeight="0.51916933" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3215434" sideWeight="0.47945204" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3215434" sideWeight="0.47945204" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49789253" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -850,27 +728,23 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/clientMocha/context.spec.js</url>
+          <url>file://$PROJECT_DIR$/tests/client/context.spec.js</url>
           <line>56</line>
-          <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/clientMocha/context.spec.js</url>
+          <url>file://$PROJECT_DIR$/tests/client/context.spec.js</url>
           <line>46</line>
-          <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/clientMocha/context.spec.js</url>
+          <url>file://$PROJECT_DIR$/tests/client/context.spec.js</url>
           <line>64</line>
-          <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/clientMocha/project.spec.js</url>
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
           <line>68</line>
-          <properties />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
@@ -879,85 +753,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/app/routers/projectRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <marker date="1482271011556" expanded="true" signature="95:2729" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="190:364" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="440:880" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="721:867" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="923:1372" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1049:1316" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1076:1204" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1459:1706" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1556:1694" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1749:2326" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1846:2313" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2071:2292" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2372:2725" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2401:2472" ph="{&quot;_id&quot;: request.params.project_id...}" />
-            <marker date="1482271011556" expanded="true" signature="2513:2713" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server/jsonfs.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="15" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
-          <folding>
-            <marker date="1482364635808" expanded="true" signature="279:431" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="332:423" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="496:979" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="549:664" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="676:973" ph="//..." />
-            <marker date="1482364635808" expanded="true" signature="1046:2415" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1099:1216" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1296:2407" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1328:1594" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1358:1576" ph="[...]" />
-            <marker date="1482364635808" expanded="true" signature="1631:2038" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1661:2020" ph="[...]" />
-            <marker date="1482364635808" expanded="true" signature="2480:3188" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="2534:2647" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="2738:3180" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="3254:3431" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="3308:3423" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/project/project.paging.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="16" lean-forward="false" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -969,22 +764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <marker date="1482430739833" expanded="false" signature="0:250" ph="/*...*/" />
-            <marker date="1482430739833" expanded="true" signature="441:2980" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="486:2948" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="512:753" ph="{&quot;serverType&quot;: servType...}" />
-            <marker date="1482430739833" expanded="true" signature="904:1137" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="1173:1513" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="1550:1885" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="1921:2019" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2063:2335" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2374:2503" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2548:2848" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2635:2793" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2696:2773" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2886:2938" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,23 +787,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <marker date="1482271011556" expanded="true" signature="95:2729" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="190:364" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="440:880" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="721:867" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="923:1372" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1049:1316" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1076:1204" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1459:1706" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1556:1694" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1749:2326" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1846:2313" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2071:2292" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2372:2725" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2401:2472" ph="{&quot;_id&quot;: request.params.project_id...}" />
-            <marker date="1482271011556" expanded="true" signature="2513:2713" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,25 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482364635808" expanded="true" signature="279:431" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="332:423" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="496:979" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="549:664" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="676:973" ph="//..." />
-            <marker date="1482364635808" expanded="true" signature="1046:2415" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1099:1216" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1296:2407" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1328:1594" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1358:1576" ph="[...]" />
-            <marker date="1482364635808" expanded="true" signature="1631:2038" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1661:2020" ph="[...]" />
-            <marker date="1482364635808" expanded="true" signature="2480:3188" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="2534:2647" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="2738:3180" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="3254:3431" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="3308:3423" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,13 +865,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="2083" column="0" lean-forward="false" selection-start-line="2083" selection-start-column="0" selection-end-line="2083" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular/angular.js" />
     <entry file="file://$PROJECT_DIR$/client/app/directives/directive-body.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1137,32 +877,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1482285713417" expanded="true" signature="51:2907" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="191:255" ph="{&quot;findFile&quot;: findFile...}" />
-            <marker date="1482285713417" expanded="true" signature="324:2233" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="338:1340" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="722:801" ph="{&quot;allFiles&quot;: files...}" />
-            <marker date="1482285713417" expanded="true" signature="976:1283" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1081:1172" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1362:1405" ph="{...}" />
-            <marker date="1482285713417" expanded="false" signature="1451:1768" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1469:1663" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1576:1647" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1678:1758" ph="{...}" />
-            <marker date="1482285713417" expanded="false" signature="1799:1962" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1817:1893" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="1908:1952" ph="{...}" />
-            <marker date="1482285713417" expanded="false" signature="1998:2227" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2016:2122" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2137:2217" ph="{...}" />
-            <marker date="1482285713417" expanded="false" signature="2268:2607" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2282:2518" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2411:2479" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2533:2601" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2654:2905" ph="{...}" />
-            <marker date="1482285713417" expanded="true" signature="2761:2874" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,7 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
           <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,22 +913,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <marker date="1482430739833" expanded="false" signature="0:250" ph="/*...*/" />
-            <marker date="1482430739833" expanded="true" signature="441:2980" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="486:2948" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="512:753" ph="{&quot;serverType&quot;: servType...}" />
-            <marker date="1482430739833" expanded="true" signature="904:1137" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="1173:1513" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="1550:1885" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="1921:2019" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2063:2335" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2374:2503" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2548:2848" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2635:2793" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2696:2773" ph="{...}" />
-            <marker date="1482430739833" expanded="true" signature="2886:2938" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,23 +921,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <marker date="1482271011556" expanded="true" signature="95:2729" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="190:364" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="440:880" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="721:867" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="923:1372" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1049:1316" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1076:1204" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1459:1706" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1556:1694" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1749:2326" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="1846:2313" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2071:2292" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2372:2725" ph="{...}" />
-            <marker date="1482271011556" expanded="true" signature="2401:2472" ph="{&quot;_id&quot;: request.params.project_id...}" />
-            <marker date="1482271011556" expanded="true" signature="2513:2713" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,56 +937,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/server.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webstorm_testing.jstd" />
-    <entry file="file://$PROJECT_DIR$/tests/server/fileguy.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1482414537196" expanded="true" signature="307:413" ph="{...}" />
-            <marker date="1482414537196" expanded="true" signature="348:405" ph="{...}" />
-            <marker date="1482414537196" expanded="true" signature="474:1321" ph="{...}" />
-            <marker date="1482414537196" expanded="true" signature="587:661" ph="{...}" />
-            <marker date="1482414537196" expanded="true" signature="723:887" ph="{...}" />
-            <marker date="1482414537196" expanded="true" signature="978:1313" ph="{...}" />
-            <marker date="1482414537196" expanded="true" signature="1158:1228" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server/jsonfs.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding>
-            <marker date="1482364635808" expanded="true" signature="279:431" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="332:423" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="496:979" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="549:664" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="676:973" ph="//..." />
-            <marker date="1482364635808" expanded="true" signature="1046:2415" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1099:1216" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1296:2407" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1328:1594" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1358:1576" ph="[...]" />
-            <marker date="1482364635808" expanded="true" signature="1631:2038" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="1661:2020" ph="[...]" />
-            <marker date="1482364635808" expanded="true" signature="2480:3188" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="2534:2647" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="2738:3180" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="3254:3431" ph="{...}" />
-            <marker date="1482364635808" expanded="true" signature="3308:3423" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -1325,33 +959,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/context.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="32" column="48" lean-forward="true" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/clientMocha/mochaAngularExample.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/clientMocha/testvariables.js">
+    <entry file="file://$PROJECT_DIR$/tests/clientMocha/mochaAngularExample.spec.js" />
+    <entry file="file://$PROJECT_DIR$/tests/client/testvariables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#599#604#0" expanded="false" />
-          </folding>
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1359,48 +974,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server/fileguy.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server/jsonfs.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="80" column="15" lean-forward="true" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/context.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/context.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/core/core.processor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/postman.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/server.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/processor.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="11" lean-forward="true" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/clientMocha/context.spec.js">
+    <entry file="file://$PROJECT_DIR$/tests/client/navigator.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="731">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
+    <entry file="file://$PROJECT_DIR$/tests/client/processor.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
+    <entry file="file://$PROJECT_DIR$/tests/client/navigator.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          <folding>
-            <element signature="e#269#610#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/clientMocha/project.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+        <state relative-caret-position="206">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
