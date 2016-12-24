@@ -1,6 +1,6 @@
 /* 
 This follows a modified version of the factory pattern proposed by John Papa
-such that instances can be created without sacrficing the readability he's achieved.
+such that instances can be created without sacrificing the readability he's achieved.
 
 See 'core.context' for a more typical JP Factory that will send out a Singleton.
 */
