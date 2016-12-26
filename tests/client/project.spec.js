@@ -1,17 +1,14 @@
-var chai = require('chai');
-var sinon_chai = require('sinon-chai');
-var chai_promises = require('chai-as-promised');
-var assert = chai.assert;
-var expect = chai.expect;
+const chai = require('chai');
+const sinon_chai = require('sinon-chai');
+const chai_promises = require('chai-as-promised');
+const expect = chai.expect;
 chai.use(sinon_chai);
 chai.use(chai_promises);
 
 require('./testvariables');
 require('../../client/app/core/core.app');
 require('../../client/app/core/core.context');
-require('../../client/app/core/core.navigator');
 require('../../client/app/core/core.server');
-require('../../client/app/core/core.postman');
 
 require('../../client/app/project/project.app');
 require('../../client/app/project/project.paging');
@@ -25,24 +22,14 @@ describe('Project Controller', function(){
         ngModule('app.core');
         ngModule('app.project');
 
-        inject(function(_$controller_, _$rootScope_, _context_, _server_, _postman_, _pagingService_) {
+        inject(function(_$controller_,_context_, _server_, _pagingService_) {
             $controller = _$controller_;
-            $rootScope = _$rootScope_;
-            var $scope = $rootScope.$new();
-            var $location = {};
             var context = _context_;
             var server = _server_;
-            var $http = {};
-            var postman = _postman_;
             var pagingService = _pagingService_;
-            projectController = $controller('projectController',
-            {
-                $scope: $scope,
-                $location: $location,
+            projectController = $controller('projectController',{
                 context: context,
                 server: server,
-                $http: $http,
-                postman: postman,
                 pagingService: pagingService
             });
         });
@@ -50,7 +37,7 @@ describe('Project Controller', function(){
 
     it('should exist', function(){
         expect(projectController).to.be.defined;
-    })
+    });
 
     it('should have all properties and methods', function(){
         expect(projectController.page).to.be.defined;
@@ -59,11 +46,27 @@ describe('Project Controller', function(){
         expect(projectController.getProjects).to.be.defined;
         expect(projectController.changeProject).to.be.defined;
         expect(projectController.updatePage).to.be.defined;
-    })
+        expect(projectController.nextProject).to.be.defined;
+        expect(projectController.previousProject).to.be.defined;
+    });
+
+    var testProj = {
+        title: 'TestingTitle',
+        colorCode: 'proj-test',
+        summary: 'Summary of testing stuff',
+        currentContent: {
+            currentItem: {}
+        },
+        images: [
+            {
+                image: 'localhost/server/data/test/image.jpg',
+                caption: 'A test image'
+            }
+        ]
+    };
 
     describe('changeProject()', function(){
         it('should update current project', function() {
-
             var currentProj = projectController.page.currentProject;
 
             expect(currentProj.title).not.to.be.equal('');
@@ -71,6 +74,72 @@ describe('Project Controller', function(){
             expect(currentProj.images).not.to.be.equal([]);
             expect(currentProj.title).not.to.be.equal('');
         });
+
+        it('should change the page color', function(){
+
+        });
     });
 
+    describe('nextProject()', function() {
+        it('should increment the project id', function () {
+            var currentId = projectController.page.currentProject.id;
+
+            projectController.nextProject();
+
+            var newId = projectController.page.currentProject.id;
+
+            expect(newId).to.be.above(currentId);
+            expect(newId).to.be.equal(0);
+        });
+
+        it('should start at the beginning if it reaches end of projects', function () {
+            var currentId = projectController.page.currentProject.id;
+
+            projectController.nextProject();
+
+            var newId = projectController.page.currentProject.id;
+
+            expect(newId).to.be.above(currentId);
+            expect(newId).to.be.equal(projectController.page.currentProject.length);
+        });
+    });
+
+    describe('previousProject()', function() {
+        it('should decrement the project id', function () {
+            var currentId = projectController.page.currentProject.id;
+
+            projectController.previousProject();
+
+            var newId = projectController.page.currentProject.id;
+
+            expect(newId).to.be.above(currentId);
+            expect(newId).to.be.equal(projectController.page.currentProject.length);
+        });
+
+        it('should head toward the final project if it decrements are negative', function () {
+            var currentId = projectController.page.currentProject.id;
+
+            projectController.previousProject();
+
+            var newId = projectController.page.currentProject.id;
+
+            expect(newId).to.be.above(currentId);
+            expect(newId).to.be.equal(projectController.page.currentProject.length);
+        });
+    });
+
+    describe('updatePage()', function(){
+        it('should update current project', function() {
+            var currentProj = projectController.page.currentProject;
+
+            expect(currentProj.title).not.to.be.equal('');
+            expect(currentProj.summary).not.to.be.equal('');
+            expect(currentProj.images).not.to.be.equal([]);
+            expect(currentProj.title).not.to.be.equal('');
+        });
+
+        it('should change the page color', function(){
+
+        });
+    });
 });

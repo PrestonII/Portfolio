@@ -6,9 +6,9 @@
         .module('app.core')
         .factory('context', context);
 
-    context.$inject = ['$http', '$rootScope'];
+    context.$inject = ['$rootScope'];
 
-    function context($http, $root) {
+    function context($root) {
 
         console.log('Creating core context');
 

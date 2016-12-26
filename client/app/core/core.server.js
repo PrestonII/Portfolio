@@ -11,9 +11,9 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
         .module('app.core')
         .factory('server', server);
 
-    server.$inject = ['$http', 'postman'];
+    server.$inject = ['postman'];
 
-    function server(http, Postman) {
+    function server(Postman) {
 
         var instance = function(servType) {
 
@@ -24,7 +24,8 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
                 getObjects: getObjects,
                 addObjects: addObjects,
                 killObjects: killObjects
-            }
+            };
+
             var postalService = new Postman(self.serverType);
 
             initialize();

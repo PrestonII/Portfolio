@@ -1,12 +1,5 @@
 var chai = require('chai');
-var sinon = require('sinon');
-var sinon_chai = require('sinon-chai');
-var chai_promises = require('chai-as-promised');
 var expect = chai.expect;
-var should = chai.should;
-chai.use(sinon_chai);
-chai.use(chai_promises);
-chai.should();
 
 require('./testvariables');
 require('../../client/app/core/core.app');
@@ -14,16 +7,6 @@ require('../../client/app/core/core.postman');
 
 describe('Postman', function(){
     var postman, $httpbackend;
-    var response_success = {
-        data:[
-            {userId: 'preston1'},
-            {token: 'xxx'}
-        ]
-    };
-
-    var response_error = {
-        data: 'not found'
-    };
 
     beforeEach(function(){
         ngModule('app.core');

@@ -10,6 +10,7 @@
         console.log('Loading Project Paging Service...');
 
         var service = {
+            projects: [],
             currentProject: {},
             previousProject: {},
             changeProject: changeProject,
@@ -20,7 +21,12 @@
         }
 
         var samples = [
-                {
+            {
+                title: 'Feature/' + '\n' + 'Lines',
+                colorCode: 'proj-assemble',
+                summary: 'Testing to see how text looks in GREY'
+            },
+            {
                 title: 'Sample Project Titles',
                 colorCode: 'proj-sample',
                 summary:
@@ -45,18 +51,13 @@
                             '\n' +
                             'Some of which have been programmed. Others which have not. ' +
                             'There are of course more words that could potentially be said but will, for now, be left unsaid.'
-                    }
-                },
+                        }
+                    },
             },
             {
                 title: 'Simulacra',
                 colorCode: 'proj-simulacra',
                 summary: 'Testing to see how text looks in WHITE'
-            },
-            {
-                title: 'Feature/' + '\n' + 'Lines',
-                colorCode: 'proj-assemble',
-                summary: 'Testing to see how text looks in GREY'
             },
         ];
 

@@ -7,9 +7,9 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['$scope','$location', 'context', 'server', '$http', 'pagingService'];
+    projectController.$inject = ['context', 'server', 'pagingService'];
 
-    function projectController($scope, $location, context, Server, $http, pagingService) {
+    function projectController(context, Server, pagingService) {
         /* jshint validthis:true */
         var vm = this;
         var projectServer = new Server('projects');
@@ -21,6 +21,7 @@
             transition: 'slowFade',
             projects: [],
             currentProject: {
+                id: -1,
                 title: '',
                 summary: '',
                 images: [],
@@ -36,6 +37,8 @@
         vm.changeProject = changeProject;
         vm.updatePage = updatePage;
         vm.getProjects = getProjects;
+        vm.nextProject = nextProject;
+        vm.previousProject = previousProject;
 
         initialize();
 
@@ -45,35 +48,59 @@
         }
 
         function updatePage() {
-            if (vm.page.projects.length <= 1) {
+            if (vm.page.projects.length <= 1)
                 getProjects();
-            }
-            
+
             context.updatePage(vm.page);
-            vm.page.currentProject = pageHelper.changeProject(vm.page.projects[0]);
-            context.updatePageColor(vm.page.currentProject);
+            vm.page.currentProject =
+                pageHelper.changeProject(vm.page.projects[0])
+                    .then(context.updatePageColor(vm.page.currentProject));
         }
 
-        function changeProject(direction) {
+        // function changeProject(direction) {
+        //
+        //     // find position of current project
+        //     var pos = vm.page.projects.indexOf(vm.page.currentProject);
+        //     var i = direction === 'next'
+        //                 ? (pos + 1)
+        //                 : (pos - 1);
+        //
+        //     if (i >= vm.page.projects.length || i < 0) {
+        //         console.log('Reached end of projects');
+        //         return;
+        //     }
+        //
+        //     var newProj = pageHelper.changeProject(vm.page.projects[i]);
+        //     vm.page.currentProject = newProj;
+        //     context.updatePageColor(vm.page.projects[i]);
+        // }
 
-            // find position of current project
-            var pos = vm.page.projects.indexOf(vm.page.currentProject);
-            var i = direction === 'next'
-                        ? (pos + 1)
-                        : (pos - 1);
+        function nextProject(){
+            var currentId = vm.page.currentProject.id;
+            var next = currentId + 1;
 
-            if (i >= vm.page.projects.length || i < 0) {
-                console.log('Reached end of projects');
-                return;
-            }
+            if(next > vm.page.projects.length)
+                next = 0;
 
-            var newProj = pageHelper.changeProject(vm.page.projects[i]);
-            vm.page.currentProject = newProj;
-            context.updatePageColor(vm.page.projects[i]);
+            var project = pageHelper.changeProject(vm.page.projects[next]);
+            vm.page.currentProject = project;
+            context.updatePageColor(project);
+        }
+
+        function previousProject(){
+            var currentId = vm.page.currentProject.id;
+            var previous = currentId - 1;
+
+            if(previous < 0)
+                previous = vm.page.projects.length;
+
+            var project = pageHelper.changeProject(vm.page.projects[previous]);
+            vm.page.currentProject = project;
+            context.updatePageColor(project);
         }
 
         function getProjects() {
-            console.log('Gettings projects from server...');
+            console.log('Getting projects from server...');
             projectServer.getObjects()
                 .then(updateProjects)
                 .catch(function(error) {

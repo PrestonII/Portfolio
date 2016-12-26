@@ -255,3 +255,5 @@ ModelManifest.xml
 .fake/
 *.idlk
 #.idea*
+*.js___jb_tmp___
+.idea/workspace.xml
