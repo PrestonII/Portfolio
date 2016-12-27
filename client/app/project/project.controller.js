@@ -14,6 +14,7 @@
         var vm = this;
         var projectHandler = projectService;
 
+        vm.initialize = initialize;
         vm.updatePage = updatePage;
         vm.updateProjectList = updateProjectList;
         vm.changeProject = changeProject;
@@ -43,28 +44,44 @@
 
         initialize();
 
-        function initialize() {
+        function initialize(callback) {
             console.log('Loading Project Controller...');
-            vm.page.projects = updateProjectList()
-                .then(updatePage);
+            updateProjectList()
+                .then(function(response){
+                    vm.page.projects = response;
+                    updatePage();
+                })
+                .catch(function(error){
+                    console.log(error);
+                });
+
+            if(vm.page.projects === Promise)
+                vm.page.projects
+                    .success(callback)
         }
 
-        function updatePage() {
+        function updatePage(callback) {
+            changeProject();
             context.updatePage(vm.page);
             context.updatePageColor(vm.page.currentProject);
+
+            if(callback)
+                return callback();
         }
 
         function updateProjectList(){
-            if (vm.page.projects.length <= 1)
-                return getProjects();
+            return getProjects();
         }
 
-        function changeProject(index) {
+        function changeProject(index, callback) {
             if(!index || index === null || index === undefined)
                 index = 0;
 
-            vm.page.currentProject = projects[index];
+            vm.page.currentProject = vm.page.projects[index];
             context.updatePageColor(vm.page.currentProject);
+
+            if(callback)
+                return callback();
         }
 
         function nextProject(){
@@ -88,8 +105,7 @@
         }
 
         function getProjects() {
-            return projectHandler.getProjects()
-                    .then(changeProject);
+            return projectHandler.getProjects();
         }
     }
 })();
