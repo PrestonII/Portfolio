@@ -10,7 +10,7 @@ require('./testvariables');
 require('../../client/app/core/core.app');
 require('../../client/app/core/core.navigator');
 
-describe('Navigator', function () {
+describe('Application Navigator', function () {
     var Navigator;
 
     // Before each test set our injected Users factory (_Users_) to our local Users variable

@@ -39,7 +39,7 @@
     },
 
     {
-      "title": [ "Feature/", "\n", " Lines" ],
+      "title": [ "Feature/", "\n", "Lines" ],
       "colorCode": "proj-assemble",
       "summary": "One of my first experiments with both WebGL and intense client side Javascript.",
       "tags": [ ".NET", "Javascript, WebGL" ],

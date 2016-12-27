@@ -5,18 +5,19 @@
         .module('app.project')
         .factory('projectService', projectService);
 
-    projectService.$inject = ['server', 'dataprocessor'];
+    projectService.$inject = ['server', 'projectFactory'];
 
-    function projectService(Server, dataprocessor) {
+    function projectService(Server, ProjectFactory) {
 
         console.log('Loading Project Retrieval Service...');
         var projectServer = new Server('projects');
-        var projectProcessor = dataprocessor;
+        var projectFactory = new ProjectFactory();
 
         var service = {
             projects: [],
             getProjects : getProjects,
-            getOfflineSamples : getOfflineSamples
+            getOfflineSamples : getOfflineSamples,
+            processProjectData : processProjectData
         };
 
         var samples = [
@@ -63,23 +64,26 @@
         return service;
 
         function getOfflineSamples() {
-
-
-            return samples;
+            return processProjectData(samples);
         }
 
         function getProjects(){
             console.log('Getting projects from server...');
+
             return projectServer.getObjects()
-                .then(function(response){
-                    return response;
-                })
+                .then(processProjectData)
                 .catch(getOfflineSamples);
         }
 
-        function processProjectData(projects){
+        function processProjectData(projectData){
+            var projects = [];
 
-            return ;
+            projectData.forEach(function(proj){
+                var processed = projectFactory.createProject(proj);
+                projects.push(processed);
+            });
+
+            return projects;
         }
     }
 })();

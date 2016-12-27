@@ -20,7 +20,8 @@
         }
 
         var escapeSequences = [
-            { key : "\n", value : "</br>" }
+            { key : "\n", value : "</br>" },
+            { key : "\\", value : '/' },
         ];
 
         return service;
@@ -54,7 +55,7 @@
             });
 
             if (hasEscapes(data))
-                return convertEscapeSequences();
+                return convertEscapeSequences(data);
 
             return data;
         }

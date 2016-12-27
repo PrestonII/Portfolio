@@ -11,7 +11,7 @@ require('../../client/app/core/core.app');
 require('../../client/app/core/core.processor');
 
 
-describe('Processor', function(){
+describe('Data Processor', function(){
     var processor;
     var data = {};
 

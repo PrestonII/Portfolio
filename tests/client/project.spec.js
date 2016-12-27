@@ -79,7 +79,11 @@ describe('Project Controller', function(){
         });
 
         it('should change the page color', function(){
+            projectController.updatePage();
+            var result = projectController.page.currentProject.colorCode;
 
+            expect(result).not.to.be.equal('');
+            expect(result).not.to.be.equal(null);
         });
     });
 

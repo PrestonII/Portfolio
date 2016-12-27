@@ -14,7 +14,6 @@
         var vm = this;
         var projectHandler = projectService;
 
-
         vm.updatePage = updatePage;
         vm.updateProjectList = updateProjectList;
         vm.changeProject = changeProject;
@@ -31,6 +30,7 @@
                 id: -1,
                 title: '',
                 summary: '',
+                colorCode: '',
                 images: [],
                 currentContent: {
                     currentItem: {
@@ -45,7 +45,8 @@
 
         function initialize() {
             console.log('Loading Project Controller...');
-            vm.page.projects = updateProjectList().then(updatePage);
+            vm.page.projects = updateProjectList()
+                .then(updatePage);
         }
 
         function updatePage() {
