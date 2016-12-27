@@ -3,22 +3,21 @@
 
     angular
         .module('app.project')
-        .factory('pagingService', pagingService);
+        .factory('projectService', projectService);
 
-    function pagingService() {
+    projectService.$inject = ['server', 'dataprocessor'];
 
-        console.log('Loading Project Paging Service...');
+    function projectService(Server, dataprocessor) {
+
+        console.log('Loading Project Retrieval Service...');
+        var projectServer = new Server('projects');
+        var projectProcessor = dataprocessor;
 
         var service = {
             projects: [],
-            currentProject: {},
-            previousProject: {},
-            changeProject: changeProject,
-            updatePageColor: updatePageColor,
-            updatePageProject: updatePageProject,
-            updateProjectImages: updateProjectImages,
+            getProjects : getProjects,
             getOfflineSamples : getOfflineSamples
-        }
+        };
 
         var samples = [
             {
@@ -63,29 +62,24 @@
 
         return service;
 
-        function changeProject(project) {
-            if (project === undefined || project === null)
-                project = samples[0];
-
-            service.currentProject = project;
-
-            return service.currentProject;
-        }
-
         function getOfflineSamples() {
+
+
             return samples;
         }
 
-        function updatePageColor() {
-            
+        function getProjects(){
+            console.log('Getting projects from server...');
+            return projectServer.getObjects()
+                .then(function(response){
+                    return response;
+                })
+                .catch(getOfflineSamples);
         }
 
-        function updatePageProject() {
-            
-        }
+        function processProjectData(projects){
 
-        function updateProjectImages() {
-            
+            return ;
         }
     }
 })();

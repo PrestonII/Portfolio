@@ -7,13 +7,20 @@
         .module('app.project')
         .controller('projectController', projectController);
 
-    projectController.$inject = ['context', 'server', 'pagingService'];
+    projectController.$inject = ['context', 'projectService'];
 
-    function projectController(context, Server, pagingService) {
+    function projectController(context, projectService) {
         /* jshint validthis:true */
         var vm = this;
-        var projectServer = new Server('projects');
-        var pageHelper = pagingService;
+        var projectHandler = projectService;
+
+
+        vm.updatePage = updatePage;
+        vm.updateProjectList = updateProjectList;
+        vm.changeProject = changeProject;
+        vm.getProjects = getProjects;
+        vm.nextProject = nextProject;
+        vm.previousProject = previousProject;
 
         vm.page = {
             name: 'Works',
@@ -34,46 +41,30 @@
             }
         };
 
-        vm.changeProject = changeProject;
-        vm.updatePage = updatePage;
-        vm.getProjects = getProjects;
-        vm.nextProject = nextProject;
-        vm.previousProject = previousProject;
-
         initialize();
 
         function initialize() {
             console.log('Loading Project Controller...');
-            updatePage();
+            vm.page.projects = updateProjectList().then(updatePage);
         }
 
         function updatePage() {
-            if (vm.page.projects.length <= 1)
-                getProjects();
-
             context.updatePage(vm.page);
-            vm.page.currentProject =
-                pageHelper.changeProject(vm.page.projects[0])
-                    .then(context.updatePageColor(vm.page.currentProject));
+            context.updatePageColor(vm.page.currentProject);
         }
 
-        // function changeProject(direction) {
-        //
-        //     // find position of current project
-        //     var pos = vm.page.projects.indexOf(vm.page.currentProject);
-        //     var i = direction === 'next'
-        //                 ? (pos + 1)
-        //                 : (pos - 1);
-        //
-        //     if (i >= vm.page.projects.length || i < 0) {
-        //         console.log('Reached end of projects');
-        //         return;
-        //     }
-        //
-        //     var newProj = pageHelper.changeProject(vm.page.projects[i]);
-        //     vm.page.currentProject = newProj;
-        //     context.updatePageColor(vm.page.projects[i]);
-        // }
+        function updateProjectList(){
+            if (vm.page.projects.length <= 1)
+                return getProjects();
+        }
+
+        function changeProject(index) {
+            if(!index || index === null || index === undefined)
+                index = 0;
+
+            vm.page.currentProject = projects[index];
+            context.updatePageColor(vm.page.currentProject);
+        }
 
         function nextProject(){
             var currentId = vm.page.currentProject.id;
@@ -82,9 +73,7 @@
             if(next > vm.page.projects.length)
                 next = 0;
 
-            var project = pageHelper.changeProject(vm.page.projects[next]);
-            vm.page.currentProject = project;
-            context.updatePageColor(project);
+            changeProject(next);
         }
 
         function previousProject(){
@@ -94,30 +83,12 @@
             if(previous < 0)
                 previous = vm.page.projects.length;
 
-            var project = pageHelper.changeProject(vm.page.projects[previous]);
-            vm.page.currentProject = project;
-            context.updatePageColor(project);
+            changeProject(previous);
         }
 
         function getProjects() {
-            console.log('Getting projects from server...');
-            projectServer.getObjects()
-                .then(updateProjects)
-                .catch(function(error) {
-                    logError(error);
-                    var samples = pageHelper.getOfflineSamples();
-                    updateProjects(samples);
-                });
-
-            function updateProjects(dbprojects) {
-                console.log('Updating page...');
-                pageHelper.changeProject(dbprojects[0]);
-                console.log('Done.');
-            }
-
-            function logError(error) {
-                console.log('There was an error attempting to retrieve projects: \n' + error);
-            }
+            return projectHandler.getProjects()
+                    .then(changeProject);
         }
     }
 })();

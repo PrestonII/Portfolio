@@ -9,9 +9,11 @@ require('./testvariables');
 require('../../client/app/core/core.app');
 require('../../client/app/core/core.context');
 require('../../client/app/core/core.server');
+require('../../client/app/core/core.postman');
+require('../../client/app/core/core.processor');
 
 require('../../client/app/project/project.app');
-require('../../client/app/project/project.paging');
+require('../../client/app/project/project.service.js');
 require('../../client/app/project/project.controller');
 
 describe('Project Controller', function(){
@@ -22,11 +24,11 @@ describe('Project Controller', function(){
         ngModule('app.core');
         ngModule('app.project');
 
-        inject(function(_$controller_,_context_, _server_, _pagingService_) {
+        inject(function(_$controller_,_context_, _server_, _projectService_) {
             $controller = _$controller_;
             var context = _context_;
             var server = _server_;
-            var pagingService = _pagingService_;
+            var pagingService = _projectService_;
             projectController = $controller('projectController',{
                 context: context,
                 server: server,
@@ -43,9 +45,10 @@ describe('Project Controller', function(){
         expect(projectController.page).to.be.defined;
         expect(projectController.page.projects).to.be.defined;
         expect(projectController.page.currentProject).to.be.defined;
-        expect(projectController.getProjects).to.be.defined;
-        expect(projectController.changeProject).to.be.defined;
         expect(projectController.updatePage).to.be.defined;
+        expect(projectController.updateProjectList).to.be.defined;
+        expect(projectController.changeProject).to.be.defined;
+        expect(projectController.getProjects).to.be.defined;
         expect(projectController.nextProject).to.be.defined;
         expect(projectController.previousProject).to.be.defined;
     });
