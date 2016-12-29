@@ -88,7 +88,7 @@
             var currentId = vm.page.currentProject.id;
             var next = currentId + 1;
 
-            if(next > vm.page.projects.length)
+            if(next >= vm.page.projects.length)
                 next = 0;
 
             changeProject(next);

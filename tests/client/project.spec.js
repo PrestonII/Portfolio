@@ -1,4 +1,5 @@
 const chai = require('chai');
+const sinon = require('sinon');
 const sinon_chai = require('sinon-chai');
 const chai_promises = require('chai-as-promised');
 const expect = chai.expect;
@@ -19,21 +20,35 @@ require('../../client/app/project/project.controller');
 
 describe('Project Controller', function(){
     "use strict";
-    var $controller, projectController, $rootScope;
+    var $controller, projectController, projectHandler, context;
+    var testProj = {
+        title: 'TestingTitle',
+        id: 0,
+        colorCode: 'proj-test',
+        summary: 'Summary of testing stuff',
+        currentContent: {
+            currentItem: {}
+        },
+        images: [
+            {
+                location: 'localhost/server/data/test/image.jpg',
+                caption: 'A test image'
+            }
+        ]
+    };
 
     beforeEach(function(){
         ngModule('app.core');
         ngModule('app.project');
 
-        inject(function(_$controller_,_context_, _server_, _projectService_) {
+        inject(function(_$controller_,_context_, _projectService_) {
             $controller = _$controller_;
-            var context = _context_;
-            var server = _server_;
-            var pagingService = _projectService_;
+            projectHandler = _projectService_;
+            context = _context_;
+
             projectController = $controller('projectController',{
                 context: context,
-                server: server,
-                pagingService: pagingService
+                pagingService: projectHandler
             });
         });
     });
@@ -54,21 +69,43 @@ describe('Project Controller', function(){
         expect(projectController.previousProject).to.be.defined;
     });
 
-    var testProj = {
-        title: 'TestingTitle',
-        id: 0,
-        colorCode: 'proj-test',
-        summary: 'Summary of testing stuff',
-        currentContent: {
-            currentItem: {}
-        },
-        images: [
-            {
-                location: 'localhost/server/data/test/image.jpg',
-                caption: 'A test image'
-            }
-        ]
-    };
+    it('should have sample projects at least, if not online', function(){
+        // setUp.then(function() {
+        //     expect(projectController.page.projects).to.eventually.be.defined;
+        //     expect(projectController.page.currentProject).to.eventually.be.defined;
+        //     expect(projectController.page.currentProject.id).to.eventually.equal(0);
+        // });
+
+        var results;
+
+        projectController.updateProjectList().then(function(response){
+            console.log(response);
+            results = response;
+            expect(results).to.eventually.be.defined;
+            expect(results[0].id).to.eventually.equal(0);
+        });
+
+        // setUp();
+        //
+        // function setUp() {
+        //
+        //     var projectGetter = sinon.stub(projectHandler, "getProjects");
+        //     var projects = [];
+        //     projects.push(testProj);
+        //
+        //     var response = new Promise(getProjects);
+        //     projectGetter.returns(response);
+        //
+        //     projectController = $controller('projectController', {
+        //         context: context,
+        //         pagingService: projectHandler
+        //     });
+        //
+        //     function getProjects(){
+        //         return projects;
+        //     };
+        // };
+    });
 
     describe('changeProject()', function(){
         it('should pick first project if no index', function() {
@@ -155,6 +192,8 @@ describe('Project Controller', function(){
 
     describe('updatePage()', function(){
         it('should update current project', function() {
+            projectController.page.projects = [];
+
             projectController.updatePage();
             var currentProj = projectController.page.currentProject;
 
