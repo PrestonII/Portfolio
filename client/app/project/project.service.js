@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
     'use strict';
 
     angular
@@ -11,7 +11,7 @@
 
         console.log('Loading Project Retrieval Service...');
         var projectServer = new Server('projects');
-        var projectFactory = new ProjectFactory();
+        var projectFactory;
 
         var service = {
             projects: [],
@@ -77,6 +77,7 @@
 
         function processProjectData(projectData){
             var projects = [];
+            projectFactory = new ProjectFactory();
 
             projectData.forEach(function(proj){
                 var processed = projectFactory.createProject(proj);

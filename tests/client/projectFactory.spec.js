@@ -11,7 +11,7 @@ require('../../client/app/project/project.factory');
 describe('Project Factory', function(){
     "use strict";
 
-    var projectFactory;
+    var projectFactory, projectData, project;
 
     beforeEach(function(){
         ngModule('app.project');
@@ -19,6 +19,27 @@ describe('Project Factory', function(){
         inject(function(_projectFactory_){
             projectFactory = new _projectFactory_();
         });
+
+        projectData ={
+            title: 'Project Data',
+            data: {
+                "title": [ "Feature/", "\n", "Lines" ],
+                "colorCode": "proj-assemble",
+                "summary": "One of my first experiments with both WebGL and intense client side Javascript.",
+                "tags": [ ".NET", "Javascript", "WebGL" ],
+                "images": [
+                    {
+                        "location": 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web1.jpg',
+                        "caption": "Image of a thing"
+                    },
+                    {
+                        "location": 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web2.jpg',
+                        "caption": "Image of another thing"
+                    }
+                ]
+            }
+        };
+        project = projectData.data;
     });
 
     it('should exist', function(){
@@ -52,28 +73,6 @@ describe('Project Factory', function(){
     });
 
     describe('data prep methods', function(){
-
-        var projectData ={
-            title: 'Project Data',
-            data: {
-                "title": [ "Feature/", "\n", "Lines" ],
-                "colorCode": "proj-assemble",
-                "summary": "One of my first experiments with both WebGL and intense client side Javascript.",
-                "tags": [ ".NET", "Javascript", "WebGL" ],
-                "images": [
-                    {
-                        "location": 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web1.jpg',
-                        "caption": "Image of a thing"
-                    },
-                    {
-                        "location": 'A:\\Work\\Projects\\Portfolio\\server\\data\\images\\example\\web2.jpg',
-                        "caption": "Image of another thing"
-                    }
-                ]
-            }
-        };
-        var project = projectData.data;
-
         it('- sanitizeProjectData() - should prep all project data for HTML usage', function(){
             var result = projectFactory.sanitizeProjectData(project);
             var expectation = {
@@ -136,23 +135,31 @@ describe('Project Factory', function(){
             expect(result[2]).to.be.equal(expectation[2]);
         });
 
-        it('- convertImages() - should fix any strange image locations or captions', function(){
-            var result = projectFactory.convertImages(project.images);
-            var expectation = [
-                {
-                    location: 'A:/Work/Projects/Portfolio/server/data/images/example/web1.jpg',
-                    caption: "Image of a thing"
-                },
-                {
-                    location: 'A:/Work/Projects/Portfolio/server/data/images/example/web2.jpg',
-                    caption: "Image of another thing"
-                }
-            ];
+        describe('convertImages()', function(){
+            it('should process nulls', function(){
+                project.images = null;
 
-            expect(result[0].location).to.be.equal(expectation[0].location);
-            expect(result[1].location).to.be.equal(expectation[1].location);
-            expect(result[0].caption).to.be.equal(expectation[0].caption);
-            expect(result[1].caption).to.be.equal(expectation[1].caption);
+                expect(projectFactory.convertImages).not.to.throw(Error);
+            });
+
+            it('should fix any strange image locations or captions', function(){
+                var result = projectFactory.convertImages(project.images);
+                var expectation = [
+                    {
+                        location: 'A:/Work/Projects/Portfolio/server/data/images/example/web1.jpg',
+                        caption: "Image of a thing"
+                    },
+                    {
+                        location: 'A:/Work/Projects/Portfolio/server/data/images/example/web2.jpg',
+                        caption: "Image of another thing"
+                    }
+                ];
+
+                expect(result[0].location).to.be.equal(expectation[0].location);
+                expect(result[1].location).to.be.equal(expectation[1].location);
+                expect(result[0].caption).to.be.equal(expectation[0].caption);
+                expect(result[1].caption).to.be.equal(expectation[1].caption);
+            });
         });
     });
 });

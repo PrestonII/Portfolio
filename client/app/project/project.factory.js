@@ -19,7 +19,7 @@
                convertColor : convertColor,
                convertTags : convertTags,
                convertImages : convertImages,
-               idCounter: 0
+               idCounter: -1
            };
 
            var Project = function (title, summary, color, tags, images) {
@@ -109,6 +109,8 @@
 
            function convertImages(images){
                let convImages = images;
+               if(convImages === null || convImages === undefined)
+                   return;
 
                convImages.forEach(function(image){
                    var location = dataProcessor.convertEscapeSequences(image.location);
