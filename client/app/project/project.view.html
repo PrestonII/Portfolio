@@ -16,6 +16,10 @@
     <div id="pictures"
          class="col-xs-6 col-md-7 pictures">
         <div class="current-picture">
+            <img src="{{ vm.page.currentProject.images[0].location }}"
+                 alt="Photo 1"
+                 class="picture"
+            />
         </div>
         <div class="caption">{{ vm.page.currentProject.currentContent.currentItem.caption }}</div>
     </div>

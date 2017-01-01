@@ -44,9 +44,11 @@
                 tags: [".NET", "Javascript", "HTML5", "CSS3"],
                 images: [
                     {
+                        location: './server/data/images/example/web1.jpg',
                         caption: 'caption for image #1'
                     },
                     {
+                        location: './server/data/images/example/web2.jpg',
                         caption: 'caption for image #2'
                     },
                 ]
