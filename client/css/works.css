@@ -68,11 +68,12 @@
     border: 1px solid #FE5A6B;
     /*background-color: #FE5A6B;*/
 
-    max-height: 600px;
-    max-width: 600px;
+    height: 80%;
+    width: 80%;
+    /*max-height: 600px;*/
+    /*max-width: 600px;*/
 
     margin: 25px 50px;
-    /*padding: 0px 50px;*/
     text-align: center;
 
     vertical-align: middle;
@@ -86,6 +87,18 @@
     max-width: 100%;
     /*margin: 0;*/
     /*vertical-align: middle;*/
+}
+
+/*.image-list{*/
+    /*height: 25px;*/
+/*}*/
+
+.image-list li{
+    font-size: 48px;
+    margin: 0px 5px;
+    color: #303030;
+    display: inline-block;
+    cursor: hand;
 }
 
 .caption {

@@ -21,13 +21,14 @@
         vm.getProjects = getProjects;
         vm.nextProject = nextProject;
         vm.previousProject = previousProject;
+        vm.changeImage = changeImage;
 
         vm.page = {
             name: 'Works',
             title: '',
             transition: 'slowFade',
             projects: [],
-            currentImage : 0,
+            currentImage : {},
             currentProject: {
                 id: -1,
                 title: '',
@@ -56,7 +57,7 @@
         }
 
         function updatePage(callback) {
-            changeProject();
+            changeProject();            
             context.updatePage(vm.page);
             context.updatePageColor(vm.page.currentProject);
 
@@ -68,12 +69,23 @@
             return getProjects();
         }
 
+        function changeImage(index, callback){
+        	if(!index || index === null || index === undefined)
+        		index = 0;
+
+        	vm.page.currentImage = vm.page.currentProject.images[index];
+
+        	if(callback)
+        		return callback();
+        }
+
         function changeProject(index, callback) {
             if(!index || index === null || index === undefined)
                 index = 0;
 
             vm.page.currentProject = vm.page.projects[index];
             context.updatePageColor(vm.page.currentProject);
+            changeImage();
 
             if(callback)
                 return callback();

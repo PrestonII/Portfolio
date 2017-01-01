@@ -1,6 +1,6 @@
 <div id="summary-section">
     <div id="words"
-         class="col-xs-4 col-md-4 words">
+         class="col-xs-4 col-s-4 col-md-4 words">
         <div id="title-{{ vm.page.name }}"
              class="title"
              ng-class="vm.page.transition">
@@ -14,18 +14,27 @@
     </div>
 
     <div id="pictures"
-         class="col-xs-6 col-md-7 pictures">
-        <div class="current-picture">
-            <img src="{{ vm.page.currentProject.images[0].location }}"
+         class="col-xs-6 col-s-6 col-md-7 pictures center-ver-hor">
+        <div class="current-picture center-child">
+            <img src="{{ vm.page.currentImage.location }}"
                  alt="Photo 1"
                  class="picture"
             />
+        </div>
+        <div class="image-list">
+            <ul>
+                <li ng-repeat="image in vm.page.currentProject.images"
+                    id="projectImage-"{{image.id}}
+                    ng-click="vm.changeImage(image.id)">
+                .
+                </li>
+            </ul>
         </div>
         <div class="caption">{{ vm.page.currentProject.currentContent.currentItem.caption }}</div>
     </div>
     
     <div id="project-navigation"
-         class="col-xs-2 col-md-1 project-navigation">
+         class="col-xs-2 col-s-2 col-md-1 project-navigation">
         <div id="next"
              ng-click="vm.nextProject()"><h2>></h2></div>
         <div id="previous"
