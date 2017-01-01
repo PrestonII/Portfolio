@@ -4,7 +4,8 @@
         <div id="title-{{ vm.page.name }}"
              class="title"
              ng-class="vm.page.transition">
-            <h2>{{ vm.page.currentProject.title}}</h2>
+            <!--<h2>{{ vm.page.currentProject.title}}</h2>-->
+            <h2 ng-repeat="projectTitle in vm.page.currentProject.title">{{projectTitle}}</h2>
         </div>
         <div id="summary-{{ vm.page.name }}"
              class="summary">
@@ -15,7 +16,6 @@
     <div id="pictures"
          class="col-xs-6 col-md-7 pictures">
         <div class="current-picture">
-            <img href="{{ vm.page.currentProject.currentContent.currentItem.image }}" alt="Photo 1" />
         </div>
         <div class="caption">{{ vm.page.currentProject.currentContent.currentItem.caption }}</div>
     </div>

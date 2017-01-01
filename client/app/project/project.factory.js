@@ -43,7 +43,7 @@
                if (typeof title === 'object')
                    return createProjectObject(title);
 
-               var proj = new Project(
+               var createdProject = new Project(
                    title,
                    summary,
                    color,
@@ -51,12 +51,12 @@
                    images
                );
 
-               return proj;
+               return createdProject;
 
-               function createProjectObject(project) {
-                   var project = sanitizeProjectData(project);
+               function createProjectObject(proj) {
+                   var project = sanitizeProjectData(proj);
 
-                   return createProject(
+                   return new Project(
                        project.title,
                        project.summary,
                        project.colorCode,
@@ -66,8 +66,8 @@
                };
            };
 
-           function sanitizeProjectData(project){
-               var convProject = project;
+           function sanitizeProjectData(proj){
+               var convProject = proj;
 
                var convTitle = convertTitle(convProject.title);
                var convSummary = convertSummary(convProject.summary);
@@ -85,11 +85,21 @@
            }
 
            function convertTitle(title){
-               var convTitle = dataProcessor.sanitize(title);
+               var convTitle = title;
+               var newTitle = [];
+               if(!Array.isArray(convTitle)){
+                   newTitle.push(convTitle);
+                   return newTitle;
+               }
+
+               // var convTitle = dataProcessor.convertEscapeSequences(title);
                return convTitle;
            }
 
            function convertSummary(summary){
+                if(summary === null || summary === undefined)
+                    return;
+
                var convSummary = dataProcessor.sanitize(summary);
                return convSummary;
            }

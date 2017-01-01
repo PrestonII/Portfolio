@@ -16,7 +16,7 @@
 
         var json = getConfig(file);
 
-        var pathed = localizeFiles(json);
+        // var pathed = localizeFiles(json);
 
         return json;
 

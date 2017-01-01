@@ -58,7 +58,7 @@ describe('Project Factory', function(){
             var project = projectFactory.createProject('TestingTitle');
 
             expect(project).to.be.defined;
-            expect(projectFactory.idCounter).to.equal(1);
+            expect(projectFactory.idCounter).to.equal(0);
             expect(project.title).to.equal('TestingTitle');
         });
 
@@ -66,14 +66,14 @@ describe('Project Factory', function(){
             var first = projectFactory.createProject('First Project');
             var second = projectFactory.createProject('Second Project');
 
-            expect(first.id).to.equal(1);
-            expect(second.id).to.equal(2);
+            expect(first.id).to.equal(0);
+            expect(second.id).to.equal(1);
             expect(first.id).not.to.be.equal(second.id);
         })
     });
 
     describe('data prep methods', function(){
-        it('- sanitizeProjectData() - should prep all project data for HTML usage', function(){
+        it('sanitizeProjectData() - should prep all project data for HTML usage', function(){
             var result = projectFactory.sanitizeProjectData(project);
             var expectation = {
                 title: 'Feature/</br>Lines',
@@ -104,21 +104,21 @@ describe('Project Factory', function(){
             expect(result.images[1].caption).to.be.equal(expectation.images[1].caption);
         });
 
-        it('- convertTitle() - should clean project title', function(){
+        it('convertTitle() - should clean project title', function(){
             var result = projectFactory.convertTitle(project.title);
             var expectation = 'Feature/</br>Lines';
 
             expect(result).to.be.equal(expectation);
         });
 
-        it('- convertSummary() - should clean project summary', function(){
+        it('convertSummary() - should clean project summary', function(){
             var result = projectFactory.convertSummary(project.summary);
             var expectation = 'One of my first experiments with both WebGL and intense client side Javascript.';
 
             expect(result).to.be.equal(expectation);
         });
 
-        it('- convertColor() - should leave color alone or assign if null', function(){
+        it('convertColor() - should leave color alone or assign if null', function(){
             var result = projectFactory.convertColor(project.colorCode);
             var expectation = 'proj-assemble';
 
@@ -126,7 +126,7 @@ describe('Project Factory', function(){
             expect(result).not.to.be.equal(null);
         });
 
-        it('- convertTags() - should leave tags alone', function(){
+        it('convertTags() - should leave tags alone', function(){
             var result = projectFactory.convertTags(project.tags);
             var expectation = [ ".NET", "Javascript", "WebGL" ];
 

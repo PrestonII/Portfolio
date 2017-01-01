@@ -70,12 +70,6 @@ describe('Project Controller', function(){
     });
 
     it('should have sample projects at least, if not online', function(){
-        // setUp.then(function() {
-        //     expect(projectController.page.projects).to.eventually.be.defined;
-        //     expect(projectController.page.currentProject).to.eventually.be.defined;
-        //     expect(projectController.page.currentProject.id).to.eventually.equal(0);
-        // });
-
         var results;
 
         projectController.updateProjectList().then(function(response){
@@ -84,27 +78,6 @@ describe('Project Controller', function(){
             expect(results).to.eventually.be.defined;
             expect(results[0].id).to.eventually.equal(0);
         });
-
-        // setUp();
-        //
-        // function setUp() {
-        //
-        //     var projectGetter = sinon.stub(projectHandler, "getProjects");
-        //     var projects = [];
-        //     projects.push(testProj);
-        //
-        //     var response = new Promise(getProjects);
-        //     projectGetter.returns(response);
-        //
-        //     projectController = $controller('projectController', {
-        //         context: context,
-        //         pagingService: projectHandler
-        //     });
-        //
-        //     function getProjects(){
-        //         return projects;
-        //     };
-        // };
     });
 
     describe('changeProject()', function(){
@@ -144,14 +117,19 @@ describe('Project Controller', function(){
 
     describe('nextProject()', function() {
         it('should increment the project id', function () {
-            var currentId = projectController.page.currentProject.id;
 
-            projectController.nextProject();
+            projectController.updateProjectList()
+                .then(function(response) {
+                    console.log(response);
+                    var currentId = projectController.page.currentProject.id;
 
-            var newId = projectController.page.currentProject.id;
+                    projectController.nextProject();
 
-            expect(newId).to.be.above(currentId);
-            expect(newId).to.be.equal(0);
+                    var newId = projectController.page.currentProject.id;
+
+                    expect(newId).to.eventually.be.above(currentId);
+                    expect(newId).to.eventually.be.equal(1);
+            });
         });
 
         it('should start at the beginning if it reaches end of projects', function () {

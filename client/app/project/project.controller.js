@@ -27,18 +27,13 @@
             title: '',
             transition: 'slowFade',
             projects: [],
+            currentImage : 0,
             currentProject: {
                 id: -1,
                 title: '',
                 summary: '',
                 colorCode: '',
                 images: [],
-                currentContent: {
-                    currentItem: {
-                        image: '',
-                        caption: ''
-                    }
-                }
             }
         };
 
@@ -99,7 +94,7 @@
             var previous = currentId - 1;
 
             if(previous < 0)
-                previous = vm.page.projects.length;
+                previous = vm.page.projects.length - 1;
 
             changeProject(previous);
         }

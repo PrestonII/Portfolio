@@ -22,7 +22,7 @@
 
         var samples = [
             {
-                title: 'Feature/' + '\n' + 'Lines',
+                title: ['Feature/', 'Lines'],
                 colorCode: 'proj-assemble',
                 summary: 'Testing to see how text looks in GREY'
             },
@@ -42,17 +42,14 @@
                     'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
                     'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que',
                 tags: [".NET", "Javascript", "HTML5", "CSS3"],
-                currentContent: {
-                    currentItem: {
-                        image: '',
-                        caption:
-                            'These are series of words about the image being shown above.' +
-                            '\n' +
-                            '\n' +
-                            'Some of which have been programmed. Others which have not. ' +
-                            'There are of course more words that could potentially be said but will, for now, be left unsaid.'
-                        }
+                images: [
+                    {
+                        caption: 'caption for image #1'
                     },
+                    {
+                        caption: 'caption for image #2'
+                    },
+                ]
             },
             {
                 title: 'Simulacra',

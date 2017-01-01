@@ -7,15 +7,15 @@
     {
       "title": "Nimble",
       "colorCode": "proj-nimble",
-      "summary": "This is a project I've been thinking about for a long while.",
+      "summary": ["This is a project I've been thinking about for a long while."],
       "tags": [ ".NET", "Javascript" ],
       "images": [
         {
-          "location": "./images/nimble/nimbleweb1.jpg",
+          "location": "./server/data/images/nimble/nimble/web1.jpg",
           "caption": "Image of a thing"
         },
         {
-          "location": "./images/nimble/nimbleweb2.jpg",
+          "location": "./server/data/images/nimble/nimble/web2.jpg",
           "caption": "Image of another thing"
         }
       ]
@@ -24,32 +24,32 @@
     {
       "title": "Simulacra",
       "colorCode": "proj-simulacra",
-      "summary": "Database normalization and join efficiencies weren't necessarily in my vocabulary before this project",
+      "summary": ["Database normalization and join efficiencies weren't necessarily in my vocabulary before this project"],
       "tags": [ ".NET", "Javascript, SQL" ],
       "images": [
         {
-          "location": "../images/thing.jpg",
+          "location": "./server/data/images/ei/pic1.jpg",
           "caption": "Image of a thing"
         },
         {
-          "location": "../images/thing2.jpg",
+          "location": "./server/data/images/ei/pic2.jpg",
           "caption": "Image of another thing"
         }
       ]
     },
 
     {
-      "title": [ "Feature/", "\n", "Lines" ],
+      "title": [ "Feature/", "Lines" ],
       "colorCode": "proj-assemble",
-      "summary": "One of my first experiments with both WebGL and intense client side Javascript.",
+      "summary": ["One of my first experiments with both WebGL and intense client side Javascript."],
       "tags": [ ".NET", "Javascript, WebGL" ],
       "images": [
         {
-          "location": "../images/thing.jpg",
+          "location": "./server/data/images/assemble/pic1.jpg",
           "caption": "Image of a thing"
         },
         {
-          "location": "../images/thing2.jpg",
+          "location": "./server/data/images/assemble/pic2.jpg",
           "caption": "Image of another thing"
         }
       ]
@@ -74,7 +74,7 @@
       "tags": [ ".NET", "Javascript", "HTML5", "CSS3" ],
       "images": [
         {
-          "location": "../images/thing.jpg",
+          "location": "./server/data/images/example/pic1.jpg",
           "caption": [
             "These are series of words about the image being shown above.",
             "\n",
@@ -84,7 +84,7 @@
           ]
         },
         {
-          "location": "../images/thing2.jpg",
+          "location": "./server/data/images/example/pic2.jpg",
           "caption": "Image of another thing"
         }
       ]
