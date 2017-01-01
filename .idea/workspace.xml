@@ -3,16 +3,21 @@
   <component name="AutoTestManager">
     <enabled-run-configurations>
       <run-configuration type="JavaScriptTestRunnerKarma" name="Run All Client Tests" />
+      <run-configuration type="mocha-javascript-test-runner" name="Project Factory.data prep methods" />
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7bf42d-3f48-4f19-a0d9-634b9b5606d1" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/app/project/project.paging.js" afterPath="$PROJECT_DIR$/client/app/project/project.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/project/project.controller.js" afterPath="$PROJECT_DIR$/client/app/project/project.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio.njsproj" afterPath="$PROJECT_DIR$/portfolio.njsproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/project/project.factory.js" afterPath="$PROJECT_DIR$/client/app/project/project.factory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/project/project.service.js" afterPath="$PROJECT_DIR$/client/app/project/project.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/project/project.view.html" afterPath="$PROJECT_DIR$/client/app/project/project.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/works.css" afterPath="$PROJECT_DIR$/client/css/works.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/services/jsonService.js" afterPath="$PROJECT_DIR$/server/app/services/jsonService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/data/projects.json" afterPath="$PROJECT_DIR$/server/data/projects.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/client/project.spec.js" afterPath="$PROJECT_DIR$/tests/client/project.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/client/projectFactory.spec.js" afterPath="$PROJECT_DIR$/tests/client/projectFactory.spec.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,18 +37,51 @@
     <favorites_list name="Portfolio" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.46130952">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="project.controller.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="project.service.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/app/project/project.service.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-84">
+                  <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+                  <folding>
+                    <element signature="e#2616#2675#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="jsonService.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/app/services/jsonService.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#498#770#0" expanded="false" />
+                    <element signature="e#822#1008#0" expanded="false" />
+                    <element signature="e#1047#1283#0" expanded="false" />
+                    <element signature="e#1320#1595#0" expanded="false" />
+                    <element signature="e#1633#1719#0" expanded="false" />
+                    <element signature="e#1754#1902#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="project.controller.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="205">
-                  <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+                <state relative-caret-position="374">
+                  <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
                   <folding>
-                    <element signature="e#679#1134#0" expanded="false" />
-                    <element signature="e#1896#2108#0" expanded="false" />
-                    <element signature="e#2144#2372#0" expanded="false" />
+                    <element signature="e#1114#1577#0" expanded="false" />
+                    <element signature="e#1617#1820#0" expanded="false" />
+                    <element signature="e#1858#1903#0" expanded="false" />
+                    <element signature="e#1953#2240#0" expanded="false" />
+                    <element signature="e#2272#2485#0" expanded="false" />
+                    <element signature="e#2521#2753#0" expanded="false" />
+                    <element signature="e#2786#2846#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -52,60 +90,32 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="core.server.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/core/core.server.js">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="projects.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/server/data/projects.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+                <state relative-caret-position="204">
+                  <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
                   <folding>
-                    <element signature="e#498#739#0" expanded="false" />
+                    <element signature="e#213#693#0" expanded="false" />
+                    <element signature="e#700#1210#0" expanded="false" />
+                    <element signature="e#1217#1730#0" expanded="false" />
+                    <element signature="e#1460#1724#0" expanded="false" />
+                    <element signature="e#1737#3297#0" expanded="false" />
+                    <element signature="e#2832#3143#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="core.postman.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/core/core.postman.js">
+          <file leaf-file-name="project.factory.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/app/project/project.factory.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="107">
-                  <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="project.service.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/project/project.service.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="72" column="19" lean-forward="false" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+                <state relative-caret-position="204">
+                  <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
                   <folding>
-                    <element signature="e#575#2692#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="core.context.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-238">
-                  <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="project.spec.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="107">
-                  <caret line="71" column="11" lean-forward="false" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#2028#2367#0" expanded="false" />
-                    <element signature="e#2911#3686#0" expanded="false" />
-                    <element signature="e#3735#4568#0" expanded="false" />
+                    <element signature="e#317#687#0" expanded="false" />
+                    <element signature="e#762#1102#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -137,7 +147,6 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/server/app/routers/projectRouter.js" />
         <option value="$PROJECT_DIR$/tests/server/jsonfs.spec.js" />
-        <option value="$PROJECT_DIR$/server/app/services/jsonService.js" />
         <option value="$PROJECT_DIR$/server/app/services/filefinder.js" />
         <option value="$PROJECT_DIR$/server/www" />
         <option value="$PROJECT_DIR$/server/server.js" />
@@ -161,18 +170,26 @@
         <option value="$PROJECT_DIR$/tests/clientMocha/navigator.spec.js" />
         <option value="$PROJECT_DIR$/tests/client/postman.spec.js" />
         <option value="$PROJECT_DIR$/tests/client/server.spec.js" />
-        <option value="$PROJECT_DIR$/client/app/project/project.view.html" />
         <option value="$PROJECT_DIR$/client/app/core/core.context.js" />
         <option value="$PROJECT_DIR$/client/app/project/project.object.js" />
         <option value="$PROJECT_DIR$/tests/client/projectObject.spec.js" />
         <option value="$PROJECT_DIR$/client/app/core/core.server.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/tests/client/projectFactory.spec.js" />
-        <option value="$PROJECT_DIR$/client/app/project/project.factory.js" />
         <option value="$PROJECT_DIR$/client/app/project/project.paging.js" />
+        <option value="$PROJECT_DIR$/tests/client/processor.spec.js" />
+        <option value="$PROJECT_DIR$/tests/client/navigator.spec.js" />
+        <option value="$PROJECT_DIR$/client/app/core/core.processor.js" />
+        <option value="$PROJECT_DIR$/tests/client/projectService.spec.js" />
+        <option value="$PROJECT_DIR$/client/templates/body.html" />
+        <option value="$PROJECT_DIR$/client/app/project/project.factory.js" />
+        <option value="$PROJECT_DIR$/tests/client/projectFactory.spec.js" />
         <option value="$PROJECT_DIR$/tests/client/project.spec.js" />
-        <option value="$PROJECT_DIR$/client/app/project/project.service.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/client/app/project/project.view.html" />
+        <option value="$PROJECT_DIR$/client/css/works.css" />
         <option value="$PROJECT_DIR$/client/app/project/project.controller.js" />
+        <option value="$PROJECT_DIR$/server/app/services/jsonService.js" />
+        <option value="$PROJECT_DIR$/server/data/projects.json" />
+        <option value="$PROJECT_DIR$/client/app/project/project.service.js" />
       </list>
     </option>
   </component>
@@ -219,6 +236,22 @@
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -237,7 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Client Tests">
           <PATH>
@@ -285,6 +317,10 @@
               <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -314,7 +350,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,64 +431,17 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/index.html" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="C:\Users\Preston\Documents\Work\Professional\Independent\Portfolio\node_modules\mocha" />
@@ -394,22 +449,24 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="$PROJECT_DIR$/node_modules/grunt-cli" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="javascript.nodejs.core.library.configured.version" value="0.12.2" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="javascript.nodejs.core.library.configured.version" value="7.3.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="JavaScriptPreferStrict" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="A:\Work\Projects\Portfolio\node_modules\gulp" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Preston\Documents\Work\Professional\Independent\Portfolio\client" />
       <recent name="C:\Users\Preston\Documents\Work\Professional\Independent\Portfolio\tests\clientMocha" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="A:\Work\Projects\Portfolio" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.tests\client\project.spec.js">
+  <component name="RunManager" selected="Node.js.Run Program">
     <configuration default="false" name="tests\client\projectFactory.spec.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -422,7 +479,7 @@
       <test-file>$PROJECT_DIR$/tests/client/projectFactory.spec.js</test-file>
       <method />
     </configuration>
-    <configuration default="false" name="Project Factory.createProject().should increment IdCounter" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Project Factory.data prep methods.convertImages().should process nulls" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -434,27 +491,13 @@
       <test-file>$PROJECT_DIR$/tests/client/projectFactory.spec.js</test-file>
       <test-names>
         <name value="Project Factory" />
-        <name value="createProject()" />
-        <name value="should increment IdCounter" />
+        <name value="data prep methods" />
+        <name value="convertImages()" />
+        <name value="should process nulls" />
       </test-names>
       <method />
     </configuration>
-    <configuration default="false" name="Project Controller" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/tests/client/project.spec.js</test-file>
-      <test-names>
-        <name value="Project Controller" />
-      </test-names>
-      <method />
-    </configuration>
-    <configuration default="false" name="Project Controller.should exist" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Project Controller.nextProject().should increment the project id" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -466,11 +509,12 @@
       <test-file>$PROJECT_DIR$/tests/client/project.spec.js</test-file>
       <test-names>
         <name value="Project Controller" />
-        <name value="should exist" />
+        <name value="nextProject()" />
+        <name value="should increment the project id" />
       </test-names>
       <method />
     </configuration>
-    <configuration default="false" name="tests\client\project.spec.js" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Project Controller.should have all properties and methods" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -478,8 +522,12 @@
       <envs />
       <ui>bdd</ui>
       <extra-mocha-options />
-      <test-kind>TEST_FILE</test-kind>
+      <test-kind>TEST</test-kind>
       <test-file>$PROJECT_DIR$/tests/client/project.spec.js</test-file>
+      <test-names>
+        <name value="Project Controller" />
+        <name value="should have all properties and methods" />
+      </test-names>
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -544,6 +592,9 @@
     </configuration>
     <configuration default="true" type="NodeJSRemoteDebug" factoryName="Node.js Remote Debug">
       <node-js-remote-debug />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="NW.js">
       <method />
     </configuration>
     <configuration default="true" type="NodeunitConfigurationType" factoryName="Nodeunit">
@@ -611,17 +662,7 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="Run Program JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:1337/index.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="Unnamed JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:1337/Portfolio/index.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="Run All Client Tests" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
-      <node-interpreter value="project" />
-      <envs />
+    <configuration default="false" name="Run Program JavaScript" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/Portfolio/index.html">
       <method />
     </configuration>
     <configuration default="false" name="All Server Tests" type="mocha-javascript-test-runner" factoryName="Mocha">
@@ -651,7 +692,7 @@
       <method />
     </configuration>
     <configuration default="false" name="Run Program" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="server/www" working-dir="$PROJECT_DIR$">
-      <browser start="true" with-js-debugger="true" url="http://localhost:1337/Portfolio/index.html" />
+      <browser start="true" url="http://localhost:1337/Portfolio/index.html" />
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -678,47 +719,26 @@
         <profiling v8-profiler-path="" />
       </EXTENSION>
       <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser start="true" with-js-debugger="true" url="http://localhost:1337/Portfolio/index.html" />
+        <browser start="true" url="http://localhost:1337/Portfolio/index.html" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Unnamed" type="NodeunitConfigurationType" factoryName="Nodeunit">
-      <setting name="nodePath" value="project" />
-      <envs />
-      <setting name="nodeunitModuleDir" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="testType" value="JS_FILE" />
-      <setting name="jsFile" value="" />
-      <method />
-    </configuration>
-    <configuration default="false" name="protractor.conf.js" type="JavaScriptTestRunnerProtractor" factoryName="Protractor" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/protractor.conf.js" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <list size="13">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Run Program JavaScript" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Unnamed JavaScript" />
-      <item index="2" class="java.lang.String" itemvalue="Karma.Run All Client Tests" />
-      <item index="3" class="java.lang.String" itemvalue="Mocha.All Server Tests" />
-      <item index="4" class="java.lang.String" itemvalue="Mocha.All Client Tests" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.Run Program" />
-      <item index="6" class="java.lang.String" itemvalue="Nodeunit.Unnamed" />
-      <item index="7" class="java.lang.String" itemvalue="Protractor.protractor.conf.js" />
-      <item index="8" class="java.lang.String" itemvalue="Mocha.tests\client\projectFactory.spec.js" />
-      <item index="9" class="java.lang.String" itemvalue="Mocha.Project Factory.createProject().should increment IdCounter" />
-      <item index="10" class="java.lang.String" itemvalue="Mocha.Project Controller" />
-      <item index="11" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
-      <item index="12" class="java.lang.String" itemvalue="Mocha.tests\client\project.spec.js" />
+      <item index="1" class="java.lang.String" itemvalue="Mocha.All Server Tests" />
+      <item index="2" class="java.lang.String" itemvalue="Mocha.All Client Tests" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.Run Program" />
+      <item index="4" class="java.lang.String" itemvalue="Mocha.tests\client\projectFactory.spec.js" />
+      <item index="5" class="java.lang.String" itemvalue="Mocha.Project Factory.data prep methods.convertImages().should process nulls" />
+      <item index="6" class="java.lang.String" itemvalue="Mocha.Project Controller.nextProject().should increment the project id" />
+      <item index="7" class="java.lang.String" itemvalue="Mocha.Project Controller.should have all properties and methods" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Mocha.tests\client\project.spec.js" />
-        <item index="1" class="java.lang.String" itemvalue="Mocha.Project Controller.should exist" />
-        <item index="2" class="java.lang.String" itemvalue="Mocha.Project Controller" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Mocha.Project Controller.should have all properties and methods" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.Project Controller.nextProject().should increment the project id" />
+        <item index="2" class="java.lang.String" itemvalue="Mocha.Project Factory.data prep methods.convertImages().should process nulls" />
         <item index="3" class="java.lang.String" itemvalue="Mocha.tests\client\projectFactory.spec.js" />
-        <item index="4" class="java.lang.String" itemvalue="Mocha.Project Factory.createProject().should increment IdCounter" />
       </list>
     </recent_temporary>
   </component>
@@ -755,44 +775,45 @@
       <workItem from="1482431230708" duration="8945000" />
       <workItem from="1482447720781" duration="2769000" />
       <workItem from="1482451816140" duration="683000" />
-      <workItem from="1482452818153" duration="38099000" />
+      <workItem from="1482452818153" duration="79140000" />
+      <workItem from="1483215058005" duration="922000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 18h 37m 41s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="All_Client_Tests - 2016.12.29 at 18h 17m 20s.xml">
+      <configuration name="All Client Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 18h 40m 33s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="All_Client_Tests - 2016.12.29 at 18h 27m 13s.xml">
+      <configuration name="All Client Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 18h 44m 25s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller_nextProject()_should_increment_the_project_id - 2016.12.29 at 18h 29m 15s.xml">
+      <configuration name="Project Controller.nextProject().should increment the project id" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 18h 45m 17s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller_nextProject()_should_increment_the_project_id - 2016.12.29 at 18h 36m 05s.xml">
+      <configuration name="Project Controller.nextProject().should increment the project id" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 19h 36m 56s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller_nextProject()_should_increment_the_project_id - 2016.12.29 at 18h 36m 33s.xml">
+      <configuration name="Project Controller.nextProject().should increment the project id" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 19h 37m 26s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller_nextProject()_should_increment_the_project_id - 2016.12.29 at 18h 37m 35s.xml">
+      <configuration name="Project Controller.nextProject().should increment the project id" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 19h 38m 22s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller_should_have_all_properties_and_methods - 2016.12.29 at 18h 38m 03s.xml">
+      <configuration name="Project Controller.should have all properties and methods" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 19h 38m 43s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Controller_should_have_all_properties_and_methods - 2016.12.29 at 18h 38m 46s.xml">
+      <configuration name="Project Controller.should have all properties and methods" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="Project_Controller_should_exist - 2016.12.26 at 19h 41m 25s.xml">
-      <configuration name="Project Controller.should exist" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Factory_data_prep_methods_convertImages()_should_process_nulls - 2016.12.29 at 07h 51m 47s.xml">
+      <configuration name="Project Factory.data prep methods.convertImages().should process nulls" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="tests_client_project_spec_js - 2016.12.26 at 19h 42m 45s.xml">
-      <configuration name="tests\client\project.spec.js" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="Project_Factory_data_prep_methods_convertImages()_should_process_nulls - 2016.12.29 at 07h 55m 09s.xml">
+      <configuration name="Project Factory.data prep methods.convertImages().should process nulls" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109959000" />
+    <option name="totallyTimeSpent" value="151922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -807,24 +828,24 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20163691" sideWeight="0.615942" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23586309" sideWeight="0.615942" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49367756" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19968387" sideWeight="0.5255591" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4347826" sideWeight="0.53199404" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4283414" sideWeight="0.48735118" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.49578503" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21130952" sideWeight="0.38405797" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4347826" sideWeight="0.46502978" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44444445" sideWeight="0.491654" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886191" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3510467" sideWeight="0.4915701" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19968387" sideWeight="0.51916933" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4347826" sideWeight="0.5349702" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4380032" sideWeight="0.50834596" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49789253" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -887,19 +908,9 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/app/services/jsonService.js</url>
-          <line>51</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/tests/server/jsonfs.spec.js</url>
           <line>43</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/app/services/jsonService.js</url>
-          <line>61</line>
-          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/tests/server/fileguy.spec.js</url>
@@ -937,105 +948,96 @@
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
-          <line>74</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/core/core.postman.js</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/tests/client/projectFactory.spec.js</url>
-          <line>36</line>
-          <properties />
+          <line>59</line>
           <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/project/project.factory.js</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/project/project.controller.js</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/project/project.service.js</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/project/project.controller.js</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/project/project.controller.js</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/app/project/project.service.js</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/core/core.server.js</url>
           <line>83</line>
-          <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/projectFactory.spec.js</url>
+          <line>129</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/app/project/project.factory.js</url>
+          <line>125</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>89</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>95</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/project/project.service.js</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="84" />
+          <line>77</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>86</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>85</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/app/project/project.controller.js</url>
+          <line>71</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/app/project/project.controller.js</url>
+          <line>58</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/app/project/project.factory.js</url>
+          <line>121</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>120</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>122</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>75</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>129</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tests/client/project.spec.js</url>
+          <line>77</line>
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="85" />
+      <option name="time" value="123" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server/jsonfs.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/services/jsonService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1051,21 +1053,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/services/projects.json" />
-    <entry file="file://$PROJECT_DIR$/server/data/projects.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/services/jsonService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="55" lean-forward="false" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/app.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1081,13 +1068,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/angular/angular.js" />
-    <entry file="file://$PROJECT_DIR$/client/app/directives/directive-body.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/app/services/filefinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1117,32 +1097,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/app/routers/projectRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://localhost:9876/debug.html">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/users.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/users.spec.js" />
     <entry file="file://$PROJECT_DIR$/webstorm_testing.jstd" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,21 +1135,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/jasmine.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/jasmine.spec.js" />
     <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
           <folding>
-            <element signature="e#2028#2367#0" expanded="false" />
-            <element signature="e#2911#3686#0" expanded="false" />
-            <element signature="e#3735#4568#0" expanded="false" />
+            <element signature="e#852#1209#0" expanded="false" />
+            <element signature="e#1710#1766#0" expanded="false" />
+            <element signature="e#1829#2399#0" expanded="false" />
+            <element signature="e#2812#4395#0" expanded="false" />
+            <element signature="e#2877#3866#0" expanded="false" />
+            <element signature="e#3923#4387#0" expanded="false" />
+            <element signature="e#5479#6312#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,14 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server/jsonfs.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="80" column="15" lean-forward="true" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1217,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="109" column="11" lean-forward="true" selection-start-line="109" selection-start-column="11" selection-end-line="109" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,15 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/processor.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-543">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,7 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="367" column="19" lean-forward="false" selection-start-line="367" selection-start-column="19" selection-end-line="367" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,20 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#493#539#0" expanded="false" />
-            <element signature="e#610#802#0" expanded="false" />
-            <element signature="e#1083#1521#0" expanded="false" />
-            <element signature="e#1606#2034#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/project/project.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,117 +1204,210 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/processor.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-954">
+          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/client/navigator.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="62" column="54" lean-forward="false" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/projectFactory.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="47" column="56" lean-forward="true" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/project/project.factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="e#191#1496#0" expanded="false" />
-            <element signature="e#218#305#0" expanded="false" />
-            <element signature="e#380#720#0" expanded="false" />
-            <element signature="e#445#677#0" expanded="false" />
-            <element signature="e#822#1486#0" expanded="false" />
-            <element signature="e#1196#1472#0" expanded="false" />
-          </folding>
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/client/server.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/core/core.processor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/core/core.postman.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/core/core.context.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server/jsonfs.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="76" column="12" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/projectService.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/core/core.postman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="61" column="12" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/core/core.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        <state relative-caret-position="122">
+          <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
           <folding>
             <element signature="e#498#739#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/project/project.service.js">
+    <entry file="file://$PROJECT_DIR$/client/templates/body.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="72" column="19" lean-forward="false" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+        <state relative-caret-position="91">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/directives/directive-body.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/core/core.processor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="74" column="8" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
           <folding>
-            <element signature="e#575#2692#0" expanded="false" />
+            <element signature="e#852#1209#0" expanded="false" />
+            <element signature="e#1710#1766#0" expanded="false" />
+            <element signature="e#1829#2399#0" expanded="false" />
+            <element signature="e#2812#4395#0" expanded="false" />
+            <element signature="e#2877#3866#0" expanded="false" />
+            <element signature="e#3923#4387#0" expanded="false" />
+            <element signature="e#5479#6312#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/works.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/routers/projectRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/client/projectFactory.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="106" column="11" lean-forward="false" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+          <folding>
+            <element signature="e#414#1443#0" expanded="false" />
+            <element signature="e#491#555#0" expanded="false" />
+            <element signature="e#580#1400#0" expanded="false" />
+            <element signature="e#5675#5804#0" expanded="false" />
+            <element signature="e#5887#6752#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/project/project.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/project/project.factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="e#317#687#0" expanded="false" />
+            <element signature="e#762#1102#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/project/project.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+        <state relative-caret-position="374">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
-            <element signature="e#679#1134#0" expanded="false" />
-            <element signature="e#1896#2108#0" expanded="false" />
-            <element signature="e#2144#2372#0" expanded="false" />
+            <element signature="e#1114#1577#0" expanded="false" />
+            <element signature="e#1617#1820#0" expanded="false" />
+            <element signature="e#1858#1903#0" expanded="false" />
+            <element signature="e#1953#2240#0" expanded="false" />
+            <element signature="e#2272#2485#0" expanded="false" />
+            <element signature="e#2521#2753#0" expanded="false" />
+            <element signature="e#2786#2846#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/client/project.spec.js">
+    <entry file="file://$PROJECT_DIR$/server/data/projects.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="71" column="11" lean-forward="false" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+        <state relative-caret-position="204">
+          <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
           <folding>
-            <element signature="e#2028#2367#0" expanded="false" />
-            <element signature="e#2911#3686#0" expanded="false" />
-            <element signature="e#3735#4568#0" expanded="false" />
+            <element signature="e#213#693#0" expanded="false" />
+            <element signature="e#700#1210#0" expanded="false" />
+            <element signature="e#1217#1730#0" expanded="false" />
+            <element signature="e#1460#1724#0" expanded="false" />
+            <element signature="e#1737#3297#0" expanded="false" />
+            <element signature="e#2832#3143#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app/services/jsonService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="e#498#770#0" expanded="false" />
+            <element signature="e#822#1008#0" expanded="false" />
+            <element signature="e#1047#1283#0" expanded="false" />
+            <element signature="e#1320#1595#0" expanded="false" />
+            <element signature="e#1633#1719#0" expanded="false" />
+            <element signature="e#1754#1902#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/project/project.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding>
+            <element signature="e#2616#2675#0" expanded="false" />
           </folding>
         </state>
       </provider>
