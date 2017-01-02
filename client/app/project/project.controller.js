@@ -73,6 +73,11 @@
         	if(!index || index === null || index === undefined)
         		index = 0;
 
+            if(!vm.page.currentProject.images || vm.page.currentProject.images.length <= 0){
+                vm.page.currentImage = null;
+                return;
+                }
+
         	vm.page.currentImage = vm.page.currentProject.images[index];
 
         	if(callback)
