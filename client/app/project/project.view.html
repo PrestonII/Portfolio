@@ -1,5 +1,5 @@
 <div id="summary-section">
-    <div id="words"
+    <div id="word-area"
          class="col-xs-4 col-s-4 col-md-4 words">
         <div id="title-{{ vm.page.name }}"
              class="title"
@@ -12,20 +12,22 @@
         </div>
     </div>
 
-    <div id="pictures"
+    <div id="image-area"
          class="col-xs-6 col-s-6 col-md-7 pictures center-ver-hor">
-        <div class="current-picture center-child">
+        <div
+                id="image-frame"
+                class="center-child">
             <img src="{{ vm.page.currentImage.location }}"
-                 alt="Photo 1"
+                 alt="Suave, Lopez..."
                  class="picture"
+                 id="current-picture"
             />
         </div>
-        <div class="image-list">
-            <ul>
+        <div class="image-list center-ver-hor center-parent">
+            <ul class="center-child center-ver-hor">
                 <li ng-repeat="image in vm.page.currentProject.images"
                     id="projectImage-"{{image.id}}
-                    ng-click="vm.changeImage(image.id)">
-                .
+                    ng-click="vm.changeImage(image.id)">.
                 </li>
             </ul>
         </div>
