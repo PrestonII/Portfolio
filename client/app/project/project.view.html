@@ -13,10 +13,8 @@
     </div>
 
     <div id="image-area"
-         class="col-xs-6 col-s-6 col-md-7 pictures center-ver-hor">
-        <div
-                id="image-frame"
-                class="center-child">
+         class="col-xs-6 col-s-6 col-md-7 pictures">
+        <div id="image-frame">
             <img src="{{ vm.page.currentImage.location }}"
                  alt="Suave, Lopez..."
                  class="picture"
@@ -31,7 +29,7 @@
                 </li>
             </ul>
         </div>
-        <div class="caption">{{ vm.page.currentProject.currentContent.currentItem.caption }}</div>
+        <div class="caption">{{ vm.page.currentImage.caption }}</div>
     </div>
     
     <div id="project-navigation"
