@@ -1,4 +1,27 @@
-﻿#page {
+﻿/*ScrollBar*********************************************/
+
+body::-webkit-scrollbar{
+    width: 3px;
+}
+body::-webkit-scrollbar-button{
+
+}
+body::-webkit-scrollbar-corner{
+
+}
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+body::-webkit-scrollbar-track{
+
+}
+body::-webkit-scrollbar-track-piece{
+
+}
+
+/*******************************************************/
+
+#page {
     padding: 20px;
     height: 100vh;
     max-height: 100%;
@@ -106,13 +129,20 @@
     PAGES
     =================================================================================
 */
-@media only screen and
-(max-height: 800px) {
-    .summary {
-        max-height: 25vh;
-        overflow: auto;
-    }
-}
+/*@media only screen and*/
+/*(max-height: 800px) {*/
+    /*!*.summary {*!*/
+        /*!*max-height: 25vh;*!*/
+        /*!*overflow: auto;*!*/
+    /*!*}*!*/
+
+    /*.summary{*/
+        /*!*height: 100%;*!*/
+        /*padding-bottom: 30px;*/
+        /*overflow: hidden;*/
+    /*}*/
+/*}*/
+
 
 #About {
     margin-right: 90px;
