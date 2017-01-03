@@ -42,7 +42,7 @@
 
         function initialize(callback) {
             console.log('Loading Project Controller...');
-            updateProjectList()
+            vm.page.projects = updateProjectList()
                 .then(function(response){
                     vm.page.projects = response;
                     updatePage();
@@ -51,9 +51,11 @@
                     console.log(error);
                 });
 
-            if(vm.page.projects === Promise)
-                vm.page.projects
-                    .success(callback)
+            if(vm.page.projects.$$state) {
+            	if(vm.page.projects.$$state.status === 0 && callback) {
+		            vm.page.projects.then(callback);
+	            }
+            }
         }
 
         function updatePage(callback) {

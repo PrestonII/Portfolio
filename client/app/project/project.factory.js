@@ -92,16 +92,34 @@
                    return newTitle;
                }
 
-               // var convTitle = dataProcessor.convertEscapeSequences(title);
                return convTitle;
            }
 
            function convertSummary(summary){
                 if(summary === null || summary === undefined)
-                    return;
+                    return new [];
 
-               var convSummary = dataProcessor.sanitize(summary);
-               return convSummary;
+                var sum = summary;
+                var converted = [];
+                if(!Array.isArray(sum)){
+                	converted.push(sum);
+                	return converted;
+                }
+
+                let currentPart = 0;
+                converted.push("");
+                sum.forEach(function(part){
+                	if(!dataProcessor.hasEscapes(part)) {
+		                converted[currentPart] = converted[currentPart].concat(part);
+	                }else {
+		                converted.push(part);
+		                currentPart++;
+		                converted.push("");
+		                currentPart++;
+	                }
+	           });
+
+                return converted;
            }
 
            function convertColor(color){

@@ -133,53 +133,82 @@ describe('Project Controller', function(){
         });
 
         it('should start at the beginning if it reaches end of projects', function () {
-            var currentId = projectController.page.currentProject.id;
+            var originalId = projectController.page.currentProject.id;
 
+            projectController.page.projects = [];
+            projectController.page.projects.push({id: 0});
+            projectController.page.projects.push({id: 1});
+
+            projectController.nextProject();
             projectController.nextProject();
 
             var newId = projectController.page.currentProject.id;
 
-            expect(newId).to.be.above(currentId);
-            expect(newId).to.be.equal(projectController.page.currentProject.length);
+            expect(newId).to.be.above(originalId);
+
+	        projectController.nextProject();
+	        var finalId = projectController.page.currentProject.id;
+
+	        expect(finalId).to.be.below(newId);
         });
     });
 
     describe('previousProject()', function() {
         it('should decrement the project id', function () {
-            var currentId = projectController.page.currentProject.id;
+	        var originalId = projectController.page.currentProject.id;
 
-            projectController.previousProject();
+	        projectController.page.projects = [];
+	        projectController.page.projects.push({id: 0});
+	        projectController.page.projects.push({id: 1});
 
-            var newId = projectController.page.currentProject.id;
+	        projectController.nextProject();
+	        projectController.nextProject();
 
-            expect(newId).to.be.above(currentId);
-            expect(newId).to.be.equal(projectController.page.currentProject.length);
+	        var newId = projectController.page.currentProject.id;
+
+	        projectController.previousProject();
+	        var finalId = projectController.page.currentProject.id;
+
+	        expect(finalId).to.be.below(newId);
         });
 
         it('should head toward the final project if it decrements are negative', function () {
-            var currentId = projectController.page.currentProject.id;
+	        var originalId = projectController.page.currentProject.id;
 
-            projectController.previousProject();
+	        projectController.page.projects = [];
+	        projectController.page.projects.push({id: 0});
+	        projectController.page.projects.push({id: 1});
 
-            var newId = projectController.page.currentProject.id;
+	        projectController.nextProject();
 
-            expect(newId).to.be.above(currentId);
-            expect(newId).to.be.equal(projectController.page.currentProject.length);
+	        var newId = projectController.page.currentProject.id;
+
+	        expect(newId).to.be.above(originalId);
+
+	        projectController.previousProject();
+	        var finalId = projectController.page.currentProject.id;
+
+	        expect(finalId).to.be.above(newId);
         });
     });
 
     describe('updatePage()', function(){
         it('should update current project', function() {
-            projectController.page.projects = [];
+            // projectController.page.projects = [];
+            //
+            // projectController.updatePage();
+	        projectController.initialize(test);
 
-            projectController.updatePage();
-            var currentProj = projectController.page.currentProject;
+	        function test(){
+	            var currentProj = projectController.page.currentProject;
 
-            expect(currentProj.title).not.to.be.equal('');
-            expect(currentProj.summary).not.to.be.equal('');
-            expect(currentProj.colorCode).not.to.be.equal('proj-none');
-            expect(currentProj.images).not.to.be.equal([]);
-            expect(currentProj.title).not.to.be.equal('');
+	            expect(1).to.eventually.be.equal(0);
+	            expect(currentProj.title).not.to.be.equal('');
+	            expect(currentProj.summary).not.to.be.equal('');
+	            expect(currentProj.colorCode).not.to.be.equal('proj-none');
+	            expect(currentProj.images).not.to.be.equal([]);
+	            expect(currentProj.title).not.to.be.equal('');
+	        };
         });
 
         it('should change the page color', function(){

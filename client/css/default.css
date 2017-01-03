@@ -2,8 +2,6 @@
     padding: 20px;
     height: 100vh;
     max-height: 100%;
-
-    /*transition: background-color 2.5s ease-in-out;*/
 }
 
 .center-ver-hor {
@@ -104,16 +102,17 @@
     color: #303030;
 }
 
-/*#name {
-    padding-right: 20px;
-}*/
-
-
-
 /*
     PAGES
     =================================================================================
 */
+@media only screen and
+(max-height: 800px) {
+    .summary {
+        max-height: 25vh;
+        overflow: auto;
+    }
+}
 
 #About {
     margin-right: 90px;

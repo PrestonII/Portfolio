@@ -23,9 +23,20 @@ describe('Project Factory', function(){
         projectData ={
             title: 'Project Data',
             data: {
-                "title": [ "Feature/", "\n", "Lines" ],
+                "title": [ "Feature/", "Lines" ],
                 "colorCode": "proj-assemble",
-                "summary": "One of my first experiments with both WebGL and intense client side Javascript.",
+                "summary": [
+	                "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
+	                "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
+	                " ulicontra consultum horeist ad dis, tatala nonemus vit niam. mortum et reis. ",
+	                "\n",
+	                "Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ",
+	                "imodic obse facchicae tin verobus video, publin sentelis fure dum ",
+	                "poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ",
+	                "in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ",
+	                "es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ",
+	                "tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
+                ],
                 "tags": [ ".NET", "Javascript", "WebGL" ],
                 "images": [
                     {
@@ -76,8 +87,13 @@ describe('Project Factory', function(){
         it('sanitizeProjectData() - should prep all project data for HTML usage', function(){
             var result = projectFactory.sanitizeProjectData(project);
             var expectation = {
-                title: 'Feature/</br>Lines',
-                summary: 'One of my first experiments with both WebGL and intense client side Javascript.',
+                title: ['Feature/', 'Lines'],
+                summary:
+	                [
+		                "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions ulicontra consultum horeist ad dis, tatala nonemus vit niam. mortum et reis. ",
+		                "\n",
+		                "Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular imodic obse facchicae tin verobus video, publin sentelis fure dum poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
+	                ],
                 colorCode: 'proj-assemble',
                 tags: [ ".NET", "Javascript", "WebGL" ],
                 images: [
@@ -92,8 +108,11 @@ describe('Project Factory', function(){
                 ]
             };
 
-            expect(result.title).to.be.equal(expectation.title);
-            expect(result.summary).to.be.equal(expectation.summary);
+            expect(result.title[0]).to.be.equal(expectation.title[0]);
+            expect(result.title[1]).to.be.equal(expectation.title[1]);
+            expect(result.summary[0]).to.be.equal(expectation.summary[0]);
+            expect(result.summary[1]).to.be.equal(expectation.summary[1]);
+            expect(result.summary[2]).to.be.equal(expectation.summary[2]);
             expect(result.colorCode).to.be.equal(expectation.colorCode);
             expect(result.tags[0]).to.be.equal(expectation.tags[0]);
             expect(result.tags[1]).to.be.equal(expectation.tags[1]);
@@ -106,16 +125,23 @@ describe('Project Factory', function(){
 
         it('convertTitle() - should clean project title', function(){
             var result = projectFactory.convertTitle(project.title);
-            var expectation = 'Feature/</br>Lines';
+            var expectation = ['Feature/', 'Lines'];
 
-            expect(result).to.be.equal(expectation);
+            expect(result[0]).to.be.equal(expectation[0]);
+            expect(result[1]).to.be.equal(expectation[1]);
         });
 
         it('convertSummary() - should clean project summary', function(){
             var result = projectFactory.convertSummary(project.summary);
-            var expectation = 'One of my first experiments with both WebGL and intense client side Javascript.';
+            var expectation = [
+		            "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions ulicontra consultum horeist ad dis, tatala nonemus vit niam. mortum et reis. ",
+		            "\n",
+		            "Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular imodic obse facchicae tin verobus video, publin sentelis fure dum poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
+	            ];
 
-            expect(result).to.be.equal(expectation);
+            expect(result[0]).to.equal(expectation[0]);
+            expect(result[1]).to.equal(expectation[1]);
+            expect(result[2]).to.equal(expectation[2]);
         });
 
         it('convertColor() - should leave color alone or assign if null', function(){

@@ -30,17 +30,18 @@
                 title: 'Sample Project Titles',
                 colorCode: 'proj-sample',
                 summary:
-                    'Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ' +
-                    'vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions' +
-                    ' ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ' +
-                    '\n' +
-                    '\n' +
-                    'Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ' +
-                    'imodic obse facchicae tin verobus video, publin sentelis fure dum ' +
-                    'poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ' +
-                    'in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ' +
-                    'es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ' +
-                    'tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que',
+	                [
+		                "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
+		                "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
+		                " ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ",
+		                "\n",
+		                "Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ",
+		                "imodic obse facchicae tin verobus video, publin sentelis fure dum ",
+		                "poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ",
+		                "in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ",
+		                "es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ",
+		                "tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
+	                ],
                 tags: [".NET", "Javascript", "HTML5", "CSS3"],
                 images: [
                     {

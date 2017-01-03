@@ -92,8 +92,13 @@
 /*.image-list{*/
     /*height: 25px;*/
 /*}*/
+.image-list ul{
+    height: 25px;
+}
 
 .image-list li{
+    position: relative;
+    line-height: 25px;
     font-size: 48px;
     margin: 0px 5px;
     color: #303030;
