@@ -27,6 +27,7 @@
             name: 'Works',
             title: '',
             transition: 'slowFade',
+            borderColor: {},
             projects: [],
             currentImage : {},
             currentProject: {
@@ -42,6 +43,12 @@
 
         function initialize(callback) {
             console.log('Loading Project Controller...');
+
+            if(vm.page.projects > 0){
+            	updatePage(callback);
+            	return;
+            }
+
             vm.page.projects = updateProjectList()
                 .then(function(response){
                     vm.page.projects = response;
@@ -78,7 +85,7 @@
             if(!vm.page.currentProject.images || vm.page.currentProject.images.length <= 0){
                 vm.page.currentImage = null;
                 return;
-                }
+            }
 
         	vm.page.currentImage = vm.page.currentProject.images[index];
 
@@ -92,6 +99,8 @@
 
             vm.page.currentProject = vm.page.projects[index];
             context.updatePageColor(vm.page.currentProject);
+            vm.page.borderColor = vm.page.currentProject.borderColor;
+            context.updatePageBorderColor(vm.page.borderColor);
             changeImage();
 
             if(callback)

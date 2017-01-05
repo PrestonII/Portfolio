@@ -13,6 +13,7 @@
         vm.page = {
             name: 'About',
             title: 'Preston',
+            borderColor: '',
             summary: {
                 title: '',
                 content: ''
@@ -41,6 +42,7 @@
             console.log('Loading About Controller...');
 
             context.resetPageColor();
+            context.updatePageBorderColor(vm.page.borderColor);
             addContent();
             addTitle();
         }

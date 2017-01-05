@@ -16,20 +16,21 @@
             currentPage: {
                 name: 'Starting Up!',
                 title: 'Loading...',
+                borderColor: '',
                 project: {
                     colorCode: 'proj-none'
                 }
             },
             updatePage: updatePage,
             updatePageColor: updatePageColor,
+            updatePageBorderColor: updatePageBorderColor,
             resetPageColor: resetPageColor
         }
 
         return service;
 
         function updatePage(page) {
-
-            if (page === null || typeof page === "undefined") 
+            if (page === null || typeof page === "undefined")
                 return service.currentPage;
 
             if(page.project && page.project.colorCode)
@@ -37,6 +38,8 @@
 
             service.currentPage.name = page.name || '';
             service.currentPage.title = page.title || '';
+            service.currentPage.borderColor = page.borderColor || '';
+            // service.currentPage = page;
 
             $root.$broadcast('onPageUpdate', service.currentPage);
 
@@ -53,6 +56,17 @@
             $root.$broadcast('onPageUpdateColor', service.currentPage.project.colorCode);
 
             return service.currentPage.project.colorCode;
+        }
+
+        function updatePageBorderColor(border){
+        	if(border === null || border === undefined)
+        		return service.currentPage.borderColor;
+
+        	service.currentPage.borderColor = border;
+
+        	$root.$broadcast('onPageUpdateBorder', service.currentPage.borderColor);
+
+        	return service.currentPage.borderColor;
         }
 
         function resetPageColor() {

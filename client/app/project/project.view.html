@@ -7,6 +7,7 @@
             <h2 ng-repeat="projectTitle in vm.page.currentProject.title">{{projectTitle}}</h2>
         </div>
         <div id="summary-{{ vm.page.name }}"
+             ng-class="vm.page.borderColor.top + 'Light'"
              class="summary">
             <p ng-repeat="paragraph in vm.page.currentProject.summary track by $index">{{ paragraph }}</p>
         </div>
@@ -17,7 +18,8 @@
         <div id="image-frame">
             <img src="{{ vm.page.currentImage.location }}"
                  alt="Suave, Lopez..."
-                 class="picture"
+                 class="picture main-picture"
+                 ng-class="vm.page.borderColor.all + 'Light'"
                  id="current-picture"
             />
         </div>
@@ -29,7 +31,9 @@
                 </li>
             </ul>
         </div>
-        <div class="caption">{{ vm.page.currentImage.caption }}</div>
+        <div class="caption"
+             ng-class="vm.page.borderColor.top + 'Heavy'"
+        >{{ vm.page.currentImage.caption }}</div>
     </div>
     
     <div id="project-navigation"

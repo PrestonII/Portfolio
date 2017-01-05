@@ -8,14 +8,15 @@
     </div>
 
     <!--the big piece at the top right-->
-    <div id="head" class="center-ver-hor center-parent">
-
+    <div id="head"
+         class="center-ver-hor center-parent borderGeneralTopHeavy"
+         ng-class="vm.page.borderColor.top + 'Heavy'">
         <div id="name" class="center-ver-hor center-child">
             <h1>{{ vm.page.title }}</h1>
         </div>
 
         <div id="navigator"
-             class="center-ver-hor center-child"
+             class="center-ver-hor center-child borderGeneralAllHeavy"
              data-ng-click="vm.toggleMenu()">
         </div>
 
@@ -29,6 +30,10 @@
     <!--the little piece on the bottom-right-->
     <div id="location"
          ng-class="vm.page.transition">
-        <h1 id="location-title"> {{ vm.page.name }} </h1>
+        <h1 id="location-title"
+            ng-class="vm.page.borderColor.left + 'Heavy'"
+            class="borderGeneralLeftHeavy">
+            {{ vm.page.name }}
+        </h1>
     </div>
 </div>

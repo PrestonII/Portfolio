@@ -22,7 +22,7 @@
                idCounter: -1
            };
 
-           var Project = function (title, summary, color, tags, images) {
+           var Project = function (title, summary, color, tags, images, border) {
                factory.idCounter++;
 
                var proj = {
@@ -31,7 +31,8 @@
                    summary: summary,
                    colorCode: color,
                    tags: tags,
-                   images: images
+                   images: images,
+                   borderColor: border
                };
 
                return proj;
@@ -39,7 +40,7 @@
 
            return factory;
 
-           function createProject(title, summary, color, tags, images) {
+           function createProject(title, summary, color, tags, images, border) {
                if (typeof title === 'object')
                    return createProjectObject(title);
 
@@ -48,7 +49,8 @@
                    summary,
                    color,
                    tags,
-                   images
+                   images,
+	               border
                );
 
                return createdProject;
@@ -61,7 +63,8 @@
                        project.summary,
                        project.colorCode,
                        project.tags,
-                       project.images
+                       project.images,
+	                   project.borderColor
                    );
                };
            };
@@ -74,12 +77,14 @@
                var convColor = convertColor(convProject.colorCode);
                var convTags = convertTags(convProject.tags);
                var convImages = convertImages(convProject.images);
+               var convBorder = convertBorder(convProject.borderColor);
 
                convProject.title = convTitle;
                convProject.summary = convSummary;
                convProject.colorCode = convColor;
                convProject.tags = convTags;
                convProject.images = convImages;
+               convProject.borderColor = convBorder;
 
                return convProject;
            }
@@ -148,6 +153,24 @@
                });
 
                return convImages;
+           }
+
+           function convertBorder(color){
+	           var borderColor = {
+		           all: '',
+		           left: '',
+		           right: '',
+		           top: '',
+		           bottom: ''
+	           };
+
+	           borderColor.all = 'border' + color + 'All';
+	           borderColor.left = 'border' + color + 'Left';
+	           borderColor.right = 'border' + color + 'Right';
+	           borderColor.top = 'border' + color + 'Top';
+	           borderColor.bottom = 'border' + color + 'Bottom';
+
+	           return borderColor;
            }
        };
 
