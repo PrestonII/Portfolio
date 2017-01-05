@@ -7,6 +7,7 @@
     {
       "title": "Nimble",
       "colorCode": "proj-nimble",
+      "borderColor": "Grey",
       "summary": ["This is a project I've been thinking about for a long while."],
       "tags": [ ".NET", "Javascript" ],
       "images": [
@@ -24,6 +25,7 @@
     {
       "title": "Simulacra",
       "colorCode": "proj-simulacra",
+      "borderColor": "White",
       "summary": ["Database normalization and join efficiencies weren't necessarily in my vocabulary before this project"],
       "tags": [ ".NET", "Javascript, SQL" ],
       "images": [
@@ -41,6 +43,7 @@
     {
       "title": [ "Feature/", "Lines" ],
       "colorCode": "proj-assemble",
+      "borderColor": "Grey",
       "summary": ["One of my first experiments with both WebGL and intense client side Javascript."],
       "tags": [ ".NET", "Javascript, WebGL" ],
       "images": [
@@ -58,6 +61,7 @@
     {
       "title": "Sample Project Titles",
       "colorCode": "proj-sample",
+      "borderColor": "Grey",
       "summary": [
         "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
         "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
@@ -76,7 +80,6 @@
           "location": "./server/data/images/example/pic1.jpg",
           "caption": [
             "These are series of words about the image being shown above.",
-            "\n",
             "\n",
             "Some of which have been programmed. Others which have not. ",
             "There are of course more words that could potentially be said but will, for now, be left unsaid."
