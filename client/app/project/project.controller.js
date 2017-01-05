@@ -34,6 +34,7 @@
                 id: -1,
                 title: '',
                 summary: '',
+	            borderColor: '',
                 colorCode: '',
                 images: [],
             }
@@ -99,7 +100,9 @@
 
             vm.page.currentProject = vm.page.projects[index];
             context.updatePageColor(vm.page.currentProject);
-            vm.page.borderColor = vm.page.currentProject.borderColor;
+            vm.page.borderColor = vm.page.currentProject.borderColor === undefined
+	            ? '' :
+	            vm.page.currentProject.borderColor;
             context.updatePageBorderColor(vm.page.borderColor);
             changeImage();
 

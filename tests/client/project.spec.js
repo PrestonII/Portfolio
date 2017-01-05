@@ -212,6 +212,16 @@ describe('Project Controller', function(){
         });
 
         it('should change the page color', function(){
+        	projectController.page.projects = [];
+        	projectController.page.projects.push({
+		        id: -1,
+			        title: '',
+			        summary: '',
+			        borderColor: '',
+			        colorCode: 'proj-test',
+			        images: [],
+	        });
+
             projectController.updatePage();
             var result = projectController.page.currentProject.colorCode;
 
