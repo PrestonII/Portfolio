@@ -24,7 +24,12 @@
       "images": [
         {
           "id": 0,
-          "location": "./server/data/images/autocad/autocad1.jpg",
+          "location": "./server/data/images/autocad/autocad1.png",
+          "caption": ""
+        },
+        {
+          "id": 1,
+          "location": "./server/data/images/autocad/autocad2.png",
           "caption": [
             "These are series of words about the image being shown above.",
             "\n",
@@ -32,21 +37,16 @@
             "There are of course more words that could potentially be said but will, for now, be left unsaid."
           ]
         },
-        {
-          "id": 1,
-          "location": "./server/data/images/autocad/autocad2.jpg",
-          "caption": "Image of another thing"
-        },
 
         {
           "id": 2,
-          "location": "./server/data/images/autocad/autocad2.jpg",
+          "location": "./server/data/images/autocad/autocad3.png",
           "caption": "Image of another thing"
         },
 
         {
           "id": 3,
-          "location": "./server/data/images/autocad/autocad2.jpg",
+          "location": "./server/data/images/autocad/autocad4.png",
           "caption": "Image of another thing"
         }
       ]
@@ -56,7 +56,13 @@
       "title": "Nimble",
       "colorCode": "proj-nimble",
       "borderColor": "Grey",
-      "summary": [ "This is a project I've been thinking about for a long while." ],
+      "summary": [
+        "Nimble is an application which aims to ease the process of working with BIM software applications. By tracking user behavior it's custom logic engine is able to not only make live suggestions to users working in models, it can advise them when they've made modeling mistakes and fix it for them.",
+        "\n",
+        "Being both a desktop and web application Nimble's stack is spread across multiple languages and additionally must manage access to Autodesk Revit's API (which of course presents it's own specific challenges).",
+        "\n",
+        "UX/UI was designed in collaboration with Los Hopper (LOHS)"
+      ],
       "tags": [ ".NET", "Javascript" ],
       "images": [
         {
@@ -68,23 +74,35 @@
           "id": 1,
           "location": "./server/data/images/nimble/nimbleweb2.jpg",
           "caption": "Image of another thing"
-        }
-      ]
-    },
-
-    {
-      "title": "Simulacra",
-      "colorCode": "proj-simulacra",
-      "borderColor": "White",
-      "summary": [ "Database normalization and join efficiencies weren't necessarily in my vocabulary before this project" ],
-      "tags": [ ".NET", "Javascript, SQL" ],
-      "images": [
-        {
-          "location": "./server/data/images/ei/pic1.jpg",
-          "caption": "Image of a thing"
         },
         {
-          "location": "./server/data/images/ei/pic2.jpg",
+          "id": 2,
+          "location": "./server/data/images/nimble/nimblemodel1.jpg",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 3,
+          "location": "./server/data/images/nimble/nimblemodel2.jpg",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 4,
+          "location": "./server/data/images/nimble/nimbleweb3.jpg",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 5,
+          "location": "./server/data/images/nimble/nimbleweb4.jpg",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 6,
+          "location": "./server/data/images/nimble/nimbleweb5.jpg",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 7,
+          "location": "./server/data/images/nimble/nimblemodel3.jpg",
           "caption": "Image of another thing"
         }
       ]
@@ -94,55 +112,87 @@
       "title": [ "Feature/", "Lines" ],
       "colorCode": "proj-assemble",
       "borderColor": "Grey",
-      "summary": [ "One of my first experiments with both WebGL and intense client side Javascript." ],
+      "summary": [
+        "Assemble Systems contracted me to work on adding a new feature to their web viewer: one that would allow them to view 2D lines along with 3D model objects. ",
+        "\n",
+        "Assemble’s Web Viewer is a great example of how incredibly powerful of WebGL is, particularly when used in well constructed Single Page Applications. That said, one of the challenges of using WebGL in this context is the way in which it renders pixels and lines. ",
+        "\n",
+        "The solution we came up with was simple but elegant. By querying model data prior to retrieval we could resolve whether the item was 2 or 3 dimensional and then present it using either LINES or TRIANGLES mode allowing both to coexist simultaneously."
+      ],
       "tags": [ ".NET", "Javascript, WebGL" ],
       "images": [
         {
-          "location": "./server/data/images/assemble/pic1.jpg",
+          "id": 0,
+          "location": "./server/data/images/assemble/assembleWeb1.jpg",
           "caption": "Image of a thing"
         },
         {
-          "location": "./server/data/images/assemble/pic2.jpg",
-          "caption": "Image of another thing"
+          "id": 1,
+          "location": "./server/data/images/assemble/assembleWeb2.png",
+          "caption": "Image of a thing"
+        },
+        {
+          "id": 2,
+          "location": "./server/data/images/assemble/assembleWeb3.jpg",
+          "caption": "Image of a thing"
+        },
+        {
+          "id": 3,
+          "location": "./server/data/images/assemble/assembleWeb4.jpg",
+          "caption": "Image of a thing"
         }
       ]
     },
 
     {
-      "title": "Automating AutoCAD",
-      "colorCode": "proj-acad",
+      "title": "Simulacra",
+      "colorCode": "proj-simulacra",
       "borderColor": "White",
       "summary": [
-        "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
-        "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
-        " ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ",
+        "The ‘Simulacra’ project was an interesting refactoring effort which turned into a complete overhaul of the client’s flagship product.",
         "\n",
-        "Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ",
-        "imodic obse facchicae tin verobus video, publin sentelis fure dum ",
-        "poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ",
-        "in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ",
-        "es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ",
-        "tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
+        "I worked on nearly all aspects of the product, from technical specification and database normalization to UX and UI design. ",
+        "\n",
+        "The original product was a Winforms based desktop application that stored data in a CSV format. The new product is a modern, ASP.NET application with a SQLite database which combines the functions of two applications into one."
       ],
-      "tags": [ ".NET", "AutoCAD", "Leadership" ],
+      "tags": [ ".NET", "Javascript, SQL, SQLite, HTML5, CSS3, Angular" ],
       "images": [
         {
           "id": 0,
-          "location": "./server/data/images/autocad/autocad1.jpg",
-          "caption": [
-            "These are series of words about the image being shown above.",
-            "\n",
-            "Some of which have been programmed. Others which have not. ",
-            "There are of course more words that could potentially be said but will, for now, be left unsaid."
-          ]
+          "location": "./server/data/images/simulacra/wireframeApplication1.png",
+          "caption": "Image of a thing"
         },
         {
           "id": 1,
-          "location": "./server/data/images/autocad/autocad2.jpg",
+          "location": "./server/data/images/simulacra/wireframeJob1.png",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 2,
+          "location": "./server/data/images/simulacra/wireframeProject1.png",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 3,
+          "location": "./server/data/images/simulacra/ftt1.png",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 4,
+          "location": "./server/data/images/simulacra/ftt2.png",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 5,
+          "location": "./server/data/images/simulacra/ftm1.png",
+          "caption": "Image of another thing"
+        },
+        {
+          "id": 6,
+          "location": "./server/data/images/simulacra/ftm2.png",
           "caption": "Image of another thing"
         }
       ]
     }
-
   ]
 }

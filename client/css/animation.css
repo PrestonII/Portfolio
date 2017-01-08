@@ -3,6 +3,8 @@
 ============================================================================= */
 .slowFade-add, .slowFade-remove,
 .proj-simulacra-add, .proj-simulacra-remove,
+.proj-nimble-add, .proj-nimble-remove,
+.proj-acad-add, .proj-acad-remove,
 .proj-assemble-add, .proj-assemble-remove {
     transition: all 1000ms linear;
 }
@@ -24,8 +26,9 @@
 
 .proj-nimble,
 .proj-nimble-add.proj-nimble-active {
-    background-color: #f15a24;
-    background-color: rgba(241, 90, 36, .95);
+    /*background-color: #f15a24;
+    background-color: rgba(241, 90, 36, .95);*/
+    background-color: white;
     color: #303130;
     color: rgba(48, 49, 48, .9);
 }
