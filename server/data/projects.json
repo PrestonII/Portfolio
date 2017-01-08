@@ -12,11 +12,13 @@
       "tags": [ ".NET", "Javascript" ],
       "images": [
         {
-          "location": "./server/data/images/nimble/nimble/web1.jpg",
+          "id":  0, 
+          "location": "./server/data/images/nimble/nimbleweb1.jpg",
           "caption": "Image of a thing"
         },
         {
-          "location": "./server/data/images/nimble/nimble/web2.jpg",
+          "id": 1,
+          "location": "./server/data/images/nimble/nimbleweb2.jpg",
           "caption": "Image of another thing"
         }
       ]
