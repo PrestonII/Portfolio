@@ -14,14 +14,20 @@
 }
 .proj-assemble,
 .proj-assemble-add.proj-assemble-active {
-    background-color: rgb(255, 212, 84);
-    color: #303130; 
+    /*background-color: rgb(255, 212, 84);*/
+    /*background-color: cmyk(.32%, 15.62%, 78.44%, 0);*/
+    background-color: #FFD454;
+    background-color: rgba(255, 212, 84, .9);
+    color: #303130;
+    color: rgba(48, 49, 48, .9);
 }
 
 .proj-nimble,
 .proj-nimble-add.proj-nimble-active {
-    background-color: rgb(241, 90, 36);
+    background-color: #f15a24;
+    background-color: rgba(241, 90, 36, .95);
     color: #303130;
+    color: rgba(48, 49, 48, .9);
 }
 
 .proj-acad,
