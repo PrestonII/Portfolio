@@ -5,14 +5,62 @@
   "type": "object",
   "data": [
     {
+      "title": "Automating AutoCAD",
+      "colorCode": "proj-acad",
+      "borderColor": "White",
+      "summary": [
+        "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
+        "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
+        " ulicontra consultum horeist ad dis, tatala nonemus vit; niam. mortum et reis. ",
+        "\n",
+        "Gra pro, caecre, ut consunum dum dentem,Num inateatra, mo con vium publinte, nocular ",
+        "imodic obse facchicae tin verobus video, publin sentelis fure dum ",
+        "poendicae nostiam er publica peruntisquo ut Cupicav ereorbit quidiest? ",
+        "in teatil hos, nicauco nfecons ultorume ata, que addum reisEssenimu nterei ",
+        "es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ",
+        "tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
+      ],
+      "tags": [ ".NET", "AutoCAD", "Leadership" ],
+      "images": [
+        {
+          "id": 0,
+          "location": "./server/data/images/autocad/autocad1.jpg",
+          "caption": [
+            "These are series of words about the image being shown above.",
+            "\n",
+            "Some of which have been programmed. Others which have not. ",
+            "There are of course more words that could potentially be said but will, for now, be left unsaid."
+          ]
+        },
+        {
+          "id": 1,
+          "location": "./server/data/images/autocad/autocad2.jpg",
+          "caption": "Image of another thing"
+        },
+
+        {
+          "id": 2,
+          "location": "./server/data/images/autocad/autocad2.jpg",
+          "caption": "Image of another thing"
+        },
+
+        {
+          "id": 3,
+          "location": "./server/data/images/autocad/autocad2.jpg",
+          "caption": "Image of another thing"
+        }
+      ]
+    },
+
+    {
       "title": "Nimble",
       "colorCode": "proj-nimble",
       "borderColor": "Grey",
-      "summary": ["This is a project I've been thinking about for a long while."],
+      "summary": [ "This is a project I've been thinking about for a long while." ],
       "tags": [ ".NET", "Javascript" ],
       "images": [
         {
-          "id":  0, 
+          "id": 0,
           "location": "./server/data/images/nimble/nimbleweb1.jpg",
           "caption": "Image of a thing"
         },
@@ -28,7 +76,7 @@
       "title": "Simulacra",
       "colorCode": "proj-simulacra",
       "borderColor": "White",
-      "summary": ["Database normalization and join efficiencies weren't necessarily in my vocabulary before this project"],
+      "summary": [ "Database normalization and join efficiencies weren't necessarily in my vocabulary before this project" ],
       "tags": [ ".NET", "Javascript, SQL" ],
       "images": [
         {
@@ -46,7 +94,7 @@
       "title": [ "Feature/", "Lines" ],
       "colorCode": "proj-assemble",
       "borderColor": "Grey",
-      "summary": ["One of my first experiments with both WebGL and intense client side Javascript."],
+      "summary": [ "One of my first experiments with both WebGL and intense client side Javascript." ],
       "tags": [ ".NET", "Javascript, WebGL" ],
       "images": [
         {
@@ -61,9 +109,9 @@
     },
 
     {
-      "title": "Sample Project Titles",
-      "colorCode": "proj-sample",
-      "borderColor": "Grey",
+      "title": "Automating AutoCAD",
+      "colorCode": "proj-acad",
+      "borderColor": "White",
       "summary": [
         "Nos, manum, ut re nos nequa screi pon sendicas Cat, non res facchi, Cat, ",
         "vervidetis. Lost pri portiorei pra ignatium antem unum serferis. Marions",
@@ -76,10 +124,11 @@
         "es rei sessi sidicaes, urnimis senteris ad fuit. Nam medetio iae eterit; ium ",
         "tus, vis, non dicaver untertante convenductu moluderis ilicaet aute, menteri, sedius, que"
       ],
-      "tags": [ ".NET", "Javascript", "HTML5", "CSS3" ],
+      "tags": [ ".NET", "AutoCAD", "Leadership" ],
       "images": [
         {
-          "location": "./server/data/images/example/pic1.jpg",
+          "id": 0,
+          "location": "./server/data/images/autocad/autocad1.jpg",
           "caption": [
             "These are series of words about the image being shown above.",
             "\n",
@@ -88,10 +137,12 @@
           ]
         },
         {
-          "location": "./server/data/images/example/pic2.jpg",
+          "id": 1,
+          "location": "./server/data/images/autocad/autocad2.jpg",
           "caption": "Image of another thing"
         }
       ]
     }
+
   ]
 }

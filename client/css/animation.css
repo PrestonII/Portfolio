@@ -9,7 +9,7 @@
 
 .proj-simulacra,
 .proj-simulacra-add.proj-simulacra-active {
-     background-color: #303130; 
+     background-color: rgba(123,123,123, .9);
      color: white;
 }
 .proj-assemble,
@@ -32,7 +32,7 @@
 
 .proj-acad,
 .proj-acad-add.proj-acad-active {
-    background-color: rgb(122, 26, 89);
+    background-color: rgba(122, 26, 89, .9);
     color: white;
 }
 
