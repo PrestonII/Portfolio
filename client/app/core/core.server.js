@@ -11,9 +11,9 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
         .module('app.core')
         .factory('server', server);
 
-    server.$inject = ['postman'];
+    server.$inject = ['$http', '$q'];
 
-    function server(Postman) {
+    function server($http, $q) {
 
         var instance = function(servType) {
 
@@ -26,19 +26,33 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
                 killObjects: killObjects
             };
 
-            var postalService = new Postman(self.serverType);
-
             initialize();
 
             return self;
 
-            function getObjects() {
+            function getObjects(useInternalStore) {
                 // reset the object list before retrieving
                 self.objectList = [];
 
-                return postalService.get()
-                    .then(updateScope)
-                    .catch(complain);
+                if (useInternalStore === undefined || useInternalStore === null)
+                    useInternalStore = true;
+
+                var def = $q.defer();
+                var url = useInternalStore
+                    ? '/api/' + self.serverType + '/internal-store'
+                    : '/api/' + self.serverType;
+
+                $http.get(url)
+                    .success(function(data){
+                        updateScope(data);
+                        def.resolve(data);
+                    })
+                    .error(function(err){
+                        complain(err);
+                        def.reject('Failed to get data');
+                    });
+
+                return def.promise;
             }
 
             function addObjects() {
@@ -70,6 +84,23 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
                 console.log('Creating "' + self.serverType + '" specific server');
             }
 
+            function updateScope(response) {
+                reviewData(response);
+
+                if (response.length > 0) {
+                    response.forEach(function(object) {
+                        self.objectList.push(object);
+                    });
+                }
+
+                return self.objectList;
+            }
+
+            function complain(error) {
+                console.log( "There was an error retrieving items from the server");
+                throw error;
+            }
+
             function reviewData(response) {
                 console.log('Received data');
 
@@ -78,23 +109,6 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
 
                 console.log('Request complete');
                 console.log(response);
-            }
-
-            function complain(error) {
-                console.log( "There was an error retrieving items from the server");
-                throw error;
-            }
-
-            function updateScope(response) {
-                reviewData(response);
-
-                if (response.data.length > 0) {
-                    response.data.forEach(function(object) {
-                        self.objectList.push(object);
-                    });
-                }
-
-                return self.objectList;
             }
 
             function refreshScope() {

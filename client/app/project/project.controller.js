@@ -45,25 +45,48 @@
         function initialize(callback) {
             console.log('Loading Project Controller...');
 
-            if(vm.page.projects > 0){
-            	updatePage(callback);
-            	return;
-            }
-
-            vm.page.projects = updateProjectList()
-                .then(function(response){
-                    vm.page.projects = response;
+            try {
+                if(projectHandler.hasApiProjects){
+                    vm.page.projects = projectHandler.projects;
                     updatePage();
-                })
-                .catch(function(error){
-                    console.log(error);
-                });
+                    return;
+                }
 
-            if(vm.page.projects.$$state) {
-            	if(vm.page.projects.$$state.status === 0 && callback) {
-		            vm.page.projects.then(callback);
-	            }
+                projectHandler.getProjects()
+                    .then(function(response){
+                        vm.page.projects = response;
+                        updatePage();
+                    })
+                    .then(function(){
+                        if(callback)
+                            return callback();
+                    });
             }
+
+            catch(error){
+                console.log(error);
+            }
+
+
+            // if(vm.page.projects > 0){
+            // 	updatePage(callback);
+            // 	return;
+            // }
+            //
+            // vm.page.projects = updateProjectList()
+            //     .then(function(response){
+            //         vm.page.projects = response;
+            //         updatePage();
+            //     })
+            //     .catch(function(error){
+            //         console.log(error);
+            //     });
+            //
+            // if(vm.page.projects.$$state) {
+            // 	if(vm.page.projects.$$state.status === 0 && callback) {
+		     //        vm.page.projects.then(callback);
+	         //    }
+            // }
         }
 
         function updatePage(callback) {
@@ -101,8 +124,8 @@
             vm.page.currentProject = vm.page.projects[index];
             context.updatePageColor(vm.page.currentProject);
             vm.page.borderColor = vm.page.currentProject.borderColor === undefined
-	            ? '' :
-	            vm.page.currentProject.borderColor;
+                                    ? ''
+                                    : vm.page.currentProject.borderColor;
             context.updatePageBorderColor(vm.page.borderColor);
             changeImage();
 

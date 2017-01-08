@@ -15,6 +15,7 @@
 
         var service = {
             projects: [],
+            hasApiProjects: false,
             getProjects : getProjects,
             getOfflineSamples : getOfflineSamples,
             processProjectData : processProjectData
@@ -121,8 +122,22 @@
             console.log('Getting projects from server...');
 
             return projectServer.getObjects()
-                .then(processProjectData)
-                .catch(getOfflineSamples);
+                .then(function(response) {
+                    var projs = processProjectData(response);
+                    service.hasApiProjects = true;
+                    service.projects = projs;
+
+                    return service.projects;
+                })
+                .catch(function(error){
+                    console.log(error);
+                    var offline = getOfflineSamples();
+                    var projs = processProjectData(offline);
+                    service.hasApiProjects = true;
+                    service.projects = projs;
+
+                    return service.projects;
+                });
         }
 
         function processProjectData(projectData){
