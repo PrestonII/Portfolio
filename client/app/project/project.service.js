@@ -42,12 +42,12 @@
                     "images": [
                         {
                             "id": 0,
-                            "location": "./server/data/images/autocad/autocad1.png",
+                            "location": "./server/data/images/autocad/autocad1.PNG",
                             "caption": "AutoCAD is a design tool used by architects, engineers and designers to draft documentation of products the products they each create. "
                         },
                         {
                             "id": 1,
-                            "location": "./server/data/images/autocad/autocad2.png",
+                            "location": "./server/data/images/autocad/autocad2.PNG",
                             "caption": [
                                 "View of the typical interface of AutoCAD's model space."
                             ]
