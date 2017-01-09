@@ -170,11 +170,15 @@
 
 
 #About {
-    margin-right: 90px;
+    /*margin-right: 90px;*/
+    width: 100%;
+    padding-right: 90px;
 }
 
 #News {
-    margin-right: 90px;
+    /*margin-right: 90px;*/
+    width: 100%;
+    padding-right: 90px;
 }
 
 .summary-title {

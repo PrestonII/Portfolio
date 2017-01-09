@@ -32,10 +32,13 @@
 .proj-nimble-add.proj-nimble-active {
     /*background-color: #f15a24;
     background-color: rgba(241, 90, 36, .95);*/
-    background-color: #e6e6e6;
-    background-color: rgba(215,215,215, 1);
     /*background-color: #7b7b7b;
     background-color: rgba(123,123,123, .9);*/
+
+    /*background-color: #e6e6e6;
+    background-color: rgba(215,215,215, 1);*/
+
+    background-color: cyan;
 
     color: #303130;
     color: rgba(48, 49, 48, .9);

@@ -26,14 +26,14 @@
                 ' Hi, Im Preston.' +
                 '\n' +
                 '\n' +
-                ' Sometimes I rhyme fast, sometimes I rhyme slow. ' +
+                ' I create both desktop and web applications and particularly love working on projects related to the construction and design industry. ' +
                 '\n' +
                 '\n' +
-                ' Enient.Atiorerias aut aut ut pores nobitas nossequ aectatur, sequisint.' +
-                ' Ullitatur solutas ea quibeati rerum ea nosam net aut iur aciae officidis' +
-                ' re, ommodicabo.Us rempor repra volupis is milluptate veniend itatis cullace' +
-                ' perumquat aut velenistius mi, volores totatur? Cilit eos pore nobit, sequat volorum' +
-                ' volessi abor'
+                ' I’ve learned to broaden my skillset over my career and I’m proud to say that I truly can do a little bit of everything. From UX/UI design, to server side code to front-end design, I have a bit of experience all over.' +
+                '\n' +
+                '\n' +
+                ' Check out the rest of my work using the navigator above! '
+
         };
 
         initialize();
