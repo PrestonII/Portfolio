@@ -7,6 +7,8 @@
 *.userosscache
 *.sln.docstates
 
+
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -21,6 +23,7 @@
 bld/
 [Bb]in/
 [Oo]bj/
+*bin/ww
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -68,6 +71,13 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+
+# Indesign Files
+*.indd
+
+# Grunt related Items
+.grunt*
+_SpecRunner.html
 
 # Chutzpah Test files
 _Chutzpah*
@@ -150,6 +160,8 @@ publish/
 *.nupkg
 # The packages folder can be ignored because of Package Restore
 **/packages/*
+**/client/public/*
+**/public/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
@@ -243,3 +255,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+*.idlk
+*.js___jb_tmp___
+.idea/codeStyleSettings.xml
+.idea/workspace.xml

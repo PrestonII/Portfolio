@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>portfolio</Name>
+    <RootNamespace>server</RootNamespace>
+    <DebuggerPort>
+    </DebuggerPort>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>eeaf4f15-5033-4bdf-8ac0-d611e073c768</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>server\www</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>8080</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="client\app\about\about.controller.js" />
+    <Compile Include="client\app\about\about.app.js" />
+    <Compile Include="client\app\app.module.js" />
+    <Compile Include="client\app\app.router.js" />
+    <Compile Include="client\app\core\core.processor.js" />
+    <Compile Include="client\app\core\core.context.js" />
+    <Compile Include="client\app\core\core.controller.js" />
+    <Compile Include="client\app\core\core.app.js" />
+    <Compile Include="client\app\core\core.navigator.js" />
+    <Compile Include="client\app\core\core.postman.js" />
+    <Compile Include="client\app\core\core.server.js" />
+    <Compile Include="client\app\directives\directive-body.js" />
+    <Compile Include="client\app\directives\directive-nav.js" />
+    <Compile Include="client\app\directives\directive-navigable.js" />
+    <Compile Include="client\app\example\users.js" />
+    <Compile Include="client\app\movie\movie.controller.js" />
+    <Compile Include="client\app\movie\movie.app.js" />
+    <Compile Include="client\app\news\news.app.js" />
+    <Compile Include="client\app\news\news.controller.js" />
+    <Compile Include="client\app\project\project.controller.js" />
+    <Compile Include="client\app\project\project.app.js" />
+    <Compile Include="client\app\project\project.factory.js" />
+    <Compile Include="client\app\project\project.service.js" />
+    <Compile Include="Gruntfile.js" />
+    <Compile Include="karma.conf.js" />
+    <Compile Include="server\app\models\page.js" />
+    <Compile Include="server\app\services\filefinder.js" />
+    <Compile Include="server\app\services\jsonFileService.js" />
+    <Compile Include="server\app\services\jsonService.js" />
+    <Compile Include="server\server.js" />
+    <Compile Include="server\app\models\movie.js" />
+    <Compile Include="server\app\models\project.js" />
+    <Compile Include="server\app\routers\approuter.js" />
+    <Compile Include="server\app\routers\movieRouter.js" />
+    <Compile Include="server\app\routers\projectRouter.js" />
+    <Compile Include="server\config\db.js" />
+    <Compile Include="server\www" />
+    <Compile Include="tests\clientMocha\context.spec.js">
+      <TestFramework>
+      </TestFramework>
+    </Compile>
+    <Compile Include="tests\clientMocha\mochaAngularExample.spec.js">
+      <TestFramework>
+      </TestFramework>
+    </Compile>
+    <Compile Include="tests\clientMocha\testvariables.js" />
+    <Compile Include="tests\client\context.spec.js" />
+    <Compile Include="tests\client\postman.spec.js" />
+    <Compile Include="tests\client\navigator.spec.js" />
+    <Compile Include="tests\client\processor.spec.js" />
+    <Compile Include="tests\client\server.spec.js" />
+    <Compile Include="tests\client\jasmine.spec.js" />
+    <Compile Include="tests\client\project.spec.js" />
+    <Compile Include="tests\client\users.spec.js" />
+    <Compile Include="tests\server\fileguy.spec.js">
+      <TestFramework>
+      </TestFramework>
+    </Compile>
+    <Compile Include="tests\server\jsonfs.spec.js">
+      <TestFramework>
+      </TestFramework>
+    </Compile>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="chutzpah.json" />
+    <Content Include="client\app\about\about.view.html" />
+    <Content Include="client\app\movie\movie.view.html" />
+    <Content Include="client\app\movie\testhome.html" />
+    <Content Include="client\app\news\news.view.html" />
+    <Content Include="client\app\project\project.view.html" />
+    <Content Include="client\css\animation.css" />
+    <Content Include="client\css\default.css" />
+    <Content Include="client\css\global.css" />
+    <Content Include="client\css\works.css" />
+    <Content Include="client\templates\body.html" />
+    <Content Include="client\templates\nav.html" />
+    <Content Include="index.html" />
+    <Content Include="package.json" />
+    <Content Include="server\data\images\nimble\model1.jpg" />
+    <Content Include="server\data\images\nimble\model2.jpg" />
+    <Content Include="server\data\images\nimble\model3.jpg" />
+    <Content Include="server\data\images\nimble\model4.jpg" />
+    <Content Include="server\data\images\nimble\model5.jpg" />
+    <Content Include="server\data\images\nimble\model6.jpg" />
+    <Content Include="server\data\images\nimble\web1.jpg" />
+    <Content Include="server\data\images\nimble\web2.jpg" />
+    <Content Include="server\data\images\nimble\web3.jpg" />
+    <Content Include="server\data\images\nimble\web4.jpg" />
+    <Content Include="server\data\projects.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="client\" />
+    <Folder Include="client\app\" />
+    <Folder Include="client\app\about\" />
+    <Folder Include="client\app\core\" />
+    <Folder Include="client\app\directives\" />
+    <Folder Include="client\app\movie\" />
+    <Folder Include="client\app\example\" />
+    <Folder Include="client\app\news\" />
+    <Folder Include="client\app\project\" />
+    <Folder Include="client\css\" />
+    <Folder Include="client\templates\" />
+    <Folder Include="server\app\models\" />
+    <Folder Include="server\app\services\" />
+    <Folder Include="server\app\routers\" />
+    <Folder Include="server\bin\" />
+    <Folder Include="server\app\" />
+    <Folder Include="server\config\" />
+    <Folder Include="server\" />
+    <Folder Include="server\data\" />
+    <Folder Include="server\data\images\" />
+    <Folder Include="server\data\images\nimble\" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\clientMocha\" />
+    <Folder Include="tests\client\" />
+    <Folder Include="tests\server\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
