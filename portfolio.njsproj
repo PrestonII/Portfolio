@@ -22,7 +22,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <NodejsPort>8080</NodejsPort>
     <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
@@ -56,6 +56,11 @@
     <Compile Include="client\app\project\project.app.js" />
     <Compile Include="client\app\project\project.factory.js" />
     <Compile Include="client\app\project\project.service.js" />
+    <Compile Include="client\resource\angular-animate.min.js" />
+    <Compile Include="client\resource\angular-route.min.js" />
+    <Compile Include="client\resource\angular.min.js" />
+    <Compile Include="client\resource\bootstrap.min.js" />
+    <Compile Include="client\resource\jquery.min.js" />
     <Compile Include="Gruntfile.js" />
     <Compile Include="karma.conf.js" />
     <Compile Include="node_modules\angular-animate\angular-animate.js" />
@@ -245,6 +250,7 @@
     <Content Include="client\css\default.css" />
     <Content Include="client\css\global.css" />
     <Content Include="client\css\works.css" />
+    <Content Include="client\resource\bootstrap.min.css" />
     <Content Include="client\templates\body.html" />
     <Content Include="client\templates\nav.html" />
     <Content Include="index.html" />
@@ -504,6 +510,7 @@
     <Folder Include="client\app\news\" />
     <Folder Include="client\app\project\" />
     <Folder Include="client\css\" />
+    <Folder Include="client\resource\" />
     <Folder Include="client\templates\" />
     <Folder Include="node_modules\" />
     <Folder Include="node_modules\angular-animate\" />
