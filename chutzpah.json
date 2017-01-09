@@ -1,0 +1,36 @@
+{
+  "CodeCoverageExecutionMode": "Never",
+  "References": [
+    {
+      "Path": "node_modules/angular/angular.min.js",
+      "IsTestFrameworkFile": true
+    },
+    {
+      "Path": "node_modules/angular-animate/angular-animate.min.js",
+      "IsTestFrameworkFile": true
+    },
+    {
+      "Path": "node_modules/angular-route/angular-route.min.js",
+      "IsTestFrameworkFile": true
+    },
+    {
+      "Path": "node_modules/angular-mocks/angular-mocks.js",
+      "IsTestFrameworkFile": true
+    },
+
+    { "Path": "client/app/core/core.app.js" },
+    {
+      "Path": "client/app/core/core",
+      "Includes": [ "*.js" ],
+      "Excludes": [ "core.app.js" ]
+    },
+    {
+      "Path": "client",
+      "Includes": [ "*.js" ],
+      "Excludes": [ "client/app/core/*.js" ]
+    },
+  ],
+  "Tests": [
+    { "Path": "tests/client", "Includes": ["*.spec.js"] },
+  ]
+}

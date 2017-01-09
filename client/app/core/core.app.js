@@ -4,7 +4,8 @@
     angular
         .module('app.core',
         [
-            'ngRoute', 'ngAnimate'
+            'ngRoute'
         ]);
 
+    console.log('Initializing core elements...');
 })();

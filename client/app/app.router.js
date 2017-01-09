@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
     'use strict';
 
     angular
@@ -9,11 +9,32 @@
 
     function router($routeProvider, $locationProvider) {
 
+        $locationProvider.hashPrefix('');
+
         $routeProvider
-            .when('/', { templateUrl: 'client/app/core/core.view.html', controller: 'coreController', controllerAs: 'coreVm'})
+
+            // home + about pages
+            .when('/',{
+                templateUrl: 'client/app/about/about.view.html',
+                controller: 'aboutController',
+                controllerAs: 'vm'
+            })
+
+            // work pages
+            .when('/Works', {
+                templateUrl: 'client/app/project/project.view.html',
+                controller: 'projectController',
+                controllerAs: 'vm'
+            })
+
+            // news page
+            .when('/News', {
+                templateUrl: 'client/app/news/news.view.html',
+                controller: 'newsController',
+                controllerAs: 'vm'
+            })
+
+            // default - return to home
             .otherwise('/');
-
-        //$locationProvider.html5Mode(true);
     }
-
 })();

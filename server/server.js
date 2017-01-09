@@ -4,10 +4,11 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var router = express.Router();
+var jsonservice = require('./app/services/jsonService');
 
 var app = express();
 var db = require('./config/db.js');
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 1337;
 
 app.port = port;
 
@@ -29,6 +30,7 @@ app.use(express.static(parent));
 
 require('./app/routers/approuter.js')(router);
 require('./app/routers/movieRouter.js')(router);
+require('./app/routers/projectRouter.js')(router, jsonservice);
 
 app.use('/api', router);
 
@@ -39,24 +41,28 @@ app.get('/', function (request, response) {
     console.log('Sent main page');
 });
 
-app.listen(port);
 console.log('Magic happens on port ' + port);
 
 process.on('uncaughtException', function (err) {
-    console.log('This exception occured: ' + err);
+    console.log('This exception occurred: ' + err);
 });
 
-process.on('SIGKILL', function (err) {
-    console.log('When SIGKILL occurs, will shutdown');
-    console.log('This exception occured: ' + err);
+process.on('exit', function(err) {
+    console.log('Exiting');
     app.close();
 });
 
-process.on('SIGTERM', function (err) {
-    console.log('When SIGTERM occurs, will shutdown');
-    console.log('This exception occured: ' + err);
-    app.close();
-});
+//process.on('SIGKILL', function (err) {
+//    console.log('When SIGKILL occurs, will shutdown');
+//    console.log('This exception occurred: ' + err);
+//    app.close();
+//});
+
+//process.on('SIGTERM', function (err) {
+//    console.log('When SIGTERM occurs, will shutdown');
+//    console.log('This exception occurred: ' + err);
+//    app.close();
+//});
 
 module.exports = app;
 

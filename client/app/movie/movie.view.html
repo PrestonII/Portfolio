@@ -1,34 +1,34 @@
-<div id="core">
-    
+<div id="home">
+
     <h1>Let's GO To The Movies !!</h1>
 
     <div id="movie-list">
         <button id="movie-getter"
-                data-ng-click="coreVm.getMovies()">Get All The Movies</button>
-        
+                data-ng-click="homeVm.getMovies()">Get All The Movies</button>
+
         <br />
 
         <input id="movie-title-input"
                type="text"
                name="movieTitle"
                placeholder="Name of Movie to Add"
-               data-ng-model="coreVm.currentMovie.name"/>
+               data-ng-model="homeVm.currentMovie.name"/>
         <button id="movie-creator"
-                data-ng-click="coreVm.addMovie()">Create A New Movie</button>
-        
+                data-ng-click="homeVm.addMovie()">Create A New Movie</button>
+
         <br />
 
         <input id="movie-id-input"
                type="text"
                name="movieId"
                placeholder="Id of Movie to Delete"
-               data-ng-model="coreVm.currentMovie._id" />
+               data-ng-model="homeVm.currentMovie._id" />
         <button id="movie-killer"
-                data-ng-click="coreVm.killMovie()">Get Rid Of This Movie!</button>
+                data-ng-click="homeVm.killMovie()">Get Rid Of This Movie!</button>
 
         <h2>Movie List!!</h2>
         <ul>
-            <li data-ng-repeat="movie in coreVm.movieList">
+            <li data-ng-repeat="movie in homeVm.movieList">
                 Name: {{ movie.name}}<br/>
                 Id:{{ movie._id}}
             </li>

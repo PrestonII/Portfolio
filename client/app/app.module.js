@@ -4,14 +4,12 @@
     angular
         .module('app',
         [
-            'ngRoute',
+            'ngRoute', 'ngAnimate',
 
-            'app.core'
-            //'app.projects',
-            //'app.news',
-            //'app.about'
+            'app.core', 'app.about', 'app.project',
+            'app.news'
         ]);
 
-    console.log('Initializing the application');
+    console.log('Initializing the application...');
 
 })();
