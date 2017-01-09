@@ -206,23 +206,25 @@
         function getProjects(){
             console.log('Getting projects from server...');
 
-            return projectServer.getObjects()
-                .then(function(response) {
+            var promise = projectServer.getObjects()
+
+            return promise.then(
+                function(response) {
                     var projs = processProjectData(response);
                     service.hasApiProjects = true;
                     service.projects = projs;
 
                     return service.projects;
-                })
-                .catch(function(error){
+            }, function(error){
                     console.log(error);
                     var offline = getOfflineSamples();
-                    var projs = processProjectData(offline);
                     service.hasApiProjects = true;
-                    service.projects = projs;
+                    service.projects = offline;
 
                     return service.projects;
-                });
+            });
+
+//             return promise;
         }
 
         function processProjectData(projectData){

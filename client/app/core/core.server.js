@@ -42,17 +42,22 @@ See 'core.context' for a more typical JP Factory that will send out a Singleton.
                     ? '/api/' + self.serverType + '/internal-store'
                     : '/api/' + self.serverType;
 
-                $http.get(url)
-                    .success(function(data){
-                        updateScope(data);
-                        def.resolve(data);
-                    })
-                    .error(function(err){
-                        complain(err);
-                        def.reject('Failed to get data');
-                    });
+                // $http.get(url)
+                //     .success(function(data){
+                //         updateScope(data);
+                //         def.resolve(data);
+                //     })
+                //     .error(function(err){
+                //         complain(err);
+                //         def.reject('Failed to get data');
+                //     });
+                //
+                // return def.promise;
 
-                return def.promise;
+                return $http.get(url)
+                    .then(function(response){
+                        return response.data;
+                    });
             }
 
             function addObjects() {

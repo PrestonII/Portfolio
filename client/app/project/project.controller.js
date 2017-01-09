@@ -52,14 +52,17 @@
                     return;
                 }
 
-                projectHandler.getProjects()
-                    .then(function(response){
+                var promise = projectHandler.getProjects()
+
+                promise.then(
+                    function(response){
                         vm.page.projects = response;
-                        updatePage();
-                    })
-                    .then(function(){
-                        if(callback)
-                            return callback();
+                        updatePage(callback);
+                    },
+                    function(error){
+                        console.log(error);
+                        vm.page.projects = response;
+                        updatePage(callback);
                     });
             }
 
