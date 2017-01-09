@@ -22,7 +22,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>8080</NodejsPort>
     <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
@@ -50,6 +50,8 @@
     <Compile Include="client\app\example\users.js" />
     <Compile Include="client\app\movie\movie.controller.js" />
     <Compile Include="client\app\movie\movie.app.js" />
+    <Compile Include="client\app\news\news.app.js" />
+    <Compile Include="client\app\news\news.controller.js" />
     <Compile Include="client\app\project\project.controller.js" />
     <Compile Include="client\app\project\project.app.js" />
     <Compile Include="client\app\project\project.factory.js" />
@@ -99,6 +101,7 @@
     <Content Include="client\app\about\about.view.html" />
     <Content Include="client\app\movie\movie.view.html" />
     <Content Include="client\app\movie\testhome.html" />
+    <Content Include="client\app\news\news.view.html" />
     <Content Include="client\app\project\project.view.html" />
     <Content Include="client\css\animation.css" />
     <Content Include="client\css\default.css" />
@@ -128,6 +131,7 @@
     <Folder Include="client\app\directives\" />
     <Folder Include="client\app\movie\" />
     <Folder Include="client\app\example\" />
+    <Folder Include="client\app\news\" />
     <Folder Include="client\app\project\" />
     <Folder Include="client\css\" />
     <Folder Include="client\templates\" />

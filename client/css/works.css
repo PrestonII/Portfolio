@@ -9,10 +9,6 @@
     
 }
 
-#summary-Works{
-    height: 40vh;
-}
-
 .word-area {
     /*border: 1px solid blue;*/
 
@@ -38,30 +34,6 @@
     right: 35px;
 }
 
-.title {
-    /*border: 1px solid red;*/
-
-    display: table-cell;
-    padding: 20px 15px;
-    height: 200px;
-    vertical-align: middle;
-    white-space: pre-line;
-    text-align: left;
-}
-
-.summary {
-    border-top: 1px solid #FE5A6B;
-
-    overflow: hidden;
-    white-space: pre-line;
-    margin: 0;
-    padding: 0 15px;
-    height: 425px;
-}
-
-.summary:hover {
-    overflow-y: auto;
-}
 
 /*.main-picture {
     border: 1px solid #FE5A6B;
@@ -174,26 +146,26 @@
 
 /* ===============================================================================*/
 
-.borderGreyAllLight{border: 1px solid #303030; !important;}
-.borderGreyTopLight{border-top: 1px solid #303030; !important}
-.borderGreyBottomLight{border-bottom: 1px solid #303030; !important;}
-.borderGreyLeftLight{border-left: 1px solid #303030; !important;}
-.borderGreyRightLight{border-right: 1px solid #303030; !important;}
+.borderGreyAllLight{border: 1px solid #303030 !important;}
+.borderGreyTopLight{border-top: 1px solid #303030 !important}
+.borderGreyBottomLight{border-bottom: 1px solid #303030 !important;}
+.borderGreyLeftLight{border-left: 1px solid #303030 !important;}
+.borderGreyRightLight{border-right: 1px solid #303030 !important;}
 
-.borderGreyAllHeavy{border: 3px solid #303030; !important;}
-.borderGreyTopHeavy{border-top: 3px solid #303030; !important}
-.borderGreyBottomHeavy{border-bottom: 3px solid #303030; !important;}
-.borderGreyLeftHeavy{border-left: 3px solid #303030; !important;}
-.borderGreyRightHeavy{border-right: 3px solid #303030; !important;}
+.borderGreyAllHeavy{border: 3px solid #303030 !important;}
+.borderGreyTopHeavy{border-top: 3px solid #303030 !important}
+.borderGreyBottomHeavy{border-bottom: 3px solid #303030 !important;}
+.borderGreyLeftHeavy{border-left: 3px solid #303030 !important;}
+.borderGreyRightHeavy{border-right: 3px solid #303030 !important;}
 
-.borderWhiteAllLight{border: 1px solid white; !important;}
-.borderWhiteTopLight{border-top: 1px solid white; !important}
-.borderWhiteBottomLight{border-bottom: 1px solid white; !important;}
-.borderWhiteLeftLight{border-left: 1px solid white; !important;}
-.borderWhiteRightLight{border-right: 1px solid white; !important;}
+.borderWhiteAllLight{border: 1px solid white !important;}
+.borderWhiteTopLight{border-top: 1px solid white !important}
+.borderWhiteBottomLight{border-bottom: 1px solid white !important;}
+.borderWhiteLeftLight{border-left: 1px solid white !important;}
+.borderWhiteRightLight{border-right: 1px solid white !important;}
 
-.borderWhiteAllHeavy{border: 3px solid white; !important;}
-.borderWhiteTopHeavy{border-top: 3px solid white; !important}
-.borderWhiteBottomHeavy{border-bottom: 3px solid white; !important;}
-.borderWhiteLeftHeavy{border-left: 3px solid white; !important;}
-.borderWhiteRightHeavy{border-right: 3px solid white; !important;}
+.borderWhiteAllHeavy{border: 3px solid white !important;}
+.borderWhiteTopHeavy{border-top: 3px solid white !important}
+.borderWhiteBottomHeavy{border-bottom: 3px solid white !important;}
+.borderWhiteLeftHeavy{border-left: 3px solid white !important;}
+.borderWhiteRightHeavy{border-right: 3px solid white !important;}

@@ -25,17 +25,23 @@
 
 /*******************************************************/
 
-.borderGeneralAllHeavy{border: 3px solid #FE5A6B;}
-.borderGeneralTopHeavy{border-top: 3px solid #FE5A6B;}
-.borderGeneralBottomHeavy{border-bottom: 3px solid #FE5A6B;}
-.borderGeneralLeftHeavy{border-left: 3px solid #FE5A6B;}
-.borderGeneralRightHeavy{border-right: 3px solid #FE5A6B;}
-
 .borderGeneralAllLight{border: 1px solid #FE5A6B;}
 .borderGeneralTopLight{border-top: 1px solid #FE5A6B;}
 .borderGeneralBottomLight{border-bottom: 1px solid #FE5A6B;}
 .borderGeneralLeftLight{border-left: 1px solid #FE5A6B;}
 .borderGeneralRightLight{border-right: 1px solid #FE5A6B;}
+
+.borderGeneralAllMedium{border: 2px solid #FE5A6B;}
+.borderGeneralTopMedium{ border-top: 2px solid #FE5A6B;}
+.borderGeneralBottomMedium{border-bottom: 2px solid #FE5A6B;}
+.borderGeneralLeftMedium{border-left: 2px solid #FE5A6B;}
+.borderGeneralRightMedium{border-right: 2px solid #FE5A6B;}
+
+.borderGeneralAllHeavy{border: 3px solid #FE5A6B;}
+.borderGeneralTopHeavy{border-top: 3px solid #FE5A6B;}
+.borderGeneralBottomHeavy{border-bottom: 3px solid #FE5A6B;}
+.borderGeneralLeftHeavy{border-left: 3px solid #FE5A6B;}
+.borderGeneralRightHeavy{border-right: 3px solid #FE5A6B;}
 
 #page {
     padding: 20px;
@@ -141,37 +147,60 @@
     PAGES
     =================================================================================
 */
-/*@media only screen and*/
-/*(max-height: 800px) {*/
-    /*!*.summary {*!*/
-        /*!*max-height: 25vh;*!*/
-        /*!*overflow: auto;*!*/
-    /*!*}*!*/
 
-    /*.summary{*/
-        /*!*height: 100%;*!*/
-        /*padding-bottom: 30px;*/
-        /*overflow: hidden;*/
-    /*}*/
-/*}*/
+.title {
+    display: table-cell;
+    padding: 20px 15px;
+    height: 200px;
+    vertical-align: middle;
+    white-space: pre-line;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.summary:hover {
+    overflow-y: auto;
+}
 
 
 #About {
     margin-right: 90px;
 }
 
-#About-summary-title {
-    border-top: 2px solid #FE5A6B;
-    border-bottom: 2px solid #FE5A6B;
+#News {
+    margin-right: 90px;
+}
+
+.summary-title {
     margin: 50px 0px 0px;
     width: auto;
     height: auto;
     padding: 30px 0;
-    text-align: right;
 }
 
-#About-summary-content {
-    text-align: right;
-
-    white-space: pre-line;
+@media only screen and (max-height: 800px) {
+    .summary {
+        overflow: hidden;
+        white-space: pre-line;
+        margin: 0;
+        padding: 0 15px;
+        height: 40vh;
+    }
 }
+
+@media only screen and (min-height: 801px) {
+    .summary {
+        overflow: hidden;
+        white-space: pre-line;
+        margin: 0;
+        padding: 0 15px;
+        height: 550px;
+    }
+}
+

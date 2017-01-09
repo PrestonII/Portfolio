@@ -1,4 +1,4 @@
-﻿(function() {
+(function() {
     'use strict';
 
     angular
@@ -28,8 +28,8 @@
             })
 
             // news page
-            .when('/news', {
-                templateUrl: 'client/app/app.view.html',
+            .when('/News', {
+                templateUrl: 'client/app/news/news.view.html',
                 controller: 'newsController',
                 controllerAs: 'vm'
             })
