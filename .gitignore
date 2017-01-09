@@ -200,8 +200,13 @@ ClientBin/
 *.dbproj.schemaview
 *.pfx
 *.publishsettings
-node_modules/
 orleans.codegen.cs
+node_modules/
+!node_modules/angular
+!node_modules/angular-animate
+!node_modules/angular-route
+!node_modules/bootstrap
+!node_modules/jquery
 
 # RIA/Silverlight projects
 Generated_Code/
