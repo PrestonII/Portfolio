@@ -4,7 +4,7 @@
     angular
         .module('app.news',
         [
-            'ngRoute', 'ngAnimate',
+            'ngRoute', 'ngAnimate', 'btford.markdown',
 
             'app.core'
         ]);

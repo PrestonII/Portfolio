@@ -10,20 +10,22 @@
     function newsController($scope, $location, navigator, context) {
         /* jshint validthis:true */
         var vm = this;
+        vm.getArticleContent = getArticleContent;
         vm.page = {
             name: 'News',
             title: '',
             borderColor: '',
-            summary: {
+            article: {
                 title: '',
+                date: '',
                 content: ''
             }
         }
 
-        var summary = {
-            title : "The Title Of An Upcoming Article That You're Sure To Love.",
-            content :
-                'Coming Soon!!'
+        var articleTest = {
+            title: "The Title Of An Upcoming Article That You're Sure To Love.",
+            date: 'September 4th, 2016',
+            content : 'client/app/news/content/test.md'
         };
 
         initialize();
@@ -33,7 +35,7 @@
 
             context.resetPageColor();
             context.updatePageBorderColor(vm.page.borderColor);
-            addContent();
+            addContent(articleTest);
             addTitle();
         }
         
@@ -41,9 +43,12 @@
             context.updatePage(vm.page);
         }
 
-        function addContent() {
-            vm.page.summary.title = summary.title;
-            vm.page.summary.content = summary.content;
+        function addContent(article) {
+            vm.page.article = article;
+        }
+
+        function getArticleContent() {
+            return articleTest.content;
         }
     }
 })();

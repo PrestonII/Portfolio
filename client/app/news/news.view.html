@@ -1,11 +1,39 @@
-<div id="summary-section"
+<div id="main-section"
+     class="col-xs-6 col-md-9 col-lg-9">
+    <!-- ReSharper disable once Html.TagNotResolved -->
+    <div btf-markdown ng-include src="vm.page.article.content">
+        <!--{{ vm.page.article.content }}-->
+    <!-- ReSharper disable once Html.TagNotResolved -->
+    </div>
+</div>
+
+<div id="title-section"
      class="col-xs-offset-6 col-xs-6 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
     <h1 class="summary-title borderGeneralTopMedium borderGeneralBottomMedium left-align"
-        id="{{ vm.page.name }}-summary-title">
-        {{ vm.page.summary.title}}
+        id="article-title">
+        {{ vm.page.article.title}}
     </h1>
-    <p class="right-align summary"
-       id="{{ vm.page.name }}-summary-content">
-        {{ vm.page.summary.content }}
-    </p>
+    
+    <div id="other-information">
+        <p class="left-align"
+           id="article-info">
+            {{ vm.page.article.date }}
+        </p>
+        
+        <ul id="share-links">
+            
+        </ul>
+        
+        <ul id="other-articles">
+            
+        </ul>
+    </div>
+</div>
+
+<div id="project-navigation"
+     class="col-xs-2 col-s-2 col-md-1 project-navigation">
+    <div id="next"
+         ng-click="vm.next()"><h2>></h2></div>
+    <div id="previous"
+         ng-click="vm.previous()"><h2><</h2></div>
 </div>
