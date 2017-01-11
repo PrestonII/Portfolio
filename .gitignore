@@ -202,6 +202,7 @@ ClientBin/
 *.publishsettings
 orleans.codegen.cs
 node_modules/
+bower_components/
 !node_modules/angular
 !node_modules/angular-animate
 !node_modules/angular-route

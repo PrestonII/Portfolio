@@ -244,6 +244,7 @@
     <Content Include="client\app\about\about.view.html" />
     <Content Include="client\app\movie\movie.view.html" />
     <Content Include="client\app\movie\testhome.html" />
+    <Content Include="client\app\news\content\test.md" />
     <Content Include="client\app\news\news.view.html" />
     <Content Include="client\app\project\project.view.html" />
     <Content Include="client\css\animation.css" />
@@ -525,6 +526,7 @@
     <Folder Include="client\app\movie\" />
     <Folder Include="client\app\example\" />
     <Folder Include="client\app\news\" />
+    <Folder Include="client\app\news\content\" />
     <Folder Include="client\app\project\" />
     <Folder Include="client\css\" />
     <Folder Include="client\resource\" />
