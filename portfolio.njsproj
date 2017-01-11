@@ -22,7 +22,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>8080</NodejsPort>
     <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
@@ -227,9 +227,7 @@
     <Compile Include="tests\client\navigator.spec.js" />
     <Compile Include="tests\client\processor.spec.js" />
     <Compile Include="tests\client\server.spec.js" />
-    <Compile Include="tests\client\jasmine.spec.js" />
     <Compile Include="tests\client\project.spec.js" />
-    <Compile Include="tests\client\users.spec.js" />
     <Compile Include="tests\server\fileguy.spec.js">
       <TestFramework>
       </TestFramework>
@@ -238,8 +236,10 @@
       <TestFramework>
       </TestFramework>
     </Compile>
+    <Content Include=".bowerrc" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="bower.json" />
     <Content Include="chutzpah.json" />
     <Content Include="client\app\about\about.view.html" />
     <Content Include="client\app\movie\movie.view.html" />
@@ -487,16 +487,33 @@
     <Content Include="node_modules\jquery\src\_Chutzpah.e8dc1fc7e360029c60675f831eaf0398da322d04.test.html" />
     <Content Include="node_modules\jquery\src\_Chutzpah.eb166384d7d688fb2daf4571609c125ce4583ad9.test.html" />
     <Content Include="package.json" />
-    <Content Include="server\data\images\nimble\model1.jpg" />
-    <Content Include="server\data\images\nimble\model2.jpg" />
-    <Content Include="server\data\images\nimble\model3.jpg" />
-    <Content Include="server\data\images\nimble\model4.jpg" />
-    <Content Include="server\data\images\nimble\model5.jpg" />
-    <Content Include="server\data\images\nimble\model6.jpg" />
-    <Content Include="server\data\images\nimble\web1.jpg" />
-    <Content Include="server\data\images\nimble\web2.jpg" />
-    <Content Include="server\data\images\nimble\web3.jpg" />
-    <Content Include="server\data\images\nimble\web4.jpg" />
+    <Content Include="server\data\images\assemble\assembleWeb1.jpg" />
+    <Content Include="server\data\images\assemble\assembleWeb2.png" />
+    <Content Include="server\data\images\assemble\assembleWeb3.jpg" />
+    <Content Include="server\data\images\assemble\assembleWeb4.jpg" />
+    <Content Include="server\data\images\autocad\autocad1.PNG" />
+    <Content Include="server\data\images\autocad\autocad2.PNG" />
+    <Content Include="server\data\images\example\web1.jpg" />
+    <Content Include="server\data\images\example\web2.jpg" />
+    <Content Include="server\data\images\example\web3.jpg" />
+    <Content Include="server\data\images\nimble\nimblemodel1.jpg" />
+    <Content Include="server\data\images\nimble\nimblemodel2.jpg" />
+    <Content Include="server\data\images\nimble\nimblemodel3.jpg" />
+    <Content Include="server\data\images\nimble\nimbleweb1.jpg" />
+    <Content Include="server\data\images\nimble\nimbleweb2.jpg" />
+    <Content Include="server\data\images\nimble\nimbleweb3.jpg" />
+    <Content Include="server\data\images\nimble\nimbleweb4.jpg" />
+    <Content Include="server\data\images\nimble\nimbleweb5.jpg" />
+    <Content Include="server\data\images\portfolio\model1.PNG" />
+    <Content Include="server\data\images\portfolio\original.PNG" />
+    <Content Include="server\data\images\simulacra\ftm1.PNG" />
+    <Content Include="server\data\images\simulacra\ftm2.PNG" />
+    <Content Include="server\data\images\simulacra\ftt1.PNG" />
+    <Content Include="server\data\images\simulacra\ftt2.PNG" />
+    <Content Include="server\data\images\simulacra\intelligence.PNG" />
+    <Content Include="server\data\images\simulacra\wireframeApplication1.png" />
+    <Content Include="server\data\images\simulacra\wireframeJob1.png" />
+    <Content Include="server\data\images\simulacra\wireframeProject1.png" />
     <Content Include="server\data\projects.json" />
   </ItemGroup>
   <ItemGroup>
@@ -560,7 +577,12 @@
     <Folder Include="server\" />
     <Folder Include="server\data\" />
     <Folder Include="server\data\images\" />
+    <Folder Include="server\data\images\assemble\" />
+    <Folder Include="server\data\images\autocad\" />
+    <Folder Include="server\data\images\example\" />
     <Folder Include="server\data\images\nimble\" />
+    <Folder Include="server\data\images\portfolio\" />
+    <Folder Include="server\data\images\simulacra\" />
     <Folder Include="tests\" />
     <Folder Include="tests\clientMocha\" />
     <Folder Include="tests\client\" />

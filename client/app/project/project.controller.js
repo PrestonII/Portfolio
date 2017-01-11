@@ -1,4 +1,4 @@
-///<reference path="project.paging.js" />
+///<reference path="./project.service.js" />
 
 (function () {
     'use strict';
@@ -69,27 +69,6 @@
             catch(error){
                 console.log(error);
             }
-
-
-            // if(vm.page.projects > 0){
-            // 	updatePage(callback);
-            // 	return;
-            // }
-            //
-            // vm.page.projects = updateProjectList()
-            //     .then(function(response){
-            //         vm.page.projects = response;
-            //         updatePage();
-            //     })
-            //     .catch(function(error){
-            //         console.log(error);
-            //     });
-            //
-            // if(vm.page.projects.$$state) {
-            // 	if(vm.page.projects.$$state.status === 0 && callback) {
-		     //        vm.page.projects.then(callback);
-	         //    }
-            // }
         }
 
         function updatePage(callback) {
