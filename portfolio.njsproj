@@ -18,7 +18,7 @@
     <StartupFile>server\www</StartupFile>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>.</WorkingDirectory>
+    <WorkingDirectory>../</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
@@ -250,6 +250,7 @@
     <Content Include="client\css\animation.css" />
     <Content Include="client\css\default.css" />
     <Content Include="client\css\global.css" />
+    <Content Include="client\css\news.css" />
     <Content Include="client\css\works.css" />
     <Content Include="client\resource\bootstrap.min.css" />
     <Content Include="client\templates\body.html" />

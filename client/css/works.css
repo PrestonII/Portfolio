@@ -25,30 +25,6 @@
     height: 100%;
 }
 
-.project-navigation {
-    /*border: 5px solid red;*/
-    margin-top: 110px;
-    text-align: right;
-    width: auto;
-    position: absolute;
-    right: 35px;
-}
-
-
-/*.main-picture {
-    border: 1px solid #FE5A6B;
-
-    min-height: 60%;
-    height: 80%;
-
-    min-width: 60%;
-    width: 80%;
-
-    margin: 15vh 5vw 2vh 5vw;
-    text-align: center;
-    vertical-align: middle;
-}*/
-
 @media only screen and
 (max-height: 800px){
     .image-area {

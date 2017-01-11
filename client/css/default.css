@@ -49,6 +49,10 @@
     max-height: 100%;
 }
 
+.absolute{
+    position: absolute;
+}
+
 .center-ver-hor {
     display: inline-block;
     vertical-align: middle;
@@ -103,6 +107,17 @@
     text-align: center;
 
     transition: all ease-in-out .5s;
+}
+
+.project-navigation {
+    /*border: 5px solid red;*/
+    /*margin-top: 110px;*/
+    text-align: right;
+    width: auto;
+    position: absolute;
+    top: 150px;
+    right: 35px;
+    transition: all 500ms linear;
 }
 
 #name {
