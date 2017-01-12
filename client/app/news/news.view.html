@@ -1,9 +1,12 @@
 <div id="news-main-section"
      class="absolute col-xs-6 col-md-8 col-lg-8 summary">
     <!-- ReSharper disable once Html.TagNotResolved -->
-    <div btf-markdown ng-include src="vm.page.article.content">
-        <!--{{ vm.page.article.content }}-->
-    <!-- ReSharper disable once Html.TagNotResolved -->
+    <div id="cover">
+        <img src="{{vm.page.article.cover}}"/>
+    </div>
+    <div btf-markdown
+         ng-include src="vm.page.article.content"
+         id="article-markdown">
     </div>
 </div>
 

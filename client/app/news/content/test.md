@@ -1,7 +1,17 @@
-![Cover Photo](http://miriadna.com/desctopwalls/images/max/Falling-asleep-forest.jpg)
-
 In consequae nimosan ditiur adit ereptas mi, odit quiate sim rem estisse quatque volorerunda aspic to dolorem quia sunt.
 Sae nullaborrum doluptas ende molum nem. Nequam harcipsum apicatur ati tet, quundae nam sunt et animillaute eum quiatium faccaborem que samus sincit doluptam, optaepe litiisqui aut autecest, omnimi, sitaest, quae sum dolut labore optat ommod mil minis eicitis estiatet ipsam quam ipid mollatibus, comni sequidi psametur ab is mi, nulluptur magnatis verspis ius aut et volorerum que res architi oremperae pratempos dunt.
+
+```Javascript
+function(){
+
+    // checking out the coding ability
+    var x = 2;
+    if(x + x === 4)
+        return true;
+
+    return null;
+}
+```
 
 > "Itatur hactemnos, conscernic in sessul hil te publiist graecuraes! Guli conu cri sedo, que niumentiam vir patum prae inte ca; incles bonsulinia re cerum que es vili consule scepotestis, Casdam seres nos, vemnes?"
 

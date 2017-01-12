@@ -1,5 +1,6 @@
 ﻿#News{
     position: fixed;
+    white-space: normal;
 }
 
 #news-title-section {
@@ -10,7 +11,7 @@
 #news-main-section {
     /*border: 1px solid red;*/
     /*top: 75px;*/
-    top: 0;
+    /*top: 0;*/
     padding: 30px;
 }
 
@@ -21,8 +22,8 @@
 @media only screen and (max-height: 800px) {
     #news-main-section {
         overflow: hidden;
-        white-space: pre-line;
-        margin: 0;
+        white-space: normal;
+        margin: 50px 0px 0px ;
         padding: 0 15px;
         height: 40vh;
     }
@@ -31,10 +32,10 @@
 @media only screen and (min-height: 801px) {
     #news-main-section {
         overflow: hidden;
-        white-space: pre-line;
-        margin: 0;
+        white-space: normal;
+        margin: 50px 0px 0px ;
         padding: 0 15px;
-        height: 700px;
+        height: 650px;
     }
 }
 
@@ -43,7 +44,29 @@
 }
 
 #news-main-section p img{
-    max-height: 30%;
+    /*max-height: 30%;*/
+    max-width: 100%;
+    height: auto;
+}
+
+#cover{
+    overflow-y: hidden;
+    /*height: auto;*/
+    max-height: 350px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+#cover img{
+    max-width: 100%;
+
+}
+
+#article-markdown{
+    padding: 0 30px;
+    text-align: justify;
+    white-space: pre-line;
 }
 
 
