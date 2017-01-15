@@ -18,7 +18,7 @@
     </h1>
     
     <div id="other-information">
-        <p class="left-align"
+        <p class="left-align generalPaddingTop generalPaddingBottom halfPaddingLeft halfPaddingRight"
            id="article-info">
             {{ vm.page.article.date }}
         </p>
@@ -28,7 +28,10 @@
         </ul>
         
         <ul id="other-articles">
-            
+            <li ng-repeat="article in vm.page.articles"
+                ng-click="vm.changeArticle(article.id)">
+                {{ article.title }}
+            </li>
         </ul>
     </div>
 </div>

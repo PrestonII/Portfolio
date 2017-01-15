@@ -121,7 +121,7 @@
 }
 
 #name {
-    margin-right: 10px;
+    margin-right: 30px;
     padding-right: 0;
 }
 
@@ -178,6 +178,16 @@
 .right-align {
     text-align: right;
 }
+
+.generalPaddingTop{ padding-top: 30px;}
+.generalPaddingBottom{ padding-bottom: 30px;}
+.generalPaddingLeft{ padding-left: 30px;}
+.generalPaddingRight{ padding-right: 30px;}
+
+.halfPaddingTop{ padding-top: 15px;}
+.halfPaddingBottom{ padding-bottom: 15px;}
+.halfPaddingLeft{ padding-left: 15px;}
+.halfPaddingRight{ padding-right: 15px;}
 
 .summary:hover {
     overflow-y: auto;
