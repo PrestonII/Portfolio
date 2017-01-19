@@ -54,8 +54,8 @@
                 id: 5,
                 title: "The Title Of An Upcoming Article That You're Sure To Love.",
                 date: 'September 4th, 2016',
-                cover: 'http://miriadna.com/desctopwalls/images/max/Falling-asleep-forest.jpg',
-                content : 'client/app/news/content/test.md'
+                cover: './client/app/news/content/tree.jpg',
+                content : './client/app/news/content/test.md'
             }
         ];
 
