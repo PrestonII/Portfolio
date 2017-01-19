@@ -6,7 +6,23 @@
     display: table;
     position: fixed;
     top: 0;
-    
+}
+
+#previousProject{
+    top: 40vh;
+    width: 100px;
+    height: 100%;
+}
+
+#nextProject{
+    float: right;
+    top: 40vh;
+    width: 100px;
+    height: 100%;
+}
+
+#summary-section{
+    top: 20px;
 }
 
 .word-area {
@@ -23,6 +39,7 @@
     text-align: center;
     margin-top: 100px;
     height: 100%;
+    padding-left: 100px;
 }
 
 @media only screen and

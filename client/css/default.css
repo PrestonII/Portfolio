@@ -164,6 +164,12 @@
     cursor: crosshair;
 }
 
+.arrow{
+    top: 25vh;
+    position:  relative;
+    width:  100px;
+}
+
 #menu li {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;

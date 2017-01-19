@@ -21,6 +21,11 @@
     white-space: normal;
 }
 
+#nextArticle{
+    position: absolute;
+    float: right;
+}
+
 #news-title-section {
     /* right: 150px; */
     /* text-align: center; */
@@ -186,14 +191,6 @@
 .google{
     background: url(../app/news/icons/icon_googleplus.jpg) left center no-repeat;
     background-size: 30px;
-}
-
-#previousArticle{
-    top: 25vh;
-}
-
-#nextArticle{
-    top: 25vh;
 }
 
 

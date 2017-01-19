@@ -1,6 +1,12 @@
-<div id="summary-section">
+<div id="previousProject"
+     class="absolute content-navigation col-xs-1 col-md-1 col-lg-1 arrow"
+     ng-click="vm.previous()">
+    <h2><</h2>
+</div>
+
+<div id="summary-section" class="col-lg-10">
     <div id="word-area"
-         class="col-xs-4 col-s-4 col-md-3 words">
+         class="col-xs-4 col-s-4 col-md-3 col-lg-4 words">
         <div id="title-{{ vm.page.name }}"
              class="title"
              ng-class="vm.page.transition">
@@ -14,7 +20,7 @@
     </div>
 
     <div id="image-area"
-         class="col-xs-6 col-s-6 col-md-8 pictures">
+         class="col-xs-6 col-s-6 col-md-8 col-lg-8 pictures">
         <div id="image-frame">
             <img src="{{ vm.page.currentImage.location }}"
                  alt="Suave, Lopez..."
@@ -35,12 +41,16 @@
              ng-class="vm.page.borderColor.top + 'Heavy'"
         >{{ vm.page.currentImage.caption }}</div>
     </div>
-    
-    <div id="project-navigation"
-         class="col-xs-2 col-s-2 col-md-1 project-navigation">
-        <div id="next"
-             ng-click="vm.next()"><h2>></h2></div>
-        <div id="previous"
-             ng-click="vm.previous()"><h2><</h2></div>
-    </div>
+    <!--<div id="project-navigation"-->
+         <!--class="col-xs-2 col-s-2 col-md-1 project-navigation">-->
+        <!--<div id="next"-->
+             <!--ng-click="vm.next()"><h2>></h2></div>-->
+        <!--<div id="previous"-->
+             <!--ng-click="vm.previous()"><h2><</h2></div>-->
+    <!--</div>-->
+</div>
+<div id="nextProject"
+     class="absolute content-navigation col-xs-1 col-md-1 col-lg-1 project-navigation arrow"
+     ng-click="vm.next()">
+    <h2>></h2>
 </div>
