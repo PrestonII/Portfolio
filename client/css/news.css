@@ -130,6 +130,28 @@
     width: 100%;
 }
 
+.share{
+    /* border: 1px solid magenta; */
+    width: 50px;
+    height: 35px;
+    /* line-height: 10px; */
+    display:  inline-block;
+}
+
+.twitter{
+    background: url(../resource/icon_twitter.svg) left center no-repeat;
+    background-size: 30px;
+}
+
+.linkedIn{
+    background: url(../resource/icon_linkedin.png) left center no-repeat;
+    background-size: 30px;
+}
+
+.google{
+    background: url(../resource/icon_googleplus.jpg) left center no-repeat;
+    background-size: 30px;
+}
 
 
 

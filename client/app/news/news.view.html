@@ -22,17 +22,23 @@
            id="article-info">
             {{ vm.page.article.date }}
         </p>
-        
-        <ul id="share-links">
-            
+
+        <div class="row">
+        <ul id="share-links"
+            class="col-lg-1">
+            <li><a><span class="share twitter"></span></a></li>
+            <li><a><span class="share google"></span></a></li>
+            <li><a><span class="share linkedIn"></span></a></li>
         </ul>
         
-        <ul id="other-articles">
+        <ul id="other-articles"
+            class="col-lg-11">
             <li ng-repeat="article in vm.page.articles"
                 ng-click="vm.changeArticle(article.id)">
                 {{ article.title }}
             </li>
         </ul>
+        </div>
     </div>
 </div>
 
