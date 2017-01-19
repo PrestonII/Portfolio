@@ -98,7 +98,7 @@
     /*height: auto;*/
     max-height: 350px;
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-drepeat;
     margin-bottom: 50px;
 }
 
@@ -113,9 +113,23 @@
     white-space: pre-line;
 }
 
-#other-articles li{
-    display: inline;
+#other-articles{
+    float: right;
+    text-align: right;
+    width: 75%;
 }
+
+#other-articles ul{
+    white-space: nowrap;
+}
+
+#other-articles li{
+    display: inline-block;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
 
 
 
