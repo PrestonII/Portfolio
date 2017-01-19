@@ -1,3 +1,21 @@
+.borderBlueAllLight{border: 1px solid #17B1BC;}
+.borderBlueTopLight{border-top: 1px solid #17B1BC;}
+.borderBlueBottomLight{border-bottom: 1px solid #17B1BC;}
+.borderBlueLeftLight{border-left: 1px solid #17B1BC;}
+.borderBlueRightLight{border-right: 1px solid #17B1BC;}
+
+.borderBlueAllMedium{border: 2px solid #17B1BC;}
+.borderBlueTopMedium{ border-top: 2px solid #17B1BC;}
+.borderBlueBottomMedium{border-bottom: 2px solid #17B1BC;}
+.borderBlueLeftMedium{border-left: 2px solid #17B1BC;}
+.borderBlueRightMedium{border-right: 2px solid #17B1BC;}
+
+.borderBlueAllHeavy{border: 3px solid #17B1BC;}
+.borderBlueTopHeavy{border-top: 3px solid #17B1BC;}
+.borderBlueBottomHeavy{border-bottom: 3px solid #17B1BC;}
+.borderBlueLeftHeavy{border-left: 3px solid #17B1BC;}
+.borderBlueRightHeavy{border-right: 3px solid #17B1BC;}
+
 #News{
     position: fixed;
     white-space: normal;

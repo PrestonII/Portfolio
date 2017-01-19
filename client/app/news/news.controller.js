@@ -14,7 +14,7 @@
         vm.page = {
             name: 'News',
             title: '',
-            borderColor: '',
+            borderColor: {},
             articles: [],
             article: {
                 title: '',
@@ -65,7 +65,9 @@
             console.log('Loading News Controller...');
 
             context.resetPageColor();
-            context.updatePageBorderColor(vm.page.borderColor);
+            var border = convertBorder('Blue');
+            vm.page.borderColor = border;
+            context.updatePageBorderColor(border);
 
             updateArticles();
             addTitle();
@@ -108,6 +110,24 @@
 
         function changeArticle(id){
             alert("This should change the article on the page");
+        }
+
+        function convertBorder(color){
+            var borderColor = {
+                all: '',
+                left: '',
+                right: '',
+                top: '',
+                bottom: ''
+            };
+
+            borderColor.all = 'border' + color + 'All';
+            borderColor.left = 'border' + color + 'Left';
+            borderColor.right = 'border' + color + 'Right';
+            borderColor.top = 'border' + color + 'Top';
+            borderColor.bottom = 'border' + color + 'Bottom';
+
+            return borderColor;
         }
     }
 })();
