@@ -19,7 +19,6 @@
 #News{
     position: fixed;
     white-space: normal;
-
 }
 
 #news-title-section {
@@ -190,7 +189,11 @@
 }
 
 #previousArticle{
-    top: 150px;
+    top: 25vh;
+}
+
+#nextArticle{
+    top: 25vh;
 }
 
 
