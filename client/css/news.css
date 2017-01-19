@@ -116,7 +116,7 @@
     /*height: auto;*/
     max-height: 350px;
     background-size: 100%;
-    background-repeat: no-drepeat;
+    background-repeat: no-repeat;
     margin-bottom: 50px;
 }
 
@@ -157,17 +157,17 @@
 }
 
 .twitter{
-    background: url(../resource/icon_twitter.svg) left center no-repeat;
+    background: url(../app/news/icons/icon_twitter.svg) left center no-repeat;
     background-size: 30px;
 }
 
 .linkedIn{
-    background: url(../resource/icon_linkedin.png) left center no-repeat;
+    background: url(../app/news/icons/icon_linkedin.png) left center no-repeat;
     background-size: 30px;
 }
 
 .google{
-    background: url(../resource/icon_googleplus.jpg) left center no-repeat;
+    background: url(../app/news/icons/icon_googleplus.jpg) left center no-repeat;
     background-size: 30px;
 }
 
