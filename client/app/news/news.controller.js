@@ -11,12 +11,15 @@
         /* jshint validthis:true */
         var vm = this;
         vm.changeArticle = changeArticle;
+        vm.next = next;
+        vm.previous = previous;
         vm.page = {
             name: 'News',
             title: '',
             borderColor: {},
             articles: [],
             article: {
+                id: '',
                 title: '',
                 date: '',
                 cover: '',
@@ -55,6 +58,7 @@
                 title: "The Title Of An Upcoming Article That You're Sure To Love.",
                 date: 'September 4th, 2016',
                 cover: './client/app/news/content/tree.jpg',
+                // cover: './content/tree.jpg',
                 content : './client/app/news/content/test.md'
             }
         ];
@@ -106,6 +110,16 @@
 
         function addContent(article) {
             vm.page.article = article;
+        }
+
+        function next(){
+            var currentId = vm.page.article.id;
+            changeArticle(currentId + 1);
+        }
+
+        function previous(){
+            var currentId = vm.page.article.id;
+            changeArticle(currentId - 1);
         }
 
         function changeArticle(id){

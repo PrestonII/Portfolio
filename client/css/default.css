@@ -53,6 +53,10 @@
     position: absolute;
 }
 
+.relative{
+    position: relative;
+}
+
 .center-ver-hor {
     display: inline-block;
     vertical-align: middle;
@@ -118,6 +122,15 @@
     top: 150px;
     right: 35px;
     transition: all 500ms linear;
+}
+
+.content-navigation{
+    transition: all 250ms linear;
+}
+
+.content-navigation:hover{
+    /*opacity: .8;*/
+    color: #FE5658;
 }
 
 #name {
