@@ -19,13 +19,19 @@
     <link rel="stylesheet" href="client/resource/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="client/css/global.css" />
     <link rel="stylesheet" href="client/css/default.css" />
     <link rel="stylesheet" href="client/css/works.css" />
+    <link rel="stylesheet" href="client/css/news.css" />
     <link rel="stylesheet" href="client/css/animation.css" />
+    
+    <base href="/Portfolio/" />
+    <!--<base href="/" />-->
     <!--Add google analytics script-->
 </head>
 <body ng-app="app">
@@ -45,6 +51,13 @@
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/showdown/compressed/Showdown.js"></script>
+    <script src="bower_components/angular-markdown-directive/markdown.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <!--<script src=""></script>-->
 

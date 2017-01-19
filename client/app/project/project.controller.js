@@ -1,4 +1,4 @@
-///<reference path="project.paging.js" />
+///<reference path="./project.service.js" />
 
 (function () {
     'use strict';
@@ -19,8 +19,8 @@
         vm.updateProjectList = updateProjectList;
         vm.changeProject = changeProject;
         vm.getProjects = getProjects;
-        vm.nextProject = nextProject;
-        vm.previousProject = previousProject;
+        vm.next = next;
+        vm.previous = previous;
         vm.changeImage = changeImage;
 
         vm.page = {
@@ -69,27 +69,6 @@
             catch(error){
                 console.log(error);
             }
-
-
-            // if(vm.page.projects > 0){
-            // 	updatePage(callback);
-            // 	return;
-            // }
-            //
-            // vm.page.projects = updateProjectList()
-            //     .then(function(response){
-            //         vm.page.projects = response;
-            //         updatePage();
-            //     })
-            //     .catch(function(error){
-            //         console.log(error);
-            //     });
-            //
-            // if(vm.page.projects.$$state) {
-            // 	if(vm.page.projects.$$state.status === 0 && callback) {
-		     //        vm.page.projects.then(callback);
-	         //    }
-            // }
         }
 
         function updatePage(callback) {
@@ -136,24 +115,24 @@
                 return callback();
         }
 
-        function nextProject(){
+        function next(){
             var currentId = vm.page.currentProject.id;
-            var next = currentId + 1;
+            var nextItem = currentId + 1;
 
-            if(next >= vm.page.projects.length)
-                next = 0;
+            if(nextItem >= vm.page.projects.length)
+                nextItem = 0;
 
-            changeProject(next);
+            changeProject(nextItem);
         }
 
-        function previousProject(){
+        function previous(){
             var currentId = vm.page.currentProject.id;
-            var previous = currentId - 1;
+            var previousItem = currentId - 1;
 
-            if(previous < 0)
-                previous = vm.page.projects.length - 1;
+            if(previousItem < 0)
+                previousItem = vm.page.projects.length - 1;
 
-            changeProject(previous);
+            changeProject(previousItem);
         }
 
         function getProjects() {

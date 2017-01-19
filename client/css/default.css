@@ -1,4 +1,4 @@
-﻿/*ScrollBar*********************************************/
+/*ScrollBar*********************************************/
 
 ::-webkit-scrollbar {
     width: 1px;
@@ -47,6 +47,14 @@
     padding: 20px;
     height: 100vh;
     max-height: 100%;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
 }
 
 .center-ver-hor {
@@ -105,8 +113,28 @@
     transition: all ease-in-out .5s;
 }
 
+.project-navigation {
+    /*border: 5px solid red;*/
+    /*margin-top: 110px;*/
+    text-align: right;
+    width: auto;
+    position: absolute;
+    top: 150px;
+    right: 35px;
+    transition: all 500ms linear;
+}
+
+.content-navigation{
+    transition: all 250ms linear;
+}
+
+.content-navigation:hover{
+    /*opacity: .8;*/
+    color: #FE5658;
+}
+
 #name {
-    margin-right: 10px;
+    margin-right: 30px;
     padding-right: 0;
 }
 
@@ -134,6 +162,12 @@
 
 .navigable:hover {
     cursor: crosshair;
+}
+
+.arrow{
+    top: 25vh;
+    position:  relative;
+    width:  100px;
 }
 
 #menu li {
@@ -164,6 +198,16 @@
     text-align: right;
 }
 
+.generalPaddingTop{ padding-top: 30px;}
+.generalPaddingBottom{ padding-bottom: 30px;}
+.generalPaddingLeft{ padding-left: 30px;}
+.generalPaddingRight{ padding-right: 30px;}
+
+.halfPaddingTop{ padding-top: 15px;}
+.halfPaddingBottom{ padding-bottom: 15px;}
+.halfPaddingLeft{ padding-left: 15px;}
+.halfPaddingRight{ padding-right: 15px;}
+
 .summary:hover {
     overflow-y: auto;
 }
@@ -185,7 +229,7 @@
     margin: 50px 0px 0px;
     width: auto;
     height: auto;
-    padding: 30px 0;
+    padding: 30px 15px;
 }
 
 @media only screen and (max-height: 800px) {

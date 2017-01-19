@@ -6,7 +6,7 @@
 .proj-nimble-add, .proj-nimble-remove,
 .proj-acad-add, .proj-acad-remove,
 .proj-assemble-add, .proj-assemble-remove {
-    transition: all 1000ms linear;
+    transition: all 500ms linear;
 }
 
 .proj-simulacra,

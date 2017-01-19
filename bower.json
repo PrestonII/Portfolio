@@ -1,0 +1,27 @@
+{
+  "name": "appserver",
+  "description": "server",
+  "main": "server/www",
+  "authors": [
+    {
+      "name": "Preston",
+      "email": "smith.preston2@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://prestonii.github.io/Portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "node_modules/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.1",
+    "angular-sanitize": "1.6.1",
+    "showdown": "1.6.0",
+    "angular-markdown-directive": "^0.3.1"
+  }
+}

@@ -4,7 +4,7 @@
     angular
         .module('app',
         [
-            'ngRoute', 'ngAnimate',
+            'ngRoute', 'ngAnimate', 'btford.markdown',
 
             'app.core', 'app.about', 'app.project',
             'app.news'

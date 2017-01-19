@@ -1,11 +1,58 @@
-<div id="summary-section"
-     class="col-xs-offset-6 col-xs-6 col-md-offset-9 col-md-3 col-lg-offset-9 col-lg-3">
-    <h1 class="summary-title borderGeneralTopMedium borderGeneralBottomMedium left-align"
-        id="{{ vm.page.name }}-summary-title">
-        {{ vm.page.summary.title}}
+<div id="previousArticle"
+     class="absolute content-navigation col-xs-1 col-md-1 col-lg-1 arrow"
+         ng-click="vm.previous()">
+    <h2><</h2>
+</div>
+
+<div id="news-main-section"
+     class="relative col-xs-6 col-md-7 col-lg-7 summary">
+    <!-- ReSharper disable once Html.TagNotResolved -->
+    <div id="cover" style="background-image: url({{vm.page.article.cover}})">
+
+        <!--<img src="{{vm.page.article.cover}}"/>-->
+    </div>
+    <div btf-markdown
+         ng-include src="vm.page.article.content"
+         id="article-markdown">
+    </div>
+</div>
+
+<div id="news-title-section"
+     class="relative col-xs-4 col-md-3 col-lg-3">
+    <h1 class="summary-title left-align borderBlueTopMedium borderBlueBottomMedium"
+        id="article-title">
+        <!--ng-class="{borderTop: vm.page.borderColor.top + 'Medium', borderBottom: vm.page.borderColor.bottom + 'Medium'}"-->
+        {{ vm.page.article.title}}
     </h1>
-    <p class="right-align summary"
-       id="{{ vm.page.name }}-summary-content">
-        {{ vm.page.summary.content }}
-    </p>
+    
+    <div id="other-information">
+        <p class="left-align generalPaddingTop generalPaddingBottom halfPaddingLeft halfPaddingRight"
+           id="article-info">
+            {{ vm.page.article.date }}
+        </p>
+
+        <div class="row">
+        <ul id="share-links"
+            class="col-xs-1 col-s-1 col-md-1 col-lg-1">
+            <li><a><span class="share twitter"></span></a></li>
+            <li><a><span class="share google"></span></a></li>
+            <li><a><span class="share linkedIn"></span></a></li>
+        </ul>
+        
+        <ul id="other-articles"
+            class="col-xs-11 col-s-11 col-md-11 col-lg-11">
+            <li ng-repeat="article in vm.page.articles"
+                class="content-navigation"
+                ng-click="vm.changeArticle(article.id)">
+                {{ article.title }}
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+<div id="nextArticle"
+     class="absolute content-navigation col-xs-1 col-md-1 col-lg-1 project-navigation arrow"
+         ng-click="vm.next()">
+    <h2>></h2>
 </div>
