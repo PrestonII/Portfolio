@@ -9,8 +9,9 @@
 
     function router($routeProvider, $locationProvider) {
 
+        // $locationProvider.hashPrefix('');
         $locationProvider.html5Mode(true);
-        $locationProvider.hashPrefix('');
+
 
         $routeProvider
 
