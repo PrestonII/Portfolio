@@ -213,7 +213,7 @@
     <Compile Include="server\app\routers\projectRouter.js" />
     <Compile Include="server\config\db.js" />
     <Compile Include="server\www" />
-    <Compile Include="tests\clientMocha\context.spec.js">
+    <Compile Include="tests\clientMocha\router.spec.js">
       <TestFramework>
       </TestFramework>
     </Compile>
@@ -222,7 +222,7 @@
       </TestFramework>
     </Compile>
     <Compile Include="tests\clientMocha\testvariables.js" />
-    <Compile Include="tests\client\context.spec.js" />
+    <Compile Include="tests\client\router.spec.js" />
     <Compile Include="tests\client\postman.spec.js" />
     <Compile Include="tests\client\navigator.spec.js" />
     <Compile Include="tests\client\processor.spec.js" />

@@ -111,7 +111,7 @@
                 	return converted;
                 }
 
-                let currentPart = 0;
+                var currentPart = 0;
                 converted.push("");
                 sum.forEach(function(part){
                 	if(!dataProcessor.hasEscapes(part)) {
@@ -141,7 +141,7 @@
            }
 
            function convertImages(images){
-               let convImages = images;
+               var convImages = images;
                if(convImages === null || convImages === undefined)
                    return;
 
