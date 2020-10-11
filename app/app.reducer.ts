@@ -5,7 +5,6 @@ import counterReducer from '../features/counter/counter.slice';
 
 function createRootReducer() {
   return combineReducers({
-    // router: useRouter(),
     counter: counterReducer,
   });
 }

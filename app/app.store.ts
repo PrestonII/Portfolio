@@ -1,49 +1,17 @@
 import { useMemo } from 'react'
-import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { configureStore } from '@reduxjs/toolkit';
+import { rootReducer } from './app.reducer';
+import { initialState } from '../features/counter/counter.data';
+import { appMiddleware } from './app.middleware';
 
 let store
 
-const initialState = {
-  lastUpdate: 0,
-  light: false,
-  count: 0,
-}
-
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'TICK':
-      return {
-        ...state,
-        lastUpdate: action.lastUpdate,
-        light: !!action.light,
-      }
-    case 'INCREMENT':
-      return {
-        ...state,
-        count: state.count + 1,
-      }
-    case 'DECREMENT':
-      return {
-        ...state,
-        count: state.count - 1,
-      }
-    case 'RESET':
-      return {
-        ...state,
-        count: initialState.count,
-      }
-    default:
-      return state
-  }
-}
-
 function initStore(preloadedState = initialState) {
-  return createStore(
-    reducer,
+  return configureStore({
+    reducer: rootReducer,
     preloadedState,
-    composeWithDevTools(applyMiddleware())
-  )
+    middleware: appMiddleware
+  })
 }
 
 export const initializeStore = (preloadedState) => {
@@ -70,5 +38,5 @@ export const initializeStore = (preloadedState) => {
 
 export function useStore(initialState) {
   const store = useMemo(() => initializeStore(initialState), [initialState])
-  return store
+  return store;
 }

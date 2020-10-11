@@ -1,33 +1,22 @@
-import { useSelector, useDispatch } from 'react-redux'
-
-const useCounter = () => {
-  const count = useSelector((state) => state.count)
-  const dispatch = useDispatch()
-  const increment = () =>
-    dispatch({
-      type: 'INCREMENT',
-    })
-  const decrement = () =>
-    dispatch({
-      type: 'DECREMENT',
-    })
-  const reset = () =>
-    dispatch({
-      type: 'RESET',
-    })
-  return { count, increment, decrement, reset }
-}
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  decrement,
+  increment,
+  reset,
+  selectCount,
+} from './counter.slice';
 
 const Counter = () => {
-  const { count, increment, decrement, reset } = useCounter()
+  const dispatch = useDispatch();
+  const { value } = useSelector(selectCount);
   return (
     <div>
       <h1>
-        Count: <span>{count}</span>
+        Count: <span>{value}</span>
       </h1>
-      <button onClick={increment}>+1</button>
-      <button onClick={decrement}>-1</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick={() => dispatch(increment())}>+1</button>
+      <button onClick={() => dispatch(decrement())}>-1</button>
+      <button onClick={() => dispatch(reset())}>Reset</button>
     </div>
   )
 }

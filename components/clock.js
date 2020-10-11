@@ -1,22 +1,19 @@
 import { useSelector, shallowEqual } from 'react-redux'
+import { selectCount } from '../features/counter/counter.slice';
 
 const useClock = () => {
   return useSelector(
-    (state) => ({
-      lastUpdate: state.lastUpdate,
-      light: state.light,
-    }),
-    shallowEqual
+    selectCount
   )
 }
 
 const formatTime = (time) => {
   // cut off except hh:mm:ss
-  return new Date(time).toJSON().slice(11, 19)
+  return new Date(time).toJSON().slice(11, 19);
 }
 
 const Clock = () => {
-  const { lastUpdate, light } = useClock()
+  const { light, lastUpdate } = useClock();
   return (
     <div className={light ? 'light' : ''}>
       {formatTime(lastUpdate)}
