@@ -1,5 +1,28 @@
-.container {
+:root {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0px;
+  // background-color: $dark_blue;
+  // color: $white;
+  overflow-y: hidden;
+  // font-family: neue-haas-grotesk-display, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+#__next {
+  height: 100%;
+  // min-height: 100vh;
   // padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -22,33 +45,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-
-:root {
-  font-size: 10px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  margin: 0px;
-  // background-color: $dark_blue;
-  // color: $white;
-  overflow-y: hidden;
-  // font-family: neue-haas-grotesk-display, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-}
-
-#__next {
-  height: 100vh;
-  box-sizing: inherit;
 }
 
 a {
