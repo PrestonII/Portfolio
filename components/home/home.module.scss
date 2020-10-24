@@ -1,8 +1,11 @@
 .main {
-  margin-top: 8rem;
-  margin-left: 16rem;
-  margin-right: 14rem;
+  padding-top: 8rem;
+  padding-left: 16rem;
+  padding-right: 14rem;
 
   display: grid;
-  justify-content: center;
+  height: 100vh;
+  scroll-snap-align: start;
+  // justify-content: center;
+  
 }
