@@ -8,13 +8,13 @@ interface props {
 
 export function Home({title}: props) {
   return (
-    <>
+    <div className={styles.main}>
       <h1>{title}</h1>
       <p>
         <Link href="/about">
           <a>About</a>
         </Link>
       </p>
-    </>
+    </div>
   )
 }
