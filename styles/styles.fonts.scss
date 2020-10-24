@@ -20,6 +20,7 @@ body {
     font-family: $font-head;
     margin: 0;
     color: $black;
+    font-weight: 400;
   }
 
   h1 {
@@ -27,7 +28,7 @@ body {
   }
 
   h2 {
-    font-size: $text-xl;
+    font-size: $text-xxl;
   }
 
   h3 {
