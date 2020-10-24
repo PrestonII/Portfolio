@@ -1,4 +1,4 @@
-import Home from '../features/home/home.layout';
+import Home from '../components/home/home.layout';
 
 const IndexPage = () => (
   <Home />
