@@ -12,32 +12,9 @@ $text-xxxl: 9rem;
 $font-head: 'Archivo', sans-serif;
 $font-body: 'Montserrat', sans-serif;
 
-%content-title {
-  font-family: $font-head;
-  // font-weight: 300;
-  color: $black;
-  font-size: $text-lg;
-}
-
-%content-subtitle {
-  font-weight: 700;
-  color: $grey;
-  font-size: $text-sm;
-}
-
-%content-text {
-  white-space: pre-line;
-  font-size: $text-md;
-}
-
-.brand-head {
-  font-family: $font-head;
-  font-size: 2rem;
-}
-
 body {
   font-family: $font-body;
-  color: $black;
+  color: $grey;
 
   h1,h2,h3,h4,h5 {
     font-family: $font-head;
