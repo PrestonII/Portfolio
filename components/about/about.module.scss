@@ -1,6 +1,24 @@
-.main {
+.about {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+
+  &__title {
+    border: 1px solid red;
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+  }
+
+  &__jumbotron {
+    border: 1px solid blue;
+    grid-column: 2 / -1;
+    grid-row: 1 / 4;
+  }
+
+  &__summary {
+    border: 1px solid green;
+    grid-column: 2 / -1;
+    grid-row: 4 / -1;
+  }
 }

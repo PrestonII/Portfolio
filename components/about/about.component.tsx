@@ -13,8 +13,10 @@ interface IAbout {
 }
 
 const About = ({title, sectionTitle, sectionContent}: IAbout) => (
-  <div className={styles.main}>
-    
+  <div className={styles.about}>
+    <div className={styles.about__title}></div>
+    <div className={styles.about__jumbotron}></div>
+    <div className={styles.about__summary}></div>
   </div>
 )
 
