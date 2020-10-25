@@ -18,10 +18,13 @@ const Sidebar = ({children, title = 'Preston Smith', sectionTitle}: ISidebar) =>
         <a>About</a>
       </Link>{' '}
       |{' '}
-      <Link href="/users">
-        <a>Users List</a>
+      <Link href="/work/recreating-space-virtually">
+        <a>Work</a>
       </Link>{' '}
-      | <a href="/api/users">Users API</a>
+      {/* <Link href="/users">
+        <a>Users List</a>
+      </Link>{' '} */}
+      {/* | <a href="/api/users">Users API</a> */}
     </nav>
   </header>
 )

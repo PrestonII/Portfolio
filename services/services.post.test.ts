@@ -17,17 +17,21 @@ describe("Post Service", () => {
     const postType = 'about';
     const fullPath = getSlugFullDirectory(postType, slug);
 
-    const post = getPostBySlug(fullPath, [
-      'title',
-      'date',
-      'slug',
-      // 'author',
-      'content',
-      // 'ogImage',
-      'coverImage',
-    ]);
+    const post = getPostBySlug(fullPath);
 
     expect(post).not.toBeNull();
     expect(post).not.toBeUndefined();
   })
+
+  it(`gets the post called 'Recreating Space Virtually' from the directory`, () => {
+    const slug = 'recreating-space-virtually';
+    const postType = 'work';
+    const fullPath = getSlugFullDirectory(postType, slug);
+
+    const post = getPostBySlug(fullPath);
+
+    expect(post).not.toBeNull();
+    expect(post).not.toBeUndefined();
+  })
+
 });
