@@ -6,16 +6,16 @@ export interface IPostProps {
 
 export interface IPostMetadata {
   slug: string;
-  postLocation: string;
+  content: string;
   extraData: Object;
-  date: Date;
+  date: string;
 }
 
 export class PostMetadata implements IPostMetadata {
   slug: string = '';
-  postLocation: string = '';
+  content: string = '';
   extraData: Object = {};
-  date: Date = new Date();
+  date: string = new Date().toString();
 }
 
 export const PostFields = {
@@ -24,4 +24,22 @@ export const PostFields = {
   Slug: 'slug',
   ContentLocation: 'contentLocation',
   Cover: 'coverImage'
+}
+
+export type PostType = {
+  slug: string
+  title: string
+  date: string
+  coverImage: string
+  excerpt?: string
+  ogImage?: {
+    url: string
+  }
+  content: string
+}
+
+export type PostProps = {
+  post: PostType
+  morePosts: PostType[]
+  preview?: boolean
 }
