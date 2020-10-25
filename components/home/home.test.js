@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Home from '../components/home/home.layout';
+import Home from './home.layout';
 
 describe("App", () => {
   it("renders without crashing", () => {
