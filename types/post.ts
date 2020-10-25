@@ -17,3 +17,11 @@ export class PostMetadata implements IPostMetadata {
   extraData: Object = {};
   date: Date = new Date();
 }
+
+export const PostFields = {
+  Title: 'title',
+  Date: 'date',
+  Slug: 'slug',
+  ContentLocation: 'contentLocation',
+  Cover: 'coverImage'
+}
