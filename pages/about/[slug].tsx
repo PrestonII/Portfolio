@@ -18,14 +18,16 @@ export async function getStaticProps({ params }: Params) {
   const postType = 'about';
   const fullPath = getSlugFullDirectory(postType, params.slug);
 
-  const post = getPostBySlug(fullPath, [
-    'title',
-    'date',
-    'slug',
-    'content',
-    'coverImage',
-  ]);
-  
+  const post = getPostBySlug(fullPath);
+
+  // const post = getPostBySlug(fullPath, [
+  //   'title',
+  //   'date',
+  //   'slug',
+  //   'content',
+  //   'coverImage',
+  // ]);
+
   const content = await convertMarkdownToHtml(post.content || '')
 
   return {

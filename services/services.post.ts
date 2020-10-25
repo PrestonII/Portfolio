@@ -14,7 +14,7 @@ export function getSlugFullDirectory(type: string, slug:string) {
   return path.join(postsDirectory, type, `${slug}.md`);
 }
 
-export function getPostBySlug(fullPath: string, fields: string[] = []) {
+export function getPostBySlug(fullPath: string, fields: string[]) {
   const postName = path.basename(fullPath).replace(/\.md$/, '');
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const data = convertMarkdownToPostData({fileContents, postName, fields});

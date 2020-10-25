@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../Layout';
-import About from './about.component';
+import PostSection from '../post/PostSection';
 import { PostProps } from '../../types/post';
 
 const AboutPost = (props: PostProps) => {
@@ -8,10 +8,12 @@ const AboutPost = (props: PostProps) => {
 
   return (
     <Layout title="Preston Smith | About">
-      <About 
+      <PostSection 
         title={title}
         sectionTitle={'Now'}
         sectionContent={content}
+        date={date}
+        coverImage={coverImage}
       />
     </Layout>
   )
