@@ -3,9 +3,9 @@ import Home from '../components/home/home.layout';
 
 describe("App", () => {
   it("renders without crashing", () => {
+    const title = "FullStack Designer & Developer"
     render(<Home />);
-    expect(
-      screen.getByRole("heading", { name: "Welcome to Next.js!" })
-    ).toBeInTheDocument();
+    const element = screen.getAllByRole("heading", { name: title })[0];
+    expect(element).toBeInTheDocument();
   });
 });
