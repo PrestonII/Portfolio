@@ -21,9 +21,9 @@ describe("Post Service", () => {
       'title',
       'date',
       'slug',
-      'author',
+      // 'author',
       'content',
-      'ogImage',
+      // 'ogImage',
       'coverImage',
     ]);
 

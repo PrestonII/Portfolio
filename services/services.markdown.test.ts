@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { convertMarkdownToPostData, PostFields } from './services.markdown';
+import { convertMarkdownToPostData } from './services.markdown';
 
 describe("Markdown Service", () => {
   it("can convert markdown to data", () => {

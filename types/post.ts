@@ -4,29 +4,7 @@ export interface IPostProps {
   fields?: string[]
 }
 
-export interface IPostMetadata {
-  slug: string;
-  content: string;
-  extraData: Object;
-  date: string;
-}
-
-export class PostMetadata implements IPostMetadata {
-  slug: string = '';
-  content: string = '';
-  extraData: Object = {};
-  date: string = new Date().toString();
-}
-
-export const PostFields = {
-  Title: 'title',
-  Date: 'date',
-  Slug: 'slug',
-  ContentLocation: 'contentLocation',
-  Cover: 'coverImage'
-}
-
-export type PostType = {
+export interface IPostData {
   slug: string
   title: string
   date: string
@@ -37,6 +15,27 @@ export type PostType = {
   }
   content: string
 }
+
+export class PostData implements IPostData {
+  title: string = '';
+  coverImage: string = '';
+  excerpt?: string | undefined;
+  ogImage?: { url: string; } | undefined;
+  slug: string = '';
+  content: string = '';
+  date: string = new Date().toString();
+  // extraData: Record<string, unknown> = {};
+}
+
+export const PostFields = {
+  Title: 'title',
+  Date: 'date',
+  Slug: 'slug',
+  Content: 'content',
+  Cover: 'coverImage'
+}
+
+export type PostType = PostData;
 
 export type PostProps = {
   post: PostType
