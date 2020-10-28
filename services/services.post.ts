@@ -31,3 +31,10 @@ export function getAllPosts(fields: string[] = []) {
   return posts
 }
 
+export function addTwo(value: number): number {
+  const additional = 2;
+  const added = value + additional;
+  
+  return added;
+}
+

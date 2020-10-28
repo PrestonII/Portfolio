@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { getAllPostSlugs, getPostBySlug, getSlugFullDirectory} from './services.post';
+import { getAllPostSlugs, getPostBySlug, getSlugFullDirectory, addTwo} from './services.post';
 
 describe("Post Service", () => {
   it("gets files from the post directory", () => {
@@ -32,6 +32,18 @@ describe("Post Service", () => {
 
     expect(post).not.toBeNull();
     expect(post).not.toBeUndefined();
+  })
+
+  it(`should reliably add two to any value`, () => {
+    // arrange
+    const value = 10;
+    const expectedValue = 12;
+
+    // act 
+    const returnedValue = addTwo(value);
+
+    // assert
+    expect(returnedValue).toEqual(expectedValue);
   })
 
 });
