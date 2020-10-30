@@ -1,8 +1,8 @@
 const RULESTATE = {
   OFF: 0,
   WARN: 1,
-  ERROR: 2
-}
+  ERROR: 2,
+};
 
 module.exports = {
   env: {
@@ -11,13 +11,13 @@ module.exports = {
     node: true,
   },
   extends: [
-    "eslint:recommended",
+    'eslint:recommended',
     'plugin:react/recommended',
-    "plugin:@typescript-eslint/recommended",
+    'plugin:@typescript-eslint/recommended',
     'airbnb',
     'prettier',
-    "prettier/@typescript-eslint",
-    "prettier/react",
+    'prettier/@typescript-eslint',
+    'prettier/react',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -27,19 +27,16 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   globals: {
-    'JSX': 'readonly'
+    JSX: 'readonly',
   },
   settings: {
     'import/resolver': {
-      'node': {
-        'extensions': ['.js', '.jsx', '.ts', '.tsx']
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
-    }
+    },
   },
   rules: {
     // 'prettier/prettier': 1,
@@ -71,8 +68,10 @@ module.exports = {
     'react/prefer-stateless-function': 1,
     'react/static-property-placement': 0,
     'react/no-array-index-key': 1,
-    'react/jsx-filename-extension': [ 2, 
-      { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
+    'react/require-default-props': RULESTATE.OFF,
   },
 };
