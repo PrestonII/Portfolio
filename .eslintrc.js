@@ -12,13 +12,13 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'eslint:recommended',
+    // 'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'prettier',
-    'prettier/@typescript-eslint',
     'prettier/react',
+    'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -56,6 +56,8 @@ module.exports = {
     'quote-props': RULESTATE.OFF,
 
     'jsx-a11y/no-noninteractive-element-interactions': RULESTATE.WARN,
+    'jsx-a11y/img-redundant-alt': RULESTATE.OFF,
+    'jsx-a11y/anchor-is-valid': RULESTATE.OFF,
 
     'import/no-dynamic-require': 0,
     // A temporary hack related to IDE not resolving correct package.json
