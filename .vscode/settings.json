@@ -1,4 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.defaultFormatter":"dbaeumer.vscode-eslint",
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true
 }
