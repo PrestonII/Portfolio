@@ -43,7 +43,7 @@ module.exports = {
   rules: {
     // 'prettier/prettier': 1,
     '@typescript-eslint/no-use-before-define': 1,
-    '@typescript-eslint/no-unused-vars': RULESTATE.WARN,
+    '@typescript-eslint/no-unused-vars': RULESTATE.OFF,
     '@typescript-eslint/explicit-module-boundary-types': RULESTATE.OFF,
 
     'no-console': RULESTATE.OFF,
@@ -54,6 +54,7 @@ module.exports = {
     'lines-between-class-members': RULESTATE.OFF,
     'no-array-constructor': RULESTATE.OFF,
     'quote-props': RULESTATE.OFF,
+    'no-shadow': RULESTATE.OFF,
 
     'jsx-a11y/no-noninteractive-element-interactions': RULESTATE.WARN,
     'jsx-a11y/img-redundant-alt': RULESTATE.OFF,
@@ -77,5 +78,7 @@ module.exports = {
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
     'react/require-default-props': RULESTATE.OFF,
+    'react/no-unused-prop-types': RULESTATE.OFF,
+    'react/prop-types': RULESTATE.OFF,
   },
 };
