@@ -7,7 +7,8 @@ export interface ISidebar {
   sectionTitle?: string;
 }
 
-const Sidebar = ({children, title = 'Preston Smith', sectionTitle}: ISidebar) => (
+// const Sidebar = ({children, title = 'Preston Smith', sectionTitle}: ISidebar) => (
+const Sidebar = () => (
   <header>
     <nav>
       <Link href="/">
