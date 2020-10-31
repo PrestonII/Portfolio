@@ -2,7 +2,7 @@ import fs from 'fs';
 import * as path from 'path';
 
 export function getAllFiles(baseDir: string): string[] {
-  let files: string[] = [];
+  const files: string[] = [];
 
   fs
     .readdirSync(baseDir)

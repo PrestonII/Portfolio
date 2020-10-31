@@ -21,8 +21,8 @@ export function convertMarkdownToPostData({fileContents, postName, fields}: IPos
     meta[field] = data[field];
   });
   
-  meta['slug'] = postName;
-  meta['content'] = content;
+  meta.slug = postName;
+  meta.content = content;
 
   // const postData = new PostData();
   
