@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "lint": "eslint --ext ts,tsx"
   },
   "dependencies": {
     "date-fns": "^2.16.1",
@@ -25,10 +26,21 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
     "babel-jest": "^26.6.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26.6.1",
     "jest-css-modules": "^2.1.0",
     "jest-dom": "^4.0.0",
+    "prettier": "^2.1.2",
+    "prettier-eslint": "^11.0.0",
     "typescript": "4.0"
   },
   "license": "MIT"

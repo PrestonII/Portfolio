@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  // "prettier.tabWidth": 2,
+  // "prettier.enable": true,
+  // "prettier.singleQuote": true,
+  "editor.defaultFormatter":"dbaeumer.vscode-eslint",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true
+}
