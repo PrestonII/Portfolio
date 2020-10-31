@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { getAllPostSlugs, getPostBySlug, getSlugFullDirectory, addTwo} from './services.post';
+import { getAllPostSlugs, getPostBySlug, getSlugFullDirectory, addTwo, getAllPosts, getAllPostSlugsByDirectory} from './services.post';
 
 describe("Post Service", () => {
   it("gets files from the post directory", () => {
@@ -44,6 +44,23 @@ describe("Post Service", () => {
 
     // assert
     expect(returnedValue).toEqual(expectedValue);
+  })
+
+  it(`should not return posts from other directories`, () => {
+    // arrange
+    const falsePost = '/work/me.md';
+
+    // act 
+    const allPosts = getAllPostSlugsByDirectory('work');
+
+    // assert
+    allPosts.forEach((post) => {
+      // console.log(post);
+      const result = post.includes(falsePost);
+      expect(result).toBeFalsy();
+    })
+
+    // throw new Error('Deliberate fail!')    ;
   })
 
 });

@@ -1,7 +1,7 @@
 import AboutLayout from '../../components/about/about.layout';
 import Post from '../../components/post/Post';
 import { PostType, PostProps } from '../../types/post';
-import { getPostBySlug, getSlugFullDirectory, getAllPosts } from '../../services/services.post';
+import { getPostBySlug, getSlugFullDirectory, getAllPosts, getAllPostsByDirectory } from '../../services/services.post';
 import { convertMarkdownToHtml } from '../../services/services.markdown';
 
 type Params = {
@@ -31,7 +31,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPostsByDirectory(['slug'], 'about');
 
   return {
     paths: posts.map((posts) => {
