@@ -1,12 +1,16 @@
 @import '../styles/styles.colors.scss';
 
+%decoration {
+  color: $grey;
+  text-decoration-line: underline;
+  text-decoration-color: $red;
+  text-decoration-thickness: .25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .pagelink {
-  a {
-    color: $grey;
-    text-decoration-line: underline;
-    text-decoration-color: $red;
-    text-decoration-thickness: .25rem;
-    text-transform: uppercase;
-    font-weight: 500;
+  a, p {
+    @extend %decoration;
   }
 }
