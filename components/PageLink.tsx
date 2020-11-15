@@ -22,19 +22,19 @@ const PageLink = ({route, text}: PageLinkProps) => (
 );
 
 export const PageLinkWithRef = React.forwardRef((props: PageLinkProps, ref: React.Ref<HTMLAnchorElement>) => (
-  <p className={`${styles.pagelink} link`}>
+  <div className={`${styles.pagelink} link`}>
     <Link href={props.route}>
       <a ref={ref}>{props.text}</a>
     </Link>
-  </p>
+  </div>
 ));
 
 export const PageLinkWithHiddenText = React.forwardRef((props: PageLinkProps, ref: React.Ref<HTMLAnchorElement>) => (
-  <p className={`${styles.pagelink} link`}>
+  <div className={`${styles.pagelink} link`}>
     <Link href={props.route}>
       <OverflowHiddenAnchor text={props.text} ref={ref}/>
     </Link>
-  </p>
+  </div>
 ));
 
 export default PageLink;

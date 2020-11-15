@@ -9,3 +9,9 @@
   // justify-content: center;
   
 }
+
+.overflow {
+  &__hidden {
+    overflow-y: hidden;
+  }
+}

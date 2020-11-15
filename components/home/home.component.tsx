@@ -17,25 +17,28 @@ export function Home({title}: props) {
   useEffect(() => {
     const home = document.querySelectorAll('.home')[0];
     const title = document.querySelectorAll('.home > h1')[0];
-    const link = document.querySelectorAll('.home > .link')[0];
+    const link = document.querySelectorAll('.overflow__hidden')[0];
     const timeline = new Timeline({paused: true});
+
+    console.log(link);
 
     timeline
       .from(home, { display: 'none', opacity: 0, ease: Power1.easeOut }, 0)
       .from(title, { display: 'none', opacity: 0, y: 50, ease: Power1.easeOut, duration: 1 }, 1)
-      .from(link, { display: 'none', opacity: 0, y: 50, ease: Power1.easeOut, duration: .5 }, 2);
+      .from(link, { display: 'none', opacity: 0, y: 50, duration: .5 }, 1.5);
 
-    // gsap
-      // .from(home, { display: 'none', opacity: 0, ease: Power1.easeOut }, 0)
-      // .from(title, { display: 'none', opacity: 0, y: 50, ease: Power1.easeOut, duration: 1 }, 1)
-      // .from(nodeLink.current, { y: -20, delay: 1, duration: 1 });
+    // gsap.from(nodeHome.current, { opacity: 0, duration: .5 })
+    // gsap.from(nodeTitle.current, { opacity: 0, y: 50, ease: Power1.easeOut, duration: 1, delay: .5 })
+    // gsap.from(nodeLink.current, { y: -20, delay: 1, duration: 1 });
 
     timeline.play();
   }, [])
 
   return (
     <div className={`${styles.main} home`}>
-      <h1>{title}</h1>
+      {/* <div className={`${styles.overflow__hidden}`}> */}
+        <h1>{title}</h1>
+      {/* </div> */}
       <PageLinkWithHiddenText route={ROUTES.ABOUT} text="What's That?" ref={nodeLink} />
     </div>
   )
