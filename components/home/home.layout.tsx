@@ -9,8 +9,8 @@ export default function HomeLayout() {
   return (
     <Layout title={`Preston Smith | ${title}`}>
       <Home title={title}/>
-      {/* <Home title={title}/>
-      <Home title={title}/> */}
+      <Home title={title}/>
+      <Home title={title}/>
     </Layout>
   )
 }
