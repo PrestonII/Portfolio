@@ -1611,6 +1611,11 @@
   dependencies:
     "@types/jest" "*"
 
+"@types/two.js@^0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@types/two.js/-/two.js-0.7.3.tgz#28a64cf6a8fea087538c9c4f56a9fdbf89ce6d63"
+  integrity sha512-MEYfZxAOXTm1h3vInMf/UxeMxhzuqHJGGQ2qGt3sxmB/W7mcluxYrx21oo1ELwpIzmjfjpX1vccBm0EzG66UAg==
+
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
@@ -8392,6 +8397,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+
+two.js@^0.7.0-stable.1:
+  version "0.7.0-stable.1"
+  resolved "https://registry.yarnpkg.com/two.js/-/two.js-0.7.0-stable.1.tgz#4999070a566c3ab1b2ba980134d0d786b46ce2db"
+  integrity sha512-4QULPtstGEyGbhMvVvCGxgm85Un6CMYqFYafw7hNan9LdqoYZqMnxsaj8pkfBT4zpRfqB98aZjGrWYoCBqKtXA==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

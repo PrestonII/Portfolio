@@ -26,7 +26,7 @@ const Sidebar = () => {
           <a>Home</a>
         </Link>{' '}
         |{' '}
-        <Link href="/about">
+        <Link href="/about/me">
           <a>About</a>
         </Link>{' '}
         |{' '}
