@@ -1,62 +1,58 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import React, { useEffect, useRef } from 'react';
+import { render } from 'react-dom';
+import * as THREE from 'three';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import styles from './canvas.module.scss';
 
-const style = {
-  height: 250 // we can control scene size by setting container dimensions
-};
+const canvasThree = () => {
+  let requestId: number;
+  let width: number;
+  let height: number;
+  let aspectRatio: number;
+  let scene: THREE.Scene;
+  let camera: THREE.PerspectiveCamera;
+  // let controls: OrbitControls;
+  let renderer: THREE.WebGLRenderer;
+  let cube: THREE.Mesh;
+  let material: THREE.MeshPhongMaterial;
 
-class App extends Component {
-  componentDidMount() {
-    this.sceneSetup();
-    this.addCustomSceneObjects();
-    this.startAnimationLoop();
-    window.addEventListener("resize", this.handleWindowResize);
-  }
+  const stageRef = useRef<HTMLDivElement>(null);
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowResize);
-    window.cancelAnimationFrame(this.requestID);
-    this.controls.dispose();
-  }
+  useEffect(() => {
+    setup(stageRef.current as HTMLElement)
+    addObjects();
+    startLoop();
+  }, [])
 
-  // Standard scene setup in Three.js. Check "Creating a scene" manual for more information
-  // https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
-  sceneSetup = () => {
-    // get container dimensions and use them for scene sizing
-    const width = this.el.clientWidth;
-    const height = this.el.clientHeight;
-
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(
-      75, // fov = field of view
-      width / height, // aspect ratio
-      0.1, // near plane
-      1000 // far plane
+  const setup = (element: HTMLElement) => {
+    width = element.clientWidth;
+    height = element.clientHeight;
+    aspectRatio = width / height;
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(
+      75,
+      aspectRatio,
+      .1,
+      1000
     );
-    this.camera.position.z = 5; // is used here to set some distance from a cube that is located at z = 0
-    // OrbitControls allow a camera to orbit around the object
-    // https://threejs.org/docs/#examples/controls/OrbitControls
-    this.controls = new OrbitControls(this.camera, this.el);
-    this.renderer = new THREE.WebGLRenderer();
-    this.renderer.setSize(width, height);
-    this.el.appendChild(this.renderer.domElement); // mount using React ref
-  };
+    camera.position.setZ(5);
+    // controls = new OrbitControls(camera, element);
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(width, height);
+    element.appendChild(renderer.domElement);
+  }
 
-  // Here should come custom code.
-  // Code below is taken from Three.js BoxGeometry example
-  // https://threejs.org/docs/#api/en/geometries/BoxGeometry
-  addCustomSceneObjects = () => {
-    const geometry = new THREE.BoxGeometry(2, 2, 2);
+  const addObjects = () => {
+    const geometry = new THREE.BoxGeometry(2,2,2);
     const material = new THREE.MeshPhongMaterial({
-      color: 0x156289,
+      color: 'green',
       emissive: 0x072534,
       side: THREE.DoubleSide,
       flatShading: true
     });
-    this.cube = new THREE.Mesh(geometry, material);
-    this.scene.add(this.cube);
+
+    cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
     const lights = [];
     lights[0] = new THREE.PointLight(0xffffff, 1, 0);
@@ -67,57 +63,22 @@ class App extends Component {
     lights[1].position.set(100, 200, 100);
     lights[2].position.set(-100, -200, -100);
 
-    this.scene.add(lights[0]);
-    this.scene.add(lights[1]);
-    this.scene.add(lights[2]);
+    scene.add(lights[0]);
+    scene.add(lights[1]);
+    scene.add(lights[2]);
   };
 
-  startAnimationLoop = () => {
-    this.cube.rotation.x += 0.01;
-    this.cube.rotation.y += 0.01;
+  const startLoop = () => {
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
 
-    this.renderer.render(this.scene, this.camera);
-
-    // The window.requestAnimationFrame() method tells the browser that you wish to perform
-    // an animation and requests that the browser call a specified function
-    // to update an animation before the next repaint
-    this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
-  };
-
-  handleWindowResize = () => {
-    const width = this.el.clientWidth;
-    const height = this.el.clientHeight;
-
-    this.renderer.setSize(width, height);
-    this.camera.aspect = width / height;
-
-    // Note that after making changes to most of camera properties you have to call
-    // .updateProjectionMatrix for the changes to take effect.
-    this.camera.updateProjectionMatrix();
-  };
-
-  render() {
-    return <div style={style} ref={ref => (this.el = ref)} />;
+    renderer.render(scene, camera);
+    requestId = window.requestAnimationFrame(startLoop);
   }
+
+  return (
+    <div className={`${styles.stage} stage`} ref={stageRef} />
+  )
 }
 
-class Container extends React.Component {
-  state = { isMounted: true };
-
-  render() {
-    const { isMounted = true } = this.state;
-    return (
-      <>
-        <button
-          onClick={() =>
-            this.setState(state => ({ isMounted: !state.isMounted }))
-          }
-        >
-          {isMounted ? "Unmount" : "Mount"}
-        </button>
-        {isMounted && <App />}
-        {isMounted && <div>Scroll to zoom, drag to rotate</div>}
-      </>
-    );
-  }
-}
+export default canvasThree;

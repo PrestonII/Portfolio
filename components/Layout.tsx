@@ -12,7 +12,7 @@ type Props = {
 const Layout = ({ children, title = 'This is the default title' }: Props) => {
 
   return (
-    <div className={styles.layout} >
+    <div className={`${styles.layout} page`} >
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
