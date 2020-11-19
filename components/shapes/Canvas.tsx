@@ -47,6 +47,8 @@ export default function TwoCanvas(props: any) {
     // const stage = ref.current;
     
     // console.log(`Stage is: ${stage?.clientWidth} by ${stage?.clientHeight}`);
+    // console.log(`Two is: ${two.current.width} by ${two.current.height}`);
+
     // two.current.width = stage?.clientWidth || 0 ;
     // two.current.height = stage?.clientHeight || 0;
   }
