@@ -2,15 +2,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import Two from 'two.js';
 import styles from './Canvas.module.scss';
 
-const params = {
-  fullscreen: true,
-  autostart: true,
-};
+// const params = {
+//   // fullscreen: true,
+//   autostart: true,
+// };
 
 export default function TwoCanvas(props: any) {
 
   const ref = useRef<HTMLDivElement>(null);
-  const two = useRef(new Two(params));
+  let two: Two;
   // const lib = Two.Instances
   // const [shapes, setShapes] = React.useState(lib);
   const [shapes, setShapes] = React.useState<Two.Object[]>([]);
@@ -18,24 +18,32 @@ export default function TwoCanvas(props: any) {
   useEffect(setup, []);
 
   function setup() {
-
-    two.current.appendTo(ref.current as HTMLElement);
+    const start = document.querySelectorAll('.stage')[0];
+    two = new Two({
+      width: start.clientWidth,
+      height: start.clientHeight,
+      autostart: true,
+    })
+    two.appendTo(start as HTMLElement);
 
     // Add any shapes you'd like here
     const twoShapes: Two.Object[] = [];
-    const shape = two.current.makeCircle(500, 0, 250);
+    const shape = two.makeCircle(500, 0, 250);
     
     twoShapes.push(shape);
     setShapes(twoShapes)
-    two.current.add(shapes)
+    two.add(shapes)
 
-    two.current.bind('update', update);
-    two.current.bind('resize', resize);
+    // two.update();
+
+    start.addEventListener('resize', resize);
+    // two.bind('update', update);
+    // two.bind('resize', resize);
 
     return function() {
       // Unmount handler
-      two.current.unbind('update', update);
-      two.current.unbind('resize', resize);
+      two.unbind('update', update);
+      two.unbind('resize', resize);
     }
 
   }
@@ -47,11 +55,13 @@ export default function TwoCanvas(props: any) {
     const stage = ref.current;
     
     console.log(`Stage is: ${stage?.clientWidth} by ${stage?.clientHeight}`);
-    console.log(`Two is: ${two.current.width} by ${two.current.height}`);
+    console.log(`Two is: ${two?.width} by ${two.height}`);
 
     
-    // two.current.width = stage?.clientWidth || 0 ;
-    // two.current.height = stage?.clientHeight || 0;
+    two.width = stage?.clientWidth || 0 ;
+    two.height = stage?.clientHeight || 0;
+
+    two.update();
   }
 
   function update() {
