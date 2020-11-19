@@ -1,66 +1,62 @@
 import React, { useState, useRef, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import Two from 'two.js';
 import styles from './Canvas.module.scss';
 
-// export default DynamicTwo;
-
 const params = {
-  // fullscreen: true,
+  fullscreen: true,
   autostart: true
 };
 
-interface ITwoComp {
-  text?: string;
-}
+export default function TwoCanvas(props: any) {
 
-const TwoComponent = (props: ITwoComp ) => {
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
   const two = useRef(new Two(params));
-  const lib = Two.Instances
-  const [shapes, setShapes] = React.useState(lib);
+  // const lib = Two.Instances
+  // const [shapes, setShapes] = React.useState(lib);
+  // const [shapes, setShapes] = React.useState<Two.Object[]>([]);
 
-  useEffect(setup, [shapes]);
-
-  
-  function resize() {
-    // Resize logic here
-    const stage = document.querySelectorAll('.stage')[0];
-    console.log('resizing');
-    console.log(`Stage is: ${stage.clientWidth} by ${stage.clientHeight}`);
-    two.current.width = stage.clientWidth;
-    two.current.height = stage.clientHeight;
-  }
-
-  function update() {
-    // animate shapes here
-    console.log('updating');
-  }
+  useEffect(setup, []);
 
   function setup() {
-    const stage = document.querySelectorAll('.stage')[0];
-    two.current.appendTo(stage);
-    two.current.width = stage.clientWidth;
-    two.current.height = stage.clientHeight;
+
+    two.current.appendTo(ref.current as HTMLElement);
 
     // Add any shapes you'd like here
+    // const twoShapes: Two.Object[] = [];
+    // const shape = two.current.makeCircle(500, 0, 250);
     
-    const shape = two.current.makeCircle(500, 0, 250);
-    two.current.add(shape);
+    // twoShapes.push(shape);
+    // setShapes(twoShapes)
+    // two.current.add(shapes)
 
     two.current.bind('update', update);
     two.current.bind('resize', resize);
 
-    return () => {
+    return function() {
       // Unmount handler
       two.current.unbind('update', update);
       two.current.unbind('resize', resize);
     }
+
+  }
+
+  function resize() {
+    // Resize logic here
+    console.log('resizing!');
+    // const stage = document.querySelectorAll('.stage')[0];
+    // const stage = ref.current;
+    
+    // console.log(`Stage is: ${stage?.clientWidth} by ${stage?.clientHeight}`);
+    // two.current.width = stage?.clientWidth || 0 ;
+    // two.current.height = stage?.clientHeight || 0;
+  }
+
+  function update() {
+    // animate shapes here
   }
 
   return (
     <div className={`${styles.twoStage} stage`} ref={ ref } />
-  )
-}
+  );
 
-export default TwoComponent;
+}
