@@ -4,7 +4,7 @@ import styles from './Canvas.module.scss';
 
 const params = {
   fullscreen: true,
-  autostart: true
+  autostart: true,
 };
 
 export default function TwoCanvas(props: any) {
@@ -13,7 +13,7 @@ export default function TwoCanvas(props: any) {
   const two = useRef(new Two(params));
   // const lib = Two.Instances
   // const [shapes, setShapes] = React.useState(lib);
-  // const [shapes, setShapes] = React.useState<Two.Object[]>([]);
+  const [shapes, setShapes] = React.useState<Two.Object[]>([]);
 
   useEffect(setup, []);
 
@@ -22,12 +22,12 @@ export default function TwoCanvas(props: any) {
     two.current.appendTo(ref.current as HTMLElement);
 
     // Add any shapes you'd like here
-    // const twoShapes: Two.Object[] = [];
-    // const shape = two.current.makeCircle(500, 0, 250);
+    const twoShapes: Two.Object[] = [];
+    const shape = two.current.makeCircle(500, 0, 250);
     
-    // twoShapes.push(shape);
-    // setShapes(twoShapes)
-    // two.current.add(shapes)
+    twoShapes.push(shape);
+    setShapes(twoShapes)
+    two.current.add(shapes)
 
     two.current.bind('update', update);
     two.current.bind('resize', resize);
@@ -49,6 +49,7 @@ export default function TwoCanvas(props: any) {
     console.log(`Stage is: ${stage?.clientWidth} by ${stage?.clientHeight}`);
     console.log(`Two is: ${two.current.width} by ${two.current.height}`);
 
+    
     // two.current.width = stage?.clientWidth || 0 ;
     // two.current.height = stage?.clientHeight || 0;
   }
