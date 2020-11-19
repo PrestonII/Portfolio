@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <PageTransition
         timeout={TIMEOUT}
-        classNames="page-transition"
+        classNames="page page-transition"
         loadingComponent={<Loader />}
         loadingDelay={500}
         loadingTimeout={{
@@ -22,6 +22,11 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
       </PageTransition>
       <style jsx global>{`
+        .page {
+          width: 100%;
+          height: 100%;
+        }
+
         .page-transition-enter {
           opacity: 0;
           transform: translate3d(0px, 0px, 0px);
