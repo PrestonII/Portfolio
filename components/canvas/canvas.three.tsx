@@ -18,11 +18,14 @@ const canvasThree = () => {
   let material: THREE.MeshPhongMaterial;
 
   const stageRef = useRef<HTMLDivElement>(null);
+  const [stateWidth, setWidth] = React.useState(0);
+  const [stateHeight, setHeight] = React.useState(0);
 
   useEffect(() => {
     setup(stageRef.current as HTMLElement)
     addObjects();
     startLoop();
+    window.addEventListener('resize', resize)
   }, [])
 
   const setup = (element: HTMLElement) => {
@@ -41,6 +44,7 @@ const canvasThree = () => {
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     element.appendChild(renderer.domElement);
+    console.log(`Other data: `, element);
   }
 
   const addObjects = () => {
@@ -75,6 +79,23 @@ const canvasThree = () => {
 
     renderer.render(scene, camera);
     requestId = window.requestAnimationFrame(startLoop);
+  }
+
+  const resize = () => {
+    const element = stageRef.current as HTMLElement;
+    const width = element.clientWidth;
+    const height = element.clientHeight;
+    const aspectRatio = width / height;
+    console.log(`The stage is ${width} by ${height}`);
+    // console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
+
+    setWidth(width);
+    setHeight(height);
+    console.log(`The stage is ${stateWidth} by ${stateHeight}`);
+
+    renderer.setSize(stateWidth, stateHeight);
+    camera.aspect = aspectRatio;
+    camera.updateProjectionMatrix();
   }
 
   return (
