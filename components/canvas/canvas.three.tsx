@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { render } from 'react-dom';
 import * as THREE from 'three';
+import { OrbitControls } from 'three-orbitcontrols-ts';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import styles from './canvas.module.scss';
 
@@ -11,7 +12,7 @@ const canvasThree = () => {
   let aspectRatio: number;
   let scene: THREE.Scene;
   let camera: THREE.PerspectiveCamera;
-  // let controls: OrbitControls;
+  let controls: OrbitControls;
   let renderer: THREE.WebGLRenderer;
   let cube: THREE.Mesh;
   let material: THREE.MeshPhongMaterial;
@@ -36,7 +37,7 @@ const canvasThree = () => {
       1000
     );
     camera.position.setZ(5);
-    // controls = new OrbitControls(camera, element);
+    controls = new OrbitControls(camera, element);
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
     element.appendChild(renderer.domElement);

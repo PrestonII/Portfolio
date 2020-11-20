@@ -20,7 +20,8 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "sass": "^1.27.0",
-    "three": "^0.122.0"
+    "three": "^0.122.0",
+    "three-orbitcontrols-ts": "^0.1.2"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.26.3",
