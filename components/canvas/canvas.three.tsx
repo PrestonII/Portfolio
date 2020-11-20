@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { render } from 'react-dom';
 import * as THREE from 'three';
 import { OrbitControls } from 'three-orbitcontrols-ts';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import styles from './canvas.module.scss';
 
 const canvasThree = () => {
@@ -25,7 +24,9 @@ const canvasThree = () => {
     setup(stageRef.current as HTMLElement)
     addObjects();
     startLoop();
-    window.addEventListener('resize', resize)
+    window.addEventListener('resize', resize, {
+      passive: true
+    })
   }, [])
 
   const setup = (element: HTMLElement) => {
@@ -33,6 +34,7 @@ const canvasThree = () => {
     height = element.clientHeight;
     aspectRatio = width / height;
     scene = new THREE.Scene();
+    scene.autoUpdate = true;
     camera = new THREE.PerspectiveCamera(
       75,
       aspectRatio,
@@ -43,8 +45,13 @@ const canvasThree = () => {
     controls = new OrbitControls(camera, element);
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(width, height);
-    element.appendChild(renderer.domElement);
-    console.log(`Other data: `, element);
+    // renderer.setSize(width, height);
+    if(element.children.length < 1)
+      element.appendChild(renderer.domElement);
+    setWidth(width);
+    setHeight(height);
+    console.log(`The stage is ${width} by ${height}`);
+    console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
   }
 
   const addObjects = () => {
@@ -82,20 +89,25 @@ const canvasThree = () => {
   }
 
   const resize = () => {
+    // console.log(stageRef.current);
+    // console.log(`Window params are ${window.innerWidth} by ${window.innerHeight} `);
     const element = stageRef.current as HTMLElement;
     const width = element.clientWidth;
     const height = element.clientHeight;
     const aspectRatio = width / height;
+
+    
     console.log(`The stage is ${width} by ${height}`);
-    // console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
+    console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
 
-    setWidth(width);
-    setHeight(height);
-    console.log(`The stage is ${stateWidth} by ${stateHeight}`);
+    // setWidth(width);
+    // setHeight(height);
+    // console.log(`The values in STATE are ${stateWidth} by ${stateHeight}`);
 
-    renderer.setSize(stateWidth, stateHeight);
-    camera.aspect = aspectRatio;
-    camera.updateProjectionMatrix();
+    // renderer.setSize(width, height);
+    // // renderer.setSize(stateWidth, stateHeight);
+    // camera.aspect = aspectRatio;
+    // camera.updateProjectionMatrix();
   }
 
   return (
