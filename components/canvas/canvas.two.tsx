@@ -60,7 +60,7 @@ const canvasTwo: React.FC = () => {
   }
 
   return (
-    <div className={`${styles.twoStage} stage`} ref={ stageRef } />
+    <div className={`${styles.stage} stage`} ref={ stageRef } />
   );
 }
 
