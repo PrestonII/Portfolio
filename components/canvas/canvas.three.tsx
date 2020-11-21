@@ -89,25 +89,17 @@ const canvasThree = () => {
   }
 
   const resize = () => {
-    // console.log(stageRef.current);
-    // console.log(`Window params are ${window.innerWidth} by ${window.innerHeight} `);
     const element = stageRef.current as HTMLElement;
     const width = element.clientWidth;
     const height = element.clientHeight;
     const aspectRatio = width / height;
-
     
     console.log(`The stage is ${width} by ${height}`);
     console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
 
-    // setWidth(width);
-    // setHeight(height);
-    // console.log(`The values in STATE are ${stateWidth} by ${stateHeight}`);
-
-    // renderer.setSize(width, height);
-    // // renderer.setSize(stateWidth, stateHeight);
-    // camera.aspect = aspectRatio;
-    // camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+    camera.aspect = aspectRatio;
+    camera.updateProjectionMatrix();
   }
 
   return (
