@@ -1611,10 +1611,12 @@
   dependencies:
     "@types/jest" "*"
 
-"@types/two.js@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@types/two.js/-/two.js-0.7.3.tgz#28a64cf6a8fea087538c9c4f56a9fdbf89ce6d63"
-  integrity sha512-MEYfZxAOXTm1h3vInMf/UxeMxhzuqHJGGQ2qGt3sxmB/W7mcluxYrx21oo1ELwpIzmjfjpX1vccBm0EzG66UAg==
+"@types/three@^0.103.2":
+  version "0.103.2"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.103.2.tgz#f7d49130001c551941a0ded757def810579aafc4"
+  integrity sha512-zhtf0Qs5wLJpIn1+VWCpzSgpKayj/GSWZ6woiuz09FW59KEDeLpnBkYz6lbblVpRmGdlnG8nd0unaASshOvcXw==
+  dependencies:
+    three "*"
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.3"
@@ -8234,6 +8236,23 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+three-orbitcontrols-ts@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/three-orbitcontrols-ts/-/three-orbitcontrols-ts-0.1.2.tgz#2040955904022ae19c2e9c52ffdff43168658abd"
+  integrity sha1-IECVWQQCKuGcLpxS/9/0MWhlir0=
+  dependencies:
+    three "^0.83.0"
+
+three@*, three@^0.122.0:
+  version "0.122.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.122.0.tgz#bd9ed8a8820074856e8ba7b63fe0a65176e01aeb"
+  integrity sha512-bgYMo0WdaQhf7DhLE8OSNN/rVFO5J4K1A2VeeKqoV4MjjuHjfCP6xLpg8Xedhns7NlEnN3sZ6VJROq19Qyl6Sg==
+
+three@^0.83.0:
+  version "0.83.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.83.0.tgz#3b7f94790af3e021dac1f44a2617569ca2032b0b"
+  integrity sha1-O3+UeQrz4CHawfRKJhdWnKIDKws=
+
 throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
@@ -8397,11 +8416,6 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
-
-two.js@^0.7.0-stable.1:
-  version "0.7.0-stable.1"
-  resolved "https://registry.yarnpkg.com/two.js/-/two.js-0.7.0-stable.1.tgz#4999070a566c3ab1b2ba980134d0d786b46ce2db"
-  integrity sha512-4QULPtstGEyGbhMvVvCGxgm85Un6CMYqFYafw7hNan9LdqoYZqMnxsaj8pkfBT4zpRfqB98aZjGrWYoCBqKtXA==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
