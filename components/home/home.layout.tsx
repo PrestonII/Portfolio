@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Layout from '../Layout'
-import TwoComponent from '../shapes/Canvas';
+import TwoComponent from '../canvas/canvas.two';
 import { Home } from './home.component';
 
 
