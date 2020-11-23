@@ -12,12 +12,16 @@ const canvasTwo: React.FC = () => {
    }, []);
 
   const setup = () => {
+    const stage = stageRef.current as HTMLDivElement;
     two = new Two({
-      width: stageRef.current?.clientWidth,
-      height: stageRef.current?.clientHeight,
+      width: stage.clientWidth,
+      height: stage.clientHeight,
       autostart: true,
+      // fullscreen: true,
     })
-    two.appendTo(stageRef.current as HTMLDivElement);
+    
+    if(stage.children.length < 1)
+      two.appendTo(stage);
 
     // Add any shapes you'd like here
     const twoShapes: Two.Object[] = [];
@@ -26,18 +30,10 @@ const canvasTwo: React.FC = () => {
     twoShapes.push(shape);
     setShapes(twoShapes)
     two.add(shapes)
-
-    // two.update();
-
-    // stageRef.current?.addEventListener('resize', resize);
+    
     two.bind('update', update);
     two.bind('resize', resize);
-
-    return function() {
-      // Unmount handler
-      two.unbind('update', update);
-      two.unbind('resize', resize);
-    }
+    two.update();
 
   }
 
@@ -52,7 +48,7 @@ const canvasTwo: React.FC = () => {
     two.width = stage.clientWidth || 0 ;
     two.height = stage.clientHeight || 0;
 
-    two.update();
+    // two.update();
   }
 
   function update() {
