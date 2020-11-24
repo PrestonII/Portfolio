@@ -44,14 +44,14 @@ const canvasThree = () => {
     camera.position.setZ(5);
     controls = new OrbitControls(camera, element);
     renderer = new THREE.WebGLRenderer();
-    renderer.setSize(width, height);
-    // renderer.setSize(width, height);
+    renderer.setSize(width, height, false);
+    
     if(element.children.length < 1)
       element.appendChild(renderer.domElement);
     setWidth(width);
     setHeight(height);
-    console.log(`The stage is ${width} by ${height}`);
-    console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
+    // console.log(`The stage is ${width} by ${height}`);
+    // console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
   }
 
   const addObjects = () => {
@@ -94,10 +94,10 @@ const canvasThree = () => {
     const height = element.clientHeight;
     const aspectRatio = width / height;
     
-    console.log(`The stage is ${width} by ${height}`);
-    console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
+    // console.log(`The stage is ${width} by ${height}`);
+    // console.log(`The parent is ${element.parentElement?.clientWidth} by ${element.parentElement?.clientHeight}`);
 
-    renderer.setSize(width, height);
+    renderer.setSize(width, height, false);
     camera.aspect = aspectRatio;
     camera.updateProjectionMatrix();
   }
