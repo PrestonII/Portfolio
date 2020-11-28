@@ -16,6 +16,8 @@ const canvasThree = () => {
   let cube: THREE.Mesh;
   let material: THREE.MeshPhongMaterial;
 
+  const cream = '#fcf8eb';
+  const red = '#eb5757';
   const stageRef = useRef<HTMLDivElement>(null);
   const [stateWidth, setWidth] = React.useState(0);
   const [stateHeight, setHeight] = React.useState(0);
@@ -35,6 +37,8 @@ const canvasThree = () => {
     aspectRatio = width / height;
     scene = new THREE.Scene();
     scene.autoUpdate = true;
+    
+    scene.background = new THREE.Color(cream);
     camera = new THREE.PerspectiveCamera(
       75,
       aspectRatio,
@@ -57,7 +61,7 @@ const canvasThree = () => {
   const addObjects = () => {
     const geometry = new THREE.BoxGeometry(2,2,2);
     const material = new THREE.MeshPhongMaterial({
-      color: 'green',
+      color: red,
       emissive: 0x072534,
       side: THREE.DoubleSide,
       flatShading: true
@@ -67,9 +71,9 @@ const canvasThree = () => {
     scene.add(cube);
 
     const lights = [];
-    lights[0] = new THREE.PointLight(0xffffff, 1, 0);
-    lights[1] = new THREE.PointLight(0xffffff, 1, 0);
-    lights[2] = new THREE.PointLight(0xffffff, 1, 0);
+    lights[0] = new THREE.PointLight(red, 1, 0);
+    lights[1] = new THREE.PointLight(red, 1, 0);
+    lights[2] = new THREE.PointLight(red, 1, 0);
 
     lights[0].position.set(0, 200, 0);
     lights[1].position.set(100, 200, 100);
