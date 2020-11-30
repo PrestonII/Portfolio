@@ -1,0 +1,14 @@
+@import '../../styles//styles.colors.scss';
+
+.bar {
+  &:before {
+    display: inline-block;
+    transform: translate(-50%);
+    content: "";
+    height: 100%;
+    position: relative;
+    left: 50%;
+    border-left: 3px solid $red;
+    padding-top: 100px;
+  }
+}

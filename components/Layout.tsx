@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect } from 'react';
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import Head from 'next/head'
-import Sidebar from './Sidebar';
+import Sidebar from './sidebar/sidebar';
 import styles from './Layout.module.scss';
 
 type Props = {

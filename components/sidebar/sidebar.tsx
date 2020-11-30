@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect } from 'react'
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
-import Link from 'next/link'
+import Link from 'next/link';
+import styles from './sidebar.module.scss';
 
 export interface ISidebar {
   children?: ReactNode;
@@ -19,7 +20,7 @@ const Sidebar = () => {
   },[])
 
   return (
-    <header>
+    <header className={styles.bar}>
       <nav>
       {/* <nav ref={navRef}> */}
         <Link href="/">
