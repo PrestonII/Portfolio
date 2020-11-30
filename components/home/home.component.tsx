@@ -22,7 +22,7 @@ export function Home({title}: props) {
 
     timeline
       .from(nodeHome.current, { display: 'none', opacity: 0, ease: Power1.easeOut }, 0)
-      .from(nodeTitle.current, { display: 'none', opacity: 0, y: 50, ease: Power1.easeOut, duration: 1 }, 1)
+      .from(nodeTitle.current, { display: 'none', opacity: 0, y: 50, ease: Power1.easeOut, duration: .5 }, 1)
       .from(nodeLink.current, { display: 'none', opacity: 0, y: 150, duration: .5 }, 1.5);
 
     timeline.play();
