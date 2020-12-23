@@ -9,14 +9,11 @@ export interface ISidebar {
   sectionTitle?: string;
 }
 
-// const Sidebar = ({children, title = 'Preston Smith', sectionTitle}: ISidebar) => (
+
 const Sidebar = () => {
-  // const navRef = React.createRef<HTMLElement>();
-  // const tl = new Timeline({paused: true});
-  // tl.from(navRef.current, { opacity: 0, duration: 1, delay: 2})
 
   useEffect(() => {
-    // tl.play();
+    console.log('Starting up...');
   },[])
 
   return (
