@@ -43,4 +43,12 @@ export const OverflowHiddenHeaderOne = React.forwardRef((props: OverflowHeaderPr
   )
 });
 
+export const OverflowHiddenHeaderTwo = React.forwardRef((props: OverflowHeaderProps, ref: React.Ref<HTMLHeadingElement>) => {
+  return (
+    <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
+      <h2 ref={ref}>{props.text}</h2>
+    </div>
+  )
+});
+
 export default OverflowHiddenContainer;
