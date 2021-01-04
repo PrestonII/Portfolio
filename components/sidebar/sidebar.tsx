@@ -20,6 +20,7 @@ const Sidebar = () => {
     <header className={styles.bar}>
       <nav>
         <FiActivity />
+        <div className={styles.line} />
       </nav>
     </header>
   )
