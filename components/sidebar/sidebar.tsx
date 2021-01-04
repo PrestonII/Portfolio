@@ -22,6 +22,9 @@ const Sidebar = () => {
         <FiActivity />
         <div className={styles.line} />
       </nav>
+      <div className={styles.place}>
+        <p>HOME</p>
+      </div>
     </header>
   )
 }

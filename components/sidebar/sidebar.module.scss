@@ -1,27 +1,18 @@
 @import '../../styles/styles.colors.scss';
 
 .bar {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   width: 5rem;
   height: 100%;
-  // border-right: 1px solid;
 
-  // &:after {
-  //   display: inline-block;
-  //   transform: translate(-50%);
-  //   content: "";
-  //   height: 100%;
-  //   position: relative;
-  //   left: 50%;
-  //   border-left: 3px solid $red;
-  //   // padding-top: 30rem;
-  // }
+  nav {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+  }
 
   .line {
     display: inline-block;
@@ -32,6 +23,21 @@
     top: 2rem;
     left: 50%;
     border-left: 3px solid $red;
-    // transform: translate(-50%);
+  }
+
+  .place {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $cream;
+    padding: 1.5rem 1rem;
+
+    p {
+      font-weight: 600;
+      color: $grey;
+      font-size: 16px;
+    }
   }
 }
