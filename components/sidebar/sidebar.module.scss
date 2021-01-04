@@ -1,14 +1,22 @@
 @import '../../styles//styles.colors.scss';
 
 .bar {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 100%;
+  border-right: 1px solid;
+
   &:before {
-    display: inline-block;
-    transform: translate(-50%);
-    content: "";
-    height: 100%;
-    position: relative;
-    left: 50%;
-    border-left: 3px solid $red;
-    padding-top: 100px;
+    // display: inline-block;
+    // transform: translate(-50%);
+    // content: "";
+    // height: 100%;
+    // position: relative;
+    // left: 50%;
+    // border-left: 3px solid $red;
+    // padding-top: 100px;
   }
 }
