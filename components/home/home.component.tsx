@@ -45,7 +45,7 @@ export function Home({title}: props) {
 
   return (
     <div className={`${styles.main} home`} ref={nodeHome}>
-      <h4>{ name }</h4>
+      <p className={styles.name}>{ name }</p>
       <OverflowHiddenHeaderTwo text={title} ref={nodeTitle} />
       <p>{ summary} </p>
       <PageLinkWithHiddenText route={ROUTES.ABOUT} text="What's That?" ref={nodeLink} />

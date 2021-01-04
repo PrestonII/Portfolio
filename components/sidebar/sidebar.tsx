@@ -19,7 +19,9 @@ const Sidebar = () => {
   return (
     <header className={styles.bar}>
       <nav>
-        <FiActivity />
+        <div className={styles.icon}>
+          <FiActivity />
+        </div>
         <div className={styles.line} />
       </nav>
       <div className={styles.place}>
