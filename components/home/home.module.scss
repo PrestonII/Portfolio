@@ -1,20 +1,25 @@
 @import '../../styles/styles.colors.scss';
 
 .main {
-  padding-top: 8rem;
-  padding-left: 16rem;
-  padding-right: 14rem;
+  padding: 8rem 24rem;
 
   display: grid;
+  grid-template-rows: auto 1fr 1fr 1fr;
   height: 100vh;
   scroll-snap-align: start;
 
   .name {
     font-weight: 600;
     color: $grey;
-    // color: red;
     font-size: 16px;
     text-transform: uppercase;
+    height: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .summary {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
