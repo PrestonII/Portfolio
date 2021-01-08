@@ -20,6 +20,7 @@ export function Home({title}: props) {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
   const name = 'Preston Smith';
+  const linkText = 'More About Me';
   const summary = `
     Over the last 10 years I've made a career of tackling difficult challenges
      at the intersection of design and technology. With a background in architecture, 
@@ -53,7 +54,7 @@ export function Home({title}: props) {
       <div className={styles.link}>
         <PageLinkWithHiddenText 
           route={ROUTES.ABOUT} 
-          text="What's That?" 
+          text={linkText} 
           ref={nodeLink} 
         />
       </div>

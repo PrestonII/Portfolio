@@ -1,12 +1,18 @@
 @import '../styles/styles.colors.scss';
 
 %decoration {
-  color: $grey;
-  text-decoration-line: underline;
-  text-decoration-color: $red;
-  text-decoration-thickness: .25rem;
-  text-transform: uppercase;
+  color: $red;
   font-weight: 500;
+  font-size: .75rem;
+  transition: all .5s ease-in;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $red;
+    text-decoration-thickness: .1rem;
+    cursor: pointer;
+    // border: 1px solid $red;
+  }
 }
 
 .pagelink {
