@@ -1,4 +1,4 @@
-import { Segment, SegmentType } from './segment.component';
+import { Segment, SegmentType } from './Segment';
 
 export interface ISegmentList {
   data: SegmentType[]

@@ -1,5 +1,5 @@
 import React from "react";
-import { SegmentList } from './segment.list';
+import { SegmentList } from '../SegmentList';
 
 export function WorkSection() {
   return (
