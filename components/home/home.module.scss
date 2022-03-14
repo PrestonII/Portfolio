@@ -1,11 +1,71 @@
-.main {
-  padding-top: 8rem;
-  padding-left: 16rem;
-  padding-right: 14rem;
+@import '../../styles/styles.colors.scss';
 
+.main {
   display: grid;
+  grid-template-rows: 1fr auto;
   height: 100vh;
   scroll-snap-align: start;
-  // justify-content: center;
-  
+  justify-items: center;
+  align-items: center;
+
+  &__inner {
+    width: 75%;
+    max-width: 768px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    // row-gap: 2rem;
+
+    &__header {
+      div {
+        margin-bottom: 2rem;
+        margin-top: .5rem;
+      }
+
+      &__name {
+        font-weight: 400;
+        color: $grey;
+        font-size: 16px;
+        text-transform: uppercase;
+        height: 1rem;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  .summary {
+    padding-top: 3rem;
+  }
+
+  .link {
+    margin-top: 6rem;
+  }
+}
+
+.overflow {
+  &__hidden {
+    overflow-y: hidden;
+  }
+}
+
+.home {
+  &__title {
+    color: $grey;
+    span {
+      color: $black;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+
+    > div {
+      display: grid;
+      gap: 0.5rem;
+      align-items: center;
+      justify-items: flex-end;
+      padding-right: 8rem;
+      grid-template-columns: 1fr auto;
+      padding-bottom: 6rem;
+    }
+  }
 }

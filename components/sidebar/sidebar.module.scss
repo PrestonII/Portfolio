@@ -1,0 +1,48 @@
+@import '../../styles/styles.colors.scss';
+
+.bar {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 100%;
+
+  nav {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+  }
+
+  .icon {
+    margin: 1rem;
+    // border: 1px solid red;
+  }
+
+  .line {
+    display: inline-block;
+    position: relative;
+    content: "";
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    border-left: 3px solid $red;
+  }
+
+  .place {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $cream;
+    padding: 1.5rem 1rem;
+
+    p {
+      font-weight: 600;
+      color: $grey;
+      font-size: 16px;
+    }
+  }
+}

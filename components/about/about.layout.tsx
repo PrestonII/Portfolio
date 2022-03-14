@@ -10,7 +10,7 @@ const AboutPost = (props: PostProps) => {
     <Layout title="Preston Smith | About">
       <PostSection 
         title={title}
-        sectionTitle={'Now'}
+        sectionTitle="Now"
         sectionContent={content}
         date={date}
         coverImage={coverImage}

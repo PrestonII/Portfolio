@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
+import React, { ReactNode, useEffect } from 'react';
+import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import Head from 'next/head'
-import Sidebar from './Sidebar';
+import Sidebar from './sidebar/sidebar';
 import styles from './Layout.module.scss';
 
 type Props = {
@@ -9,20 +9,23 @@ type Props = {
   title?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div className={styles.layout}>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    
-    <Sidebar />
+const Layout = ({ children, title = 'This is the default title' }: Props) => {
 
-    <main>
-      {children}
-    </main>
-  </div>
-)
+  return (
+    <div className={styles.layout} >
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      
+      <Sidebar />
+
+      <main>
+        {children}
+      </main>
+    </div>
+  )
+}
 
 export default Layout

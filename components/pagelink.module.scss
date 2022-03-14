@@ -1,12 +1,29 @@
 @import '../styles/styles.colors.scss';
+@import '../styles/styles.fonts.scss';
+
+%decoration {
+  font-family: $font-head;
+  color: $red;
+  font-weight: 500;
+  font-size: 16px !important;
+  transition: color 1s ;
+
+  &:hover {
+    cursor: pointer;
+    color: darken($red, 25%)
+  }
+}
 
 .pagelink {
-  a {
-    color: $grey;
-    text-decoration-line: underline;
-    text-decoration-color: $red;
-    text-decoration-thickness: .25rem;
-    text-transform: uppercase;
-    font-weight: 500;
+  a, p {
+    @extend %decoration;
+  }
+}
+
+.link {
+  &__inner {
+    display:flex;
+    gap: .5rem;
+    align-items: center;
   }
 }
