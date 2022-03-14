@@ -1,4 +1,4 @@
-import { PageLinkWithHiddenText } from "./PageLink";
+import { InternalLink } from "./PageLink";
 
 export interface ISegmentProps {
   title: string;
@@ -17,10 +17,9 @@ export const Segment = (props: ISegmentProps) => {
       { data ?? 'Work' }
     </div>
     <p className="segment__summary"> { summary || 'Words describing the project' } </p>
-    <PageLinkWithHiddenText 
+    <InternalLink 
       route={url}
-      text='See The Work'
-    />
+    >See The Work</InternalLink>
   </div>
 }
 

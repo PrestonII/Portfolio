@@ -1,8 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect } from 'react';
-// import * as Greensock from 'gsap';
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import styles from './home.module.scss';
-import PageLink, { PageLinkWithHiddenText} from '../PageLink';
+import { InternalLink} from '../PageLink';
 import ROUTES from '../Routes';
 import { 
   OverflowHiddenAnchor, 
@@ -12,7 +12,7 @@ import {
 } from '../containers/container.hidden';
 
 interface props {
-  title: string;
+  title: string | JSX.Element;
 }
 
 export function Home({title}: props) {
@@ -21,19 +21,17 @@ export function Home({title}: props) {
   const nodeLink = React.createRef<HTMLParagraphElement>();
   const name = 'Preston Smith';
   const linkText = 'More About Me';
-  const summary = `
-    Over the last 10 years I've made a career of tackling difficult challenges
-     at the intersection of design and technology. With a background in architecture, 
-     visual design and software development I've been able to take a unique 
-     approach to problem solving that leads to incredible results. 
-     I've also contributed to the industry by speaking about my work at 
-     multiple industry conferences, including Autodesk University.
-  `
+  const canoaSupply = (<b>Canoa Supply</b>)
+  const summary = 
+  <>
+  I love making & learning to make things using both digital & physical tools. Currently, I'm working as a Senior Fullstack Developer helping to decarbonize the built environment with {canoaSupply}. 
+  <br/>
+  <br/>
+  See more about my work by scrolling below or feel free to reach out for a chat.
+  </>
 
   useEffect(() => {
     const timeline = new Timeline({paused: true});
-
-    console.log(nodeLink.current);
 
     timeline
       .from(nodeHome.current, { display: 'none', opacity: 0, ease: Power1.easeOut }, 0)
@@ -41,23 +39,38 @@ export function Home({title}: props) {
       .from(nodeLink.current, { display: 'none', opacity: 0, y: 150, duration: .5 }, 1.5);
 
     timeline.play();
-
   }, [])
 
   return (
-    <div className={`${styles.main} home`} ref={nodeHome}>
-      <span className={styles.name}>
-        { name }
-      </span> 
-      <OverflowHiddenHeaderTwo text={title} ref={nodeTitle} />
-      <p className={styles.summary}>{ summary} </p>
+    <div className={`${styles.main}`} ref={nodeHome}>
+      <div className={styles.main__inner}>
+        <div className={styles.main__inner__header}>
+        <span className={styles.main__inner__header__name}>
+          { name }
+        </span> 
+        <OverflowHiddenHeaderTwo ref={nodeTitle}>
+          { title }
+        </OverflowHiddenHeaderTwo>
+        </div>
+        <OverflowHiddenParagraph>
+        { summary }
+      </OverflowHiddenParagraph>
       <div className={styles.link}>
-        <PageLinkWithHiddenText 
+        <InternalLink 
           route={ROUTES.ABOUT} 
-          text={linkText} 
           ref={nodeLink} 
-        />
+        >
+          {linkText}
+        </InternalLink>
+      </div>  
       </div>
+      <InternalLink 
+        route={ROUTES.CONTACT} 
+        ref={nodeLink} 
+        classOverrides={styles.home__contact}
+      >
+        Get In Touch
+      </InternalLink>
       
     </div>
   )

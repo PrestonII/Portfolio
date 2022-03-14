@@ -1,54 +1,48 @@
-import React from 'react';
+import React, {CSSProperties} from 'react';
 import styles from './container.module.scss';
 
-interface OverflowProps {
-  children: JSX.Element;
+export type OverridableStyling = {
+  classOverrides?: string;
+  style?: CSSProperties;
 }
 
-interface OverflowAnchorProps {
-  text: string;
+export type ContainerType<T> = OverridableStyling & {
+  ref?: React.Ref<T>
 }
 
-interface OverflowHeaderProps {
-  text: string;
-}
-
-const OverflowHiddenContainer = ({children}: OverflowProps) => (
-  <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
-    { children }
+const OverflowHiddenContainer: React.FC = (props) => (
+  <div className={`${styles.overflow} ${styles.overflow__hidden}`}>
+    { props.children }
   </div>
 );
 
-export const OverflowHiddenAnchor = React.forwardRef((props: OverflowAnchorProps, ref: React.Ref<HTMLAnchorElement>) => {
+export const OverflowHiddenAnchor = React.forwardRef((props: React.PropsWithChildren<unknown>, ref: React.Ref<HTMLAnchorElement>) => {
   return (
     <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
-      <a ref={ref}>{props.text}</a>
+      <a ref={ref}>{props.children}</a>
     </div>
   )
 });
 
-export const OverflowHiddenParagraph = React.forwardRef((props: OverflowAnchorProps, ref: React.Ref<HTMLParagraphElement>) => {
-  return (
-    <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
-      <p ref={ref}>{props.text}</p>
-    </div>
-  )
-});
+export const OverflowHiddenParagraph: React.FC<ContainerType<HTMLParagraphElement>> = (
+  props
+) => (
+  <div className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} style={props.style}>
+    <p ref={props.ref}>{props.children}</p>
+  </div>
+);
 
-export const OverflowHiddenHeaderOne = React.forwardRef((props: OverflowHeaderProps, ref: React.Ref<HTMLHeadingElement>) => {
-  return (
-    <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
-      <h1 ref={ref}>{props.text}</h1>
+export const OverflowHiddenHeaderOne: React.FC<ContainerType<HTMLHeadingElement>> = (props) => (
+    <div className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} style={props.style}>
+      <h1 ref={props.ref}>{props.children}</h1>
     </div>
-  )
-});
+  );
 
-export const OverflowHiddenHeaderTwo = React.forwardRef((props: OverflowHeaderProps, ref: React.Ref<HTMLHeadingElement>) => {
-  return (
-    <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
-      <h2 ref={ref}>{props.text}</h2>
+export const OverflowHiddenHeaderTwo: React.FC<ContainerType<HTMLHeadingElement>> = (props) => (
+    <div className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} style={props.style}>
+      <h2 ref={props.ref}>{props.children}</h2>
     </div>
-  )
-});
+  );
+
 
 export default OverflowHiddenContainer;

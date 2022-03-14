@@ -2,55 +2,30 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import styles from './pagelink.module.scss';
-import { OverflowHiddenAnchor, OverflowHiddenParagraph } from './containers/container.hidden';
+import { ContainerType, OverflowHiddenParagraph } from './containers/container.hidden';
+import { IconArrow } from './icons/Icon.arrow';
 
-
-interface PageLinkProps {
+interface PageLinkProps<T> extends ContainerType<T> {
   route: string;
-  text: string;
 }
 
-interface LinkRefProps extends PageLinkProps {
-  ref: React.Ref<HTMLAnchorElement>
-}
-
-const PageLink = ({route, text}: PageLinkProps) => (
-  <p className={`${styles.pagelink} link`}>
-    <Link href={route}>
-      <a>{text}</a>
-    </Link>
-  </p>
+export const ExternalLink: React.FC<PageLinkProps<HTMLAnchorElement>> = (props) => (
+  <div className={`${styles.pagelink}`}>
+    <a href={props.route} ref={props.ref}>{props.children}</a>
+  </div>
 );
 
-export const PageLinkWithRef = React.forwardRef((props: PageLinkProps, ref: React.Ref<HTMLAnchorElement>) => (
-  <div className={`${styles.pagelink} link`}>
-    <Link href={props.route}>
-      <a ref={ref}>{props.text}</a>
-    </Link>
-  </div>
-));
-
-export const PageLinkWithHiddenText = React.forwardRef((props: PageLinkProps, ref: React.Ref<HTMLParagraphElement>) => {
+export const InternalLink: React.FC<PageLinkProps<HTMLParagraphElement>> = (props) => {
   const outline = React.createRef<HTMLDivElement>();
-  // const red = '#EB5757';
-
-  // useEffect(() => {
-  //   const timeline = new Timeline({paused: true});
-
-  //   // timeline
-  //   //   .to(outline.current, { textDecorationLine: 'underline', textDecorationColor: red, textDecorationStyle: '.25rem' });
-
-  //   timeline.play();
-
-  // }, [outline])
 
   return (
-    <div className={`${styles.pagelink} link`} ref={outline}>
+    <div ref={outline} className={`${styles.link} ${props.classOverrides}`}>
       <Link href={props.route}>
-        <OverflowHiddenParagraph text={props.text} ref={ref}/>
+        <div className={styles.link__inner}>
+          <OverflowHiddenParagraph ref={props.ref} classOverrides={styles.pagelink}>{props.children}</OverflowHiddenParagraph>
+          <IconArrow direction='NE' />
+        </div>
       </Link>
     </div>
   );
-});
-
-export default PageLink;
+};

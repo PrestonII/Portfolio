@@ -1,35 +1,71 @@
 @import '../../styles/styles.colors.scss';
 
 .main {
-  padding: 8rem 24rem;
-
   display: grid;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
   height: 100vh;
   scroll-snap-align: start;
+  justify-items: center;
+  align-items: center;
 
-  .name {
-    font-weight: 600;
-    color: $grey;
-    font-size: 16px;
-    text-transform: uppercase;
-    height: 1rem;
-    margin-bottom: .5rem;
+  &__inner {
+    width: 75%;
+    max-width: 768px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    // row-gap: 2rem;
+
+    &__header {
+      div {
+        margin-bottom: 2rem;
+        margin-top: .5rem;
+      }
+
+      &__name {
+        font-weight: 400;
+        color: $grey;
+        font-size: 16px;
+        text-transform: uppercase;
+        height: 1rem;
+        margin-bottom: .5rem;
+      }
+    }
   }
 
   .summary {
     padding-top: 3rem;
-    // padding-bottom: 3rem;
-    // margin-bottom: 3rem;
   }
 
   .link {
-    padding-top: 3rem;
+    margin-top: 6rem;
   }
 }
 
 .overflow {
   &__hidden {
     overflow-y: hidden;
+  }
+}
+
+.home {
+  &__title {
+    color: $grey;
+    span {
+      color: $black;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+
+    > div {
+      display: grid;
+      gap: 0.5rem;
+      align-items: center;
+      justify-items: flex-end;
+      padding-right: 8rem;
+      grid-template-columns: 1fr auto;
+      padding-bottom: 6rem;
+    }
   }
 }

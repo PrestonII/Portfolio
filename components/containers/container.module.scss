@@ -1,7 +1,28 @@
+@import '../../styles/styles.colors.scss';
+
 .overflow {
   height: auto;
 
   &__hidden {
     overflow: hidden;
+  }
+}
+
+.text {
+  &__override {
+    h2 {
+      font-size: 72px;
+    }
+    
+    p {
+      font-size: 18px;
+      white-space: pre-line;
+      font-weight: 300;
+
+      b {
+        font-weight: 600;
+        color: $grey_dark;
+      }
+    }
   }
 }

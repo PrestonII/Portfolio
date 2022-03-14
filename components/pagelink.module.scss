@@ -1,22 +1,23 @@
 @import '../styles/styles.colors.scss';
+@import '../styles/styles.fonts.scss';
 
 %decoration {
+  font-family: $font-head;
   color: $red;
   font-weight: 500;
-  font-size: .75rem;
-  transition: all .5s ease-in;
-
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: $red;
-    text-decoration-thickness: .1rem;
-    cursor: pointer;
-    // border: 1px solid $red;
-  }
+  font-size: 16px !important;
 }
 
 .pagelink {
   a, p {
     @extend %decoration;
   }
+}
+
+.link {
+  &__inner {
+    display:flex;
+    gap: .5rem;
+    align-items: center;
+    }
 }
