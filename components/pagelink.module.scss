@@ -6,6 +6,12 @@
   color: $red;
   font-weight: 500;
   font-size: 16px !important;
+  transition: color 1s ;
+
+  &:hover {
+    cursor: pointer;
+    color: darken($red, 25%)
+  }
 }
 
 .pagelink {
@@ -19,5 +25,5 @@
     display:flex;
     gap: .5rem;
     align-items: center;
-    }
+  }
 }
