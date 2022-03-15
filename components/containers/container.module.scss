@@ -10,11 +10,15 @@
 
 .text {
   &__override {
-    h2 {
+    > h2 {
       font-size: 72px;
     }
+    > span {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
     
-    p {
+    > p {
       font-size: 18px;
       white-space: pre-line;
       font-weight: 300;

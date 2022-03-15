@@ -54,6 +54,7 @@ const PointTimeline: React.FC<{height: number}> = (props) => {
     "2015": 2015,
     "2017": 2017,
     "2019": 2019,
+    "2020": 2020,
     "NOW": now,
   }
   const points = Object.values(history);

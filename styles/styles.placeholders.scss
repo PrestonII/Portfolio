@@ -4,3 +4,12 @@
     flex-direction: column;
   }
 }
+
+%fullpage {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  scroll-snap-align: start;
+  justify-items: center;
+  align-items: center;
+}

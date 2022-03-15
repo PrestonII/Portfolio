@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../Layout'
 import { Home } from './home.component';
+import DesignHome from './home.design';
 import styles from './home.module.scss'
 
 export default function HomeLayout(): JSX.Element {
@@ -24,8 +25,7 @@ export default function HomeLayout(): JSX.Element {
   return (
     <Layout title={`Preston Smith | ${title}`}>
       <Home title={heading}/>
-      <Home title={heading}/>
-      <Home title={heading}/>
+      <DesignHome />
     </Layout>
   )
 }
