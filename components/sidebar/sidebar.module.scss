@@ -67,9 +67,11 @@
   }
 
   &__text {
-    color: $red;
-    font-weight: 500;
-    font-family: $font-head;
+    a {
+      color: $red;
+      font-weight: 500;
+      font-family: $font-head;
+    }
   }
 
   &:hover {
@@ -94,5 +96,11 @@
     padding-bottom: 10vh;
     width: auto;
     transform: translate(1.5px);
+  }
+
+  &__home {
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

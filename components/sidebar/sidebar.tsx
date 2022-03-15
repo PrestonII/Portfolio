@@ -18,7 +18,6 @@ type IHistoryPoint = {
 }
 
 const HistoryPoint: React.FC<IHistoryPoint> = (props) => {
-  const textRef = React.createRef<HTMLParagraphElement>();
   const [hidden, setHidden] = useState(true);
   const onHover = () => setHidden(false);
   const onLeave = () => setHidden(true);
@@ -32,12 +31,12 @@ const HistoryPoint: React.FC<IHistoryPoint> = (props) => {
     >
       <div className={styles.history__dot} style={{ }} />
       <OverflowContainer 
-        containerType='paragraph' 
+        containerType='anchor' 
         classOverrides={styles.history__text} 
         startHidden 
         showOnHover 
         hidden={hidden}
-        wrapperRef={textRef}
+        linkSrc={`about/${props.text.toLocaleLowerCase()}`}
       >
         {props.text}
       </OverflowContainer>
