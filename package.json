@@ -21,7 +21,8 @@
     "react-icons": "^4.1.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "sass": "^1.27.0"
+    "sass": "^1.27.0",
+    "use-resize-observer": "^8.0.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.26.3",

@@ -13,6 +13,7 @@
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: center;
+    height: 100%;
   }
 
   .icon {
@@ -23,11 +24,11 @@
     display: inline-block;
     position: relative;
     content: "";
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 50%;
-    border-left: 3px solid  $red;
+    border-left: 2px solid  $red;
   }
 
   .place {
@@ -52,6 +53,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  transform: translate(-1.5px);
   
   &__dot {
     width: 10px;
@@ -74,7 +76,6 @@
     cursor: pointer;
     
     .history__dot {
-      // position: absolute;
       background-color: $cream;
       border: 2px solid $red;
       width: 16px;
@@ -82,5 +83,16 @@
       border-radius: 8px;
       transform: translate(-6.5px);
     }
+  }
+}
+
+.timeline {
+  &__wrapper {
+    position: absolute;
+    top: 12vh;
+    background-color: transparent;
+    padding-bottom: 10vh;
+    width: auto;
+    transform: translate(1.5px);
   }
 }

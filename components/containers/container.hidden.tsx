@@ -1,4 +1,4 @@
-import React, {CSSProperties} from 'react';
+import React, {CSSProperties, useEffect, useState} from 'react';
 import styles from './container.module.scss';
 
 export type OverridableStyling = {
@@ -6,43 +6,90 @@ export type OverridableStyling = {
   style?: CSSProperties;
 }
 
-export type ContainerType<T> = OverridableStyling & {
-  ref?: React.Ref<T>
+type ContainerType = 'div' | 'paragraph' | 'anchor' | 'h1' | 'h2';
+
+type WrapperProps = {
+  containerType: ContainerType; 
+  wrapperRef?: React.Ref<unknown>;
+  linkSrc?: string;
 }
 
-const OverflowHiddenContainer: React.FC = (props) => (
-  <div className={`${styles.overflow} ${styles.overflow__hidden}`}>
-    { props.children }
-  </div>
-);
+export type ContainerProps = OverridableStyling & WrapperProps & {
+  hidden?: boolean;
+  startHidden?: boolean;
+  showOnHover?: boolean;
+}
 
-export const OverflowHiddenAnchor = React.forwardRef((props: React.PropsWithChildren<unknown>, ref: React.Ref<HTMLAnchorElement>) => {
-  return (
-    <div className={`${styles.overflow} ${styles.overflow__hidden} overflow overflow__hidden`}>
-      <a ref={ref}>{props.children}</a>
-    </div>
+export const getWrapper = ({containerType, children, wrapperRef: ref, linkSrc}: React.PropsWithChildren<WrapperProps>): JSX.Element => {
+  let wrapper = (
+    <div>{children}</div>
   )
-});
 
-export const OverflowHiddenParagraph: React.FC<ContainerType<HTMLParagraphElement>> = (
-  props
-) => (
-  <div className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} style={props.style}>
-    <p ref={props.ref}>{props.children}</p>
-  </div>
-);
+  switch(containerType) {
+    case 'anchor':
+      wrapper = (
+        <a ref={ref as React.Ref<HTMLAnchorElement>} href={linkSrc}>{children}</a>
+      )
+      break;
+    case 'div':
+      wrapper = (
+        <div ref={ref as React.Ref<HTMLDivElement>}>{children}</div>
+      )
+      break;
+    case 'h1':
+      wrapper = (
+        <h1 ref={ref as React.Ref<HTMLHeadingElement>}>{children}</h1>
+      )
+      break;
+    case 'h2':
+      wrapper = (
+        <h2 ref={ref as React.Ref<HTMLHeadingElement>}>{children}</h2>
+      )
+      break;
+    case 'paragraph':
+      wrapper = (
+        <p ref={ref as React.Ref<HTMLParagraphElement>}>{children}</p>
+      )
+      break;
+    default:
+      break;
+  }
 
-export const OverflowHiddenHeaderOne: React.FC<ContainerType<HTMLHeadingElement>> = (props) => (
-    <div className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} style={props.style}>
-      <h1 ref={props.ref}>{props.children}</h1>
+  return wrapper;
+}
+
+const OverflowHiddenContainer: React.FC<ContainerProps> = (props) => {
+  const wrapper = getWrapper(props);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    setHidden(props.startHidden ?? false);
+  },[props.startHidden])
+
+  useEffect(() => {
+    setHidden(props.hidden ?? false)
+  },[props.hidden])
+
+  const onHover = () => {
+    if(!props.showOnHover) return;
+    setHidden(false);
+  }
+  
+  const onLeave = () => {
+    if(!props.showOnHover) return;
+    setHidden(true);
+  }
+
+  return (
+    <div 
+      className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} 
+      style={props.style} 
+      onMouseEnter={onHover} 
+      onMouseLeave={onLeave}
+    >
+      { hidden ? undefined : wrapper  }
     </div>
   );
-
-export const OverflowHiddenHeaderTwo: React.FC<ContainerType<HTMLHeadingElement>> = (props) => (
-    <div className={`${styles.overflow} ${styles.overflow__hidden} ${styles.text__override} ${props.classOverrides}`} style={props.style}>
-      <h2 ref={props.ref}>{props.children}</h2>
-    </div>
-  );
-
+}
 
 export default OverflowHiddenContainer;

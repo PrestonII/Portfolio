@@ -1,9 +1,10 @@
-import React, { ReactNode, useEffect } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import Link from 'next/link';
 import { SidebarIcon } from './SidebarIcon';
 import styles from './sidebar.module.scss';
-import { OverflowHiddenParagraph } from '../containers/container.hidden';
+import OverflowContainer from '../containers/container.hidden';
+import useResizeObserver from 'use-resize-observer';
 
 export interface ISidebar {
   children?: ReactNode;
@@ -11,18 +12,69 @@ export interface ISidebar {
   sectionTitle?: string;
 }
 
-const HistoryPoint = () => (
-  <div className={styles.history} style={{top: 500, left: '50%'}}>
-    <div className={styles.history__dot} style={{ }} />
-    <OverflowHiddenParagraph classOverrides={styles.history__text}>NOW</OverflowHiddenParagraph>
-  </div>
-  
-)
+type IHistoryPoint = {
+  top: number; 
+  text: string;
+}
+
+const HistoryPoint: React.FC<IHistoryPoint> = (props) => {
+  const textRef = React.createRef<HTMLParagraphElement>();
+  const [hidden, setHidden] = useState(true);
+  const onHover = () => setHidden(false);
+  const onLeave = () => setHidden(true);
+
+  return (
+    <div 
+      className={styles.history} 
+      style={{top: `${props.top}%`, left: '50%'}}
+      onMouseEnter={onHover} 
+      onMouseLeave={onLeave}
+    >
+      <div className={styles.history__dot} style={{ }} />
+      <OverflowContainer 
+        containerType='paragraph' 
+        classOverrides={styles.history__text} 
+        startHidden 
+        showOnHover 
+        hidden={hidden}
+        wrapperRef={textRef}
+      >
+        {props.text}
+      </OverflowContainer>
+    </div>
+  )
+}
+
+const PointTimeline: React.FC<{height: number}> = (props) => {
+  const now = new Date().getFullYear();
+  const start = 2010;
+  const careerLength = now - start;
+  const history = {
+    "START": start,
+    "2012": 2012,
+    "2015": 2015,
+    "2017": 2017,
+    "2019": 2019,
+    "NOW": now,
+  }
+  const points = Object.values(history);
+  const careerPts = points.map(pt => (((now - pt) / careerLength) * 100))
+  const events = careerPts.map((point, idx) => <HistoryPoint key={idx} top={point} text={Object.keys(history)[idx]} />)
+
+  return (
+    <div className={styles.timeline__wrapper} style={{height: props.height}}>
+      { events }
+    </div>
+  )
+}
 
 const Sidebar = () => {
-  useEffect(() => {
-    // tl.play();
-  },[])
+  const [timelineHeight, setTimelineHeight] = useState(500);
+  const { ref } = useResizeObserver<HTMLDivElement>({
+    onResize: ({ width, height }) => {
+      height && setTimelineHeight(height);
+    },
+  });
 
   return (
     <header className={styles.bar}>
@@ -30,8 +82,8 @@ const Sidebar = () => {
         <div className={styles.icon}>
           <SidebarIcon />
         </div>
-        <div className={styles.line} />
-        <HistoryPoint />
+        <div className={styles.line} ref={ref} />
+        <PointTimeline height={timelineHeight} />
       </nav>
       <div className={styles.place}>
         <p>HOME</p>

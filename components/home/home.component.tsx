@@ -1,21 +1,15 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect } from 'react';
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import styles from './home.module.scss';
 import { InternalLink} from '../PageLink';
 import ROUTES from '../Routes';
-import { 
-  OverflowHiddenAnchor, 
-  OverflowHiddenHeaderOne, 
-  OverflowHiddenHeaderTwo, 
-  OverflowHiddenParagraph 
-} from '../containers/container.hidden';
+import OverflowContainer from '../containers/container.hidden';
 
 interface props {
   title: string | JSX.Element;
 }
 
-export function Home({title}: props) {
+export function Home({title}: props): JSX.Element {
   const nodeHome = React.createRef<HTMLDivElement>();
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
@@ -30,17 +24,6 @@ export function Home({title}: props) {
   See more about my work by scrolling below or feel free to reach out for a chat.
   </>
 
-  useEffect(() => {
-    const timeline = new Timeline({paused: true});
-
-    timeline
-      .from(nodeHome.current, { display: 'none', opacity: 0, ease: Power1.easeOut }, 0)
-      .from(nodeTitle.current, { display: 'none', opacity: 0, y: 50, ease: Power1.easeOut, duration: .5 }, 1)
-      .from(nodeLink.current, { display: 'none', opacity: 0, y: 150, duration: .5 }, 1.5);
-
-    timeline.play();
-  }, [])
-
   return (
     <div className={`${styles.main}`} ref={nodeHome}>
       <div className={styles.main__inner}>
@@ -48,17 +31,17 @@ export function Home({title}: props) {
         <span className={styles.main__inner__header__name}>
           { name }
         </span> 
-        <OverflowHiddenHeaderTwo ref={nodeTitle}>
+        <OverflowContainer wrapperRef={nodeTitle} containerType={'h2'}>
           { title }
-        </OverflowHiddenHeaderTwo>
+        </OverflowContainer>
         </div>
-        <OverflowHiddenParagraph>
+        <OverflowContainer containerType='paragraph'>
         { summary }
-      </OverflowHiddenParagraph>
+      </OverflowContainer>
       <div className={styles.link}>
         <InternalLink 
           route={ROUTES.ABOUT} 
-          ref={nodeLink} 
+          wrapperRef={nodeLink} 
         >
           {linkText}
         </InternalLink>
@@ -66,7 +49,7 @@ export function Home({title}: props) {
       </div>
       <InternalLink 
         route={ROUTES.CONTACT} 
-        ref={nodeLink} 
+        wrapperRef={nodeLink} 
         classOverrides={styles.home__contact}
       >
         Get In Touch
