@@ -1,11 +1,12 @@
 @import '../../styles/styles.colors.scss';
+@import '../../styles/styles.fonts.scss';
 
 .bar {
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
-  width: 5rem;
+  width: 150px;
   height: 100%;
 
   nav {
@@ -15,8 +16,7 @@
   }
 
   .icon {
-    margin: 1rem;
-    // border: 1px solid red;
+    margin: 48px 32px
   }
 
   .line {
@@ -27,7 +27,7 @@
     width: 100%;
     top: 0;
     left: 50%;
-    border-left: 3px solid $red;
+    border-left: 3px solid  $red;
   }
 
   .place {
@@ -40,9 +40,47 @@
     padding: 1.5rem 1rem;
 
     p {
-      font-weight: 600;
-      color: $grey;
+      font-weight: 500;
+      color: $black;
       font-size: 16px;
+    }
+  }
+}
+
+.history {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    content: "";
+    background-color: $red;
+    transform: translate(-3.5px);
+    border: 0px solid $red;
+    transition: all .5s ;
+  }
+
+  &__text {
+    color: $red;
+    font-weight: 500;
+    font-family: $font-head;
+  }
+
+  &:hover {
+    cursor: pointer;
+    
+    .history__dot {
+      // position: absolute;
+      background-color: $cream;
+      border: 2px solid $red;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      transform: translate(-6.5px);
     }
   }
 }

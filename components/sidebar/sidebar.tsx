@@ -1,8 +1,9 @@
 import React, { ReactNode, useEffect } from 'react'
 import { TimelineMax as Timeline, Power1, gsap } from 'gsap';
 import Link from 'next/link';
-import { FiActivity } from 'react-icons/fi';
+import { SidebarIcon } from './SidebarIcon';
 import styles from './sidebar.module.scss';
+import { OverflowHiddenParagraph } from '../containers/container.hidden';
 
 export interface ISidebar {
   children?: ReactNode;
@@ -10,6 +11,13 @@ export interface ISidebar {
   sectionTitle?: string;
 }
 
+const HistoryPoint = () => (
+  <div className={styles.history} style={{top: 500, left: '50%'}}>
+    <div className={styles.history__dot} style={{ }} />
+    <OverflowHiddenParagraph classOverrides={styles.history__text}>NOW</OverflowHiddenParagraph>
+  </div>
+  
+)
 
 const Sidebar = () => {
   useEffect(() => {
@@ -20,9 +28,10 @@ const Sidebar = () => {
     <header className={styles.bar}>
       <nav>
         <div className={styles.icon}>
-          <FiActivity />
+          <SidebarIcon />
         </div>
         <div className={styles.line} />
+        <HistoryPoint />
       </nav>
       <div className={styles.place}>
         <p>HOME</p>
