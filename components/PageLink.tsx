@@ -19,7 +19,7 @@ export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (pro
   const outline = React.createRef<HTMLDivElement>();
 
   return (
-    <div ref={outline} className={`${styles.link} ${props.classOverrides}`}>
+    <div ref={outline} className={`${styles.link} ${props.classOverrides}`} style={props.style} >
       <Link href={props.route}>
         <div className={styles.link__inner}>
           <OverflowHiddenParagraph containerType='paragraph' wrapperRef={props.wrapperRef} classOverrides={styles.pagelink}>{props.children}</OverflowHiddenParagraph>

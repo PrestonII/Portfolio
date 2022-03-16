@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../Layout'
 import { Home } from './home.component';
-import DesignHome from './home.design';
+import DesignHome from '../design/design.home';
 import styles from './home.module.scss'
 
 export default function HomeLayout(): JSX.Element {

@@ -6,7 +6,7 @@ export type OverridableStyling = {
   style?: CSSProperties;
 }
 
-type ContainerType = 'div' | 'paragraph' | 'anchor' | 'h1' | 'h2' | 'subtitle';
+type ContainerType = 'div' | 'paragraph' | 'anchor' | 'h1' | 'h2' | 'h3' | 'subtitle';
 
 type WrapperProps = {
   containerType: ContainerType; 
@@ -44,6 +44,11 @@ export const getWrapper = ({containerType, children, wrapperRef: ref, linkSrc}: 
     case 'h2':
       wrapper = (
         <h2 ref={ref as React.Ref<HTMLHeadingElement>}>{children}</h2>
+      )
+      break;
+    case 'h3':
+      wrapper = (
+        <h3 ref={ref as React.Ref<HTMLHeadingElement>}>{children}</h3>
       )
       break;
     case 'paragraph':
