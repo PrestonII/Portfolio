@@ -6,24 +6,32 @@
   color: $red;
   font-weight: 500;
   font-size: 16px !important;
-  transition: color 1s ;
+  transition: color 1s;
 
   &:hover {
     cursor: pointer;
-    color: darken($red, 25%)
+    color: darken($red, 25%);
   }
 }
 
 .pagelink {
-  a, p {
+  a,
+  p {
     @extend %decoration;
   }
 }
 
 .link {
   &__inner {
-    display:flex;
-    gap: .5rem;
+    display: flex;
+    gap: 0.5rem;
     align-items: center;
+  }
+
+  &__override {
+    &:hover {
+      background-color: $red;
+      color: $cream !important;
+    }
   }
 }

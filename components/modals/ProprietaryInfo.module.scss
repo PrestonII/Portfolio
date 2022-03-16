@@ -1,0 +1,47 @@
+@import '../../styles/styles.colors.scss';
+@import '../../styles/styles.fonts.scss';
+
+.modal {
+  background-color: $cream;
+
+  &__header {
+    p {
+      font-size: 32px;
+      color: $black;
+      font-family: $font-head;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    padding: 8px 16px 24px;
+    width: 100%;
+    height: 100%;
+    justify-content: unset;
+    margin-top: unset;
+  }
+
+  &__content {
+    margin-bottom: 1rem;
+    display: grid;
+    row-gap: 1.5rem;
+  }
+
+  &__input {
+    // padding-top: 16px;
+  }
+
+  &__btn {
+    &__primary {
+      all: unset !important;
+      margin: unset !important;
+      padding-top: unset !important;
+      padding-bottom: unset !important;
+      width: 100% !important;
+      background-color: $red !important;
+      color: $cream !important;
+      height: 3rem !important;
+      text-align: center !important;
+    }
+  }
+}
