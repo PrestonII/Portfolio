@@ -4,10 +4,11 @@
   display: flex;
   gap: 24px;
 
-  &__title {
-    width: 25px;
-    height: 25px;
-    border-radius: 12.5px;
-    background-color: $red;
+  &__text {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    color: $black;
+    font-weight: 500;
   }
 }
