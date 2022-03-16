@@ -1,33 +1,30 @@
 import React from 'react';
-import Layout from '../Layout'
+import Layout from '../Layout';
 import { Home } from './home.component';
-import DesignHome from '../design/design.home';
-import DevelopHome from '../develop/develop.home';
-import styles from './home.module.scss'
+import DesignHome from './home.design';
+import DevelopHome from './home.develop';
+import styles from './home.module.scss';
 
 export default function HomeLayout(): JSX.Element {
-  const title = "FullStack Designer & Developer"
+  const title = 'FullStack Designer & Developer';
   const headingText1 = (
     <div className="">
-      A <span>Developer</span> that also <span>Designs</span> and <span>Builds</span>
+      A <span>Developer</span> that also <span>Designs</span> and{' '}
+      <span>Builds</span>
     </div>
-  )
+  );
   const headingText2 = (
     <div className="">
       A <span>Developer</span> that can also <span>Design</span> product
     </div>
-  )
-  const heading = (
-    <div className={styles.home__title}>
-      { headingText1}
-    </div>
-  )
+  );
+  const heading = <div className={styles.home__title}>{headingText1}</div>;
 
   return (
     <Layout title={`Preston Smith | ${title}`}>
-      <Home title={heading}/>
+      <Home title={heading} />
       <DesignHome />
       <DevelopHome />
     </Layout>
-  )
+  );
 }

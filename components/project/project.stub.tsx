@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import OverflowHiddenContainer from '../containers/container.hidden';
 import { ProprietaryWorkLink } from '../modals/ProprietaryInfo';
-import styles from './design.module.scss';
+import styles from './project.module.scss';
 
 type StubType = {
   route: string;
@@ -11,12 +11,16 @@ type StubType = {
   description: string;
 };
 
-const DesignStub: React.FC<StubType> = (props) => {
+const ProjectStub: React.FC<StubType> = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [userHasAccess, setUserHasAccess] = useState(false);
 
   const details = props.details?.map((detail, idx) => (
-    <OverflowHiddenContainer key={idx} containerType="subtitle">
+    <OverflowHiddenContainer
+      key={idx}
+      containerType="subtitle"
+      classOverrides={styles.stub__details__item}
+    >
       {detail}
     </OverflowHiddenContainer>
   ));
@@ -48,4 +52,4 @@ const DesignStub: React.FC<StubType> = (props) => {
   );
 };
 
-export default DesignStub;
+export default ProjectStub;

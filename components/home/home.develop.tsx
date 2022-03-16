@@ -1,16 +1,16 @@
 import OverflowHiddenContainer from '../containers/container.hidden';
 import FacetTitle from '../facets/facet.title';
 import { InternalLink } from '../PageLink';
-import styles from './develop.module.scss';
-import DevelopStub from './develop.stub';
+import ProjectStub from '../project/project.stub';
 import { ReactComponent as IconNimble } from '../assets/Icon_Nimble_Dev.svg';
 import { ReactComponent as IconPG } from '../assets/Icon_PG_Dev.svg';
 import { ReactComponent as IconTether } from '../assets/Icon_Tether_Dev.svg';
 import { ReactComponent as IconDev } from '../assets/ICON_DEV.svg';
+import styles from './subhome.module.scss';
 
 const DevelopHome: React.FC = () => {
   const title = `Things I've Developed`;
-  const msg = `A big part of my job is wiring things up together. I love using digital tools to compose all the things I (or others) have designed. It's another way I can explore how things work and bring them together.`;
+  const msg = `A big part of my job is wiring things together with code. I love using digital tools to compose all the things I (or others) have designed. It's another way I can explore how things work and bring them together.`;
   const nimble = {
     icon: <IconNimble />,
     title: 'Nimble',
@@ -37,10 +37,10 @@ const DevelopHome: React.FC = () => {
   };
 
   return (
-    <div className={styles.develop}>
-      <div className={styles.develop__wrapper}>
-        <div className={styles.develop__title}>
-          <FacetTitle title="Design" icon={<IconDev />} />
+    <div className={styles.subhome}>
+      <div className={styles.subhome__wrapper}>
+        <div className={styles.subhome__title}>
+          <FacetTitle title="Development" icon={<IconDev />} />
           <OverflowHiddenContainer containerType="h2">
             {title}
           </OverflowHiddenContainer>
@@ -49,15 +49,15 @@ const DevelopHome: React.FC = () => {
           </OverflowHiddenContainer>
           <InternalLink
             route="/work/design"
-            classOverrides={styles.develop__link}
+            classOverrides={styles.subhome__link}
           >
             Thoughts On Development
           </InternalLink>
         </div>
-        <div className={styles.develop__projects}>
-          <DevelopStub {...nimble} />
-          <DevelopStub {...program_generator} />
-          <DevelopStub {...piper} />
+        <div className={styles.subhome__projects}>
+          <ProjectStub {...nimble} />
+          <ProjectStub {...program_generator} />
+          <ProjectStub {...piper} />
         </div>
       </div>
     </div>

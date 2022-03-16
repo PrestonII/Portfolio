@@ -42,6 +42,13 @@
       color: $cream !important;
       height: 3rem !important;
       text-align: center !important;
+      transition: all 1s !important;
+
+      &:hover {
+        cursor: pointer !important;
+        background-color: darken($red, 10%) !important;
+        color: lighten($cream, 10%) !important;
+      }
     }
   }
 }

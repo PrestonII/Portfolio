@@ -1,12 +1,12 @@
 import OverflowHiddenContainer from '../containers/container.hidden';
 import FacetTitle from '../facets/facet.title';
 import { InternalLink } from '../PageLink';
-import styles from './design.module.scss';
-import DesignStub from './design.stub';
+import ProjectStub from '../project/project.stub';
 import { ReactComponent as IconNimble } from '../assets/Icon_Nimble.svg';
 import { ReactComponent as IconPG } from '../assets/Icon_PG.svg';
 import { ReactComponent as IconPiper } from '../assets/Icon_Piper.svg';
 import { ReactComponent as IconDesign } from '../assets/ICON_DESIGN.svg';
+import styles from './subhome.module.scss';
 
 const DesignHome: React.FC = () => {
   const title = `Things I've Designed`;
@@ -37,9 +37,9 @@ const DesignHome: React.FC = () => {
   };
 
   return (
-    <div className={styles.design}>
-      <div className={styles.design__wrapper}>
-        <div className={styles.design__title}>
+    <div className={styles.subhome}>
+      <div className={styles.subhome__wrapper}>
+        <div className={styles.subhome__title}>
           <FacetTitle title="Design" icon={<IconDesign />} />
           <OverflowHiddenContainer containerType="h2">
             {title}
@@ -49,15 +49,15 @@ const DesignHome: React.FC = () => {
           </OverflowHiddenContainer>
           <InternalLink
             route="/work/design"
-            classOverrides={styles.design__link}
+            classOverrides={styles.subhome__link}
           >
             Thoughts On Design
           </InternalLink>
         </div>
-        <div className={styles.design__projects}>
-          <DesignStub {...nimble} />
-          <DesignStub {...program_generator} />
-          <DesignStub {...piper} />
+        <div className={styles.subhome__projects}>
+          <ProjectStub {...nimble} />
+          <ProjectStub {...program_generator} />
+          <ProjectStub {...piper} />
         </div>
       </div>
     </div>
