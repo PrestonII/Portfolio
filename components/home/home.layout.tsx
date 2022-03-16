@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../Layout'
 import { Home } from './home.component';
 import DesignHome from '../design/design.home';
+import DevelopHome from '../develop/develop.home';
 import styles from './home.module.scss'
 
 export default function HomeLayout(): JSX.Element {
@@ -26,6 +27,7 @@ export default function HomeLayout(): JSX.Element {
     <Layout title={`Preston Smith | ${title}`}>
       <Home title={heading}/>
       <DesignHome />
+      <DevelopHome />
     </Layout>
   )
 }

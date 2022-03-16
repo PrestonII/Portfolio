@@ -42,8 +42,8 @@ const DesignHome: React.FC = () => {
         <OverflowHiddenContainer containerType="paragraph">
           { msg }
         </OverflowHiddenContainer>
-        <InternalLink route="/work/design" >
-          More Design Work
+        <InternalLink route="/work/design" classOverrides={styles.design__link}>
+          Thoughts On Design
         </InternalLink>
       </div>
       <div className={styles.design__projects}>
