@@ -3,11 +3,12 @@ import styles from './FacetTitle.module.scss';
 
 type CareerFacetTitleType = {
   title: string;
+  icon: JSX.Element
 }
 
 const CareerFacetTitle: React.FC<CareerFacetTitleType> = (props) => (
   <div className={styles.facet}>
-    <span className={styles.facet__title} />
+    { props.icon }
     <OverflowHiddenContainer containerType="subtitle">
       {props.title}
     </OverflowHiddenContainer>

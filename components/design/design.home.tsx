@@ -6,6 +6,7 @@ import DesignStub from "./design.stub";
 import { ReactComponent as IconNimble } from '../assets/Icon_Nimble.svg';
 import { ReactComponent as IconPG } from '../assets/Icon_PG.svg';
 import { ReactComponent as IconPiper } from '../assets/Icon_Piper.svg';
+import { ReactComponent as IconDesign } from '../assets/ICON_DESIGN.svg';
 
 const DesignHome: React.FC = () => {
   const title = `Things I've Designed`;
@@ -35,7 +36,7 @@ const DesignHome: React.FC = () => {
   return (
     <div className={styles.design}>
       <div className={styles.design__title}>
-        <FacetTitle title="Design" />
+        <FacetTitle title="Design" icon={<IconDesign/>} />
         <OverflowHiddenContainer containerType="h2">
           { title }
         </OverflowHiddenContainer>

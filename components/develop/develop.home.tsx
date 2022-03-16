@@ -6,6 +6,7 @@ import DevelopStub from "./develop.stub";
 import { ReactComponent as IconNimble } from '../assets/Icon_Nimble_Dev.svg';
 import { ReactComponent as IconPG } from '../assets/Icon_PG_Dev.svg';
 import { ReactComponent as IconTether } from '../assets/Icon_Tether_Dev.svg';
+import { ReactComponent as IconDev } from '../assets/ICON_DEV.svg';
 
 const DevelopHome: React.FC = () => {
   const title = `Things I've Developed`;
@@ -35,7 +36,7 @@ const DevelopHome: React.FC = () => {
   return (
     <div className={styles.develop}>
       <div className={styles.develop__title}>
-        <FacetTitle title="Development" />
+        <FacetTitle title="Design" icon={<IconDev/>} />
         <OverflowHiddenContainer containerType="h2">
           { title }
         </OverflowHiddenContainer>
