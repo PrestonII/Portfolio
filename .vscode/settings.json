@@ -1,5 +1,5 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.defaultFormatter":"dbaeumer.vscode-eslint",
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true
+  "editor.formatOnPaste": true
 }
