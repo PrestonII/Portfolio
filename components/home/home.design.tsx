@@ -55,7 +55,7 @@ const DesignHome: React.FC = () => {
           </InternalLink>
         </div>
         <div className={styles.subhome__projects}>
-          <ProjectStub {...nimble} />
+          <ProjectStub {...nimble} userHasAccess />
           <ProjectStub {...program_generator} />
           <ProjectStub {...piper} />
         </div>

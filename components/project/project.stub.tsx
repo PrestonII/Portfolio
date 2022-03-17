@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import OverflowHiddenContainer from '../containers/container.hidden';
 import { ProprietaryWorkLink } from '../modals/ProprietaryInfo';
 import styles from './project.module.scss';
@@ -9,11 +9,16 @@ type StubType = {
   title: string;
   details?: string[];
   description: string;
+  userHasAccess?: boolean;
 };
 
 const ProjectStub: React.FC<StubType> = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [userHasAccess, setUserHasAccess] = useState(false);
+
+  useEffect(() => {
+    setUserHasAccess(props.userHasAccess ?? false);
+  }, [props.userHasAccess]);
 
   const details = props.details?.map((detail, idx) => (
     <OverflowHiddenContainer

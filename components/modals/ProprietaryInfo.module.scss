@@ -10,6 +10,26 @@
       color: $black;
       font-family: $font-head;
     }
+
+    button {
+      transition: all 0.5s;
+      background-color: $black;
+
+      svg {
+        fill: $cream;
+        color: $cream;
+      }
+
+      &:hover {
+        background-color: lighten($black, 50%);
+        color: $cream;
+
+        svg {
+          fill: $cream;
+          color: $cream;
+        }
+      }
+    }
   }
 
   &__footer {
@@ -28,7 +48,13 @@
   }
 
   &__input {
-    // padding-top: 16px;
+    background-color: $cream !important;
+    border: 1px solid $black;
+
+    &:active,
+    &:focus {
+      outline: 2px solid $black;
+    }
   }
 
   &__btn {
@@ -38,15 +64,15 @@
       padding-top: unset !important;
       padding-bottom: unset !important;
       width: 100% !important;
-      background-color: $red !important;
+      background-color: $black !important;
       color: $cream !important;
       height: 3rem !important;
       text-align: center !important;
-      transition: all 1s !important;
+      transition: all 0.5s !important;
 
       &:hover {
         cursor: pointer !important;
-        background-color: darken($red, 10%) !important;
+        background-color: lighten($black, 50%) !important;
         color: lighten($cream, 10%) !important;
       }
     }
