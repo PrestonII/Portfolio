@@ -1,8 +1,9 @@
 @import '../../styles/styles.colors.scss';
 
 .facet {
-  display: flex;
+  display: grid;
   gap: 24px;
+  grid-template-columns: auto 1fr;
 
   &__text {
     height: 100%;
