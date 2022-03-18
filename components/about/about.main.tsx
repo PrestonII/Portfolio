@@ -43,57 +43,117 @@ const AboutPage: React.FC = () => {
           <div className={stylesAbout.about__icons}>
             <div className={stylesAbout.about__icons__row}>
               <IconGen1
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__clear}`}
+                className={`
+                  ${stylesAbout.about__icons__upgradedSize} 
+                  ${stylesAbout.about__icons__red} 
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                  ${stylesAbout.about__icons__upgradedStroke__second}
+                `}
               />
               <IconGen2
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__upgradedSize} 
+                  ${stylesAbout.about__icons__red}
+                `}
               />
               <IconGen3
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red} 
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
             </div>
             <div className={stylesAbout.about__icons__row}>
               <IconGen4
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
               <IconGen5
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
               <IconGen6
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
             </div>
             <div className={stylesAbout.about__icons__row}>
               <IconGen7
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red} 
+                  ${stylesAbout.about__icons__upgradedStroke__first}
+                `}
               />
               <IconGen8
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                `}
               />
               <IconGen9
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
             </div>
             <div className={stylesAbout.about__icons__row}>
               <IconGen10
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
               <IconGen11
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
               <IconGen12
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__second} 
+                `}
               />
             </div>
             <div className={stylesAbout.about__icons__row}>
               <IconGen13
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__upgradedSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                  ${stylesAbout.about__icons__upgradedStroke__second} 
+                `}
               />
               <IconGen14
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
               <IconGen15
-                className={`${stylesAbout.about__icons__resizable} ${stylesAbout.about__icons__red}`}
+                className={`
+                  ${stylesAbout.about__icons__uniformSize} 
+                  ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
+                `}
               />
             </div>
           </div>

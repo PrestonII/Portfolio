@@ -57,13 +57,41 @@
       @include SVGFillMixer($red);
     }
 
-    &__resizable {
+    &__uniformSize {
       overflow: visible;
       width: 3rem;
       height: 3rem;
+    }
 
-      > path {
-        stroke-width: 1.5 !important;
+    &__upgradedSize {
+      overflow: visible;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &__uniformStroke {
+      &__first {
+        > path:nth-child(1) {
+          stroke-width: 1.5;
+        }
+      }
+      &__second {
+        > path:nth-child(2) {
+          stroke-width: 1.5;
+        }
+      }
+    }
+
+    &__upgradedStroke {
+      &__first {
+        > path:nth-child(1) {
+          stroke-width: 4;
+        }
+      }
+      &__second {
+        > path:nth-child(2) {
+          stroke-width: 4;
+        }
       }
     }
   }
