@@ -31,11 +31,24 @@
 
   &__image {
     position: fixed;
-    border: 1px solid red;
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
+    cursor: none;
+    background-image: url('../assets/nolosdos.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+
     &__hidden {
       display: none;
+    }
+
+    &__wrapper {
+      b {
+        color: $red;
+        font-weight: 600;
+      }
     }
   }
 

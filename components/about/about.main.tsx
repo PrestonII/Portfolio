@@ -22,32 +22,35 @@ import { useState } from 'react';
 
 const AboutPage: React.FC = () => {
   const [showNLD, setShowNLD] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   const headerType = 'Me?';
   const title = `Generalist By Nature`;
   const nolosdos = (
-    <div
+    <b
       onMouseEnter={() => setShowNLD(true)}
       onMouseLeave={() => setShowNLD(false)}
+      onMouseMove={(e) => setPosition({ x: e.clientX, y: e.clientY })}
     >
-      <b>“porque no los dos?” </b>
-    </div>
+      porque no los dos?{' '}
+    </b>
   );
 
   const msg = (
-    <div className="">
+    <div className={stylesAbout.about__image__wrapper}>
       For much of my career I've had to choose between doing one thing or
-      another. Physical or Digital, Code or Design. My background in
-      architecture helped me embrace a {nolosdos}
+      another. Physical or Digital. Code or Design. My background in
+      architecture has helped me embrace more of a {nolosdos}
       approach to things.
       <br />
       <br />
-      Feel free to explore the rest of the site to learn more about my story.
+      Explore below to learn more about my story.
     </div>
   );
 
   return (
     <>
       <div
+        style={{ top: position.y, left: position.x }}
         className={
           showNLD ? stylesAbout.about__image : stylesAbout.image__hidden
         }
