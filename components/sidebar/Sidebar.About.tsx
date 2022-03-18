@@ -62,7 +62,10 @@ const PointTimeline: React.FC<{ height: number }> = (props) => {
   ));
 
   return (
-    <div className={styles.timeline__wrapper} style={{ height: props.height }}>
+    <div
+      className={styles.timeline__wrapper}
+      style={{ height: props.height, top: '12vh' }}
+    >
       {events}
     </div>
   );
