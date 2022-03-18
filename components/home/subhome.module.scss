@@ -3,6 +3,7 @@
 .subhome {
   @extend %fullpage;
   padding: 80px 160px;
+  padding-right: 0px;
 
   &__wrapper {
     display: grid;

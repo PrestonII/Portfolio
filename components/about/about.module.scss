@@ -29,6 +29,16 @@
     justify-items: center;
   }
 
+  &__image {
+    position: fixed;
+    border: 1px solid red;
+    width: 20rem;
+    height: 20rem;
+    &__hidden {
+      display: none;
+    }
+  }
+
   &__icons {
     display: flex;
     flex-direction: column;

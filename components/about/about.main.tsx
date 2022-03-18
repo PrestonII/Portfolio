@@ -18,14 +18,40 @@ import { ReactComponent as IconGen14 } from '../assets/ICON_GEN_14.svg';
 import { ReactComponent as IconGen15 } from '../assets/ICON_GEN_15.svg';
 import stylesHome from '../home/subhome.module.scss';
 import stylesAbout from './about.module.scss';
+import { useState } from 'react';
 
 const AboutPage: React.FC = () => {
+  const [showNLD, setShowNLD] = useState(false);
   const headerType = 'Me?';
   const title = `Generalist By Nature`;
-  const msg = `I explore the building process with many different tools - design, code, even physical processes like woodworking. Some of my interests are off to the side but scroll down if you're interested in learning more about my story.`;
+  const nolosdos = (
+    <div
+      onMouseEnter={() => setShowNLD(true)}
+      onMouseLeave={() => setShowNLD(false)}
+    >
+      <b>“porque no los dos?” </b>
+    </div>
+  );
+
+  const msg = (
+    <div className="">
+      For much of my career I've had to choose between doing one thing or
+      another. Physical or Digital, Code or Design. My background in
+      architecture helped me embrace a {nolosdos}
+      approach to things.
+      <br />
+      <br />
+      Feel free to explore the rest of the site to learn more about my story.
+    </div>
+  );
 
   return (
     <>
+      <div
+        className={
+          showNLD ? stylesAbout.about__image : stylesAbout.image__hidden
+        }
+      />
       <SidebarAbout />
       <div className={stylesHome.subhome}>
         <div className={stylesAbout.about__wrapper}>
@@ -35,7 +61,7 @@ const AboutPage: React.FC = () => {
               msg,
               headerType,
               icon: <IconPerson className={stylesAbout.about__icons__red} />,
-              linkText: 'Things I Think About',
+              linkText: 'Thoughts On My Career',
               linkClassOverrides: stylesHome.subhome__link,
               classOverrides: stylesHome.subhome__title,
             }}

@@ -6,7 +6,7 @@ import { InternalLink } from '../PageLink';
 
 type PageHeaderType = {
   title: string;
-  msg: string;
+  msg: string | JSX.Element;
   headerType: string;
   icon: JSX.Element;
   linkClassOverrides?: string;
