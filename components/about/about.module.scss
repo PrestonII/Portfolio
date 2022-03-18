@@ -49,6 +49,10 @@
       b {
         color: $red;
         font-weight: 600;
+
+        &:hover {
+          cursor: none;
+        }
       }
     }
   }

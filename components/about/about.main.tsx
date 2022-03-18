@@ -83,6 +83,7 @@ const AboutPage: React.FC = () => {
                 className={`
                   ${stylesAbout.about__icons__upgradedSize} 
                   ${stylesAbout.about__icons__red}
+                  ${stylesAbout.about__icons__uniformStroke__first} 
                 `}
               />
               <IconGen3
