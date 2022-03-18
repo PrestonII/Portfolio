@@ -17,18 +17,18 @@
   }
 
   .icon {
-    margin: 48px 32px
+    margin: 48px 32px;
   }
 
   .line {
     display: inline-block;
     position: relative;
-    content: "";
+    content: '';
     height: 100%;
     width: 100%;
     top: 0;
     left: 50%;
-    border-left: 2px solid  $red;
+    border-left: 2px solid $red;
   }
 
   .place {
@@ -54,16 +54,16 @@
   align-items: center;
   gap: 8px;
   transform: translate(-1.5px);
-  
+
   &__dot {
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    content: "";
+    content: '';
     background-color: $red;
     transform: translate(-3.5px);
     border: 0px solid $red;
-    transition: all .5s ;
+    transition: all 0.5s;
   }
 
   &__text {
@@ -76,7 +76,7 @@
 
   &:hover {
     cursor: pointer;
-    
+
     .history__dot {
       background-color: $cream;
       border: 2px solid $red;
@@ -91,7 +91,6 @@
 .timeline {
   &__wrapper {
     position: absolute;
-    top: 12vh;
     background-color: transparent;
     padding-bottom: 10vh;
     width: auto;
