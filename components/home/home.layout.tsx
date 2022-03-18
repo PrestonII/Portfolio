@@ -18,7 +18,7 @@ export default function HomeLayout(): JSX.Element {
       A <span>Developer</span> that can also <span>Design</span> product
     </div>
   );
-  const heading = <div className={styles.home__title}>{headingText1}</div>;
+  const heading = <div className={styles.home__title}>{headingText2}</div>;
 
   return (
     <Layout title={`Preston Smith | ${title}`}>

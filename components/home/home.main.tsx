@@ -21,15 +21,15 @@ export function Home({ title }: props): JSX.Element {
   );
 
   const summary = (
-    <div style={{ whiteSpace: 'pre-line' }}>
+    <>
       I make things using both digital & physical tools. Currently, I'm working
-      as a Senior Front-End Developer helping to decarbonize the built
+      as a <b>Senior Front-End Developer</b> helping to decarbonize the built
       environment with {canoaSupply}.
       <br />
       <br />
       See more about my work by scrolling below or feel free to reach out for a
       chat.
-    </div>
+    </>
   );
 
   return (
