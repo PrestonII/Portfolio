@@ -6,7 +6,9 @@ import { ReactComponent as IconDesign } from '../assets/ICON_DESIGN.svg';
 import styles from './subhome.module.scss';
 import PageHeader from '../page/PageHeader';
 
-const DesignHome: React.FC = () => {
+const DesignHome: React.FC<{
+  anchorRef: React.RefObject<HTMLDivElement>;
+}> = (props) => {
   const headerType = 'Design';
   const title = `Things I've Designed`;
   const msg = `I like working through the process of thinking about how things will look & feel. The idea of aesthetics as a semantic language is something that continues to inspire me.`;
@@ -36,7 +38,7 @@ const DesignHome: React.FC = () => {
   };
 
   return (
-    <div className={styles.subhome}>
+    <div className={styles.subhome} ref={props.anchorRef}>
       <div className={styles.subhome__wrapper}>
         <PageHeader
           {...{

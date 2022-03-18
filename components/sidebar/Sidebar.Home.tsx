@@ -1,5 +1,4 @@
-import React, { ReactNode, useLayoutEffect, useState } from 'react';
-import { TimelineMax as Timeline } from 'gsap';
+import React, { ReactNode, useState } from 'react';
 import { SidebarIcon } from './SidebarIcon';
 import OverflowContainer from '../containers/container.hidden';
 import useResizeObserver from 'use-resize-observer';
@@ -13,13 +12,14 @@ export interface ISidebar {
   sectionTitle?: string;
 }
 
-type IHistoryPoint = {
+type TimelinePointType = {
   top: number;
   text: string;
   icon?: JSX.Element;
+  onClick: () => void;
 };
 
-const TimelinePoint: React.FC<IHistoryPoint> = (props) => {
+const TimelinePoint: React.FC<TimelinePointType> = (props) => {
   const [hidden, setHidden] = useState(true);
   const onHover = () => setHidden(false);
   const onLeave = () => setHidden(true);
@@ -30,6 +30,7 @@ const TimelinePoint: React.FC<IHistoryPoint> = (props) => {
       style={{ top: `${props.top}%`, left: '50%' }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      onClick={props.onClick}
     >
       {props.icon ?? <div className={styles.history__dot} />}
       <OverflowContainer
@@ -38,7 +39,6 @@ const TimelinePoint: React.FC<IHistoryPoint> = (props) => {
         startHidden
         showOnHover
         hidden={hidden}
-        linkSrc={`about/${props.text.toLocaleLowerCase()}`}
       >
         {props.text}
       </OverflowContainer>
@@ -46,20 +46,10 @@ const TimelinePoint: React.FC<IHistoryPoint> = (props) => {
   );
 };
 
-const TimelinePointList: React.FC<{ height: number }> = (props) => {
-  const outline = React.createRef<HTMLHeadElement>();
-
-  useLayoutEffect(() => {
-    const tl = new Timeline({ paused: true });
-
-    tl.from(outline.current, {
-      opacity: 0,
-      delay: 2,
-    });
-
-    tl.play();
-  }, []);
-
+const TimelinePointList: React.FC<{
+  height: number;
+  navMethodList: (() => void)[];
+}> = (props) => {
   const career = {
     Design: <IconDesign />,
     Develop: <IconDev />,
@@ -70,7 +60,12 @@ const TimelinePointList: React.FC<{ height: number }> = (props) => {
     (_, idx) => ((idx + 1) / (points.length + 1)) * 100,
   );
   const events = careerPts.map((point, idx) => (
-    <TimelinePoint key={idx} top={point} text={Object.keys(career)[idx]} />
+    <TimelinePoint
+      key={idx}
+      top={point}
+      text={Object.keys(career)[idx]}
+      onClick={props.navMethodList[idx]}
+    />
   ));
 
   return (
@@ -80,7 +75,7 @@ const TimelinePointList: React.FC<{ height: number }> = (props) => {
   );
 };
 
-const HomeSidebar = () => {
+const HomeSidebar: React.FC<{ navMethodList: (() => void)[] }> = (props) => {
   const [timelineHeight, setTimelineHeight] = useState(500);
   const { ref } = useResizeObserver<HTMLDivElement>({
     onResize: ({ height }) => {
@@ -95,7 +90,10 @@ const HomeSidebar = () => {
           <SidebarIcon />
         </div>
         <div className={styles.line} ref={ref} />
-        <TimelinePointList height={timelineHeight} />
+        <TimelinePointList
+          height={timelineHeight}
+          navMethodList={props.navMethodList}
+        />
       </nav>
       <div className={styles.place}>
         <p>HOME</p>

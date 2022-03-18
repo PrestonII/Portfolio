@@ -6,7 +6,9 @@ import { ReactComponent as IconDev } from '../assets/ICON_DEV.svg';
 import styles from './subhome.module.scss';
 import PageHeader from '../page/PageHeader';
 
-const DevelopHome: React.FC = () => {
+const DevelopHome: React.FC<{
+  anchorRef: React.RefObject<HTMLDivElement>;
+}> = (props) => {
   const headerType = 'Development';
   const title = `Things I've Developed`;
   const msg = `A big part of my job is wiring things together with code. I love using digital tools to compose all the things I (or others) have designed. It's another way I can explore how things work and bring them together.`;
@@ -36,7 +38,7 @@ const DevelopHome: React.FC = () => {
   };
 
   return (
-    <div className={styles.subhome}>
+    <div className={styles.subhome} ref={props.anchorRef}>
       <div className={styles.subhome__wrapper}>
         <PageHeader
           {...{
