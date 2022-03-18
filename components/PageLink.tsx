@@ -1,6 +1,4 @@
 import React, { useCallback } from 'react';
-// import Link from 'next/link';
-import { Button } from 'carbon-components-react';
 import { useRouter } from 'next/router';
 import styles from './pagelink.module.scss';
 import OverflowHiddenParagraph, {
@@ -16,14 +14,14 @@ interface PageLinkProps extends ContainerProps {
 }
 
 export const ExternalLink: React.FC<PageLinkProps> = (props) => (
-  <div className={`${styles.pagelink}`}>
+  <span className={`${styles.pagelink}`}>
     {getWrapper({
       containerType: 'anchor',
       children: props.children,
       wrapperRef: props.wrapperRef,
       linkSrc: props.route,
     })}
-  </div>
+  </span>
 );
 
 export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (

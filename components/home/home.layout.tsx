@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../Layout';
-import { Home } from './home.component';
+import { Home } from './home.main';
 import DesignHome from './home.design';
 import DevelopHome from './home.develop';
 import styles from './home.module.scss';

@@ -16,23 +16,23 @@ const DesignHome: React.FC = () => {
     route: '/work/nimble',
     details: ['UX Design', 'UI Design'],
     description:
-      'Lacinia suspendisse malesuada et massa, sed ipsum tellus. Nisi ullamcorper urna, sed diam donec id eu id nisi. Adipiscing massa ante at posuere id eget.',
+      'A product focused on making it easier to use Revit, decreasing the time it takes you to get from an idea to finished product.',
   };
   const program_generator = {
     icon: <IconPG />,
-    title: 'Program Generator',
+    title: 'Parcel',
     route: '/work/pg',
-    details: ['UI Design'],
+    details: ['Language'],
     description:
-      'Lacinia suspendisse malesuada et massa, sed ipsum tellus. Nisi ullamcorper urna, sed diam donec id eu id nisi. Adipiscing massa ante at posuere id eget.',
+      'A visual language created to describe projects I work on with forms. Inspired by minimalist iconography and my previous architectural background.',
   };
   const piper = {
     icon: <IconPiper />,
     title: 'Piper',
     route: '/work/piper',
-    details: ['UX Design', 'UI Design', 'Motion'],
+    details: ['Language', 'UI Design', 'Motion'],
     description:
-      'Lacinia suspendisse malesuada et massa, sed ipsum tellus. Nisi ullamcorper urna, sed diam donec id eu id nisi. Adipiscing massa ante at posuere id eget.',
+      'A mobile app that helps users understand actions that they can take to ensure projects they build have less impact on the environment.',
   };
 
   return (

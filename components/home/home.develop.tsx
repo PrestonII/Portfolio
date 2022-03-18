@@ -16,7 +16,7 @@ const DevelopHome: React.FC = () => {
     route: '/work/nimble',
     details: ['Front-End', 'Back-End', 'CI/CD'],
     description:
-      'Lacinia suspendisse malesuada et massa, sed ipsum tellus. Nisi ullamcorper urna, sed diam donec id eu id nisi. Adipiscing massa ante at posuere id eget.',
+      'A product focused on making it easier to use Revit, decreasing the time it takes you to get from an idea to finished product.',
   };
   const program_generator = {
     icon: <IconPG />,
@@ -24,7 +24,7 @@ const DevelopHome: React.FC = () => {
     route: '/work/pg',
     details: ['Front-End', 'Back-End', 'Databases'],
     description:
-      'Lacinia suspendisse malesuada et massa, sed ipsum tellus. Nisi ullamcorper urna, sed diam donec id eu id nisi. Adipiscing massa ante at posuere id eget.',
+      'A web based application created to enhance the speed users created feasibilty studies for their clients.',
   };
   const piper = {
     icon: <IconTether />,
@@ -32,7 +32,7 @@ const DevelopHome: React.FC = () => {
     route: '/work/tether',
     details: ['Front-End'],
     description:
-      'Lacinia suspendisse malesuada et massa, sed ipsum tellus. Nisi ullamcorper urna, sed diam donec id eu id nisi. Adipiscing massa ante at posuere id eget.',
+      "A product that allows users to design workplaces. It's embedded marketplace is focused on helping users prioritize low-carbon purchases. ",
   };
 
   return (

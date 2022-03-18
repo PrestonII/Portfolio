@@ -16,7 +16,8 @@
 
 .pagelink {
   a,
-  p {
+  p,
+  svg {
     @extend %decoration;
   }
 }
