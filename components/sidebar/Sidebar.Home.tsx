@@ -19,6 +19,10 @@ type TimelinePointType = {
   onClick: () => void;
 };
 
+export type AnchorNavigationType = {
+  navMethodList: Record<string, () => void>;
+};
+
 const TimelinePoint: React.FC<TimelinePointType> = (props) => {
   const [hidden, setHidden] = useState(true);
   const onHover = () => setHidden(false);
@@ -46,10 +50,11 @@ const TimelinePoint: React.FC<TimelinePointType> = (props) => {
   );
 };
 
-const TimelinePointList: React.FC<{
-  height: number;
-  navMethodList: (() => void)[];
-}> = (props) => {
+const TimelinePointList: React.FC<
+  {
+    height: number;
+  } & AnchorNavigationType
+> = (props) => {
   const career = {
     Design: <IconDesign />,
     Develop: <IconDev />,
@@ -64,7 +69,7 @@ const TimelinePointList: React.FC<{
       key={idx}
       top={point}
       text={Object.keys(career)[idx]}
-      onClick={props.navMethodList[idx]}
+      onClick={props.navMethodList[Object.keys(career)[idx]]}
     />
   ));
 
@@ -75,7 +80,7 @@ const TimelinePointList: React.FC<{
   );
 };
 
-const HomeSidebar: React.FC<{ navMethodList: (() => void)[] }> = (props) => {
+const HomeSidebar: React.FC<AnchorNavigationType> = (props) => {
   const [timelineHeight, setTimelineHeight] = useState(500);
   const { ref } = useResizeObserver<HTMLDivElement>({
     onResize: ({ height }) => {
@@ -87,7 +92,7 @@ const HomeSidebar: React.FC<{ navMethodList: (() => void)[] }> = (props) => {
     <header className={styles.bar} ref={ref}>
       <nav>
         <div className={styles.icon}>
-          <SidebarIcon />
+          <SidebarIcon onNavHome={props.navMethodList['Home']} />
         </div>
         <div className={styles.line} ref={ref} />
         <TimelinePointList

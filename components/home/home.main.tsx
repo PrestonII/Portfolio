@@ -6,10 +6,10 @@ import OverflowContainer from '../containers/container.hidden';
 
 interface props {
   title: string | JSX.Element;
+  anchorRef: React.RefObject<HTMLDivElement>;
 }
 
-export function Home({ title }: props): JSX.Element {
-  const nodeHome = React.createRef<HTMLDivElement>();
+export function Home({ title, anchorRef }: props): JSX.Element {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
   const name = 'Preston Smith';
@@ -33,7 +33,7 @@ export function Home({ title }: props): JSX.Element {
   );
 
   return (
-    <div className={`${styles.main}`} ref={nodeHome}>
+    <div className={`${styles.main}`} ref={anchorRef}>
       <div className={styles.main__inner}>
         <div className={styles.main__inner__header}>
           <span className={styles.main__inner__header__name}>{name}</span>

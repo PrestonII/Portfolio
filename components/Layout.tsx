@@ -1,13 +1,12 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import HomeSidebar from './sidebar/Sidebar.Home';
+import HomeSidebar, { AnchorNavigationType } from './sidebar/Sidebar.Home';
 import styles from './Layout.module.scss';
 
 type Props = {
   children?: ReactNode;
   title?: string;
-  navMethodList: (() => void)[];
-};
+} & AnchorNavigationType;
 
 const Layout = ({
   children,

@@ -21,17 +21,20 @@ export default function HomeLayout(): JSX.Element {
   );
   const heading = <div className={styles.home__title}>{headingText2}</div>;
   const {
+    anchorRef: homeRef,
+    scrollToAnchor: homeScroll,
+  } = useScrollToAnchor();
+  const {
     anchorRef: designRef,
     scrollToAnchor: designScroll,
   } = useScrollToAnchor();
   const { anchorRef: devRef, scrollToAnchor: devScroll } = useScrollToAnchor();
 
+  const list = { Home: homeScroll, Design: designScroll, Develop: devScroll };
+
   return (
-    <Layout
-      title={`Preston Smith | ${title}`}
-      navMethodList={[designScroll, devScroll]}
-    >
-      <Home title={heading} />
+    <Layout title={`Preston Smith | ${title}`} navMethodList={list}>
+      <Home title={heading} anchorRef={homeRef} />
       <DesignHome anchorRef={designRef} />
       <DevelopHome anchorRef={devRef} />
     </Layout>
