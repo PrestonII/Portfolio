@@ -6,7 +6,7 @@ import styles from './Layout.module.scss';
 type Props = {
   children?: ReactNode;
   title?: string;
-} & AnchorNavigationType;
+} & Partial<AnchorNavigationType>;
 
 const Layout = ({
   children,
@@ -20,7 +20,7 @@ const Layout = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <HomeSidebar navMethodList={navMethodList} />
+      <HomeSidebar navMethodList={navMethodList ?? {}} />
       <main>{children}</main>
     </div>
   );

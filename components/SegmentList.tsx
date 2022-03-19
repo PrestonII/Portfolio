@@ -1,11 +1,9 @@
-import { Segment, SegmentType } from './Segment';
+import { SegmentType } from './Segment';
 
 export interface ISegmentList {
-  data: SegmentType[]
+  data: SegmentType[];
 }
 
-export const SegmentList = ({data: segments}: ISegmentList) => (
-  <div className="segmentlist">
-    { segments }
-  </div>
-)
+export const SegmentList = ({ data: segments }: ISegmentList) => (
+  <div className="segmentlist">{segments}</div>
+);

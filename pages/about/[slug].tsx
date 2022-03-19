@@ -1,10 +1,8 @@
 import AboutLayout from '../../components/about/about.layout';
-import Post from '../../components/post/Post';
-import { PostType, PostProps } from '../../types/post';
+import { PostProps } from '../../types/post';
 import {
   getPostBySlug,
   getSlugFullDirectory,
-  getAllPosts,
   getAllPostsByDirectory,
 } from '../../services/services.post';
 import { convertMarkdownToHtml } from '../../services/services.markdown';

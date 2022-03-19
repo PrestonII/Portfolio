@@ -1,5 +1,4 @@
-import React from "react";
-import { SegmentList } from '../SegmentList';
+import React from 'react';
 
 export function WorkSection() {
   return (
@@ -7,9 +6,7 @@ export function WorkSection() {
       <div className="work__title">
         <h2>Featured Work</h2>
       </div>
-      <div className="work__list">
-        {/* <SegmentList data={} /> */}
-      </div>
+      <div className="work__list">{/* <SegmentList data={} /> */}</div>
     </div>
-  )
+  );
 }

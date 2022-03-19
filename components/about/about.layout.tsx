@@ -7,8 +7,8 @@ const AboutPost = (props: PostProps) => {
   const { title, content, date, coverImage } = props.post;
 
   return (
-    <Layout title="Preston Smith | About">
-      <PostSection 
+    <Layout title="Preston Smith | About" navMethodList={{}}>
+      <PostSection
         title={title}
         sectionTitle="Now"
         sectionContent={content}
@@ -16,7 +16,7 @@ const AboutPost = (props: PostProps) => {
         coverImage={coverImage}
       />
     </Layout>
-  )
-}
+  );
+};
 
 export default AboutPost;

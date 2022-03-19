@@ -74,7 +74,7 @@ const PointTimeline: React.FC<{ height: number }> = (props) => {
 const SidebarAbout = () => {
   const [timelineHeight, setTimelineHeight] = useState(500);
   const { ref } = useResizeObserver<HTMLDivElement>({
-    onResize: ({ width, height }) => {
+    onResize: ({ height }) => {
       height && setTimelineHeight(height);
     },
   });

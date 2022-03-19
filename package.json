@@ -52,7 +52,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && pretty-quick --staged",
-      "pre-push": "yarn lint"
+      "pre-push": "yarn lint && yarn build"
     }
   },
   "license": "MIT"

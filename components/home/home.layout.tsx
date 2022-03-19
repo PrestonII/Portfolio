@@ -9,12 +9,6 @@ import ContactHome from './home.contact';
 
 export default function HomeLayout(): JSX.Element {
   const title = 'Design Engineer';
-  const headingText1 = (
-    <div className="">
-      A <span>Developer</span> that also <span>Designs</span> and{' '}
-      <span>Builds</span>
-    </div>
-  );
   const headingText2 = (
     <div className="">
       A <span>Developer</span> that can also <span>Design</span> product

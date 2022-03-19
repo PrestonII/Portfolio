@@ -4,11 +4,6 @@ import { ExternalLink, InternalLink } from '../PageLink';
 import ROUTES from '../Routes';
 import OverflowContainer from '../containers/container.hidden';
 
-interface props {
-  title: string | JSX.Element;
-  anchorRef: React.RefObject<HTMLDivElement>;
-}
-
 const ContactHome: React.FC<{
   anchorRef: React.RefObject<HTMLDivElement>;
 }> = ({ anchorRef }) => {
@@ -17,11 +12,6 @@ const ContactHome: React.FC<{
   const name = 'Get In Touch';
   const linkText = 'Write Me An Email';
   const title = `Let's Work On Something Together`;
-  const canoaSupply = (
-    <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
-      <b style={{ fontSize: 18 }}>Canoa Supply</b>
-    </ExternalLink>
-  );
 
   const summary = (
     <>
