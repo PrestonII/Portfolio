@@ -1,3 +1,4 @@
+@import 'carbon-components/scss/globals/scss/styles.scss';
 @import './styles.colors.scss';
 @import './styles.breakpoints.scss';
 @import './styles.placeholders.scss';
@@ -22,7 +23,6 @@ html, body {
 }
 
 #__next {
-  // height: 100vh;
   height: 100%;
   box-sizing: inherit;
 }
@@ -49,4 +49,48 @@ header {
 
 main {
   // border: 5px solid blue;
+}
+
+/****************************** FONTS **********************************/
+body {
+  font-family: $font-body;
+  color: $grey;
+
+  h1,h2,h3,h4,h5 {
+    font-family: $font-head;
+    margin: 0;
+    color: $black;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: $text-xxxl;
+  }
+
+  h2 {
+    font-size: $text-xxl;
+  }
+
+  h3 {
+    font-size: $text-lg;
+  }
+
+  h4 {
+    font-size: $text-md;
+  }
+
+  h5 {
+    font-size: $text-xs;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: $text-xs;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+
+  a {
+    color: $grey;
+  }
 }

@@ -1,11 +1,79 @@
-.main {
-  padding-top: 8rem;
-  padding-left: 16rem;
-  padding-right: 14rem;
+@import '../../styles/styles.colors.scss';
+@import '../../styles/styles.placeholders.scss';
 
-  display: grid;
-  height: 100vh;
-  scroll-snap-align: start;
-  // justify-content: center;
-  
+.main {
+  @extend %fullpage;
+
+  &__inner {
+    width: 75%;
+    max-width: 768px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    &__header {
+      div {
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+      }
+
+      &__name {
+        font-weight: 400;
+        color: $grey;
+        font-size: 16px;
+        text-transform: uppercase;
+        height: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .summary {
+    padding-top: 3rem;
+  }
+
+  .link {
+    margin-top: 6rem;
+  }
+}
+
+.overflow {
+  &__hidden {
+    overflow-y: hidden;
+  }
+}
+
+.home {
+  &__title {
+    color: $grey;
+    span {
+      color: $black;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+
+    > div {
+      display: grid;
+      gap: 0.5rem;
+      align-items: center;
+      justify-items: flex-end;
+      padding-right: 4rem;
+      grid-template-columns: 1fr auto;
+      padding-bottom: 4rem;
+      a {
+        color: $red;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-self: right;
+    column-gap: 3rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+  }
 }

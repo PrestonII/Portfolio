@@ -17,12 +17,12 @@ export interface IPostData {
 }
 
 export class PostData implements IPostData {
-  title: string = '';
-  coverImage: string = '';
+  title = '';
+  coverImage = '';
   excerpt?: string | undefined;
   ogImage?: { url: string; } | undefined;
-  slug: string = '';
-  content: string = '';
+  slug = '';
+  content = '';
   date: string = new Date().toString();
   // extraData: Record<string, unknown> = {};
 }

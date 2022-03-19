@@ -1,6 +1,4 @@
 import React from 'react';
-import PageLink from '../PageLink';
-import ROUTES from '../Routes';
 import PostCoverImage from './PostCoverImage';
 import PostBody from './PostBody';
 import styles from './post.module.scss';
@@ -14,7 +12,13 @@ interface IPostSection {
   sectionNext?: string;
 }
 
-const PostSection = ({title, sectionTitle, sectionContent, coverImage, sectionNext}: IPostSection) => {
+const PostSection = ({
+  title,
+  sectionTitle,
+  sectionContent,
+  coverImage,
+  sectionNext,
+}: IPostSection) => {
   const imageUrl = coverImage ?? '';
 
   return (
@@ -33,7 +37,7 @@ const PostSection = ({title, sectionTitle, sectionContent, coverImage, sectionNe
         <PostBody content={sectionContent} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PostSection;

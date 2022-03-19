@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:darken">
+<path d="M48.1167 1.67968L2.1167 1.67969C2.1167 9.67969 6.5167 25.6797 24.1167 25.6797C41.7167 25.6797 47.45 9.67968 48.1167 1.67968Z" stroke="black" stroke-width="3" stroke-dasharray="6 6"/>
+</g>
+<g style="mix-blend-mode:darken">
+<path d="M48.1167 25.6797L2.1167 25.6797C2.1167 17.6797 6.5167 1.67969 24.1167 1.67969C41.7167 1.67969 47.45 17.6797 48.1167 25.6797Z" fill="currentColor"/>
+<path d="M48.1167 25.6797L2.1167 25.6797C2.1167 17.6797 6.5167 1.67969 24.1167 1.67969C41.7167 1.67969 47.45 17.6797 48.1167 25.6797Z" stroke="black" stroke-width="3"/>
+</g>
+</svg>

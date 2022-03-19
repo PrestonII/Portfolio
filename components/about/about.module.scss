@@ -1,0 +1,126 @@
+@import '../../styles/styles.colors.scss';
+
+@mixin SVGFillMixer($color: 'none') {
+  color: $color;
+}
+
+@mixin SVGFillMixerForced($color: 'none') {
+  color: none;
+  fill: $color;
+
+  path {
+    color: none;
+    fill: $color;
+  }
+
+  g {
+    path {
+      color: none;
+      fill: $color;
+    }
+  }
+}
+
+.about {
+  &__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    justify-items: center;
+    padding-left: 3rem;
+  }
+
+  &__image {
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+    cursor: none;
+    background-image: url('../assets/nolosdos.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+
+    &__hidden {
+      display: none;
+    }
+
+    &__wrapper {
+      b {
+        color: $red;
+        font-weight: 600;
+
+        &:hover {
+          cursor: none;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 30rem;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__clear {
+      @include SVGFillMixerForced();
+    }
+
+    &__cream {
+      @include SVGFillMixer($cream);
+    }
+
+    &__red {
+      @include SVGFillMixer($red);
+    }
+
+    &__uniformSize {
+      overflow: visible;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &__upgradedSize {
+      overflow: visible;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &__uniformStroke {
+      &__first {
+        > path:nth-child(1) {
+          stroke-width: 1.5;
+        }
+      }
+      &__second {
+        > path:nth-child(2) {
+          stroke-width: 1.5;
+        }
+      }
+    }
+
+    &__upgradedStroke {
+      &__first {
+        > path:nth-child(1) {
+          stroke-width: 4;
+        }
+      }
+      &__second {
+        > path:nth-child(2) {
+          stroke-width: 4;
+        }
+      }
+    }
+  }
+}
