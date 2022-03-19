@@ -3,8 +3,9 @@ import { ReactComponent as IconNimble } from '../assets/Icon_Nimble_Dev.svg';
 import { ReactComponent as IconPG } from '../assets/Icon_PG_Dev.svg';
 import { ReactComponent as IconTether } from '../assets/Icon_Tether_Dev.svg';
 import { ReactComponent as IconDev } from '../assets/ICON_DEV.svg';
-import styles from './subhome.module.scss';
 import PageHeader from '../page/PageHeader';
+import icons from '../about/about.module.scss';
+import styles from './subhome.module.scss';
 
 const DevelopHome: React.FC<{
   anchorRef: React.RefObject<HTMLDivElement>;
@@ -13,7 +14,7 @@ const DevelopHome: React.FC<{
   const title = `Things I've Developed`;
   const msg = `A big part of my job is wiring things together with code. I love using digital tools to compose all the things I (or others) have designed. It's another way I can explore how things work and bring them together.`;
   const nimble = {
-    icon: <IconNimble />,
+    icon: <IconNimble className={icons.about__icons__uniformStroke__first} />,
     title: 'Nimble',
     route: '/work/nimble',
     details: ['Front-End', 'Back-End', 'CI/CD'],
@@ -29,7 +30,7 @@ const DevelopHome: React.FC<{
       'A web based application created to enhance the speed users created feasibilty studies for their clients.',
   };
   const piper = {
-    icon: <IconTether />,
+    icon: <IconTether className={icons.about__icons__uniformStroke__first} />,
     title: 'Tether',
     route: '/work/tether',
     details: ['Front-End'],

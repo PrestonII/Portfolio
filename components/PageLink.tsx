@@ -8,7 +8,7 @@ import OverflowHiddenParagraph, {
 import { IconArrow } from './icons/Icon.Arrow';
 
 interface PageLinkProps extends ContainerProps {
-  route: string;
+  route?: string;
   onClick?: () => void;
   preventProceeding?: boolean;
 }
@@ -31,9 +31,10 @@ export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (
   const outline = React.createRef<HTMLDivElement>();
 
   const onClick = useCallback(() => {
+    console.log(props.onClick);
     props.onClick && props.onClick();
-    if (!props.preventProceeding) router.push(props.route);
-  }, [props.preventProceeding]);
+    if (!props.preventProceeding && props.route) router.push(props.route);
+  }, [props.preventProceeding, props.onClick]);
 
   return (
     <div
@@ -42,10 +43,7 @@ export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (
       style={props.style}
       onClick={onClick}
     >
-      <div
-        className={styles.link__inner}
-        onClick={() => console.log('clicked')}
-      >
+      <div className={styles.link__inner}>
         <OverflowHiddenParagraph
           containerType="paragraph"
           wrapperRef={props.wrapperRef}

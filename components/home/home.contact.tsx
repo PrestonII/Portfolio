@@ -7,14 +7,16 @@ import OverflowContainer from '../containers/container.hidden';
 interface props {
   title: string | JSX.Element;
   anchorRef: React.RefObject<HTMLDivElement>;
-  onContact: () => void;
 }
 
-export function Home({ title, anchorRef, onContact }: props): JSX.Element {
+const ContactHome: React.FC<{
+  anchorRef: React.RefObject<HTMLDivElement>;
+}> = ({ anchorRef }) => {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
-  const name = 'Preston Smith';
-  const linkText = 'More About Me';
+  const name = 'Get In Touch';
+  const linkText = 'Write Me An Email';
+  const title = `Let's Work On Something Together`;
   const canoaSupply = (
     <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
       <b style={{ fontSize: 18 }}>Canoa Supply</b>
@@ -23,13 +25,10 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
 
   const summary = (
     <>
-      I enjoy making digital products out of pixels and code. Currently, I'm
-      helping to decarbonize the built environment with {canoaSupply} as a{' '}
-      <b>Senior Front-End Developer</b> .
-      <br />
-      <br />
-      See more about my work by scrolling below or feel free to reach out for a
-      chat.
+      I love talking about new projects and if I can't find a way to help you,
+      I'll certainly point you to someone in my network who can. <br />
+      <br /> Reaching out to me via email typically gets the fastest response -
+      try it below.
     </>
   );
 
@@ -51,13 +50,28 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
           </InternalLink>
         </div>
       </div>
-      <InternalLink
-        wrapperRef={nodeLink}
-        classOverrides={styles.home__contact}
-        onClick={onContact}
-      >
-        Get In Touch
-      </InternalLink>
+      <div className={styles.home__links}>
+        <ExternalLink
+          route="https://www.linkedin.com/in/prestonsmithbim/"
+          containerType="anchor"
+        >
+          LinkedIn
+        </ExternalLink>
+        <ExternalLink
+          route="https://twitter.com/prestonthemaker"
+          containerType="anchor"
+        >
+          Twitter
+        </ExternalLink>
+        <ExternalLink
+          route="https://www.instagram.com/preston_makes_stuff/"
+          containerType="anchor"
+        >
+          Instagram
+        </ExternalLink>
+      </div>
     </div>
   );
-}
+};
+
+export default ContactHome;

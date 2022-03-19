@@ -13,7 +13,7 @@
     &__header {
       div {
         margin-bottom: 2rem;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
       }
 
       &__name {
@@ -22,7 +22,7 @@
         font-size: 16px;
         text-transform: uppercase;
         height: 1rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -58,9 +58,22 @@
       gap: 0.5rem;
       align-items: center;
       justify-items: flex-end;
-      padding-right: 8rem;
+      padding-right: 4rem;
       grid-template-columns: 1fr auto;
-      padding-bottom: 6rem;
+      padding-bottom: 4rem;
+      a {
+        color: $red;
+        font-weight: 600;
+      }
     }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-self: right;
+    column-gap: 3rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
   }
 }

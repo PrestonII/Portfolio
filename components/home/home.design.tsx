@@ -3,17 +3,25 @@ import { ReactComponent as IconNimble } from '../assets/Icon_Nimble.svg';
 import { ReactComponent as IconPG } from '../assets/Icon_PG.svg';
 import { ReactComponent as IconPiper } from '../assets/Icon_Piper.svg';
 import { ReactComponent as IconDesign } from '../assets/ICON_DESIGN.svg';
-import styles from './subhome.module.scss';
 import PageHeader from '../page/PageHeader';
+import styles from './subhome.module.scss';
+import icons from '../about/about.module.scss';
 
 const DesignHome: React.FC<{
   anchorRef: React.RefObject<HTMLDivElement>;
 }> = (props) => {
   const headerType = 'Design';
   const title = `Things I've Designed`;
-  const msg = `I like working through the process of thinking about how things will look & feel. The idea of aesthetics as a semantic language is something that continues to inspire me.`;
+  const msg = (
+    <>
+      Most of my work is influenced by my architectural background and is
+      focused on a systematic approach to problem solving. That said, the
+      process of thinking through how things will look & feel is my favorite
+      part of design.
+    </>
+  );
   const nimble = {
-    icon: <IconNimble />,
+    icon: <IconNimble className={icons.about__icons__uniformStroke__first} />,
     title: 'Nimble',
     route: '/work/nimble',
     details: ['UX Design', 'UI Design'],
