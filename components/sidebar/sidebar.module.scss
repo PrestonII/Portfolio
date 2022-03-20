@@ -103,3 +103,23 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .bar {
+    width: 5rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+  }
+}

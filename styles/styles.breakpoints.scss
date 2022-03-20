@@ -1,33 +1,24 @@
+$mobileLimit: 767px;
+$tablet: 768px;
+$desktop: 992px;
+
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (max-width: $mobileLimit) {
   :root {
     font-size: 8px;
   }
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   :root {
     font-size: 12px;
   }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: $desktop) {
   :root {
     font-size: 16px;
   }
 }
-
-// Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1441px) {
-//   :root {
-//     font-size: 18px;
-//   }
-// }
-
-// @media (min-width: 1800px) {
-//   :root {
-//     font-size: 24px;
-//   }
-// }
