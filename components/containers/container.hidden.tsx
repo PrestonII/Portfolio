@@ -40,7 +40,11 @@ export const getWrapper = ({
   switch (containerType) {
     case 'anchor':
       wrapper = (
-        <a ref={ref as React.Ref<HTMLAnchorElement>} href={linkSrc}>
+        <a
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          href={linkSrc}
+          target="_blank"
+        >
           {children}
         </a>
       );
