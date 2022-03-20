@@ -1,16 +1,14 @@
 import React from 'react';
 import styles from './home.module.scss';
-import { ExternalLink, InternalLink } from '../PageLink';
-import ROUTES from '../Routes';
+import { ExternalLink } from '../PageLink';
 import OverflowContainer from '../containers/container.hidden';
 
 const ContactHome: React.FC<{
   anchorRef: React.RefObject<HTMLDivElement>;
 }> = ({ anchorRef }) => {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
-  const nodeLink = React.createRef<HTMLParagraphElement>();
   const name = 'Get In Touch';
-  const linkText = 'Write Me An Email';
+  const contactText = 'Write Me An Email';
   const title = `Let's Work On Something Together`;
 
   const summary = (
@@ -35,9 +33,12 @@ const ContactHome: React.FC<{
           {summary}
         </OverflowContainer>
         <div className={styles.link}>
-          <InternalLink route={ROUTES.ABOUT} wrapperRef={nodeLink}>
-            {linkText}
-          </InternalLink>
+          <ExternalLink
+            containerType="anchor"
+            route="mailto:prestonmakesstuff@gmail.com?subject=Hi!"
+          >
+            {contactText}
+          </ExternalLink>
         </div>
       </div>
       <div className={styles.home__links}>

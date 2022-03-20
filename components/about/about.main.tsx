@@ -41,9 +41,6 @@ const AboutPage: React.FC = () => {
       another. Physical or Digital. Code or Design. My background in
       architecture has helped me embrace more of a {nolosdos}
       approach to things.
-      <br />
-      <br />
-      Explore below to learn more about my story.
     </div>
   );
 

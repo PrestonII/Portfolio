@@ -10,7 +10,8 @@ type PageHeaderType = {
   headerType: string;
   icon: JSX.Element;
   linkClassOverrides?: string;
-  linkText: string;
+  linkText?: string;
+  pageLinkRoute?: string;
 } & OverridableStyling;
 
 const PageHeader: React.FC<PageHeaderType> = ({
@@ -22,6 +23,7 @@ const PageHeader: React.FC<PageHeaderType> = ({
   classOverrides,
   style,
   headerType,
+  pageLinkRoute,
 }) => {
   return (
     <div className={classOverrides} style={style}>
@@ -32,9 +34,11 @@ const PageHeader: React.FC<PageHeaderType> = ({
       <OverflowHiddenContainer containerType="paragraph">
         {msg}
       </OverflowHiddenContainer>
-      <InternalLink route="/work/design" classOverrides={linkClassOverrides}>
-        {linkText}
-      </InternalLink>
+      {pageLinkRoute && linkText ? (
+        <InternalLink route={pageLinkRoute} classOverrides={linkClassOverrides}>
+          {linkText}
+        </InternalLink>
+      ) : undefined}
     </div>
   );
 };

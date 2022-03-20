@@ -5,7 +5,7 @@ import OverflowHiddenParagraph, {
   ContainerProps,
   getWrapper,
 } from './containers/container.hidden';
-import { IconArrow } from './icons/Icon.Arrow';
+import { Arrow } from './icons/Arrow';
 
 interface PageLinkProps extends ContainerProps {
   route?: string;
@@ -51,7 +51,7 @@ export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (
         >
           {props.children}
         </OverflowHiddenParagraph>
-        <IconArrow direction="NE" />
+        <Arrow direction="NE" />
       </div>
     </div>
   );
