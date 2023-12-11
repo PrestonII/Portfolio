@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../Layout';
 import { PostProps } from '../../types/post';
 import Link from 'next/link';
 import { CldImage } from 'next-cloudinary';
+import useResizeObserver from 'use-resize-observer';
 
 const WorkDetailPage = (props: PostProps) => {
+  const [imageWidth, setImageWidth] = useState<number>(100);
+  const [imageHeight, setImageHeight] = useState<number>(100);
+
+  const { ref } = useResizeObserver<HTMLDivElement>({
+    onResize: ({ width, height }) => {
+      width && setImageWidth(width);
+      height && setImageHeight(height);
+    },
+  });
+
   const {
     title,
     content,
@@ -47,9 +58,13 @@ const WorkDetailPage = (props: PostProps) => {
             gridColumn: '2 / 4',
             gridRow: '1 / 3',
           }}
+          ref={ref}
         >
-          carousel
-          <CldImage src="cld-sample-5" width="100%" height="100%" />
+          <CldImage
+            src="cld-sample-5"
+            width={`${imageWidth}`}
+            height={`${imageHeight}`}
+          />
         </div>
         <div
           style={{
