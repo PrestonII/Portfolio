@@ -339,6 +339,33 @@
     winston "^3.3.3"
     yargs "^16.1.1"
 
+"@cloudinary-util/url-loader@^3.20.0":
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/@cloudinary-util/url-loader/-/url-loader-3.21.0.tgz#ad19af5d7f45170b21d80cbb7d5f3b9407bca6a4"
+  integrity sha512-YcB+mZgriZB29eoFGvVaEDu9ov6ROEqqVxq6kqCywUwHbsXGIZx0TYt0SJoqVj2ISvdL2wZzTLyBOpaFXJN1bg==
+  dependencies:
+    "@cloudinary-util/util" "2.3.0"
+    "@cloudinary/url-gen" "^1.10.2"
+
+"@cloudinary-util/util@2.3.0", "@cloudinary-util/util@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@cloudinary-util/util/-/util-2.3.0.tgz#8a2a7ad3d3f089c2fff08f53eaddd50e946048f1"
+  integrity sha512-0Gojd+ZRQjJQmlBEAa8Ua94amvx7uWHoUzVUEGi1S8bgF1wPcMqG07cSUGQfRwHsFQ/9XOesx76Df622E+CevA==
+
+"@cloudinary/transformation-builder-sdk@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@cloudinary/transformation-builder-sdk/-/transformation-builder-sdk-1.9.0.tgz#0c6d37f3c4fd071d8205ca800d70bd8882a00512"
+  integrity sha512-19ZV3r2dE2mYMZTN/ytP7p7hmqiD7PC6EoWdQwJByabN4JXtNwgotElHYC509/eD7j5xJajghgHiIXTonrgMhQ==
+  dependencies:
+    "@cloudinary/url-gen" "^1.7.0"
+
+"@cloudinary/url-gen@^1.10.2", "@cloudinary/url-gen@^1.7.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.14.0.tgz#87a31719858acd98b482ca331a0df2d5a8791f34"
+  integrity sha512-XbG8QgD5fkTUO/YYUWftfz3sUpKzRZJkXhp6xLSxmK/36iyMy2wA4SF5FLCOnv6fLLUneQzXbc4OAwaDM0EWCQ==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.9.0"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -4221,6 +4248,14 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+
+next-cloudinary@^5.11.0:
+  version "5.11.0"
+  resolved "https://registry.yarnpkg.com/next-cloudinary/-/next-cloudinary-5.11.0.tgz#b5375842858315d0195c2152ae776c2e036ff5a5"
+  integrity sha512-gTPqqMG7hzoeA2wEBpUR51FExVFq3+p1qZU52xlwejpEGYaGVIVzpILOA0G2i9s0jyxudWuA5GLFh2A/bvQmFw==
+  dependencies:
+    "@cloudinary-util/url-loader" "^3.20.0"
+    "@cloudinary-util/util" "^2.3.0"
 
 next-page-transitions@^1.0.0-beta.2:
   version "1.0.0-beta.2"

@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../Layout';
 import { PostProps } from '../../types/post';
 import Link from 'next/link';
+import { CldImage } from 'next-cloudinary';
 
 const WorkDetailPage = (props: PostProps) => {
   const {
@@ -48,6 +49,7 @@ const WorkDetailPage = (props: PostProps) => {
           }}
         >
           carousel
+          <CldImage src="cld-sample-5" width="100%" height="100%" />
         </div>
         <div
           style={{
