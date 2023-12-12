@@ -10,7 +10,6 @@
     "lint": "eslint --ext ts,tsx"
   },
   "dependencies": {
-    "@carbon/ibmdotcom-web-components": "^1.38.0",
     "@carbon/icons-react": "10.22.0",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "carbon-components": "10.25.0",

@@ -4,7 +4,6 @@ import { PostProps } from '../../types/post';
 import Link from 'next/link';
 import { CldImage } from 'next-cloudinary';
 import useResizeObserver from 'use-resize-observer';
-import Carousel from '@carbon/ibmdotcom-web-components/es/components-react/carousel/carousel';
 
 const WorkDetailPage = (props: PostProps) => {
   const [imageWidth, setImageWidth] = useState<number>(100);
@@ -60,25 +59,7 @@ const WorkDetailPage = (props: PostProps) => {
             gridRow: '1 / 3',
           }}
           ref={ref}
-        >
-          <Carousel pageSize={1}>
-            <CldImage
-              src="cld-sample-5"
-              width={`${imageWidth}`}
-              height={`${imageHeight}`}
-            />
-            <CldImage
-              src="cld-sample-4"
-              width={`${imageWidth}`}
-              height={`${imageHeight}`}
-            />
-            <CldImage
-              src="cld-sample-3"
-              width={`${imageWidth}`}
-              height={`${imageHeight}`}
-            />
-          </Carousel>
-        </div>
+        ></div>
         <div
           style={{
             border: '1px solid green',
