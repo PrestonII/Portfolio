@@ -2,12 +2,13 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "yarn bundle-ibm && next",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
     "test": "jest --no-cache",
-    "lint": "eslint --ext ts,tsx"
+    "lint": "eslint --ext ts,tsx",
+    "bundle-ibm": "vite build && node utils/process_ibm.js"
   },
   "dependencies": {
     "@carbon/ibmdotcom-web-components": "^1.38.0",
@@ -30,7 +31,8 @@
     "remark-html": "^13.0.2",
     "sass": "^1.27.0",
     "typescript": "^4.6.2",
-    "use-resize-observer": "^9.1.0"
+    "use-resize-observer": "^9.1.0",
+    "vite": "^5.0.11"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.0",

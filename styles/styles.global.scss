@@ -3,6 +3,10 @@
 @import './styles.placeholders.scss';
 @import './styles.fonts.scss';
 
+c4d-carousel {
+  --c4d--carousel--page-size: 1;
+}
+
 * {
   box-sizing: border-box;
 }

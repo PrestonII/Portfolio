@@ -1,0 +1,1 @@
+export const path_ibm = "/ibm/ibmWebComponents-HyKzVQ3U.js";
