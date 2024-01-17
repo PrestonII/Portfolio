@@ -4,6 +4,7 @@ import { PostProps } from '../../types/post';
 import Link from 'next/link';
 import { CldImage } from 'next-cloudinary';
 import useResizeObserver from 'use-resize-observer';
+import ImageCarousel from '../carousel/Carousel';
 
 const WorkDetailPage = (props: PostProps) => {
   const [imageWidth, setImageWidth] = useState<number>(100);
@@ -60,9 +61,7 @@ const WorkDetailPage = (props: PostProps) => {
           }}
           ref={ref}
         >
-          {/**
-           * carousel
-           */}
+          <ImageCarousel imageWidth={imageWidth} imageHeight={imageHeight} />
         </div>
         <div
           style={{
