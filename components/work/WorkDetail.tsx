@@ -1,13 +1,9 @@
-'use client';
-
 import React, { useState } from 'react';
 import Layout from '../Layout';
 import { PostProps } from '../../types/post';
 import Link from 'next/link';
 import { CldImage } from 'next-cloudinary';
 import useResizeObserver from 'use-resize-observer';
-// import Carousel from '@carbon/ibmdotcom-web-components/es/components-react/carousel/carousel';
-import Carousel from '@carbon/ibmdotcom-web-components/es/components-react/carousel/carousel';
 
 const WorkDetailPage = (props: PostProps) => {
   const [imageWidth, setImageWidth] = useState<number>(100);
@@ -64,26 +60,9 @@ const WorkDetailPage = (props: PostProps) => {
           }}
           ref={ref}
         >
-          <Carousel>
-            <CldImage
-              src="cld-sample-5"
-              width={`${imageWidth}`}
-              height={`${imageHeight}`}
-              alt="5"
-            />
-            <CldImage
-              src="cld-sample-4"
-              width={`${imageWidth}`}
-              height={`${imageHeight}`}
-              alt="5"
-            />
-            <CldImage
-              src="cld-sample-3"
-              width={`${imageWidth}`}
-              height={`${imageHeight}`}
-              alt="5"
-            />
-          </Carousel>
+          {/**
+           * carousel
+           */}
         </div>
         <div
           style={{
