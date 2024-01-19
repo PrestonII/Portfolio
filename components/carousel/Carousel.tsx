@@ -58,7 +58,7 @@ function ImageCarousel({
     setActiveStep(step);
   };
 
-  const titleBoxHeight = 48;
+  const titleBoxHeight = 0;
   const stepperBoxHeight = 48;
   const imageBoxHeight = imageHeight
     ? imageHeight - titleBoxHeight - stepperBoxHeight
@@ -74,7 +74,7 @@ function ImageCarousel({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          height: 48,
+          height: titleBoxHeight,
           pl: 2,
           bgcolor: 'background.default',
         }}
@@ -119,22 +119,34 @@ function ImageCarousel({
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            Next
             {theme.direction === 'rtl' ? (
               <KeyboardArrowLeft />
             ) : (
-              <KeyboardArrowRight />
+              <KeyboardArrowRight
+                sx={{
+                  color: '#fe4646',
+                }}
+              />
             )}
           </Button>
         }
+        sx={{
+          bgcolor: 'transparent',
+          '& .MuiMobileStepper-dotActive': {
+            bgcolor: '#fe4646',
+          },
+        }}
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (
-              <KeyboardArrowLeft />
+              <KeyboardArrowLeft
+                sx={{
+                  color: '#fe4646',
+                }}
+              />
             )}
-            Back
           </Button>
         }
       />
