@@ -8,7 +8,7 @@ import useScrollToAnchor from '../sidebar/hooks/useScrollToAnchor';
 import ContactHome from './home.contact';
 
 export default function HomeLayout(): JSX.Element {
-  const title = 'Design Engineer';
+  const title = 'Developer | Designer';
   const headingText2 = <div className="">SITE IS UNDER MAINTENANCE</div>;
   const heading = <div className={styles.home__title}>{headingText2}</div>;
   const { anchorRef: homeRef, scrollToAnchor: homeScroll } =
@@ -29,9 +29,6 @@ export default function HomeLayout(): JSX.Element {
   return (
     <Layout title={`Preston Smith | ${title}`} navMethodList={list}>
       <Home title={heading} anchorRef={homeRef} onContact={contactScroll} />
-      {/* <DesignHome anchorRef={designRef} />
-      <DevelopHome anchorRef={devRef} />
-      <ContactHome anchorRef={contactRef} /> */}
     </Layout>
   );
 }

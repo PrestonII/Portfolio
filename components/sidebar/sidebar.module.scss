@@ -28,7 +28,7 @@
     width: 100%;
     top: 0;
     left: 50%;
-    border-left: 2px solid $red;
+    border-left: 2px solid $black;
   }
 
   .place {
@@ -60,15 +60,15 @@
     height: 10px;
     border-radius: 5px;
     content: '';
-    background-color: $red;
+    background-color: $black;
     transform: translate(-3.5px);
-    border: 0px solid $red;
+    border: 0px solid $black;
     transition: all 0.5s;
   }
 
   &__text {
     a {
-      color: $red;
+      color: $black;
       font-weight: 500;
       font-family: $font-head;
     }
@@ -79,7 +79,7 @@
 
     .history__dot {
       background-color: $cream;
-      border: 2px solid $red;
+      border: 2px solid $black;
       width: 16px;
       height: 16px;
       border-radius: 8px;
