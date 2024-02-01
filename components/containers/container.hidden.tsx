@@ -50,7 +50,14 @@ export const getWrapper = ({
       );
       break;
     case 'div':
-      wrapper = <div ref={ref as React.Ref<HTMLDivElement>}>{children}</div>;
+      wrapper = (
+        <div
+          style={{ color: 'inherit' }}
+          ref={ref as React.Ref<HTMLDivElement>}
+        >
+          {children}
+        </div>
+      );
       break;
     case 'h1':
       wrapper = <h1 ref={ref as React.Ref<HTMLHeadingElement>}>{children}</h1>;

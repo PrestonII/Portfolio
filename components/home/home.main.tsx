@@ -20,16 +20,25 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       <b style={{ fontSize: 18 }}>Canoa Supply</b>
     </ExternalLink>
   );
+  const hlw = (
+    <ExternalLink route="https://www.hlw.design/" containerType="paragraph">
+      <b style={{ fontSize: 18 }}>HLW</b>
+    </ExternalLink>
+  );
 
   const summary = (
     <>
-      I enjoy making digital products out of pixels and code. Currently, I'm
-      helping to decarbonize the built environment with {canoaSupply} as a{' '}
-      <b>Senior Front-End Developer</b> .
+      Preston is a software developer operating out of New York City.
       <br />
       <br />
-      See more about my work by scrolling below or feel free to reach out for a
-      chat.
+      He's been working on revamping this site since <b>2020</b> but promises
+      that, for sure, <b>2024</b> will be his year. Previously, he worked some
+      really awesome teams like {canoaSupply}, {hlw} and a host of smaller teams
+      building niche tools in the BIM space.
+      <br />
+      <br />
+      He's had a very weird career - click the link below to find out more or
+      reach out for a chat
     </>
   );
 
@@ -51,13 +60,6 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
           </InternalLink>
         </div>
       </div>
-      <InternalLink
-        wrapperRef={nodeLink}
-        classOverrides={styles.home__contact}
-        onClick={onContact}
-      >
-        Get In Touch
-      </InternalLink>
     </div>
   );
 }

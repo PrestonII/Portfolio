@@ -24,9 +24,11 @@ export const ExternalLink: React.FC<PageLinkProps> = (props) => (
   </span>
 );
 
-export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (
-  props,
-) => {
+export const InternalLink: React.FC<
+  Omit<PageLinkProps, 'containerType'> & {
+    arrowColor?: React.CSSProperties['color'];
+  }
+> = (props) => {
   const router = useRouter();
   const outline = React.createRef<HTMLDivElement>();
 
@@ -51,7 +53,7 @@ export const InternalLink: React.FC<Omit<PageLinkProps, 'containerType'>> = (
         >
           {props.children}
         </OverflowHiddenParagraph>
-        <Arrow direction="NE" />
+        <Arrow direction="NE" color={props.arrowColor} />
       </div>
     </div>
   );

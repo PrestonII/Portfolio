@@ -8,6 +8,7 @@ type ArrowDirection = typeof ArrowDirections[number];
 
 type ArrowIconType = IconType & {
   direction?: ArrowDirection;
+  color?: React.CSSProperties['color'];
 };
 
 const getTransform = (direction?: ArrowDirection): string => {
@@ -47,6 +48,9 @@ export const Arrow: React.FC<ArrowIconType> = (props) => (
   <ArrowIcon
     onClick={props.onClick}
     className={styles.icon__arrow}
-    style={{ transform: `rotate(${getTransform(props.direction)})` }}
+    style={{
+      transform: `rotate(${getTransform(props.direction)})`,
+      color: props.color,
+    }}
   />
 );

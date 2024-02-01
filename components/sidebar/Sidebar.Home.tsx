@@ -5,6 +5,7 @@ import useResizeObserver from 'use-resize-observer';
 import { ReactComponent as IconDesign } from '../assets/ICON_DESIGN.svg';
 import { ReactComponent as IconDev } from '../assets/ICON_DEV.svg';
 import styles from './sidebar.module.scss';
+import { InternalLink } from '../PageLink';
 
 export interface ISidebar {
   children?: ReactNode;
@@ -56,7 +57,7 @@ const TimelinePointList: React.FC<
   } & AnchorNavigationType
 > = (props) => {
   const career = {
-    Design: <IconDesign />,
+    Come: <IconDesign />,
     Develop: <IconDev />,
     Contact: <IconDev />,
   };
@@ -68,7 +69,7 @@ const TimelinePointList: React.FC<
     <TimelinePoint
       key={idx}
       top={point}
-      text={Object.keys(career)[idx]}
+      text={'Come Back Soon!ß'}
       onClick={props.navMethodList[Object.keys(career)[idx]]}
     />
   ));
@@ -88,6 +89,8 @@ const HomeSidebar: React.FC<AnchorNavigationType> = (props) => {
     },
   });
 
+  const contactText = 'Get In Touch';
+
   return (
     <header className={styles.bar} ref={ref}>
       <nav>
@@ -102,6 +105,15 @@ const HomeSidebar: React.FC<AnchorNavigationType> = (props) => {
       </nav>
       <div className={styles.place}>
         <p>HOME</p>
+      </div>
+      <div className={styles.footer}>
+        <p>Footer</p>
+        <InternalLink
+          route="mailto:prestonmakesstuff@gmail.com?subject=Hi!"
+          arrowColor={`#fcf8eb`}
+        >
+          {contactText}
+        </InternalLink>
       </div>
     </header>
   );
