@@ -28,7 +28,7 @@ const WorkDetailPage = (props: PostProps) => {
     client,
   } = props.post;
 
-  console.log('content', content);
+  // console.log('content', content);
 
   return (
     <Layout title={`Preston Smith | ${title}`} navMethodList={{}}>
