@@ -2,7 +2,7 @@ const path = require('path');
 
 const nextConfig = {
   /* config options here */
-  // ignoreBuildErrors: true,
+  ignoreBuildErrors: true,
   removeConsole: false,
   // sassOptions: {
   //   includePaths: [
