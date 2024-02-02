@@ -13,16 +13,16 @@
     &__header {
       div {
         margin-bottom: 2rem;
-        margin-top: 0.5rem;
+        margin-top: 0rem;
       }
 
       &__name {
         font-weight: 400;
-        color: $grey;
-        font-size: 16px;
+        color: $red;
+        font-size: 12px;
         text-transform: uppercase;
         height: 1rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0rem;
       }
     }
   }

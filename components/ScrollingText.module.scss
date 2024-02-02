@@ -1,0 +1,94 @@
+.container {
+  border: 3px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.text {
+  &.horizontal {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: scroll_horizontal 15s linear infinite;
+    -webkit-animation: scroll_horizontal 15s linear infinite;
+    animation: scroll_horizontal 15s linear infinite;
+  }
+  &.vertical {
+    /* animation properties */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+
+    -moz-animation: scroll_vertical 2s linear infinite;
+    -webkit-animation: scroll_vertical 2s linear infinite;
+    animation: scroll_vertical 2s linear infinite;
+  }
+}
+
+/* for Firefox */
+@-moz-keyframes scroll_horizontal {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes scroll_horizontal {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll_horizontal {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/* for Firefox */
+@-moz-keyframes scroll_vertical {
+  from {
+    -moz-transform: translateY(-100%);
+  }
+  to {
+    -moz-transform: translateY(100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes scroll_vertical {
+  from {
+    -webkit-transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@keyframes scroll_vertical {
+  from {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}

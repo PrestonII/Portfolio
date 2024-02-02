@@ -6,6 +6,8 @@ import { ReactComponent as IconDesign } from '../assets/ICON_DESIGN.svg';
 import { ReactComponent as IconDev } from '../assets/ICON_DEV.svg';
 import styles from './sidebar.module.scss';
 import { InternalLink } from '../PageLink';
+import ScrollingText from '../ScrollingText';
+import { Arrow } from '../icons/Arrow';
 
 export interface ISidebar {
   children?: ReactNode;
@@ -57,7 +59,7 @@ const TimelinePointList: React.FC<
   } & AnchorNavigationType
 > = (props) => {
   const career = {
-    Come: <IconDesign />,
+    Design: <IconDesign />,
     Develop: <IconDev />,
     Contact: <IconDev />,
   };
@@ -69,7 +71,7 @@ const TimelinePointList: React.FC<
     <TimelinePoint
       key={idx}
       top={point}
-      text={'Come Back Soon!ß'}
+      text={Object.keys(career)[idx]}
       onClick={props.navMethodList[Object.keys(career)[idx]]}
     />
   ));
@@ -107,7 +109,22 @@ const HomeSidebar: React.FC<AnchorNavigationType> = (props) => {
         <p>HOME</p>
       </div>
       <div className={styles.footer}>
-        <p>Footer</p>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            color: '#fcf8eb',
+          }}
+        >
+          <ScrollingText
+            style={{ color: '#fcf8eb' }}
+            direction="vertical"
+            content={<Arrow direction={'S'} color={'#fcf8eb'} />}
+          />
+          <div className="">Scroll For More</div>
+        </div>
+
         <InternalLink
           route="mailto:prestonmakesstuff@gmail.com?subject=Hi!"
           arrowColor={`#fcf8eb`}

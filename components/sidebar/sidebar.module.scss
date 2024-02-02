@@ -124,6 +124,129 @@
   }
 }
 
+// Laptop typical?
+@media (min-width: 1024px) {
+  .bar {
+    width: 3rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+  }
+
+  .history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translate(-1.5px);
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      content: '';
+      background-color: $black;
+      transform: translate(11.5px);
+      border: 0px solid $black;
+      transition: all 0.5s;
+    }
+
+    &__text {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-family: $font-head;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .history__dot {
+        background-color: $cream;
+        border: 2px solid $black;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        transform: translate(0px);
+      }
+    }
+  }
+}
+
+// iPad Mini Landscape
+@media (max-width: 1023px) {
+  .bar {
+    width: 3rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+  }
+
+  .history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translate(-1.5px);
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      content: '';
+      background-color: $black;
+      transform: translate(8px);
+      border: 0px solid $black;
+      transition: all 0.5s;
+    }
+
+    &__text {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-family: $font-head;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .history__dot {
+        background-color: $cream;
+        border: 2px solid $black;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        transform: translate(0px);
+      }
+    }
+  }
+}
+
+// iPad Mini Portrait
 @media (max-width: 767px) {
   .bar {
     width: 5rem;
@@ -140,6 +263,67 @@
       top: 7rem;
       left: 2.5rem;
       height: 100vh;
+    }
+  }
+}
+
+// iPhone 12 Portrait up to iPad Mini Portrait
+@media (max-width: 766px) {
+  .bar {
+    width: 5rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+  }
+
+  .history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translate(-1.5px);
+
+    &__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 5px;
+      content: '';
+      background-color: $black;
+      transform: translate(-3px);
+      border: 0px solid $black;
+      transition: all 0.5s;
+    }
+
+    &__text {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-family: $font-head;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .history__dot {
+        background-color: $cream;
+        border: 2px solid $black;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        transform: translate(0px);
+      }
     }
   }
 }

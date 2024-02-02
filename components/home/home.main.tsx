@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './home.module.scss';
 import { ExternalLink, InternalLink } from '../PageLink';
-import ROUTES from '../Routes';
 import OverflowContainer from '../containers/container.hidden';
+import { Arrow } from '../icons/Arrow';
 
 interface props {
   title: string | JSX.Element;
@@ -13,12 +13,15 @@ interface props {
 export function Home({ title, anchorRef, onContact }: props): JSX.Element {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
-  const name = 'Preston Smith';
+  const name = 'Preston Smith (Selected Works 2016 - 2023)';
   const linkText = 'More About Me';
+  const linkedIn = 'https://www.linkedin.com/in/prestonsmithbim/';
   const canoaSupply = (
-    <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
-      <b style={{ fontSize: 18 }}>Canoa Supply</b>
-    </ExternalLink>
+    <>
+      <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
+        <b style={{ fontSize: 18 }}>Canoa Supply</b>
+      </ExternalLink>
+    </>
   );
   const hlw = (
     <ExternalLink route="https://www.hlw.design/" containerType="paragraph">
@@ -32,13 +35,14 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       <br />
       <br />
       He's been working on revamping this site since <b>2020</b> but promises
-      that, for sure, <b>2024</b> will be his year. Previously, he worked some
-      really awesome teams like {canoaSupply}, {hlw} and a host of smaller teams
-      building niche tools in the BIM space.
+      that, for sure, <b>2024</b> will be his year. Previously, he worked with
+      the cool folks at {canoaSupply} who are changing the game for interior
+      designers, the incredible Design Technology team of {hlw} and a host of
+      other smaller teams building niche tools in the BIM space.
       <br />
       <br />
       He's had a very weird career - click the link below to find out more or
-      reach out for a chat
+      reach out for a chat.
     </>
   );
 
@@ -55,7 +59,7 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
           {summary}
         </OverflowContainer>
         <div className={styles.link}>
-          <InternalLink route={ROUTES.ABOUT} wrapperRef={nodeLink}>
+          <InternalLink route={linkedIn} wrapperRef={nodeLink}>
             {linkText}
           </InternalLink>
         </div>
