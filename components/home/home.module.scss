@@ -18,7 +18,7 @@
 
       &__name {
         font-weight: 400;
-        color: $red;
+        color: $grey;
         font-size: 12px;
         text-transform: uppercase;
         height: 1rem;
@@ -44,7 +44,7 @@
 
 .home {
   &__title {
-    color: $red;
+    color: $grey;
     span {
       color: $black;
     }
@@ -77,15 +77,6 @@
     padding-bottom: 4rem;
   }
 }
-
-// @media (min-width: 1024px) {
-//   .link {
-//     p {
-//       font-size: 12px;
-//     }
-//   }
-
-// }
 
 @media (max-width: 1023px) {
   .link {

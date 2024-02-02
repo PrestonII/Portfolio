@@ -9,7 +9,11 @@ import ContactHome from './home.contact';
 
 export default function HomeLayout(): JSX.Element {
   const title = 'Developer | Designer';
-  const headingText2 = <div className="">THIS SITE IS BEING RECONSTRUCTED</div>;
+  const headingText2 = (
+    <div className="">
+      A <span>Developer</span> that can also <span>Design</span> product
+    </div>
+  );
   const heading = <h2 className={styles.home__title}>{headingText2}</h2>;
   const { anchorRef: homeRef, scrollToAnchor: homeScroll } =
     useScrollToAnchor();
