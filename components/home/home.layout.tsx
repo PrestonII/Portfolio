@@ -12,7 +12,7 @@ export default function HomeLayout(): JSX.Element {
   const headingText2 = (
     <div className="">THIS SITE IS UNDER RE-CONSTRUCTION</div>
   );
-  const heading = <div className={styles.home__title}>{headingText2}</div>;
+  const heading = <h2 className={styles.home__title}>{headingText2}</h2>;
   const { anchorRef: homeRef, scrollToAnchor: homeScroll } =
     useScrollToAnchor();
   const { anchorRef: designRef, scrollToAnchor: designScroll } =

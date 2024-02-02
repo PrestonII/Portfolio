@@ -7,31 +7,3 @@
     overflow: hidden;
   }
 }
-
-.text {
-  &__override {
-    > h2 {
-      font-size: 4.5rem;
-      color: $red;
-    }
-    > h3 {
-      font-size: 3rem;
-    }
-    > span {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-    }
-
-    > p {
-      font-size: 1.125rem;
-      white-space: pre-line;
-      font-weight: 300;
-
-      > b {
-        font-weight: 600;
-        color: $grey_dark;
-        font-size: 1rem;
-      }
-    }
-  }
-}

@@ -16,7 +16,7 @@ type ContainerType =
   | 'subtitle';
 
 type WrapperProps = {
-  containerType: ContainerType;
+  containerType?: ContainerType;
   wrapperRef?: React.Ref<unknown>;
   linkSrc?: string;
 };
@@ -35,7 +35,11 @@ export const getWrapper = ({
   wrapperRef: ref,
   linkSrc,
 }: React.PropsWithChildren<WrapperProps>): JSX.Element => {
-  let wrapper = <div>{children}</div>;
+  let wrapper = (
+    <div style={{ color: 'inherit' }} ref={ref as React.Ref<HTMLDivElement>}>
+      {children}
+    </div>
+  );
 
   switch (containerType) {
     case 'anchor':

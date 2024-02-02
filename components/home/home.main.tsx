@@ -19,13 +19,13 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
   const canoaSupply = (
     <>
       <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
-        <b style={{ fontSize: 18 }}>Canoa Supply</b>
+        <b>Canoa Supply</b>
       </ExternalLink>
     </>
   );
   const hlw = (
     <ExternalLink route="https://www.hlw.design/" containerType="paragraph">
-      <b style={{ fontSize: 18 }}>HLW</b>
+      <b>HLW</b>
     </ExternalLink>
   );
 
@@ -51,9 +51,7 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       <div className={styles.main__inner}>
         <div className={styles.main__inner__header}>
           <span className={styles.main__inner__header__name}>{name}</span>
-          <OverflowContainer wrapperRef={nodeTitle} containerType={'h2'}>
-            {title}
-          </OverflowContainer>
+          <OverflowContainer wrapperRef={nodeTitle}>{title}</OverflowContainer>
         </div>
         <OverflowContainer containerType="paragraph">
           {summary}
