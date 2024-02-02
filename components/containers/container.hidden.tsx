@@ -19,24 +19,27 @@ type WrapperProps = {
   containerType?: ContainerType;
   wrapperRef?: React.Ref<unknown>;
   linkSrc?: string;
-};
+} & OverridableStyling;
 
-export type ContainerProps = OverridableStyling &
-  WrapperProps & {
-    hidden?: boolean;
-    startHidden?: boolean;
-    showOnHover?: boolean;
-    onClick?: () => void;
-  };
+export type ContainerProps = WrapperProps & {
+  hidden?: boolean;
+  startHidden?: boolean;
+  showOnHover?: boolean;
+  onClick?: () => void;
+};
 
 export const getWrapper = ({
   containerType,
   children,
   wrapperRef: ref,
   linkSrc,
+  style,
 }: React.PropsWithChildren<WrapperProps>): JSX.Element => {
   let wrapper = (
-    <div style={{ color: 'inherit' }} ref={ref as React.Ref<HTMLDivElement>}>
+    <div
+      style={{ color: 'inherit', ...style }}
+      ref={ref as React.Ref<HTMLDivElement>}
+    >
       {children}
     </div>
   );

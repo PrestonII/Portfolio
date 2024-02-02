@@ -1,6 +1,20 @@
-$mobileLimit: 767px;
-$tablet: 768px;
-$desktop: 992px;
+$desktopLimit: 1024px;
+$tabletLimit: 1023px;
+$mobileLimit: 766px;
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $desktopLimit) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: $tabletLimit) {
+  :root {
+    font-size: 12px;
+  }
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: $mobileLimit) {
@@ -8,17 +22,18 @@ $desktop: 992px;
     font-size: 8px;
   }
 }
+/**
+********** breakpoint templates  **********
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: $tablet) {
-  :root {
-    font-size: 12px;
-  }
+@media (min-width: 1024px) {
+
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: $desktop) {
-  :root {
-    font-size: 16px;
-  }
+@media (max-width: 1023px) {
+
 }
+
+@media (max-width: 766px) {
+
+}
+**/

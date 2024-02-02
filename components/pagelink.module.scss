@@ -19,9 +19,8 @@
     @extend %decoration;
   }
 
-  a {
-    // display: flex;
-    // align-items: center;
+  p {
+    font-size: inherit;
   }
 }
 
@@ -30,7 +29,6 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    font-size: 1.125rem;
   }
 
   &__override {
@@ -39,4 +37,13 @@
       color: $cream !important;
     }
   }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1023px) {
+}
+
+@media (max-width: 766px) {
 }

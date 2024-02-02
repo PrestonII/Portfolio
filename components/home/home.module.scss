@@ -26,14 +26,14 @@
       }
     }
   }
+}
 
-  .summary {
-    padding-top: 3rem;
-  }
+.summary {
+  padding-top: 3rem;
+}
 
-  .link {
-    margin-top: 6rem;
-  }
+.link {
+  margin-top: 6rem;
 }
 
 .overflow {
@@ -75,5 +75,43 @@
     column-gap: 3rem;
     padding-right: 4rem;
     padding-bottom: 4rem;
+  }
+}
+
+// @media (min-width: 1024px) {
+//   .link {
+//     p {
+//       font-size: 12px;
+//     }
+//   }
+
+// }
+
+@media (max-width: 1023px) {
+  .link {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 766px) {
+  .main {
+    &__inner {
+      &__header {
+        &__name {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .link {
+    justify-self: right;
+    margin-top: 9rem;
+
+    p {
+      font-size: 12px;
+    }
   }
 }

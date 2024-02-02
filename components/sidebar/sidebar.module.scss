@@ -183,6 +183,10 @@
       }
     }
   }
+
+  .footer {
+    padding-left: 30px;
+  }
 }
 
 // iPad Mini Landscape
@@ -244,6 +248,16 @@
       }
     }
   }
+
+  .footer {
+    padding-left: 19px;
+    font-size: 12px;
+    font-weight: 500;
+
+    p {
+      font-size: 14px;
+    }
+  }
 }
 
 // iPhone 12 Portrait up to iPad Mini Portrait
@@ -263,6 +277,12 @@
       top: 7rem;
       left: 2.5rem;
       height: 100vh;
+    }
+
+    .place {
+      p {
+        font-size: 12px;
+      }
     }
   }
 
@@ -303,6 +323,16 @@
         border-radius: 8px;
         transform: translate(0px);
       }
+    }
+  }
+
+  .footer {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+
+    p {
+      font-size: 12px;
     }
   }
 }

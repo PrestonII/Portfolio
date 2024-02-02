@@ -103,155 +103,11 @@ body {
   }
 }
 
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  // Your styles here
+// laptop typical
+@media (min-width: 1024px) {
   body {
-    font-family: $font-body;
-    color: $grey;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: $font-head;
-      margin: 0;
-      color: $black;
-      font-weight: 400;
-    }
-
-    h1 {
-      font-size: $text-xxxl;
-    }
-
-    h2 {
-      font-size: $text-xxl;
-    }
-
-    h3 {
-      font-size: $text-lg;
-    }
-
-    h4 {
-      font-size: $text-md;
-    }
-
-    h5 {
-      font-size: $text-xs;
-      font-weight: 700;
-    }
-
-    p {
-      font-size: 10px;
-      margin-block-start: 0px;
-      margin-block-end: 0px;
-    }
-
-    a {
-      color: $grey;
-    }
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {
-  // Your styles here
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {
-  // Your styles here
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  // Your styles here
-  body {
-    font-family: $font-body;
-    color: $grey;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: $font-head;
-      margin: 0;
-      color: $black;
-      font-weight: 400;
-    }
-
-    h1 {
-      font-size: $text-xxxl;
-    }
-
-    h2 {
-      font-size: $text-xxl;
-    }
-
-    h3 {
-      font-size: $text-lg;
-    }
-
-    h4 {
-      font-size: $text-md;
-    }
-
-    h5 {
-      font-size: $text-xs;
-      font-weight: 700;
-    }
-
-    p {
-      font-size: 10px;
-      margin-block-start: 0px;
-      margin-block-end: 0px;
-    }
-
-    a {
-      color: $grey;
-    }
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  // Your styles here
-  body {
-    font-family: $font-body;
-    color: $grey;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: $font-head;
-      margin: 0;
-      color: $black;
-      font-weight: 400;
-    }
-
-    h1 {
-      font-size: $text-xxxl;
-    }
-
     h2 {
       font-size: 72px;
-    }
-
-    h3 {
-      font-size: $text-lg;
-    }
-
-    h4 {
-      font-size: $text-md;
-    }
-
-    h5 {
-      font-size: $text-xs;
-      font-weight: 700;
     }
 
     p {
@@ -259,9 +115,36 @@ body {
       margin-block-start: 0px;
       margin-block-end: 0px;
     }
+  }
+}
 
-    a {
-      color: $grey;
+// iPad mini landscape
+@media (max-width: 1023px) {
+  body {
+    h2 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+  }
+}
+
+// iPhone Portrait up to iPad Mini Portrait
+@media (max-width: 766px) {
+  body {
+    h2 {
+      font-size: 42px;
+      line-break: anywhere;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
     }
   }
 }

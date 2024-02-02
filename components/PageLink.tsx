@@ -14,12 +14,13 @@ interface PageLinkProps extends ContainerProps {
 }
 
 export const ExternalLink: React.FC<PageLinkProps> = (props) => (
-  <span className={`${styles.pagelink}`}>
+  <span className={`${styles.pagelink}`} style={props.style}>
     {getWrapper({
       containerType: 'anchor',
       children: props.children,
       wrapperRef: props.wrapperRef,
       linkSrc: props.route,
+      style: props.style,
     })}
   </span>
 );
