@@ -1,14 +1,9 @@
 const path = require('path');
 
 const nextConfig = {
-  /* config options here */
-  ignoreBuildErrors: true,
-  removeConsole: false,
-  // sassOptions: {
-  //   includePaths: [
-  //     path.join(__dirname, 'node_modules', 'carbon-components', 'scss'),
-  //   ],
-  // },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;

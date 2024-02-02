@@ -37,7 +37,7 @@ export const InternalLink: React.FC<
     console.log(props.onClick);
     props.onClick && props.onClick();
     if (!props.preventProceeding && props.route) router.push(props.route);
-  }, [props.preventProceeding, props.onClick]);
+  }, [props, router]);
 
   return (
     <div

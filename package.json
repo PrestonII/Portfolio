@@ -7,7 +7,8 @@
     "start": "next start",
     "type-check": "tsc",
     "test": "jest --no-cache",
-    "lint": "eslint --ext ts,tsx"
+    "lint": "eslint --ext ts,tsx",
+    "nextlint": "next lint"
   },
   "dependencies": {
     "@carbon/icons-react": "10.22.0",
@@ -20,7 +21,7 @@
     "carbon-components-react": "7.25.0",
     "carbon-icons": "7.0.7",
     "date-fns": "^2.16.1",
-    "eslint-config-next": "13",
+    "eslint-config-next": "^14.1.0",
     "gray-matter": "^4.0.2",
     "gsap": "^3.5.1",
     "next": "13",
