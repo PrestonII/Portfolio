@@ -39,10 +39,10 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       the cool folks at {canoaSupply} who are changing the game for interior
       designers, the incredible Design Technology team of {hlw} and a host of
       other smaller teams building niche tools in the BIM space.
-      <br />
+      {/* <br />
       <br />
       He's had a very weird career - click the link below to find out more or
-      reach out for a chat.
+      reach out for a chat. */}
     </>
   );
 

@@ -117,12 +117,16 @@ const HomeSidebar: React.FC<AnchorNavigationType> = (props) => {
             color: '#fcf8eb',
           }}
         >
+          <Arrow direction={'N'} color={'#fcf8eb'} />
           <ScrollingText
             style={{ color: '#fcf8eb' }}
-            direction="vertical"
-            content={<Arrow direction={'S'} color={'#fcf8eb'} />}
+            direction="horizontal"
+            content={
+              <div style={{ whiteSpace: 'nowrap' }}>
+                THIS SITE IS UNDER RECONSTRUCTION
+              </div>
+            }
           />
-          <div className="">Scroll For More</div>
         </div>
 
         <InternalLink
