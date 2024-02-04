@@ -6,11 +6,13 @@ import OverflowHiddenParagraph, {
   getWrapper,
 } from './containers/container.hidden';
 import { Arrow } from './icons/Arrow';
+import Link from 'next/link';
 
 interface PageLinkProps extends ContainerProps {
   route?: string;
   onClick?: () => void;
   preventProceeding?: boolean;
+  openNewTab?: boolean;
 }
 
 export const ExternalLink: React.FC<PageLinkProps> = (props) => (
@@ -40,11 +42,11 @@ export const InternalLink: React.FC<
   }, [props, router]);
 
   return (
-    <div
-      ref={outline}
+    <Link
       className={`${styles.link} ${props.classOverrides}`}
       style={props.style}
-      onClick={onClick}
+      href={props.route || '/'}
+      target={props.openNewTab ? '_blank' : undefined}
     >
       <div className={styles.link__inner}>
         <OverflowHiddenParagraph
@@ -56,6 +58,6 @@ export const InternalLink: React.FC<
         </OverflowHiddenParagraph>
         <Arrow direction="NE" color={props.arrowColor} />
       </div>
-    </div>
+    </Link>
   );
 };

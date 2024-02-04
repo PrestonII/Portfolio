@@ -57,7 +57,7 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
           {summary}
         </OverflowContainer>
         <div className={styles.link}>
-          <InternalLink route={linkedIn} wrapperRef={nodeLink}>
+          <InternalLink route={linkedIn} wrapperRef={nodeLink} openNewTab>
             {linkText}
           </InternalLink>
         </div>
