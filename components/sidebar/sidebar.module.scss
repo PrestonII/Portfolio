@@ -336,3 +336,17 @@
     }
   }
 }
+
+// iPhone 12 Portrait up to iPad Mini Portrait
+@media (max-width: 375px) {
+  .footer {
+    padding-left: 13px;
+    font-size: 12px;
+    font-weight: 500;
+    padding-right: 3rem;
+
+    p {
+      font-size: 12px;
+    }
+  }
+}

@@ -148,3 +148,18 @@ body {
     }
   }
 }
+
+// iPhone Portrait up to iPad Mini Portrait
+@media (max-width: 375px) {
+  body {
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+  }
+}
