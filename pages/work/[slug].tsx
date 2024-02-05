@@ -1,4 +1,4 @@
-import AboutLayout from '../../components/about/about.layout';
+import WorkDetailPage from '../../components/work/WorkDetail';
 import { PostProps } from '../../types/post';
 import {
   getPostBySlug,
@@ -14,7 +14,7 @@ type Params = {
 };
 
 export default function SlugLayout(props: PostProps) {
-  return <AboutLayout {...props} />;
+  return <WorkDetailPage {...props} />;
 }
 
 export async function getStaticProps({ params }: Params) {

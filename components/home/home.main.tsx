@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './home.module.scss';
 import { ExternalLink, InternalLink } from '../PageLink';
-import ROUTES from '../Routes';
 import OverflowContainer from '../containers/container.hidden';
+import { Arrow } from '../icons/Arrow';
 
 interface props {
   title: string | JSX.Element;
@@ -13,23 +13,36 @@ interface props {
 export function Home({ title, anchorRef, onContact }: props): JSX.Element {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
-  const name = 'Preston Smith';
+  const name = 'Preston Smith (Selected Works 2016 - 2023)';
   const linkText = 'More About Me';
+  const linkedIn = 'https://www.linkedin.com/in/prestonsmithbim/';
   const canoaSupply = (
-    <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
-      <b style={{ fontSize: 18 }}>Canoa Supply</b>
+    <>
+      <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
+        <b>Canoa Supply</b>
+      </ExternalLink>
+    </>
+  );
+  const hlw = (
+    <ExternalLink route="https://www.hlw.design/" containerType="paragraph">
+      <b>HLW</b>
     </ExternalLink>
   );
 
   const summary = (
     <>
-      I enjoy making digital products out of pixels and code. Currently, I'm
-      helping to decarbonize the built environment with {canoaSupply} as a{' '}
-      <b>Senior Front-End Developer</b> .
+      Preston is a software developer operating out of New York City.
       <br />
       <br />
-      See more about my work by scrolling below or feel free to reach out for a
-      chat.
+      He's been working on revamping this site since <b>2020</b> but promises
+      that, for sure, <b>2024</b> will be his year. Previously, he's worked with
+      the cool folks at {canoaSupply}, the incredible Design Technology team of{' '}
+      {hlw} and a host of other smaller teams building niche tools in the AEC
+      space.
+      {/* <br />
+      <br />
+      He's had a very weird career - click the link below to find out more or
+      reach out for a chat. */}
     </>
   );
 
@@ -38,26 +51,17 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       <div className={styles.main__inner}>
         <div className={styles.main__inner__header}>
           <span className={styles.main__inner__header__name}>{name}</span>
-          <OverflowContainer wrapperRef={nodeTitle} containerType={'h2'}>
-            {title}
-          </OverflowContainer>
+          <OverflowContainer wrapperRef={nodeTitle}>{title}</OverflowContainer>
         </div>
         <OverflowContainer containerType="paragraph">
           {summary}
         </OverflowContainer>
         <div className={styles.link}>
-          <InternalLink route={ROUTES.ABOUT} wrapperRef={nodeLink}>
+          <InternalLink route={linkedIn} wrapperRef={nodeLink} openNewTab>
             {linkText}
           </InternalLink>
         </div>
       </div>
-      <InternalLink
-        wrapperRef={nodeLink}
-        classOverrides={styles.home__contact}
-        onClick={onContact}
-      >
-        Get In Touch
-      </InternalLink>
     </div>
   );
 }

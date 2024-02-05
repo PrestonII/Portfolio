@@ -1,33 +1,39 @@
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  :root {
-    font-size: 8px;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  :root {
-    font-size: 12px;
-  }
-}
+$desktopLimit: 1024px;
+$tabletLimit: 1023px;
+$mobileLimit: 766px;
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: $desktopLimit) {
   :root {
     font-size: 16px;
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1441px) {
-//   :root {
-//     font-size: 18px;
-//   }
-// }
+// Medium devices (tablets, 768px and up)
+@media (max-width: $tabletLimit) {
+  :root {
+    font-size: 12px;
+  }
+}
 
-// @media (min-width: 1800px) {
-//   :root {
-//     font-size: 24px;
-//   }
-// }
+// Small devices (landscape phones, 576px and up)
+@media (max-width: $mobileLimit) {
+  :root {
+    font-size: 8px;
+  }
+}
+/**
+********** breakpoint templates  **********
+
+@media (min-width: 1024px) {
+
+}
+
+@media (max-width: 1023px) {
+
+}
+
+@media (max-width: 766px) {
+
+}
+**/

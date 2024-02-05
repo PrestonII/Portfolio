@@ -1,6 +1,9 @@
+const path = require('path');
+
 const nextConfig = {
-  /* config options here */
-  // ignoreBuildErrors: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;

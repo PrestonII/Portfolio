@@ -1,6 +1,7 @@
-import { PageTransition } from 'next-page-transitions'
+import { PageTransition } from 'next-page-transitions';
 import Loader from '../components/Loader';
 import '../styles/styles.global.scss';
+import '../styles/styles.breakpoints.scss';
 
 const TIMEOUT = 400;
 const red = '#EB5757';
@@ -49,7 +50,7 @@ const MyApp = ({ Component, pageProps }) => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
-export default MyApp
+export default MyApp;

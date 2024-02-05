@@ -21,14 +21,13 @@ export function convertMarkdownToPostData({
     [key: string]: any;
   };
   const meta: Meta = {};
-  dataFields.forEach((field) => {
+  for (const field of dataFields) {
+    if (!Object.keys(data).includes(field)) continue;
     meta[field] = data[field];
-  });
+  }
 
   meta.slug = postName;
   meta.content = content;
-
-  // const postData = new PostData();
 
   return meta;
 }

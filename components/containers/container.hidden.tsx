@@ -16,26 +16,33 @@ type ContainerType =
   | 'subtitle';
 
 type WrapperProps = {
-  containerType: ContainerType;
+  containerType?: ContainerType;
   wrapperRef?: React.Ref<unknown>;
   linkSrc?: string;
-};
+} & OverridableStyling;
 
-export type ContainerProps = OverridableStyling &
-  WrapperProps & {
-    hidden?: boolean;
-    startHidden?: boolean;
-    showOnHover?: boolean;
-    onClick?: () => void;
-  };
+export type ContainerProps = WrapperProps & {
+  hidden?: boolean;
+  startHidden?: boolean;
+  showOnHover?: boolean;
+  onClick?: () => void;
+};
 
 export const getWrapper = ({
   containerType,
   children,
   wrapperRef: ref,
   linkSrc,
+  style,
 }: React.PropsWithChildren<WrapperProps>): JSX.Element => {
-  let wrapper = <div>{children}</div>;
+  let wrapper = (
+    <div
+      style={{ color: 'inherit', ...style }}
+      ref={ref as React.Ref<HTMLDivElement>}
+    >
+      {children}
+    </div>
+  );
 
   switch (containerType) {
     case 'anchor':
@@ -50,7 +57,14 @@ export const getWrapper = ({
       );
       break;
     case 'div':
-      wrapper = <div ref={ref as React.Ref<HTMLDivElement>}>{children}</div>;
+      wrapper = (
+        <div
+          style={{ color: 'inherit' }}
+          ref={ref as React.Ref<HTMLDivElement>}
+        >
+          {children}
+        </div>
+      );
       break;
     case 'h1':
       wrapper = <h1 ref={ref as React.Ref<HTMLHeadingElement>}>{children}</h1>;

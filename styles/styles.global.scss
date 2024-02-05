@@ -1,8 +1,11 @@
-@import 'carbon-components/scss/globals/scss/styles.scss';
+@import '../node_modules/carbon-components/scss/globals/scss/styles.scss';
 @import './styles.colors.scss';
-@import './styles.breakpoints.scss';
 @import './styles.placeholders.scss';
 @import './styles.fonts.scss';
+
+c4d-carousel {
+  --c4d--carousel--page-size: 1;
+}
 
 * {
   box-sizing: border-box;
@@ -14,7 +17,8 @@ html {
   scrollbar-width: none;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -56,7 +60,11 @@ body {
   font-family: $font-body;
   color: $grey;
 
-  h1,h2,h3,h4,h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: $font-head;
     margin: 0;
     color: $black;
@@ -92,5 +100,66 @@ body {
 
   a {
     color: $grey;
+  }
+}
+
+// laptop typical
+@media (min-width: 1024px) {
+  body {
+    h2 {
+      font-size: 72px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+  }
+}
+
+// iPad mini landscape
+@media (max-width: 1023px) {
+  body {
+    h2 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+  }
+}
+
+// iPhone Portrait up to iPad Mini Portrait
+@media (max-width: 766px) {
+  body {
+    h2 {
+      font-size: 42px;
+      // line-break: anywhere;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+  }
+}
+
+// iPhone Portrait up to iPad Mini Portrait
+@media (max-width: 375px) {
+  body {
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
   }
 }

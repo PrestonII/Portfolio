@@ -33,7 +33,7 @@
 
   .place {
     position: absolute;
-    bottom: 2rem;
+    bottom: 84px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -62,13 +62,13 @@
     content: '';
     background-color: $red;
     transform: translate(-3.5px);
-    border: 0px solid $red;
+    border: 0px solid $black;
     transition: all 0.5s;
   }
 
   &__text {
     a {
-      color: $red;
+      color: $black;
       font-weight: 500;
       font-family: $font-head;
     }
@@ -100,6 +100,258 @@
   &__home {
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  height: 64px;
+  background-color: $red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+
+  p {
+    font-weight: 500;
+    color: $cream !important;
+    font-size: 14px;
+  }
+}
+
+// Laptop typical?
+@media (min-width: 1024px) {
+  .bar {
+    width: 3rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+  }
+
+  .history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translate(-1.5px);
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      content: '';
+      background-color: $red;
+      transform: translate(11.5px);
+      border: 0px solid $red;
+      transition: all 0.5s;
+    }
+
+    &__text {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-family: $font-head;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .history__dot {
+        background-color: $cream;
+        border: 2px solid $black;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        transform: translate(0px);
+      }
+    }
+  }
+
+  .footer {
+    padding-left: 30px;
+  }
+}
+
+// iPad Mini Landscape
+@media (max-width: 1023px) {
+  .bar {
+    width: 3rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+  }
+
+  .history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translate(-1.5px);
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      content: '';
+      background-color: $red;
+      transform: translate(8px);
+      border: 0px solid $red;
+      transition: all 0.5s;
+    }
+
+    &__text {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-family: $font-head;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .history__dot {
+        background-color: $cream;
+        border: 2px solid $red;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        transform: translate(0px);
+      }
+    }
+  }
+
+  .footer {
+    padding-left: 22px;
+    font-size: 12px;
+    font-weight: 500;
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+// iPhone 12 Portrait up to iPad Mini Portrait
+@media (max-width: 766px) {
+  .bar {
+    width: 5rem;
+    height: 100vh;
+
+    .icon {
+      margin: 16px 8px;
+      margin-left: 10px;
+    }
+
+    .line {
+      width: 5rem;
+      position: fixed;
+      top: 7rem;
+      left: 2.5rem;
+      height: 100vh;
+    }
+
+    .place {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transform: translate(-1.5px);
+
+    &__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 5px;
+      content: '';
+      background-color: $red;
+      transform: translate(-3px);
+      border: 0px solid $black;
+      transition: all 0.5s;
+    }
+
+    &__text {
+      a {
+        color: $black;
+        font-weight: 500;
+        font-family: $font-head;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .history__dot {
+        background-color: $cream;
+        border: 2px solid $red;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        transform: translate(0px);
+      }
+    }
+  }
+
+  .footer {
+    padding-left: 15px;
+    font-size: 12px;
+    font-weight: 500;
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+// iPhone 12 Portrait up to iPad Mini Portrait
+@media (max-width: 400px) {
+  .history {
+    transform: translate(19px);
+  }
+
+  .footer {
+    position: fixed;
+    padding-left: 13px;
+    font-size: 12px;
+    font-weight: 500;
+    padding-right: 3rem;
+
+    p {
+      font-size: 12px;
     }
   }
 }
