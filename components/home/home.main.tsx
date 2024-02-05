@@ -38,7 +38,7 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       that, for sure, <b>2024</b> will be his year. Previously, he worked with
       the cool folks at {canoaSupply} who are changing the game for interior
       designers, the incredible Design Technology team of {hlw} and a host of
-      other smaller teams building niche tools in the BIM space.
+      other smaller teams building niche tools in the AEC space.
       {/* <br />
       <br />
       He's had a very weird career - click the link below to find out more or
