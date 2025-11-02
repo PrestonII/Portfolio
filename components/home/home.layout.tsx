@@ -11,7 +11,7 @@ export default function HomeLayout(): JSX.Element {
   const title = 'Developer | Designer';
   const headingText2 = (
     <div className="">
-      A <span>Developer</span> that can also <span>Design</span> product
+      A <span>Developer</span> that can also <span>Design</span> products
     </div>
   );
   const heading = <h2 className={styles.home__title}>{headingText2}</h2>;

@@ -60,6 +60,12 @@ body {
   font-family: $font-body;
   color: $grey;
 
+  // Override Carbon reset for bold tags
+  b,
+  strong {
+    font-weight: 700;
+  }
+
   h1,
   h2,
   h3,

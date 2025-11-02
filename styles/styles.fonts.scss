@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
-@import "./styles.colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import './styles.colors.scss';
 
 $text-xs: 0.75rem;
 $text-sm: 1rem;
@@ -11,5 +11,4 @@ $text-xxl: 3rem;
 $text-xxxl: 6rem;
 
 $font-head: 'Archivo', sans-serif;
-$font-body: "IBM Plex Sans", sans-serif;
-
+$font-body: 'IBM Plex Sans', sans-serif;
