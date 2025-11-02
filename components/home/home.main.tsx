@@ -13,9 +13,19 @@ interface props {
 export function Home({ title, anchorRef, onContact }: props): JSX.Element {
   const nodeTitle = React.createRef<HTMLHeadingElement>();
   const nodeLink = React.createRef<HTMLParagraphElement>();
-  const name = 'Preston Smith (Selected Works 2016 - 2023)';
+  const name = 'Preston Smith';
   const linkText = 'More About Me';
   const linkedIn = 'https://www.linkedin.com/in/prestonsmithbim/';
+  const ipx = (
+    <>
+      <ExternalLink
+        route="https://www.integrated-projects.com/"
+        containerType="paragraph"
+      >
+        <b>IPX</b>
+      </ExternalLink>
+    </>
+  );
   const canoaSupply = (
     <>
       <ExternalLink route="https://www.canoa.supply/" containerType="paragraph">
@@ -34,9 +44,11 @@ export function Home({ title, anchorRef, onContact }: props): JSX.Element {
       Preston is a software developer operating out of New York City.
       <br />
       <br />
-      He's been working on revamping this site since <b>2020</b> but promises
-      that, for sure, <b>2024</b> will be his year. Previously, he's worked with
-      the cool folks at {canoaSupply}, the incredible Design Technology team of{' '}
+      He's been working on revamping this site since 2022 but promises that, for
+      sure, <b>2026</b> will be his year. He's currently working as{' '}
+      <b>Head of BIM Ops Engineering</b> creating a one-click Scan-to-BIM
+      solution for the AECO industry at {ipx}. Previously, he's worked with the
+      cool folks at {canoaSupply}, the incredible Design Technology team of{' '}
       {hlw} and a host of other smaller teams building niche tools in the AEC
       space.
       {/* <br />
